@@ -94,3 +94,6 @@ Desktop.ini
 
 # Crash dumps
 crashinfo-*
+
+# Cesium plugin request cache (local, regenerated at runtime)
+cesium-request-cache.sqlite*
