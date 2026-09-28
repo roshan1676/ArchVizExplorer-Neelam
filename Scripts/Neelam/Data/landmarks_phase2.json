@@ -1,0 +1,19 @@
+{
+ "categories": {
+  "Immediate":     {"color": [1.0, 0.72, 0.10], "tags": ["Education", "Immediate"]},
+  "Transport":     {"color": [0.10, 0.45, 1.00], "tags": ["Transportation", "Transport"]}
+ },
+ "landmarks": [
+  {"id": "vaze", "name": "V.G. Vaze College", "cat": "Immediate", "lat": 19.16294, "lon": 72.95744,
+   "dist": "240 m", "icon": "T_Icon_Education_01", "about": "Arts, Science & Commerce college right next to the project"},
+  {"id": "station", "name": "Mulund Railway Station", "cat": "Transport", "lat": 19.17164, "lon": 72.95627,
+   "dist": "1.3 km", "icon": "T_Icon_Train_01", "about": "Central Railway suburban station (Mulund)"},
+  {"id": "checknaka", "name": "Check Naka", "cat": "Transport", "lat": 19.17610, "lon": 72.96824,
+   "dist": "1.6 km", "icon": "T_Icon_Place_01", "about": "Mulund East check naka / toll plaza on the Eastern Express Highway (Thane gateway)"}
+ ],
+ "roads": [
+  {"id": "vb",  "cat": "Transport", "label": "V B Phadke Road", "dist": "Immediate / local", "poles": {"spacing": 3500, "offset": 650}},
+  {"id": "eeh", "cat": "Transport", "label": "Mumbai–Thane East / Highway", "dist": "Connectivity route", "poles": {"spacing": 5000, "offset": 1100}},
+  {"id": "mar", "cat": "Transport", "label": "Mulund–Airoli Link Road", "dist": "Connectivity route", "poles": null}
+ ]
+}

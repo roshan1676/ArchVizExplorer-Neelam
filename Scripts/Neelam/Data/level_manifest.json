@@ -1,0 +1,12730 @@
+[
+ {
+  "asset": "SM_Site_PlantingBeds",
+  "folder": "Meshes/Site/Ground",
+  "location_m": [
+   15.727,
+   6.289,
+   0.0
+  ],
+  "unreal_location_cm": [
+   1572.7,
+   -628.9,
+   0.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Site_ReservedPlot_Building02",
+  "folder": "Meshes/Site/Ground",
+  "location_m": [
+   13.025,
+   -40.973,
+   0.0
+  ],
+  "unreal_location_cm": [
+   1302.5,
+   4097.3,
+   0.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Podium_Structure_Skin",
+  "folder": "Meshes/Podium",
+  "location_m": [
+   19.279,
+   26.031,
+   0.56
+  ],
+  "unreal_location_cm": [
+   1927.9,
+   -2603.1,
+   56.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Podium_Screen_Slats",
+  "folder": "Meshes/Podium",
+  "location_m": [
+   19.257,
+   25.913,
+   6.61
+  ],
+  "unreal_location_cm": [
+   1925.7,
+   -2591.3,
+   661.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Podium_InteriorBlocker",
+  "folder": "Meshes/Podium",
+  "location_m": [
+   19.257,
+   25.913,
+   0.6
+  ],
+  "unreal_location_cm": [
+   1925.7,
+   -2591.3,
+   60.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Podium_Deck_AB_Top",
+  "folder": "Meshes/Podium",
+  "location_m": [
+   -34.82,
+   23.835,
+   36.05
+  ],
+  "unreal_location_cm": [
+   -3482.0,
+   -2383.5,
+   3605.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_MainEntrance_Canopy",
+  "folder": "Meshes/Podium",
+  "location_m": [
+   -9.708,
+   51.638,
+   0.15
+  ],
+  "unreal_location_cm": [
+   -970.8,
+   -5163.8,
+   15.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Podium_Deck_CDE_v2",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   54.028,
+   26.175,
+   23.15
+  ],
+  "unreal_location_cm": [
+   5402.8,
+   -2617.5,
+   2315.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Crown_Fins",
+  "folder": "Meshes/Towers/TowerA",
+  "location_m": [
+   -47.92,
+   38.196,
+   36.05
+  ],
+  "unreal_location_cm": [
+   -4792.0,
+   -3819.6,
+   3605.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_InteriorBlocker",
+  "folder": "Meshes/Towers/TowerA",
+  "location_m": [
+   -47.92,
+   38.193,
+   36.1
+  ],
+  "unreal_location_cm": [
+   -4792.0,
+   -3819.3,
+   3610.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Crown_Fins",
+  "folder": "Meshes/Towers/TowerB",
+  "location_m": [
+   -48.515,
+   4.25,
+   36.05
+  ],
+  "unreal_location_cm": [
+   -4851.5,
+   -425.0,
+   3605.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_InteriorBlocker",
+  "folder": "Meshes/Towers/TowerB",
+  "location_m": [
+   -48.515,
+   10.3,
+   36.1
+  ],
+  "unreal_location_cm": [
+   -4851.5,
+   -1030.0,
+   3610.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Crown_Fins",
+  "folder": "Meshes/Towers/TowerC",
+  "location_m": [
+   20.025,
+   9.2,
+   23.15
+  ],
+  "unreal_location_cm": [
+   2002.5,
+   -920.0,
+   2315.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_InteriorBlocker",
+  "folder": "Meshes/Towers/TowerC",
+  "location_m": [
+   20.675,
+   9.2,
+   23.2
+  ],
+  "unreal_location_cm": [
+   2067.5,
+   -920.0,
+   2320.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Crown_Fins",
+  "folder": "Meshes/Towers/TowerD",
+  "location_m": [
+   62.875,
+   9.2,
+   23.15
+  ],
+  "unreal_location_cm": [
+   6287.5,
+   -920.0,
+   2315.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_InteriorBlocker",
+  "folder": "Meshes/Towers/TowerD",
+  "location_m": [
+   62.225,
+   9.2,
+   23.2
+  ],
+  "unreal_location_cm": [
+   6222.5,
+   -920.0,
+   2320.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Crown_Fins",
+  "folder": "Meshes/Towers/TowerE",
+  "location_m": [
+   94.433,
+   31.65,
+   23.15
+  ],
+  "unreal_location_cm": [
+   9443.3,
+   -3165.0,
+   2315.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_InteriorBlocker",
+  "folder": "Meshes/Towers/TowerE",
+  "location_m": [
+   92.762,
+   31.65,
+   23.2
+  ],
+  "unreal_location_cm": [
+   9276.2,
+   -3165.0,
+   2320.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Roof_Parapet_Services",
+  "folder": "Meshes/Towers/TowerA",
+  "location_m": [
+   -47.92,
+   38.192,
+   226.5
+  ],
+  "unreal_location_cm": [
+   -4792.0,
+   -3819.2,
+   22650.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Roof_Parapet_Services",
+  "folder": "Meshes/Towers/TowerB",
+  "location_m": [
+   -48.515,
+   10.3,
+   188.1
+  ],
+  "unreal_location_cm": [
+   -4851.5,
+   -1030.0,
+   18810.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Roof_Parapet_Services",
+  "folder": "Meshes/Towers/TowerC",
+  "location_m": [
+   20.675,
+   9.2,
+   158.525
+  ],
+  "unreal_location_cm": [
+   2067.5,
+   -920.0,
+   15852.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Roof_Parapet_Services",
+  "folder": "Meshes/Towers/TowerD",
+  "location_m": [
+   62.225,
+   9.2,
+   158.525
+  ],
+  "unreal_location_cm": [
+   6222.5,
+   -920.0,
+   15852.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Roof_Parapet_Services",
+  "folder": "Meshes/Towers/TowerE",
+  "location_m": [
+   92.762,
+   31.65,
+   158.525
+  ],
+  "unreal_location_cm": [
+   9276.2,
+   -3165.0,
+   15852.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Podium_Glass",
+  "folder": "Meshes/Podium",
+  "location_m": [
+   19.199,
+   25.913,
+   0.6
+  ],
+  "unreal_location_cm": [
+   1919.9,
+   -2591.3,
+   60.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_BoundaryWall_Perimeter",
+  "folder": "Meshes/Site/BoundaryGates",
+  "location_m": [
+   15.771,
+   -1.188,
+   0.0
+  ],
+  "unreal_location_cm": [
+   1577.1,
+   118.8,
+   0.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Gate_Main",
+  "folder": "Meshes/Site/BoundaryGates",
+  "location_m": [
+   -28.457,
+   55.127,
+   0.0
+  ],
+  "unreal_location_cm": [
+   -2845.7,
+   -5512.7,
+   0.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Gate_Sliding",
+  "folder": "Meshes/Site/BoundaryGates",
+  "location_m": [
+   -55.945,
+   57.64,
+   0.0
+  ],
+  "unreal_location_cm": [
+   -5594.5,
+   -5764.0,
+   0.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Gate_Wicket",
+  "folder": "Meshes/Site/BoundaryGates",
+  "location_m": [
+   14.571,
+   55.874,
+   0.0
+  ],
+  "unreal_location_cm": [
+   1457.1,
+   -5587.4,
+   0.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Podium_Plinth_Steps",
+  "folder": "Meshes/Podium",
+  "location_m": [
+   19.257,
+   25.913,
+   0.15
+  ],
+  "unreal_location_cm": [
+   1925.7,
+   -2591.3,
+   15.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Site_Ramps",
+  "folder": "Meshes/Site/Ground",
+  "location_m": [
+   46.904,
+   21.336,
+   0.0
+  ],
+  "unreal_location_cm": [
+   4690.4,
+   -2133.6,
+   0.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Driveway_Main",
+  "folder": "Meshes/Site/Ground",
+  "location_m": [
+   15.803,
+   21.623,
+   0.0
+  ],
+  "unreal_location_cm": [
+   1580.3,
+   -2162.3,
+   0.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Walkway_Perimeter",
+  "folder": "Meshes/Site/Ground",
+  "location_m": [
+   19.257,
+   25.913,
+   0.0
+  ],
+  "unreal_location_cm": [
+   1925.7,
+   -2591.3,
+   0.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Driveway_GateAprons",
+  "folder": "Meshes/Site/Ground",
+  "location_m": [
+   -43.372,
+   58.71,
+   -0.02
+  ],
+  "unreal_location_cm": [
+   -4337.2,
+   -5871.0,
+   -2.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Hardscape",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   40.726,
+   34.955,
+   22.85
+  ],
+  "unreal_location_cm": [
+   4072.6,
+   -3495.5,
+   2285.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Lawns_Planting",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   31.775,
+   34.95,
+   22.85
+  ],
+  "unreal_location_cm": [
+   3177.5,
+   -3495.0,
+   2285.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Pools",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   20.0,
+   41.153,
+   21.9
+  ],
+  "unreal_location_cm": [
+   2000.0,
+   -4115.3,
+   2190.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Amenity_CourtLines",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   63.095,
+   36.27,
+   23.109
+  ],
+  "unreal_location_cm": [
+   6309.5,
+   -3627.0,
+   2310.9
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Amenity_SportsEquipment_ClimbingWall",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   63.158,
+   34.655,
+   23.1
+  ],
+  "unreal_location_cm": [
+   6315.8,
+   -3465.5,
+   2310.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Amenity_PoolWater",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   20.0,
+   41.153,
+   23.1
+  ],
+  "unreal_location_cm": [
+   2000.0,
+   -4115.3,
+   2310.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Amenity_CourtFences",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   61.8,
+   35.46,
+   23.1
+  ],
+  "unreal_location_cm": [
+   6180.0,
+   -3546.0,
+   2310.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Shrubs_Hedges",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   31.775,
+   34.947,
+   23.65
+  ],
+  "unreal_location_cm": [
+   3177.5,
+   -3494.7,
+   2365.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Amenity_TrackLanes",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   42.839,
+   35.6,
+   23.1
+  ],
+  "unreal_location_cm": [
+   4283.9,
+   -3560.0,
+   2310.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Lighting_Fixtures",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   29.147,
+   36.475,
+   22.6
+  ],
+  "unreal_location_cm": [
+   2914.7,
+   -3647.5,
+   2260.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Pergolas",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   8.925,
+   37.425,
+   23.25
+  ],
+  "unreal_location_cm": [
+   892.5,
+   -3742.5,
+   2325.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Furniture_Planters",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   6.863,
+   37.75,
+   23.25
+  ],
+  "unreal_location_cm": [
+   686.3,
+   -3775.0,
+   2325.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Trees",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   31.734,
+   38.768,
+   23.65
+  ],
+  "unreal_location_cm": [
+   3173.4,
+   -3876.8,
+   2365.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_Amenity_ABDeck_Lawn",
+  "folder": "Meshes/Amenities",
+  "location_m": [
+   -14.0,
+   37.75,
+   36.05
+  ],
+  "unreal_location_cm": [
+   -1400.0,
+   -3775.0,
+   3605.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_PodiumTop_M01_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   36.05
+  ],
+  "actor": "SM_TowerA_Shell_PT",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   3605.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   40.9
+  ],
+  "actor": "SM_TowerA_Shell_L01",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   4090.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   44.1
+  ],
+  "actor": "SM_TowerA_Shell_L02",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   4410.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   47.3
+  ],
+  "actor": "SM_TowerA_Shell_L03",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   4730.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   50.5
+  ],
+  "actor": "SM_TowerA_Shell_L04",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   5050.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   53.7
+  ],
+  "actor": "SM_TowerA_Shell_L05",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   5370.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   56.9
+  ],
+  "actor": "SM_TowerA_Shell_L06",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   5690.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   60.1
+  ],
+  "actor": "SM_TowerA_Shell_L07",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   6010.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   63.3
+  ],
+  "actor": "SM_TowerA_Shell_L08",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   6330.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   66.5
+  ],
+  "actor": "SM_TowerA_Shell_L09",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   6650.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   69.7
+  ],
+  "actor": "SM_TowerA_Shell_L10",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   6970.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   72.9
+  ],
+  "actor": "SM_TowerA_Shell_L11",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   7290.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   76.1
+  ],
+  "actor": "SM_TowerA_Shell_L12",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   7610.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   79.3
+  ],
+  "actor": "SM_TowerA_Shell_L13",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   7930.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   82.5
+  ],
+  "actor": "SM_TowerA_Shell_L14",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   8250.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   85.7
+  ],
+  "actor": "SM_TowerA_Shell_L15",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   8570.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   88.9
+  ],
+  "actor": "SM_TowerA_Shell_L16",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   8890.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   92.1
+  ],
+  "actor": "SM_TowerA_Shell_L17",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   9210.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   95.3
+  ],
+  "actor": "SM_TowerA_Shell_L18",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   9530.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   98.5
+  ],
+  "actor": "SM_TowerA_Shell_L19",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   9850.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   101.7
+  ],
+  "actor": "SM_TowerA_Shell_L20",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   10170.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   104.9
+  ],
+  "actor": "SM_TowerA_Shell_L21",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   10490.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   108.1
+  ],
+  "actor": "SM_TowerA_Shell_L22",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   10810.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   111.3
+  ],
+  "actor": "SM_TowerA_Shell_L23",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   11130.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   114.5
+  ],
+  "actor": "SM_TowerA_Shell_L24",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   11450.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   117.7
+  ],
+  "actor": "SM_TowerA_Shell_L25",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   11770.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   120.9
+  ],
+  "actor": "SM_TowerA_Shell_L26",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   12090.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   124.1
+  ],
+  "actor": "SM_TowerA_Shell_L27",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   12410.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   127.3
+  ],
+  "actor": "SM_TowerA_Shell_L28",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   12730.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   130.5
+  ],
+  "actor": "SM_TowerA_Shell_L29",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   13050.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   133.7
+  ],
+  "actor": "SM_TowerA_Shell_L30",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   13370.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   136.9
+  ],
+  "actor": "SM_TowerA_Shell_L31",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   13690.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   140.1
+  ],
+  "actor": "SM_TowerA_Shell_L32",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   14010.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   143.3
+  ],
+  "actor": "SM_TowerA_Shell_L33",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   14330.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   146.5
+  ],
+  "actor": "SM_TowerA_Shell_L34",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   14650.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   149.7
+  ],
+  "actor": "SM_TowerA_Shell_L35",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   14970.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   152.9
+  ],
+  "actor": "SM_TowerA_Shell_L36",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   15290.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   156.1
+  ],
+  "actor": "SM_TowerA_Shell_L37",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   15610.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   159.3
+  ],
+  "actor": "SM_TowerA_Shell_L38",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   15930.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   162.5
+  ],
+  "actor": "SM_TowerA_Shell_L39",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   16250.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   165.7
+  ],
+  "actor": "SM_TowerA_Shell_L40",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   16570.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   168.9
+  ],
+  "actor": "SM_TowerA_Shell_L41",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   16890.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   172.1
+  ],
+  "actor": "SM_TowerA_Shell_L42",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   17210.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   175.3
+  ],
+  "actor": "SM_TowerA_Shell_L43",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   17530.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   178.5
+  ],
+  "actor": "SM_TowerA_Shell_L44",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   17850.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   181.7
+  ],
+  "actor": "SM_TowerA_Shell_L45",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   18170.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   184.9
+  ],
+  "actor": "SM_TowerA_Shell_L46",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   18490.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   188.1
+  ],
+  "actor": "SM_TowerA_Shell_L47",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   18810.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   191.3
+  ],
+  "actor": "SM_TowerA_Shell_L48",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   19130.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   194.5
+  ],
+  "actor": "SM_TowerA_Shell_L49",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   19450.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M05_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   197.7
+  ],
+  "actor": "SM_TowerA_Shell_L50",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   19770.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   200.9
+  ],
+  "actor": "SM_TowerA_Shell_L51",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   20090.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   204.1
+  ],
+  "actor": "SM_TowerA_Shell_L52",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   20410.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   207.3
+  ],
+  "actor": "SM_TowerA_Shell_L53",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   20730.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   210.5
+  ],
+  "actor": "SM_TowerA_Shell_L54",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   21050.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   213.7
+  ],
+  "actor": "SM_TowerA_Shell_L55",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   21370.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   216.9
+  ],
+  "actor": "SM_TowerA_Shell_L56",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   21690.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M05_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   220.1
+  ],
+  "actor": "SM_TowerA_Shell_L57",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   22010.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Shell",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   223.3
+  ],
+  "actor": "SM_TowerA_Shell_L58",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   22330.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_PodiumTop_M01_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   36.05
+  ],
+  "actor": "SM_TowerB_Shell_PT",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   3605.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   40.9
+  ],
+  "actor": "SM_TowerB_Shell_L01",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   4090.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   44.1
+  ],
+  "actor": "SM_TowerB_Shell_L02",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   4410.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   47.3
+  ],
+  "actor": "SM_TowerB_Shell_L03",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   4730.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   50.5
+  ],
+  "actor": "SM_TowerB_Shell_L04",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   5050.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   53.7
+  ],
+  "actor": "SM_TowerB_Shell_L05",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   5370.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   56.9
+  ],
+  "actor": "SM_TowerB_Shell_L06",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   5690.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   60.1
+  ],
+  "actor": "SM_TowerB_Shell_L07",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   6010.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   63.3
+  ],
+  "actor": "SM_TowerB_Shell_L08",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   6330.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   66.5
+  ],
+  "actor": "SM_TowerB_Shell_L09",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   6650.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   69.7
+  ],
+  "actor": "SM_TowerB_Shell_L10",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   6970.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   72.9
+  ],
+  "actor": "SM_TowerB_Shell_L11",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   7290.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   76.1
+  ],
+  "actor": "SM_TowerB_Shell_L12",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   7610.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   79.3
+  ],
+  "actor": "SM_TowerB_Shell_L13",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   7930.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   82.5
+  ],
+  "actor": "SM_TowerB_Shell_L14",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   8250.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   85.7
+  ],
+  "actor": "SM_TowerB_Shell_L15",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   8570.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   88.9
+  ],
+  "actor": "SM_TowerB_Shell_L16",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   8890.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   92.1
+  ],
+  "actor": "SM_TowerB_Shell_L17",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   9210.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   95.3
+  ],
+  "actor": "SM_TowerB_Shell_L18",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   9530.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   98.5
+  ],
+  "actor": "SM_TowerB_Shell_L19",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   9850.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   101.7
+  ],
+  "actor": "SM_TowerB_Shell_L20",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   10170.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   104.9
+  ],
+  "actor": "SM_TowerB_Shell_L21",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   10490.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   108.1
+  ],
+  "actor": "SM_TowerB_Shell_L22",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   10810.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   111.3
+  ],
+  "actor": "SM_TowerB_Shell_L23",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   11130.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   114.5
+  ],
+  "actor": "SM_TowerB_Shell_L24",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   11450.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   117.7
+  ],
+  "actor": "SM_TowerB_Shell_L25",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   11770.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   120.9
+  ],
+  "actor": "SM_TowerB_Shell_L26",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   12090.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   124.1
+  ],
+  "actor": "SM_TowerB_Shell_L27",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   12410.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   127.3
+  ],
+  "actor": "SM_TowerB_Shell_L28",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   12730.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   130.5
+  ],
+  "actor": "SM_TowerB_Shell_L29",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   13050.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   133.7
+  ],
+  "actor": "SM_TowerB_Shell_L30",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   13370.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   136.9
+  ],
+  "actor": "SM_TowerB_Shell_L31",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   13690.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   140.1
+  ],
+  "actor": "SM_TowerB_Shell_L32",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   14010.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   143.3
+  ],
+  "actor": "SM_TowerB_Shell_L33",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   14330.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   146.5
+  ],
+  "actor": "SM_TowerB_Shell_L34",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   14650.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   149.7
+  ],
+  "actor": "SM_TowerB_Shell_L35",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   14970.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   152.9
+  ],
+  "actor": "SM_TowerB_Shell_L36",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   15290.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   156.1
+  ],
+  "actor": "SM_TowerB_Shell_L37",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   15610.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   159.3
+  ],
+  "actor": "SM_TowerB_Shell_L38",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   15930.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   162.5
+  ],
+  "actor": "SM_TowerB_Shell_L39",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   16250.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   165.7
+  ],
+  "actor": "SM_TowerB_Shell_L40",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   16570.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   168.9
+  ],
+  "actor": "SM_TowerB_Shell_L41",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   16890.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   172.1
+  ],
+  "actor": "SM_TowerB_Shell_L42",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   17210.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   175.3
+  ],
+  "actor": "SM_TowerB_Shell_L43",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   17530.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   178.5
+  ],
+  "actor": "SM_TowerB_Shell_L44",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   17850.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   181.7
+  ],
+  "actor": "SM_TowerB_Shell_L45",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   18170.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   184.9
+  ],
+  "actor": "SM_TowerB_Shell_L46",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   18490.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_PodiumTop_M01_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   23.15
+  ],
+  "actor": "SM_TowerC_Shell_PT",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   2315.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   27.325
+  ],
+  "actor": "SM_TowerC_Shell_L01",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   2732.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   30.525
+  ],
+  "actor": "SM_TowerC_Shell_L02",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   3052.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   33.725
+  ],
+  "actor": "SM_TowerC_Shell_L03",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   3372.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   36.925
+  ],
+  "actor": "SM_TowerC_Shell_L04",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   3692.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   40.125
+  ],
+  "actor": "SM_TowerC_Shell_L05",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   4012.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   43.325
+  ],
+  "actor": "SM_TowerC_Shell_L06",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   4332.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   46.525
+  ],
+  "actor": "SM_TowerC_Shell_L07",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   4652.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   49.725
+  ],
+  "actor": "SM_TowerC_Shell_L08",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   4972.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   52.925
+  ],
+  "actor": "SM_TowerC_Shell_L09",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   5292.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   56.125
+  ],
+  "actor": "SM_TowerC_Shell_L10",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   5612.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   59.325
+  ],
+  "actor": "SM_TowerC_Shell_L11",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   5932.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   62.525
+  ],
+  "actor": "SM_TowerC_Shell_L12",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   6252.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   65.725
+  ],
+  "actor": "SM_TowerC_Shell_L13",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   6572.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   68.925
+  ],
+  "actor": "SM_TowerC_Shell_L14",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   6892.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   72.125
+  ],
+  "actor": "SM_TowerC_Shell_L15",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   7212.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   75.325
+  ],
+  "actor": "SM_TowerC_Shell_L16",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   7532.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   78.525
+  ],
+  "actor": "SM_TowerC_Shell_L17",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   7852.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   81.725
+  ],
+  "actor": "SM_TowerC_Shell_L18",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   8172.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   84.925
+  ],
+  "actor": "SM_TowerC_Shell_L19",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   8492.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   88.125
+  ],
+  "actor": "SM_TowerC_Shell_L20",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   8812.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   91.325
+  ],
+  "actor": "SM_TowerC_Shell_L21",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   9132.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   94.525
+  ],
+  "actor": "SM_TowerC_Shell_L22",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   9452.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   97.725
+  ],
+  "actor": "SM_TowerC_Shell_L23",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   9772.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   100.925
+  ],
+  "actor": "SM_TowerC_Shell_L24",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   10092.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   104.125
+  ],
+  "actor": "SM_TowerC_Shell_L25",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   10412.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   107.325
+  ],
+  "actor": "SM_TowerC_Shell_L26",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   10732.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   110.525
+  ],
+  "actor": "SM_TowerC_Shell_L27",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   11052.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   113.725
+  ],
+  "actor": "SM_TowerC_Shell_L28",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   11372.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   116.925
+  ],
+  "actor": "SM_TowerC_Shell_L29",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   11692.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   120.125
+  ],
+  "actor": "SM_TowerC_Shell_L30",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   12012.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   123.325
+  ],
+  "actor": "SM_TowerC_Shell_L31",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   12332.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   126.525
+  ],
+  "actor": "SM_TowerC_Shell_L32",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   12652.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   129.725
+  ],
+  "actor": "SM_TowerC_Shell_L33",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   12972.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   132.925
+  ],
+  "actor": "SM_TowerC_Shell_L34",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   13292.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   136.125
+  ],
+  "actor": "SM_TowerC_Shell_L35",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   13612.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   139.325
+  ],
+  "actor": "SM_TowerC_Shell_L36",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   13932.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   142.525
+  ],
+  "actor": "SM_TowerC_Shell_L37",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   14252.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   145.725
+  ],
+  "actor": "SM_TowerC_Shell_L38",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   14572.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   148.925
+  ],
+  "actor": "SM_TowerC_Shell_L39",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   14892.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   152.125
+  ],
+  "actor": "SM_TowerC_Shell_L40",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   15212.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   155.325
+  ],
+  "actor": "SM_TowerC_Shell_L41",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   15532.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_PodiumTop_M01_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   23.15
+  ],
+  "actor": "SM_TowerD_Shell_PT",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   2315.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   27.325
+  ],
+  "actor": "SM_TowerD_Shell_L01",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   2732.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   30.525
+  ],
+  "actor": "SM_TowerD_Shell_L02",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   3052.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   33.725
+  ],
+  "actor": "SM_TowerD_Shell_L03",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   3372.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   36.925
+  ],
+  "actor": "SM_TowerD_Shell_L04",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   3692.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   40.125
+  ],
+  "actor": "SM_TowerD_Shell_L05",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   4012.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   43.325
+  ],
+  "actor": "SM_TowerD_Shell_L06",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   4332.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   46.525
+  ],
+  "actor": "SM_TowerD_Shell_L07",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   4652.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   49.725
+  ],
+  "actor": "SM_TowerD_Shell_L08",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   4972.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   52.925
+  ],
+  "actor": "SM_TowerD_Shell_L09",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   5292.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   56.125
+  ],
+  "actor": "SM_TowerD_Shell_L10",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   5612.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   59.325
+  ],
+  "actor": "SM_TowerD_Shell_L11",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   5932.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   62.525
+  ],
+  "actor": "SM_TowerD_Shell_L12",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   6252.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   65.725
+  ],
+  "actor": "SM_TowerD_Shell_L13",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   6572.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   68.925
+  ],
+  "actor": "SM_TowerD_Shell_L14",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   6892.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   72.125
+  ],
+  "actor": "SM_TowerD_Shell_L15",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   7212.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   75.325
+  ],
+  "actor": "SM_TowerD_Shell_L16",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   7532.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   78.525
+  ],
+  "actor": "SM_TowerD_Shell_L17",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   7852.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   81.725
+  ],
+  "actor": "SM_TowerD_Shell_L18",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   8172.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   84.925
+  ],
+  "actor": "SM_TowerD_Shell_L19",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   8492.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   88.125
+  ],
+  "actor": "SM_TowerD_Shell_L20",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   8812.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   91.325
+  ],
+  "actor": "SM_TowerD_Shell_L21",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   9132.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   94.525
+  ],
+  "actor": "SM_TowerD_Shell_L22",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   9452.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   97.725
+  ],
+  "actor": "SM_TowerD_Shell_L23",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   9772.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   100.925
+  ],
+  "actor": "SM_TowerD_Shell_L24",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   10092.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   104.125
+  ],
+  "actor": "SM_TowerD_Shell_L25",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   10412.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   107.325
+  ],
+  "actor": "SM_TowerD_Shell_L26",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   10732.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   110.525
+  ],
+  "actor": "SM_TowerD_Shell_L27",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   11052.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   113.725
+  ],
+  "actor": "SM_TowerD_Shell_L28",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   11372.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   116.925
+  ],
+  "actor": "SM_TowerD_Shell_L29",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   11692.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   120.125
+  ],
+  "actor": "SM_TowerD_Shell_L30",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   12012.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   123.325
+  ],
+  "actor": "SM_TowerD_Shell_L31",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   12332.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   126.525
+  ],
+  "actor": "SM_TowerD_Shell_L32",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   12652.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   129.725
+  ],
+  "actor": "SM_TowerD_Shell_L33",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   12972.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   132.925
+  ],
+  "actor": "SM_TowerD_Shell_L34",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   13292.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   136.125
+  ],
+  "actor": "SM_TowerD_Shell_L35",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   13612.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   139.325
+  ],
+  "actor": "SM_TowerD_Shell_L36",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   13932.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   142.525
+  ],
+  "actor": "SM_TowerD_Shell_L37",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   14252.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   145.725
+  ],
+  "actor": "SM_TowerD_Shell_L38",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   14572.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   148.925
+  ],
+  "actor": "SM_TowerD_Shell_L39",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   14892.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   152.125
+  ],
+  "actor": "SM_TowerD_Shell_L40",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   15212.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   155.325
+  ],
+  "actor": "SM_TowerD_Shell_L41",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   15532.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_PodiumTop_M01_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   23.15
+  ],
+  "actor": "SM_TowerE_Shell_PT",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   2315.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   27.325
+  ],
+  "actor": "SM_TowerE_Shell_L01",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   2732.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   30.525
+  ],
+  "actor": "SM_TowerE_Shell_L02",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   3052.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   33.725
+  ],
+  "actor": "SM_TowerE_Shell_L03",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   3372.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   36.925
+  ],
+  "actor": "SM_TowerE_Shell_L04",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   3692.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   40.125
+  ],
+  "actor": "SM_TowerE_Shell_L05",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   4012.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   43.325
+  ],
+  "actor": "SM_TowerE_Shell_L06",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   4332.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   46.525
+  ],
+  "actor": "SM_TowerE_Shell_L07",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   4652.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   49.725
+  ],
+  "actor": "SM_TowerE_Shell_L08",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   4972.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   52.925
+  ],
+  "actor": "SM_TowerE_Shell_L09",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   5292.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   56.125
+  ],
+  "actor": "SM_TowerE_Shell_L10",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   5612.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   59.325
+  ],
+  "actor": "SM_TowerE_Shell_L11",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   5932.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   62.525
+  ],
+  "actor": "SM_TowerE_Shell_L12",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   6252.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   65.725
+  ],
+  "actor": "SM_TowerE_Shell_L13",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   6572.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   68.925
+  ],
+  "actor": "SM_TowerE_Shell_L14",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   6892.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   72.125
+  ],
+  "actor": "SM_TowerE_Shell_L15",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   7212.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   75.325
+  ],
+  "actor": "SM_TowerE_Shell_L16",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   7532.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   78.525
+  ],
+  "actor": "SM_TowerE_Shell_L17",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   7852.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   81.725
+  ],
+  "actor": "SM_TowerE_Shell_L18",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   8172.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   84.925
+  ],
+  "actor": "SM_TowerE_Shell_L19",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   8492.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   88.125
+  ],
+  "actor": "SM_TowerE_Shell_L20",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   8812.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   91.325
+  ],
+  "actor": "SM_TowerE_Shell_L21",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   9132.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   94.525
+  ],
+  "actor": "SM_TowerE_Shell_L22",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   9452.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   97.725
+  ],
+  "actor": "SM_TowerE_Shell_L23",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   9772.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   100.925
+  ],
+  "actor": "SM_TowerE_Shell_L24",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   10092.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   104.125
+  ],
+  "actor": "SM_TowerE_Shell_L25",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   10412.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   107.325
+  ],
+  "actor": "SM_TowerE_Shell_L26",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   10732.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   110.525
+  ],
+  "actor": "SM_TowerE_Shell_L27",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   11052.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   113.725
+  ],
+  "actor": "SM_TowerE_Shell_L28",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   11372.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   116.925
+  ],
+  "actor": "SM_TowerE_Shell_L29",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   11692.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   120.125
+  ],
+  "actor": "SM_TowerE_Shell_L30",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   12012.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   123.325
+  ],
+  "actor": "SM_TowerE_Shell_L31",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   12332.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   126.525
+  ],
+  "actor": "SM_TowerE_Shell_L32",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   12652.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   129.725
+  ],
+  "actor": "SM_TowerE_Shell_L33",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   12972.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   132.925
+  ],
+  "actor": "SM_TowerE_Shell_L34",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   13292.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   136.125
+  ],
+  "actor": "SM_TowerE_Shell_L35",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   13612.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Refuge_M02_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   139.325
+  ],
+  "actor": "SM_TowerE_Shell_L36",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   13932.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   142.525
+  ],
+  "actor": "SM_TowerE_Shell_L37",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   14252.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   145.725
+  ],
+  "actor": "SM_TowerE_Shell_L38",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   14572.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   148.925
+  ],
+  "actor": "SM_TowerE_Shell_L39",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   14892.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   152.125
+  ],
+  "actor": "SM_TowerE_Shell_L40",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   15212.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   155.325
+  ],
+  "actor": "SM_TowerE_Shell_L41",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   15532.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_PodiumTop_M01_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   36.05
+  ],
+  "actor": "SM_TowerA_Glass_PT",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   3605.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   40.9
+  ],
+  "actor": "SM_TowerA_Glass_L01",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   4090.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   44.1
+  ],
+  "actor": "SM_TowerA_Glass_L02",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   4410.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   47.3
+  ],
+  "actor": "SM_TowerA_Glass_L03",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   4730.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   50.5
+  ],
+  "actor": "SM_TowerA_Glass_L04",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   5050.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   53.7
+  ],
+  "actor": "SM_TowerA_Glass_L05",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   5370.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   56.9
+  ],
+  "actor": "SM_TowerA_Glass_L06",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   5690.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   60.1
+  ],
+  "actor": "SM_TowerA_Glass_L07",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   6010.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   63.3
+  ],
+  "actor": "SM_TowerA_Glass_L08",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   6330.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   66.5
+  ],
+  "actor": "SM_TowerA_Glass_L09",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   6650.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   69.7
+  ],
+  "actor": "SM_TowerA_Glass_L10",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   6970.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   72.9
+  ],
+  "actor": "SM_TowerA_Glass_L11",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   7290.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   76.1
+  ],
+  "actor": "SM_TowerA_Glass_L12",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   7610.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   79.3
+  ],
+  "actor": "SM_TowerA_Glass_L13",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   7930.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   82.5
+  ],
+  "actor": "SM_TowerA_Glass_L14",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   8250.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   85.7
+  ],
+  "actor": "SM_TowerA_Glass_L15",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   8570.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   88.9
+  ],
+  "actor": "SM_TowerA_Glass_L16",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   8890.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   92.1
+  ],
+  "actor": "SM_TowerA_Glass_L17",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   9210.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   95.3
+  ],
+  "actor": "SM_TowerA_Glass_L18",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   9530.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   98.5
+  ],
+  "actor": "SM_TowerA_Glass_L19",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   9850.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   101.7
+  ],
+  "actor": "SM_TowerA_Glass_L20",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   10170.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   104.9
+  ],
+  "actor": "SM_TowerA_Glass_L21",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   10490.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   108.1
+  ],
+  "actor": "SM_TowerA_Glass_L22",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   10810.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   111.3
+  ],
+  "actor": "SM_TowerA_Glass_L23",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   11130.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   114.5
+  ],
+  "actor": "SM_TowerA_Glass_L24",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   11450.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   117.7
+  ],
+  "actor": "SM_TowerA_Glass_L25",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   11770.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   120.9
+  ],
+  "actor": "SM_TowerA_Glass_L26",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   12090.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   124.1
+  ],
+  "actor": "SM_TowerA_Glass_L27",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   12410.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   127.3
+  ],
+  "actor": "SM_TowerA_Glass_L28",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   12730.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   130.5
+  ],
+  "actor": "SM_TowerA_Glass_L29",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   13050.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   133.7
+  ],
+  "actor": "SM_TowerA_Glass_L30",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   13370.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   136.9
+  ],
+  "actor": "SM_TowerA_Glass_L31",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   13690.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   140.1
+  ],
+  "actor": "SM_TowerA_Glass_L32",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   14010.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   143.3
+  ],
+  "actor": "SM_TowerA_Glass_L33",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   14330.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   146.5
+  ],
+  "actor": "SM_TowerA_Glass_L34",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   14650.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   149.7
+  ],
+  "actor": "SM_TowerA_Glass_L35",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   14970.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   152.9
+  ],
+  "actor": "SM_TowerA_Glass_L36",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   15290.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   156.1
+  ],
+  "actor": "SM_TowerA_Glass_L37",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   15610.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   159.3
+  ],
+  "actor": "SM_TowerA_Glass_L38",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   15930.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   162.5
+  ],
+  "actor": "SM_TowerA_Glass_L39",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   16250.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   165.7
+  ],
+  "actor": "SM_TowerA_Glass_L40",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   16570.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   168.9
+  ],
+  "actor": "SM_TowerA_Glass_L41",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   16890.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   172.1
+  ],
+  "actor": "SM_TowerA_Glass_L42",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   17210.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   175.3
+  ],
+  "actor": "SM_TowerA_Glass_L43",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   17530.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   178.5
+  ],
+  "actor": "SM_TowerA_Glass_L44",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   17850.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   181.7
+  ],
+  "actor": "SM_TowerA_Glass_L45",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   18170.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   184.9
+  ],
+  "actor": "SM_TowerA_Glass_L46",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   18490.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   188.1
+  ],
+  "actor": "SM_TowerA_Glass_L47",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   18810.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   191.3
+  ],
+  "actor": "SM_TowerA_Glass_L48",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   19130.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   194.5
+  ],
+  "actor": "SM_TowerA_Glass_L49",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   19450.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M05_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   197.7
+  ],
+  "actor": "SM_TowerA_Glass_L50",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   19770.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   200.9
+  ],
+  "actor": "SM_TowerA_Glass_L51",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   20090.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   204.1
+  ],
+  "actor": "SM_TowerA_Glass_L52",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   20410.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   207.3
+  ],
+  "actor": "SM_TowerA_Glass_L53",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   20730.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   210.5
+  ],
+  "actor": "SM_TowerA_Glass_L54",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   21050.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   213.7
+  ],
+  "actor": "SM_TowerA_Glass_L55",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   21370.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   216.9
+  ],
+  "actor": "SM_TowerA_Glass_L56",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   21690.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M05_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   220.1
+  ],
+  "actor": "SM_TowerA_Glass_L57",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   22010.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Glass",
+  "folder": "Meshes/Towers/TowerA/FloorModules",
+  "location_m": [
+   -47.776,
+   40.4359,
+   223.3
+  ],
+  "actor": "SM_TowerA_Glass_L58",
+  "unreal_location_cm": [
+   -4777.6,
+   -4043.59,
+   22330.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_PodiumTop_M01_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   36.05
+  ],
+  "actor": "SM_TowerB_Glass_PT",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   3605.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   40.9
+  ],
+  "actor": "SM_TowerB_Glass_L01",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   4090.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   44.1
+  ],
+  "actor": "SM_TowerB_Glass_L02",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   4410.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   47.3
+  ],
+  "actor": "SM_TowerB_Glass_L03",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   4730.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   50.5
+  ],
+  "actor": "SM_TowerB_Glass_L04",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   5050.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   53.7
+  ],
+  "actor": "SM_TowerB_Glass_L05",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   5370.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   56.9
+  ],
+  "actor": "SM_TowerB_Glass_L06",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   5690.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   60.1
+  ],
+  "actor": "SM_TowerB_Glass_L07",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   6010.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   63.3
+  ],
+  "actor": "SM_TowerB_Glass_L08",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   6330.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   66.5
+  ],
+  "actor": "SM_TowerB_Glass_L09",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   6650.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   69.7
+  ],
+  "actor": "SM_TowerB_Glass_L10",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   6970.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   72.9
+  ],
+  "actor": "SM_TowerB_Glass_L11",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   7290.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   76.1
+  ],
+  "actor": "SM_TowerB_Glass_L12",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   7610.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   79.3
+  ],
+  "actor": "SM_TowerB_Glass_L13",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   7930.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   82.5
+  ],
+  "actor": "SM_TowerB_Glass_L14",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   8250.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   85.7
+  ],
+  "actor": "SM_TowerB_Glass_L15",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   8570.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   88.9
+  ],
+  "actor": "SM_TowerB_Glass_L16",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   8890.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   92.1
+  ],
+  "actor": "SM_TowerB_Glass_L17",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   9210.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   95.3
+  ],
+  "actor": "SM_TowerB_Glass_L18",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   9530.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   98.5
+  ],
+  "actor": "SM_TowerB_Glass_L19",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   9850.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   101.7
+  ],
+  "actor": "SM_TowerB_Glass_L20",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   10170.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   104.9
+  ],
+  "actor": "SM_TowerB_Glass_L21",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   10490.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   108.1
+  ],
+  "actor": "SM_TowerB_Glass_L22",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   10810.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   111.3
+  ],
+  "actor": "SM_TowerB_Glass_L23",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   11130.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   114.5
+  ],
+  "actor": "SM_TowerB_Glass_L24",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   11450.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   117.7
+  ],
+  "actor": "SM_TowerB_Glass_L25",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   11770.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   120.9
+  ],
+  "actor": "SM_TowerB_Glass_L26",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   12090.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   124.1
+  ],
+  "actor": "SM_TowerB_Glass_L27",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   12410.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   127.3
+  ],
+  "actor": "SM_TowerB_Glass_L28",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   12730.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   130.5
+  ],
+  "actor": "SM_TowerB_Glass_L29",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   13050.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   133.7
+  ],
+  "actor": "SM_TowerB_Glass_L30",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   13370.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   136.9
+  ],
+  "actor": "SM_TowerB_Glass_L31",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   13690.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   140.1
+  ],
+  "actor": "SM_TowerB_Glass_L32",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   14010.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   143.3
+  ],
+  "actor": "SM_TowerB_Glass_L33",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   14330.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   146.5
+  ],
+  "actor": "SM_TowerB_Glass_L34",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   14650.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   149.7
+  ],
+  "actor": "SM_TowerB_Glass_L35",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   14970.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   152.9
+  ],
+  "actor": "SM_TowerB_Glass_L36",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   15290.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   156.1
+  ],
+  "actor": "SM_TowerB_Glass_L37",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   15610.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   159.3
+  ],
+  "actor": "SM_TowerB_Glass_L38",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   15930.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   162.5
+  ],
+  "actor": "SM_TowerB_Glass_L39",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   16250.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   165.7
+  ],
+  "actor": "SM_TowerB_Glass_L40",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   16570.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   168.9
+  ],
+  "actor": "SM_TowerB_Glass_L41",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   16890.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   172.1
+  ],
+  "actor": "SM_TowerB_Glass_L42",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   17210.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   175.3
+  ],
+  "actor": "SM_TowerB_Glass_L43",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   17530.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   178.5
+  ],
+  "actor": "SM_TowerB_Glass_L44",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   17850.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   181.7
+  ],
+  "actor": "SM_TowerB_Glass_L45",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   18170.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerB/FloorModules",
+  "location_m": [
+   -48.44,
+   7.3524,
+   184.9
+  ],
+  "actor": "SM_TowerB_Glass_L46",
+  "unreal_location_cm": [
+   -4844.0,
+   -735.24,
+   18490.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_PodiumTop_M01_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   23.15
+  ],
+  "actor": "SM_TowerC_Glass_PT",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   2315.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   27.325
+  ],
+  "actor": "SM_TowerC_Glass_L01",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   2732.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   30.525
+  ],
+  "actor": "SM_TowerC_Glass_L02",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   3052.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   33.725
+  ],
+  "actor": "SM_TowerC_Glass_L03",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   3372.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   36.925
+  ],
+  "actor": "SM_TowerC_Glass_L04",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   3692.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   40.125
+  ],
+  "actor": "SM_TowerC_Glass_L05",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   4012.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   43.325
+  ],
+  "actor": "SM_TowerC_Glass_L06",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   4332.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   46.525
+  ],
+  "actor": "SM_TowerC_Glass_L07",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   4652.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   49.725
+  ],
+  "actor": "SM_TowerC_Glass_L08",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   4972.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   52.925
+  ],
+  "actor": "SM_TowerC_Glass_L09",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   5292.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   56.125
+  ],
+  "actor": "SM_TowerC_Glass_L10",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   5612.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   59.325
+  ],
+  "actor": "SM_TowerC_Glass_L11",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   5932.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   62.525
+  ],
+  "actor": "SM_TowerC_Glass_L12",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   6252.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   65.725
+  ],
+  "actor": "SM_TowerC_Glass_L13",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   6572.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   68.925
+  ],
+  "actor": "SM_TowerC_Glass_L14",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   6892.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   72.125
+  ],
+  "actor": "SM_TowerC_Glass_L15",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   7212.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   75.325
+  ],
+  "actor": "SM_TowerC_Glass_L16",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   7532.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   78.525
+  ],
+  "actor": "SM_TowerC_Glass_L17",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   7852.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   81.725
+  ],
+  "actor": "SM_TowerC_Glass_L18",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   8172.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   84.925
+  ],
+  "actor": "SM_TowerC_Glass_L19",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   8492.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   88.125
+  ],
+  "actor": "SM_TowerC_Glass_L20",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   8812.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   91.325
+  ],
+  "actor": "SM_TowerC_Glass_L21",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   9132.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   94.525
+  ],
+  "actor": "SM_TowerC_Glass_L22",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   9452.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   97.725
+  ],
+  "actor": "SM_TowerC_Glass_L23",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   9772.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   100.925
+  ],
+  "actor": "SM_TowerC_Glass_L24",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   10092.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   104.125
+  ],
+  "actor": "SM_TowerC_Glass_L25",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   10412.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   107.325
+  ],
+  "actor": "SM_TowerC_Glass_L26",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   10732.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   110.525
+  ],
+  "actor": "SM_TowerC_Glass_L27",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   11052.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   113.725
+  ],
+  "actor": "SM_TowerC_Glass_L28",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   11372.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   116.925
+  ],
+  "actor": "SM_TowerC_Glass_L29",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   11692.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   120.125
+  ],
+  "actor": "SM_TowerC_Glass_L30",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   12012.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   123.325
+  ],
+  "actor": "SM_TowerC_Glass_L31",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   12332.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   126.525
+  ],
+  "actor": "SM_TowerC_Glass_L32",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   12652.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   129.725
+  ],
+  "actor": "SM_TowerC_Glass_L33",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   12972.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   132.925
+  ],
+  "actor": "SM_TowerC_Glass_L34",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   13292.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   136.125
+  ],
+  "actor": "SM_TowerC_Glass_L35",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   13612.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   139.325
+  ],
+  "actor": "SM_TowerC_Glass_L36",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   13932.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   142.525
+  ],
+  "actor": "SM_TowerC_Glass_L37",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   14252.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   145.725
+  ],
+  "actor": "SM_TowerC_Glass_L38",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   14572.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   148.925
+  ],
+  "actor": "SM_TowerC_Glass_L39",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   14892.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   152.125
+  ],
+  "actor": "SM_TowerC_Glass_L40",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   15212.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerC/FloorModules",
+  "location_m": [
+   20.32,
+   9.0661,
+   155.325
+  ],
+  "actor": "SM_TowerC_Glass_L41",
+  "unreal_location_cm": [
+   2032.0,
+   -906.61,
+   15532.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_PodiumTop_M01_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   23.15
+  ],
+  "actor": "SM_TowerD_Glass_PT",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   2315.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   27.325
+  ],
+  "actor": "SM_TowerD_Glass_L01",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   2732.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   30.525
+  ],
+  "actor": "SM_TowerD_Glass_L02",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   3052.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   33.725
+  ],
+  "actor": "SM_TowerD_Glass_L03",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   3372.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   36.925
+  ],
+  "actor": "SM_TowerD_Glass_L04",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   3692.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   40.125
+  ],
+  "actor": "SM_TowerD_Glass_L05",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   4012.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   43.325
+  ],
+  "actor": "SM_TowerD_Glass_L06",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   4332.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   46.525
+  ],
+  "actor": "SM_TowerD_Glass_L07",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   4652.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   49.725
+  ],
+  "actor": "SM_TowerD_Glass_L08",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   4972.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   52.925
+  ],
+  "actor": "SM_TowerD_Glass_L09",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   5292.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   56.125
+  ],
+  "actor": "SM_TowerD_Glass_L10",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   5612.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   59.325
+  ],
+  "actor": "SM_TowerD_Glass_L11",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   5932.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   62.525
+  ],
+  "actor": "SM_TowerD_Glass_L12",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   6252.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   65.725
+  ],
+  "actor": "SM_TowerD_Glass_L13",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   6572.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   68.925
+  ],
+  "actor": "SM_TowerD_Glass_L14",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   6892.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   72.125
+  ],
+  "actor": "SM_TowerD_Glass_L15",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   7212.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   75.325
+  ],
+  "actor": "SM_TowerD_Glass_L16",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   7532.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   78.525
+  ],
+  "actor": "SM_TowerD_Glass_L17",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   7852.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   81.725
+  ],
+  "actor": "SM_TowerD_Glass_L18",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   8172.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   84.925
+  ],
+  "actor": "SM_TowerD_Glass_L19",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   8492.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   88.125
+  ],
+  "actor": "SM_TowerD_Glass_L20",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   8812.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   91.325
+  ],
+  "actor": "SM_TowerD_Glass_L21",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   9132.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   94.525
+  ],
+  "actor": "SM_TowerD_Glass_L22",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   9452.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   97.725
+  ],
+  "actor": "SM_TowerD_Glass_L23",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   9772.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   100.925
+  ],
+  "actor": "SM_TowerD_Glass_L24",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   10092.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   104.125
+  ],
+  "actor": "SM_TowerD_Glass_L25",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   10412.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   107.325
+  ],
+  "actor": "SM_TowerD_Glass_L26",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   10732.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   110.525
+  ],
+  "actor": "SM_TowerD_Glass_L27",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   11052.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   113.725
+  ],
+  "actor": "SM_TowerD_Glass_L28",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   11372.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   116.925
+  ],
+  "actor": "SM_TowerD_Glass_L29",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   11692.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   120.125
+  ],
+  "actor": "SM_TowerD_Glass_L30",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   12012.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   123.325
+  ],
+  "actor": "SM_TowerD_Glass_L31",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   12332.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   126.525
+  ],
+  "actor": "SM_TowerD_Glass_L32",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   12652.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   129.725
+  ],
+  "actor": "SM_TowerD_Glass_L33",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   12972.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   132.925
+  ],
+  "actor": "SM_TowerD_Glass_L34",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   13292.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   136.125
+  ],
+  "actor": "SM_TowerD_Glass_L35",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   13612.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   139.325
+  ],
+  "actor": "SM_TowerD_Glass_L36",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   13932.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   142.525
+  ],
+  "actor": "SM_TowerD_Glass_L37",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   14252.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   145.725
+  ],
+  "actor": "SM_TowerD_Glass_L38",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   14572.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   148.925
+  ],
+  "actor": "SM_TowerD_Glass_L39",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   14892.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   152.125
+  ],
+  "actor": "SM_TowerD_Glass_L40",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   15212.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerD/FloorModules",
+  "location_m": [
+   62.58,
+   9.0661,
+   155.325
+  ],
+  "actor": "SM_TowerD_Glass_L41",
+  "unreal_location_cm": [
+   6258.0,
+   -906.61,
+   15532.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_PodiumTop_M01_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   23.15
+  ],
+  "actor": "SM_TowerE_Glass_PT",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   2315.0
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   27.325
+  ],
+  "actor": "SM_TowerE_Glass_L01",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   2732.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   30.525
+  ],
+  "actor": "SM_TowerE_Glass_L02",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   3052.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   33.725
+  ],
+  "actor": "SM_TowerE_Glass_L03",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   3372.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   36.925
+  ],
+  "actor": "SM_TowerE_Glass_L04",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   3692.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   40.125
+  ],
+  "actor": "SM_TowerE_Glass_L05",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   4012.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   43.325
+  ],
+  "actor": "SM_TowerE_Glass_L06",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   4332.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   46.525
+  ],
+  "actor": "SM_TowerE_Glass_L07",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   4652.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   49.725
+  ],
+  "actor": "SM_TowerE_Glass_L08",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   4972.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   52.925
+  ],
+  "actor": "SM_TowerE_Glass_L09",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   5292.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   56.125
+  ],
+  "actor": "SM_TowerE_Glass_L10",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   5612.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   59.325
+  ],
+  "actor": "SM_TowerE_Glass_L11",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   5932.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   62.525
+  ],
+  "actor": "SM_TowerE_Glass_L12",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   6252.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   65.725
+  ],
+  "actor": "SM_TowerE_Glass_L13",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   6572.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   68.925
+  ],
+  "actor": "SM_TowerE_Glass_L14",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   6892.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   72.125
+  ],
+  "actor": "SM_TowerE_Glass_L15",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   7212.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   75.325
+  ],
+  "actor": "SM_TowerE_Glass_L16",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   7532.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   78.525
+  ],
+  "actor": "SM_TowerE_Glass_L17",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   7852.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   81.725
+  ],
+  "actor": "SM_TowerE_Glass_L18",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   8172.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   84.925
+  ],
+  "actor": "SM_TowerE_Glass_L19",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   8492.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   88.125
+  ],
+  "actor": "SM_TowerE_Glass_L20",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   8812.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   91.325
+  ],
+  "actor": "SM_TowerE_Glass_L21",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   9132.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   94.525
+  ],
+  "actor": "SM_TowerE_Glass_L22",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   9452.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   97.725
+  ],
+  "actor": "SM_TowerE_Glass_L23",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   9772.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   100.925
+  ],
+  "actor": "SM_TowerE_Glass_L24",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   10092.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   104.125
+  ],
+  "actor": "SM_TowerE_Glass_L25",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   10412.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   107.325
+  ],
+  "actor": "SM_TowerE_Glass_L26",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   10732.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   110.525
+  ],
+  "actor": "SM_TowerE_Glass_L27",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   11052.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   113.725
+  ],
+  "actor": "SM_TowerE_Glass_L28",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   11372.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   116.925
+  ],
+  "actor": "SM_TowerE_Glass_L29",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   11692.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   120.125
+  ],
+  "actor": "SM_TowerE_Glass_L30",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   12012.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   123.325
+  ],
+  "actor": "SM_TowerE_Glass_L31",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   12332.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   126.525
+  ],
+  "actor": "SM_TowerE_Glass_L32",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   12652.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   129.725
+  ],
+  "actor": "SM_TowerE_Glass_L33",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   12972.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   132.925
+  ],
+  "actor": "SM_TowerE_Glass_L34",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   13292.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   136.125
+  ],
+  "actor": "SM_TowerE_Glass_L35",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   13612.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Refuge_M02_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   139.325
+  ],
+  "actor": "SM_TowerE_Glass_L36",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   13932.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   142.525
+  ],
+  "actor": "SM_TowerE_Glass_L37",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   14252.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   145.725
+  ],
+  "actor": "SM_TowerE_Glass_L38",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   14572.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   148.925
+  ],
+  "actor": "SM_TowerE_Glass_L39",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   14892.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   152.125
+  ],
+  "actor": "SM_TowerE_Glass_L40",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   15212.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "folder": "Meshes/Towers/TowerE/FloorModules",
+  "location_m": [
+   94.1747,
+   31.4303,
+   155.325
+  ],
+  "actor": "SM_TowerE_Glass_L41",
+  "unreal_location_cm": [
+   9417.47,
+   -3143.03,
+   15532.5
+  ],
+  "rotation": [
+   0,
+   0,
+   0
+  ],
+  "scale": [
+   1,
+   1,
+   1
+  ]
+ }
+]

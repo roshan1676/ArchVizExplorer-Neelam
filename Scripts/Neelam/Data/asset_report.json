@@ -1,0 +1,2898 @@
+[
+ {
+  "asset": "SM_Site_PlantingBeds",
+  "file": "Meshes/Site/Ground/SM_Site_PlantingBeds.fbx",
+  "tris": 592,
+  "materials": [
+   "M_Kerb_Concrete",
+   "M_Planting_Soil"
+  ],
+  "pivot_m": [
+   15.727,
+   6.289,
+   0.0
+  ],
+  "local_bounds_m": [
+   -98.9273,
+   -55.7134,
+   0.0,
+   98.9282,
+   55.7136,
+   0.15
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 56684,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 3e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Site_ReservedPlot_Building02",
+  "file": "Meshes/Site/Ground/SM_Site_ReservedPlot_Building02.fbx",
+  "tris": 12,
+  "materials": [
+   "M_Ground_Reserved"
+  ],
+  "pivot_m": [
+   13.025,
+   -40.973,
+   0.0
+  ],
+  "local_bounds_m": [
+   -96.2555,
+   -23.4731,
+   0.0,
+   96.2562,
+   23.473,
+   0.0
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 18300,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 5e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Podium_Structure_Skin",
+  "file": "Meshes/Podium/SM_Podium_Structure_Skin.fbx",
+  "tris": 30120,
+  "materials": [
+   "M_Metal_WindowFrame",
+   "M_Paint_White_Trim",
+   "M_Podium_Arch_Terracotta",
+   "M_Paint_Cream",
+   "M_Interior_Dark",
+   "M_Kerb_Concrete",
+   "M_GreenWall"
+  ],
+  "pivot_m": [
+   19.279,
+   26.031,
+   0.56
+  ],
+  "local_bounds_m": [
+   -89.394,
+   -30.116,
+   0.0,
+   89.3949,
+   30.1163,
+   36.59
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 1874316,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Podium_Screen_Slats",
+  "file": "Meshes/Podium/SM_Podium_Screen_Slats.fbx",
+  "tris": 24488,
+  "materials": [
+   "M_Podium_Screen_Bronze",
+   "M_Metal_Railing"
+  ],
+  "pivot_m": [
+   19.257,
+   25.913,
+   6.61
+  ],
+  "local_bounds_m": [
+   -89.107,
+   -29.948,
+   0.0,
+   89.108,
+   29.947,
+   29.44
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 1244700,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 1e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Podium_InteriorBlocker",
+  "file": "Meshes/Podium/SM_Podium_InteriorBlocker.fbx",
+  "tris": 102,
+  "materials": [
+   "M_Interior_Dark"
+  ],
+  "pivot_m": [
+   19.257,
+   25.913,
+   0.6
+  ],
+  "local_bounds_m": [
+   -88.297,
+   -29.138,
+   0.0,
+   88.298,
+   29.137,
+   35.44
+  ],
+  "collision": "none",
+  "bytes": 22988,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Podium_Deck_AB_Top",
+  "file": "Meshes/Podium/SM_Podium_Deck_AB_Top.fbx",
+  "tris": 134,
+  "materials": [
+   "M_Paving_Deck"
+  ],
+  "pivot_m": [
+   -34.82,
+   23.835,
+   36.05
+  ],
+  "local_bounds_m": [
+   -34.77,
+   -27.61,
+   0.0,
+   34.77,
+   27.61,
+   0.0
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 30972,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_MainEntrance_Canopy",
+  "file": "Meshes/Podium/SM_MainEntrance_Canopy.fbx",
+  "tris": 48,
+  "materials": [
+   "M_Paint_White_Trim",
+   "M_Metal_Railing"
+  ],
+  "pivot_m": [
+   -9.708,
+   51.638,
+   0.15
+  ],
+  "local_bounds_m": [
+   -4.5412,
+   -1.8597,
+   0.0,
+   4.5417,
+   1.8593,
+   4.6
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 22540,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 3e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Podium_Deck_CDE_v2",
+  "file": "Meshes/Amenities/SM_Podium_Deck_CDE_v2.fbx",
+  "tris": 246,
+  "materials": [
+   "M_Paving_Deck"
+  ],
+  "pivot_m": [
+   54.028,
+   26.175,
+   23.15
+  ],
+  "local_bounds_m": [
+   -54.078,
+   -29.425,
+   0.0,
+   54.077,
+   29.425,
+   0.0
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 39164,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Crown_Fins",
+  "file": "Meshes/Towers/TowerA/SM_TowerA_Crown_Fins.fbx",
+  "tris": 1236,
+  "materials": [
+   "M_Paint_White_Trim",
+   "M_Metal_Screen_Champagne"
+  ],
+  "pivot_m": [
+   -47.92,
+   38.196,
+   36.05
+  ],
+  "local_bounds_m": [
+   -19.2068,
+   -13.681,
+   0.0,
+   19.2068,
+   13.6808,
+   196.0
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 79740,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerA_InteriorBlocker",
+  "file": "Meshes/Towers/TowerA/SM_TowerA_InteriorBlocker.fbx",
+  "tris": 120,
+  "materials": [
+   "M_Interior_Dark"
+  ],
+  "pivot_m": [
+   -47.92,
+   38.193,
+   36.1
+  ],
+  "local_bounds_m": [
+   -17.425,
+   -11.903,
+   0.0,
+   17.425,
+   11.902,
+   190.35
+  ],
+  "collision": "none",
+  "bytes": 22172,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 1e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Crown_Fins",
+  "file": "Meshes/Towers/TowerB/SM_TowerB_Crown_Fins.fbx",
+  "tris": 1080,
+  "materials": [
+   "M_Paint_White_Trim",
+   "M_Metal_Screen_Champagne"
+  ],
+  "pivot_m": [
+   -48.515,
+   4.25,
+   36.05
+  ],
+  "local_bounds_m": [
+   -21.5068,
+   -8.4568,
+   0.0,
+   21.5068,
+   8.4568,
+   157.6
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 75532,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerB_InteriorBlocker",
+  "file": "Meshes/Towers/TowerB/SM_TowerB_InteriorBlocker.fbx",
+  "tris": 120,
+  "materials": [
+   "M_Interior_Dark"
+  ],
+  "pivot_m": [
+   -48.515,
+   10.3,
+   36.1
+  ],
+  "local_bounds_m": [
+   -19.725,
+   -12.84,
+   0.0,
+   19.725,
+   12.84,
+   151.95
+  ],
+  "collision": "none",
+  "bytes": 22332,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 1e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Crown_Fins",
+  "file": "Meshes/Towers/TowerC/SM_TowerC_Crown_Fins.fbx",
+  "tris": 1260,
+  "materials": [
+   "M_Paint_White_Trim",
+   "M_Metal_Screen_Champagne"
+  ],
+  "pivot_m": [
+   20.025,
+   9.2,
+   23.15
+  ],
+  "local_bounds_m": [
+   -20.4068,
+   -9.5818,
+   0.0,
+   20.4068,
+   9.5818,
+   140.925
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 83388,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerC_InteriorBlocker",
+  "file": "Meshes/Towers/TowerC/SM_TowerC_InteriorBlocker.fbx",
+  "tris": 108,
+  "materials": [
+   "M_Interior_Dark"
+  ],
+  "pivot_m": [
+   20.675,
+   9.2,
+   23.2
+  ],
+  "local_bounds_m": [
+   -19.275,
+   -7.8,
+   0.0,
+   19.275,
+   7.8,
+   135.275
+  ],
+  "collision": "none",
+  "bytes": 21548,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 1e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Crown_Fins",
+  "file": "Meshes/Towers/TowerD/SM_TowerD_Crown_Fins.fbx",
+  "tris": 1248,
+  "materials": [
+   "M_Paint_White_Trim",
+   "M_Metal_Screen_Champagne"
+  ],
+  "pivot_m": [
+   62.875,
+   9.2,
+   23.15
+  ],
+  "local_bounds_m": [
+   -20.4068,
+   -9.5818,
+   0.0,
+   20.4068,
+   9.5818,
+   140.925
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 83420,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerD_InteriorBlocker",
+  "file": "Meshes/Towers/TowerD/SM_TowerD_InteriorBlocker.fbx",
+  "tris": 108,
+  "materials": [
+   "M_Interior_Dark"
+  ],
+  "pivot_m": [
+   62.225,
+   9.2,
+   23.2
+  ],
+  "local_bounds_m": [
+   -19.275,
+   -7.8,
+   0.0,
+   19.275,
+   7.8,
+   135.275
+  ],
+  "collision": "none",
+  "bytes": 21612,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 1e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Crown_Fins",
+  "file": "Meshes/Towers/TowerE/SM_TowerE_Crown_Fins.fbx",
+  "tris": 852,
+  "materials": [
+   "M_Paint_White_Trim",
+   "M_Metal_Screen_Champagne"
+  ],
+  "pivot_m": [
+   94.433,
+   31.65,
+   23.15
+  ],
+  "local_bounds_m": [
+   -8.3748,
+   -24.1818,
+   0.0,
+   8.3738,
+   24.1818,
+   140.925
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 62380,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerE_InteriorBlocker",
+  "file": "Meshes/Towers/TowerE/SM_TowerE_InteriorBlocker.fbx",
+  "tris": 116,
+  "materials": [
+   "M_Interior_Dark"
+  ],
+  "pivot_m": [
+   92.762,
+   31.65,
+   23.2
+  ],
+  "local_bounds_m": [
+   -8.262,
+   -22.4,
+   0.0,
+   8.263,
+   22.4,
+   135.275
+  ],
+  "collision": "none",
+  "bytes": 22188,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 1e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Roof_Parapet_Services",
+  "file": "Meshes/Towers/TowerA/SM_TowerA_Roof_Parapet_Services.fbx",
+  "tris": 588,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Concrete_Roof"
+  ],
+  "pivot_m": [
+   -47.92,
+   38.192,
+   226.5
+  ],
+  "local_bounds_m": [
+   -18.825,
+   -13.302,
+   0.0,
+   18.825,
+   13.303,
+   13.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 59468,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Roof_Parapet_Services",
+  "file": "Meshes/Towers/TowerB/SM_TowerB_Roof_Parapet_Services.fbx",
+  "tris": 544,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Concrete_Roof"
+  ],
+  "pivot_m": [
+   -48.515,
+   10.3,
+   188.1
+  ],
+  "local_bounds_m": [
+   -21.125,
+   -14.24,
+   0.0,
+   21.125,
+   14.24,
+   13.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 57980,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Roof_Parapet_Services",
+  "file": "Meshes/Towers/TowerC/SM_TowerC_Roof_Parapet_Services.fbx",
+  "tris": 542,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Concrete_Roof"
+  ],
+  "pivot_m": [
+   20.675,
+   9.2,
+   158.525
+  ],
+  "local_bounds_m": [
+   -20.675,
+   -9.2,
+   0.0,
+   20.675,
+   9.2,
+   13.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 56908,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 1e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Roof_Parapet_Services",
+  "file": "Meshes/Towers/TowerD/SM_TowerD_Roof_Parapet_Services.fbx",
+  "tris": 544,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Concrete_Roof"
+  ],
+  "pivot_m": [
+   62.225,
+   9.2,
+   158.525
+  ],
+  "local_bounds_m": [
+   -20.675,
+   -9.2,
+   0.0,
+   20.675,
+   9.2,
+   13.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 57260,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 1e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Roof_Parapet_Services",
+  "file": "Meshes/Towers/TowerE/SM_TowerE_Roof_Parapet_Services.fbx",
+  "tris": 460,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Concrete_Roof"
+  ],
+  "pivot_m": [
+   92.762,
+   31.65,
+   158.525
+  ],
+  "local_bounds_m": [
+   -9.662,
+   -23.8,
+   0.0,
+   9.663,
+   23.8,
+   13.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 53676,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 1e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Podium_Glass",
+  "file": "Meshes/Podium/SM_Podium_Glass.fbx",
+  "tris": 874,
+  "materials": [
+   "M_Glass_Retail",
+   "M_Glass_Residential"
+  ],
+  "pivot_m": [
+   19.199,
+   25.913,
+   0.6
+  ],
+  "local_bounds_m": [
+   -88.839,
+   -29.738,
+   0.0,
+   88.8391,
+   29.737,
+   34.85
+  ],
+  "collision": "none",
+  "bytes": 55420,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 5e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_BoundaryWall_Perimeter",
+  "file": "Meshes/Site/BoundaryGates/SM_BoundaryWall_Perimeter.fbx",
+  "tris": 2826,
+  "materials": [
+   "M_BoundaryWall_Paint",
+   "M_Paint_White_Trim"
+  ],
+  "pivot_m": [
+   15.771,
+   -1.188,
+   0.0
+  ],
+  "local_bounds_m": [
+   -99.0475,
+   -63.3078,
+   0.0,
+   99.0473,
+   63.3072,
+   2.4
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 199564,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 5e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Gate_Main",
+  "file": "Meshes/Site/BoundaryGates/SM_Gate_Main.fbx",
+  "tris": 740,
+  "materials": [
+   "M_BoundaryWall_Paint",
+   "M_Paint_White_Trim",
+   "M_Gate_Metal"
+  ],
+  "pivot_m": [
+   -28.457,
+   55.127,
+   0.0
+  ],
+  "local_bounds_m": [
+   -3.6913,
+   -0.6025,
+   0.0,
+   3.691,
+   0.6018,
+   2.82
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 54876,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 3e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Gate_Sliding",
+  "file": "Meshes/Site/BoundaryGates/SM_Gate_Sliding.fbx",
+  "tris": 704,
+  "materials": [
+   "M_BoundaryWall_Paint",
+   "M_Paint_White_Trim",
+   "M_Gate_Metal"
+  ],
+  "pivot_m": [
+   -55.945,
+   57.64,
+   0.0
+  ],
+  "local_bounds_m": [
+   -6.3127,
+   -0.9735,
+   0.0,
+   6.3131,
+   0.974,
+   2.82
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 51804,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Gate_Wicket",
+  "file": "Meshes/Site/BoundaryGates/SM_Gate_Wicket.fbx",
+  "tris": 212,
+  "materials": [
+   "M_BoundaryWall_Paint",
+   "M_Paint_White_Trim",
+   "M_Gate_Metal"
+  ],
+  "pivot_m": [
+   14.571,
+   55.874,
+   0.0
+  ],
+  "local_bounds_m": [
+   -1.2899,
+   -0.4298,
+   0.0,
+   1.29,
+   0.429,
+   2.82
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 33148,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Podium_Plinth_Steps",
+  "file": "Meshes/Podium/SM_Podium_Plinth_Steps.fbx",
+  "tris": 735,
+  "materials": [
+   "M_Stone_Plinth"
+  ],
+  "pivot_m": [
+   19.257,
+   25.913,
+   0.15
+  ],
+  "local_bounds_m": [
+   -89.797,
+   -30.638,
+   0.0,
+   89.798,
+   30.637,
+   0.45
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 70812,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Site_Ramps",
+  "file": "Meshes/Site/Ground/SM_Site_Ramps.fbx",
+  "tris": 29,
+  "materials": [
+   "M_Asphalt",
+   "M_Kerb_Concrete",
+   "M_Paving_Walkway",
+   "M_Metal_Railing"
+  ],
+  "pivot_m": [
+   46.904,
+   21.336,
+   0.0
+  ],
+  "local_bounds_m": [
+   -67.2514,
+   -30.636,
+   0.0,
+   67.251,
+   30.636,
+   1.5249
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 30156,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 2e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Driveway_Main",
+  "file": "Meshes/Site/Ground/SM_Driveway_Main.fbx",
+  "tris": 175,
+  "materials": [
+   "M_Asphalt"
+  ],
+  "pivot_m": [
+   15.803,
+   21.623,
+   0.0
+  ],
+  "local_bounds_m": [
+   -97.6521,
+   -39.123,
+   0.0,
+   97.6522,
+   39.1232,
+   0.0
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 36716,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 5e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Walkway_Perimeter",
+  "file": "Meshes/Site/Ground/SM_Walkway_Perimeter.fbx",
+  "tris": 249,
+  "materials": [
+   "M_Kerb_Concrete",
+   "M_Paving_Walkway"
+  ],
+  "pivot_m": [
+   19.257,
+   25.913,
+   0.0
+  ],
+  "local_bounds_m": [
+   -91.297,
+   -32.138,
+   0.0,
+   91.298,
+   32.137,
+   0.15
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 40236,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Driveway_GateAprons",
+  "file": "Meshes/Site/Ground/SM_Driveway_GateAprons.fbx",
+  "tris": 12,
+  "materials": [
+   "M_Asphalt"
+  ],
+  "pivot_m": [
+   -43.372,
+   58.71,
+   -0.02
+  ],
+  "local_bounds_m": [
+   -19.1614,
+   -3.6583,
+   0.0,
+   19.1623,
+   3.6579,
+   0.0
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 22556,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Hardscape",
+  "file": "Meshes/Amenities/SM_Amenity_Hardscape.fbx",
+  "tris": 1034,
+  "materials": [
+   "M_Kotah_Stone",
+   "M_Jogging_EPDM",
+   "M_Timber_Deck",
+   "M_Pool_Coping_Stone",
+   "M_Court_Acrylic_Green",
+   "M_Court_Acrylic_Blue",
+   "M_Paint_Cream",
+   "M_Track_Grey",
+   "M_Stone_PoolDeck",
+   "M_Court_Acrylic_Blue_Dark"
+  ],
+  "pivot_m": [
+   40.726,
+   34.955,
+   22.85
+  ],
+  "local_bounds_m": [
+   -40.444,
+   -16.51,
+   0.0,
+   40.444,
+   16.5094,
+   0.85
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 91484,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Lawns_Planting",
+  "file": "Meshes/Amenities/SM_Amenity_Lawns_Planting.fbx",
+  "tris": 85,
+  "materials": [
+   "M_Kotah_Stone",
+   "M_Grass_Lawn",
+   "M_Planting_Soil"
+  ],
+  "pivot_m": [
+   31.775,
+   34.95,
+   22.85
+  ],
+  "local_bounds_m": [
+   -31.353,
+   -16.365,
+   0.0,
+   31.353,
+   16.3648,
+   0.8
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 28076,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 3e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Pools",
+  "file": "Meshes/Amenities/SM_Amenity_Pools.fbx",
+  "tris": 110,
+  "materials": [
+   "M_Pool_Tile",
+   "M_Pool_Water"
+  ],
+  "pivot_m": [
+   20.0,
+   41.153,
+   21.9
+  ],
+  "local_bounds_m": [
+   -15.448,
+   -7.185,
+   0.0,
+   15.448,
+   7.186,
+   1.35
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 23740,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Amenity_CourtLines",
+  "file": "Meshes/Amenities/SM_Amenity_CourtLines.fbx",
+  "tris": 366,
+  "materials": [
+   "M_Court_Lines_White"
+  ],
+  "pivot_m": [
+   63.095,
+   36.27,
+   23.109
+  ],
+  "local_bounds_m": [
+   -18.08,
+   -14.225,
+   0.0,
+   18.08,
+   14.225,
+   0.105
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 42508,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Amenity_SportsEquipment_ClimbingWall",
+  "file": "Meshes/Amenities/SM_Amenity_SportsEquipment_ClimbingWall.fbx",
+  "tris": 912,
+  "materials": [
+   "M_Metal_Railing",
+   "M_Net",
+   "M_Court_Lines_White",
+   "M_Glass_Railing",
+   "M_Climbing_Holds",
+   "M_ClimbingWall",
+   "M_Safety_Mat"
+  ],
+  "pivot_m": [
+   63.158,
+   34.655,
+   23.1
+  ],
+  "local_bounds_m": [
+   -11.443,
+   -16.255,
+   0.0,
+   11.442,
+   16.255,
+   6.05
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 66076,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Amenity_PoolWater",
+  "file": "Meshes/Amenities/SM_Amenity_PoolWater.fbx",
+  "tris": 4,
+  "materials": [
+   "M_Pool_Water"
+  ],
+  "pivot_m": [
+   20.0,
+   41.153,
+   23.1
+  ],
+  "local_bounds_m": [
+   -15.448,
+   -7.185,
+   0.0,
+   15.448,
+   7.186,
+   0.0
+  ],
+  "collision": "none",
+  "bytes": 17868,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Amenity_CourtFences",
+  "file": "Meshes/Amenities/SM_Amenity_CourtFences.fbx",
+  "tris": 980,
+  "materials": [
+   "M_ChainLink",
+   "M_Fence_Post"
+  ],
+  "pivot_m": [
+   61.8,
+   35.46,
+   23.1
+  ],
+  "local_bounds_m": [
+   -19.74,
+   -15.43,
+   0.0,
+   19.74,
+   15.43,
+   4.0225
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 56300,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Shrubs_Hedges",
+  "file": "Meshes/Amenities/SM_Amenity_Shrubs_Hedges.fbx",
+  "tris": 93,
+  "materials": [
+   "M_Leaves"
+  ],
+  "pivot_m": [
+   31.775,
+   34.947,
+   23.65
+  ],
+  "local_bounds_m": [
+   -31.273,
+   -16.282,
+   0.0,
+   31.273,
+   16.2824,
+   0.6
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 23436,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 1e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Amenity_TrackLanes",
+  "file": "Meshes/Amenities/SM_Amenity_TrackLanes.fbx",
+  "tris": 1107,
+  "materials": [
+   "M_Court_Lines_White",
+   "M_Track_Grey"
+  ],
+  "pivot_m": [
+   42.839,
+   35.6,
+   23.1
+  ],
+  "local_bounds_m": [
+   -40.062,
+   -16.4,
+   0.0,
+   40.061,
+   16.4,
+   0.068
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 86748,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Lighting_Fixtures",
+  "file": "Meshes/Amenities/SM_Amenity_Lighting_Fixtures.fbx",
+  "tris": 1470,
+  "materials": [
+   "M_Light_Emissive",
+   "M_Fence_Post",
+   "M_Pool_Light"
+  ],
+  "pivot_m": [
+   29.147,
+   36.475,
+   22.6
+  ],
+  "local_bounds_m": [
+   -52.857,
+   -14.8673,
+   0.0,
+   52.8571,
+   14.8673,
+   17.4
+  ],
+  "collision": "none",
+  "bytes": 85660,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Pergolas",
+  "file": "Meshes/Amenities/SM_Amenity_Pergolas.fbx",
+  "tris": 1860,
+  "materials": [
+   "M_Timber_Pergola"
+  ],
+  "pivot_m": [
+   8.925,
+   37.425,
+   23.25
+  ],
+  "local_bounds_m": [
+   -29.675,
+   -6.525,
+   0.0,
+   29.675,
+   6.525,
+   16.97
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 87084,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Furniture_Planters",
+  "file": "Meshes/Amenities/SM_Amenity_Furniture_Planters.fbx",
+  "tris": 3536,
+  "materials": [
+   "M_Stone_Tabletop",
+   "M_Furniture_Metal",
+   "M_Fabric_Cushion",
+   "M_Furniture_Wood",
+   "M_Paint_Cream",
+   "M_Leaves"
+  ],
+  "pivot_m": [
+   6.863,
+   37.75,
+   23.25
+  ],
+  "local_bounds_m": [
+   -30.163,
+   -9.05,
+   0.0,
+   30.1633,
+   9.05,
+   14.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 219356,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 1e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Amenity_Trees",
+  "file": "Meshes/Amenities/SM_Amenity_Trees.fbx",
+  "tris": 1400,
+  "materials": [
+   "M_Bark",
+   "M_Plumeria_Leaves",
+   "M_Leaves"
+  ],
+  "pivot_m": [
+   31.734,
+   38.768,
+   23.65
+  ],
+  "local_bounds_m": [
+   -28.9624,
+   -8.9871,
+   0.0,
+   28.9624,
+   8.9863,
+   5.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 164860,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_Amenity_ABDeck_Lawn",
+  "file": "Meshes/Amenities/SM_Amenity_ABDeck_Lawn.fbx",
+  "tris": 34,
+  "materials": [
+   "M_Kerb_Concrete",
+   "M_Grass_Lawn"
+  ],
+  "pivot_m": [
+   -14.0,
+   37.75,
+   36.05
+  ],
+  "local_bounds_m": [
+   -10.0,
+   -9.75,
+   0.0,
+   10.0,
+   9.75,
+   0.15
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 20844,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 0.0,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_PodiumTop_M01_Shell",
+  "file": "Meshes/Towers/TowerA/FloorModules/SM_TowerA_Floor_PodiumTop_M01_Shell.fbx",
+  "tris": 4430,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Metal_WindowFrame"
+  ],
+  "pivot_m": [
+   -47.776,
+   40.4359,
+   0.0
+  ],
+  "local_bounds_m": [
+   -19.089,
+   -15.6659,
+   -0.14,
+   18.801,
+   11.1791,
+   4.85
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 237228,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 5e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_PodiumTop_M01_Glass",
+  "file": "Meshes/Towers/TowerA/FloorModules/SM_TowerA_Floor_PodiumTop_M01_Glass.fbx",
+  "tris": 92,
+  "materials": [
+   "M_Glass_Retail"
+  ],
+  "pivot_m": [
+   -47.776,
+   40.4359,
+   0.0
+  ],
+  "local_bounds_m": [
+   -18.719,
+   -14.1409,
+   0.15,
+   18.431,
+   10.8091,
+   4.15
+  ],
+  "collision": "none",
+  "bytes": 22700,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 5e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Shell",
+  "file": "Meshes/Towers/TowerA/FloorModules/SM_TowerA_Floor_Refuge_M02_Shell.fbx",
+  "tris": 5430,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Paving_Deck",
+   "M_Metal_WindowFrame",
+   "M_Metal_Railing",
+   "M_Louvre_Dark"
+  ],
+  "pivot_m": [
+   -47.776,
+   40.4359,
+   0.0
+  ],
+  "local_bounds_m": [
+   -19.269,
+   -15.6659,
+   -0.14,
+   18.981,
+   11.6591,
+   3.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 301452,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 5e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M02_Glass",
+  "file": "Meshes/Towers/TowerA/FloorModules/SM_TowerA_Floor_Refuge_M02_Glass.fbx",
+  "tris": 80,
+  "materials": [
+   "M_Glass_Residential",
+   "M_Glass_Railing_Tinted"
+  ],
+  "pivot_m": [
+   -47.776,
+   40.4359,
+   0.0
+  ],
+  "local_bounds_m": [
+   -18.929,
+   -14.0909,
+   0.0,
+   18.641,
+   10.7591,
+   2.45
+  ],
+  "collision": "none",
+  "bytes": 23276,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 5e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Shell",
+  "file": "Meshes/Towers/TowerA/FloorModules/SM_TowerA_Floor_Typical_M03_Shell.fbx",
+  "tris": 8622,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Paving_Deck",
+   "M_Metal_WindowFrame",
+   "M_Metal_Railing"
+  ],
+  "pivot_m": [
+   -47.776,
+   40.4359,
+   0.0
+  ],
+  "local_bounds_m": [
+   -19.269,
+   -15.6659,
+   -0.14,
+   18.981,
+   11.6591,
+   3.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 437196,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 5e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M03_Glass",
+  "file": "Meshes/Towers/TowerA/FloorModules/SM_TowerA_Floor_Typical_M03_Glass.fbx",
+  "tris": 332,
+  "materials": [
+   "M_Glass_Residential",
+   "M_Glass_Railing_Tinted"
+  ],
+  "pivot_m": [
+   -47.776,
+   40.4359,
+   0.0
+  ],
+  "local_bounds_m": [
+   -18.929,
+   -15.3959,
+   0.0,
+   18.641,
+   11.6091,
+   2.45
+  ],
+  "collision": "none",
+  "bytes": 36348,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 5e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Shell",
+  "file": "Meshes/Towers/TowerA/FloorModules/SM_TowerA_Floor_Typical_M04_Shell.fbx",
+  "tris": 9002,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Paving_Deck",
+   "M_Metal_WindowFrame",
+   "M_Metal_Railing"
+  ],
+  "pivot_m": [
+   -47.776,
+   40.4359,
+   0.0
+  ],
+  "local_bounds_m": [
+   -19.269,
+   -16.1459,
+   -0.14,
+   18.981,
+   11.6591,
+   3.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 454812,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 5e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Typical_M04_Glass",
+  "file": "Meshes/Towers/TowerA/FloorModules/SM_TowerA_Floor_Typical_M04_Glass.fbx",
+  "tris": 352,
+  "materials": [
+   "M_Glass_Residential",
+   "M_Glass_Railing_Tinted"
+  ],
+  "pivot_m": [
+   -47.776,
+   40.4359,
+   0.0
+  ],
+  "local_bounds_m": [
+   -18.929,
+   -16.0959,
+   0.0,
+   18.641,
+   11.6091,
+   2.45
+  ],
+  "collision": "none",
+  "bytes": 37212,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 5e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M05_Shell",
+  "file": "Meshes/Towers/TowerA/FloorModules/SM_TowerA_Floor_Refuge_M05_Shell.fbx",
+  "tris": 5610,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Paving_Deck",
+   "M_Metal_WindowFrame",
+   "M_Metal_Railing",
+   "M_Louvre_Dark"
+  ],
+  "pivot_m": [
+   -47.776,
+   40.4359,
+   0.0
+  ],
+  "local_bounds_m": [
+   -19.269,
+   -16.1459,
+   -0.14,
+   18.981,
+   11.6591,
+   3.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 312556,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 5e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerA_Floor_Refuge_M05_Glass",
+  "file": "Meshes/Towers/TowerA/FloorModules/SM_TowerA_Floor_Refuge_M05_Glass.fbx",
+  "tris": 80,
+  "materials": [
+   "M_Glass_Residential",
+   "M_Glass_Railing_Tinted"
+  ],
+  "pivot_m": [
+   -47.776,
+   40.4359,
+   0.0
+  ],
+  "local_bounds_m": [
+   -18.929,
+   -14.0909,
+   0.0,
+   18.641,
+   10.7591,
+   2.45
+  ],
+  "collision": "none",
+  "bytes": 23276,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 5e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_PodiumTop_M01_Shell",
+  "file": "Meshes/Towers/TowerB/FloorModules/SM_TowerB_Floor_PodiumTop_M01_Shell.fbx",
+  "tris": 4116,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Metal_WindowFrame"
+  ],
+  "pivot_m": [
+   -48.44,
+   7.3524,
+   0.0
+  ],
+  "local_bounds_m": [
+   -21.32,
+   -11.4124,
+   -0.14,
+   21.17,
+   17.3076,
+   4.85
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 221772,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_PodiumTop_M01_Glass",
+  "file": "Meshes/Towers/TowerB/FloorModules/SM_TowerB_Floor_PodiumTop_M01_Glass.fbx",
+  "tris": 82,
+  "materials": [
+   "M_Glass_Retail"
+  ],
+  "pivot_m": [
+   -48.44,
+   7.3524,
+   0.0
+  ],
+  "local_bounds_m": [
+   -20.95,
+   -10.9424,
+   0.15,
+   20.8,
+   16.1126,
+   4.15
+  ],
+  "collision": "none",
+  "bytes": 22140,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Shell",
+  "file": "Meshes/Towers/TowerB/FloorModules/SM_TowerB_Floor_Refuge_M02_Shell.fbx",
+  "tris": 4410,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Paving_Deck",
+   "M_Louvre_Dark",
+   "M_Metal_Railing",
+   "M_Metal_WindowFrame"
+  ],
+  "pivot_m": [
+   -48.44,
+   7.3524,
+   0.0
+  ],
+  "local_bounds_m": [
+   -21.8,
+   -11.7774,
+   -0.14,
+   21.65,
+   17.3076,
+   3.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 254444,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Refuge_M02_Glass",
+  "file": "Meshes/Towers/TowerB/FloorModules/SM_TowerB_Floor_Refuge_M02_Glass.fbx",
+  "tris": 48,
+  "materials": [
+   "M_Glass_Residential",
+   "M_Glass_Railing_Tinted"
+  ],
+  "pivot_m": [
+   -48.44,
+   7.3524,
+   0.0
+  ],
+  "local_bounds_m": [
+   -12.05,
+   -11.2524,
+   0.0,
+   11.75,
+   5.2976,
+   2.45
+  ],
+  "collision": "none",
+  "bytes": 21900,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Shell",
+  "file": "Meshes/Towers/TowerB/FloorModules/SM_TowerB_Floor_Typical_M03_Shell.fbx",
+  "tris": 7388,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Metal_WindowFrame",
+   "M_Metal_Railing",
+   "M_Paving_Deck"
+  ],
+  "pivot_m": [
+   -48.44,
+   7.3524,
+   0.0
+  ],
+  "local_bounds_m": [
+   -21.8,
+   -11.7774,
+   -0.14,
+   21.65,
+   17.3076,
+   3.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 386492,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerB_Floor_Typical_M03_Glass",
+  "file": "Meshes/Towers/TowerB/FloorModules/SM_TowerB_Floor_Typical_M03_Glass.fbx",
+  "tris": 328,
+  "materials": [
+   "M_Glass_Residential",
+   "M_Glass_Railing_Tinted"
+  ],
+  "pivot_m": [
+   -48.44,
+   7.3524,
+   0.0
+  ],
+  "local_bounds_m": [
+   -21.75,
+   -11.7274,
+   0.0,
+   21.6,
+   14.9376,
+   2.45
+  ],
+  "collision": "none",
+  "bytes": 36492,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 4e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_PodiumTop_M01_Shell",
+  "file": "Meshes/Towers/TowerC/FloorModules/SM_TowerC_Floor_PodiumTop_M01_Shell.fbx",
+  "tris": 4084,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Metal_WindowFrame"
+  ],
+  "pivot_m": [
+   20.32,
+   9.0661,
+   0.0
+  ],
+  "local_bounds_m": [
+   -20.44,
+   -9.1861,
+   -0.14,
+   21.15,
+   9.4539,
+   4.175
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 211036,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 2e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_PodiumTop_M01_Glass",
+  "file": "Meshes/Towers/TowerC/FloorModules/SM_TowerC_Floor_PodiumTop_M01_Glass.fbx",
+  "tris": 80,
+  "materials": [
+   "M_Glass_Retail"
+  ],
+  "pivot_m": [
+   20.32,
+   9.0661,
+   0.0
+  ],
+  "local_bounds_m": [
+   -20.07,
+   -8.8161,
+   0.15,
+   20.78,
+   9.0839,
+   3.475
+  ],
+  "collision": "none",
+  "bytes": 22220,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 2e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Refuge_M02_Shell",
+  "file": "Meshes/Towers/TowerC/FloorModules/SM_TowerC_Floor_Refuge_M02_Shell.fbx",
+  "tris": 3378,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Paving_Deck",
+   "M_Metal_WindowFrame",
+   "M_Metal_Railing",
+   "M_Louvre_Dark"
+  ],
+  "pivot_m": [
+   20.32,
+   9.0661,
+   0.0
+  ],
+  "local_bounds_m": [
+   -21.186,
+   -9.6671,
+   -0.14,
+   21.15,
+   9.9329,
+   3.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 196556,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 2e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Refuge_M02_Glass",
+  "file": "Meshes/Towers/TowerC/FloorModules/SM_TowerC_Floor_Refuge_M02_Glass.fbx",
+  "tris": 40,
+  "materials": [
+   "M_Glass_Residential",
+   "M_Glass_Railing_Tinted"
+  ],
+  "pivot_m": [
+   20.32,
+   9.0661,
+   0.0
+  ],
+  "local_bounds_m": [
+   -17.919,
+   -9.0261,
+   0.0,
+   13.93,
+   9.2939,
+   2.45
+  ],
+  "collision": "none",
+  "bytes": 21020,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 2e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Shell",
+  "file": "Meshes/Towers/TowerC/FloorModules/SM_TowerC_Floor_Typical_M03_Shell.fbx",
+  "tris": 5790,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Paving_Deck",
+   "M_Metal_WindowFrame",
+   "M_Metal_Railing"
+  ],
+  "pivot_m": [
+   20.32,
+   9.0661,
+   0.0
+  ],
+  "local_bounds_m": [
+   -21.186,
+   -9.6671,
+   -0.14,
+   21.15,
+   9.9329,
+   3.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 297596,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 2e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerC_Floor_Typical_M03_Glass",
+  "file": "Meshes/Towers/TowerC/FloorModules/SM_TowerC_Floor_Typical_M03_Glass.fbx",
+  "tris": 170,
+  "materials": [
+   "M_Glass_Residential",
+   "M_Glass_Railing_Tinted"
+  ],
+  "pivot_m": [
+   20.32,
+   9.0661,
+   0.0
+  ],
+  "local_bounds_m": [
+   -20.17,
+   -9.6171,
+   0.0,
+   20.734,
+   9.8829,
+   2.45
+  ],
+  "collision": "none",
+  "bytes": 27356,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 3e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_PodiumTop_M01_Shell",
+  "file": "Meshes/Towers/TowerD/FloorModules/SM_TowerD_Floor_PodiumTop_M01_Shell.fbx",
+  "tris": 4084,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Metal_WindowFrame"
+  ],
+  "pivot_m": [
+   62.58,
+   9.0661,
+   0.0
+  ],
+  "local_bounds_m": [
+   -21.15,
+   -9.1861,
+   -0.14,
+   20.44,
+   9.4539,
+   4.175
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 210956,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 2e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_PodiumTop_M01_Glass",
+  "file": "Meshes/Towers/TowerD/FloorModules/SM_TowerD_Floor_PodiumTop_M01_Glass.fbx",
+  "tris": 80,
+  "materials": [
+   "M_Glass_Retail"
+  ],
+  "pivot_m": [
+   62.58,
+   9.0661,
+   0.0
+  ],
+  "local_bounds_m": [
+   -20.78,
+   -8.8161,
+   0.15,
+   20.07,
+   9.0839,
+   3.475
+  ],
+  "collision": "none",
+  "bytes": 22220,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 2e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Refuge_M02_Shell",
+  "file": "Meshes/Towers/TowerD/FloorModules/SM_TowerD_Floor_Refuge_M02_Shell.fbx",
+  "tris": 3390,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Paving_Deck",
+   "M_Louvre_Dark",
+   "M_Metal_Railing",
+   "M_Metal_WindowFrame"
+  ],
+  "pivot_m": [
+   62.58,
+   9.0661,
+   0.0
+  ],
+  "local_bounds_m": [
+   -21.15,
+   -9.6671,
+   -0.14,
+   20.44,
+   9.9329,
+   3.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 199756,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 2e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Refuge_M02_Glass",
+  "file": "Meshes/Towers/TowerD/FloorModules/SM_TowerD_Floor_Refuge_M02_Glass.fbx",
+  "tris": 44,
+  "materials": [
+   "M_Glass_Residential",
+   "M_Glass_Railing_Tinted"
+  ],
+  "pivot_m": [
+   62.58,
+   9.0661,
+   0.0
+  ],
+  "local_bounds_m": [
+   -17.329,
+   -9.0261,
+   0.0,
+   14.52,
+   9.2939,
+   2.45
+  ],
+  "collision": "none",
+  "bytes": 21340,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 3e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Shell",
+  "file": "Meshes/Towers/TowerD/FloorModules/SM_TowerD_Floor_Typical_M03_Shell.fbx",
+  "tris": 5562,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Metal_WindowFrame",
+   "M_Metal_Railing",
+   "M_Paving_Deck"
+  ],
+  "pivot_m": [
+   62.58,
+   9.0661,
+   0.0
+  ],
+  "local_bounds_m": [
+   -21.15,
+   -9.6671,
+   -0.14,
+   20.44,
+   9.9329,
+   3.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 295820,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 2e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerD_Floor_Typical_M03_Glass",
+  "file": "Meshes/Towers/TowerD/FloorModules/SM_TowerD_Floor_Typical_M03_Glass.fbx",
+  "tris": 166,
+  "materials": [
+   "M_Glass_Residential",
+   "M_Glass_Railing_Tinted"
+  ],
+  "pivot_m": [
+   62.58,
+   9.0661,
+   0.0
+  ],
+  "local_bounds_m": [
+   -20.726,
+   -9.6171,
+   0.0,
+   20.32,
+   9.8829,
+   2.45
+  ],
+  "collision": "none",
+  "bytes": 27516,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 3e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_PodiumTop_M01_Shell",
+  "file": "Meshes/Towers/TowerE/FloorModules/SM_TowerE_Floor_PodiumTop_M01_Shell.fbx",
+  "tris": 3844,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Metal_WindowFrame"
+  ],
+  "pivot_m": [
+   94.1747,
+   31.4303,
+   0.0
+  ],
+  "local_bounds_m": [
+   -11.1947,
+   -23.7003,
+   -0.14,
+   8.3703,
+   24.1397,
+   4.175
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 199036,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 3e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_PodiumTop_M01_Glass",
+  "file": "Meshes/Towers/TowerE/FloorModules/SM_TowerE_Floor_PodiumTop_M01_Glass.fbx",
+  "tris": 76,
+  "materials": [
+   "M_Glass_Retail"
+  ],
+  "pivot_m": [
+   94.1747,
+   31.4303,
+   0.0
+  ],
+  "local_bounds_m": [
+   -10.8247,
+   -23.3303,
+   0.15,
+   7.9003,
+   23.7697,
+   3.475
+  ],
+  "collision": "none",
+  "bytes": 22268,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 3e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Refuge_M02_Shell",
+  "file": "Meshes/Towers/TowerE/FloorModules/SM_TowerE_Floor_Refuge_M02_Shell.fbx",
+  "tris": 2532,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Paving_Deck",
+   "M_Louvre_Dark",
+   "M_Metal_Railing",
+   "M_Metal_WindowFrame"
+  ],
+  "pivot_m": [
+   94.1747,
+   31.4303,
+   0.0
+  ],
+  "local_bounds_m": [
+   -11.1947,
+   -23.7003,
+   -0.14,
+   8.3703,
+   24.1397,
+   3.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 161068,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 3e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Refuge_M02_Glass",
+  "file": "Meshes/Towers/TowerE/FloorModules/SM_TowerE_Floor_Refuge_M02_Glass.fbx",
+  "tris": 16,
+  "materials": [
+   "M_Glass_Residential",
+   "M_Glass_Railing_Tinted"
+  ],
+  "pivot_m": [
+   94.1747,
+   31.4303,
+   0.0
+  ],
+  "local_bounds_m": [
+   -8.1797,
+   -23.5403,
+   0.0,
+   8.2103,
+   14.8697,
+   2.45
+  ],
+  "collision": "none",
+  "bytes": 20268,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 3e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Shell",
+  "file": "Meshes/Towers/TowerE/FloorModules/SM_TowerE_Floor_Typical_M03_Shell.fbx",
+  "tris": 4336,
+  "materials": [
+   "M_Paint_Cream",
+   "M_Paint_White_Trim",
+   "M_Metal_WindowFrame",
+   "M_Paving_Deck",
+   "M_Metal_Railing"
+  ],
+  "pivot_m": [
+   94.1747,
+   31.4303,
+   0.0
+  ],
+  "local_bounds_m": [
+   -11.1947,
+   -23.7803,
+   -0.14,
+   8.3703,
+   24.2197,
+   3.2
+  ],
+  "collision": "complex_as_simple",
+  "bytes": 233868,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 3e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ {
+  "asset": "SM_TowerE_Floor_Typical_M03_Glass",
+  "file": "Meshes/Towers/TowerE/FloorModules/SM_TowerE_Floor_Typical_M03_Glass.fbx",
+  "tris": 92,
+  "materials": [
+   "M_Glass_Residential",
+   "M_Glass_Railing_Tinted"
+  ],
+  "pivot_m": [
+   94.1747,
+   31.4303,
+   0.0
+  ],
+  "local_bounds_m": [
+   -9.8437,
+   -23.5403,
+   0.0,
+   8.2103,
+   23.8697,
+   2.45
+  ],
+  "collision": "none",
+  "bytes": 24332,
+  "uv_channels": [
+   "UVMap",
+   "UVLightmap"
+  ],
+  "roundtrip_error_m": 3e-05,
+  "roundtrip_uv_channels": 2,
+  "roundtrip_scale": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ }
+]
