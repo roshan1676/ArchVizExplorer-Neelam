@@ -109,3 +109,19 @@ Full plan: `claude/surroundings_plan.md` in the Claude project "neelma" (copy of
 - **BP fix:** `BP_Explorer_PC` Switch_Pawn(360) now checks `POI_Selected` Is Valid before reading its Texture_360 (errors when entering 360 from Floor View).
 - **Rebuilding C++:** bridge job `Rebuild_Restart.run()` (schtasks) closes the editor, builds, reopens. Or open the editor and answer Yes to "rebuild modules".
   Child processes of the editor are killed when it exits – only Task Scheduler survives. HighResShot does not capture UMG; the PIE UI only paints when the window is visible.
+
+## 8. Amenity deck beautify (29 Sep 2026)
+- Removed 2 beech trees my vegetation script had put on the amenity deck lawns (HISM_beech #40/#41); `Plant_Vegetation.py` no longer plants on decks.
+- `Scripts/Neelam/Amenity_Beautify.py` (re-runnable steps):
+  - `step_tree_materials()` – Poly Haven CC0 jacaranda_tree / island_tree_02 (FBX 2k in `SourceArt/PolyHaven/models`, git-ignored), textures + `M_Neelam_Foliage` (masked, two-sided foliage, Nanite) / `M_Neelam_Bark`.
+  - `step_place_trees()` – 9 jacarandas (2 lawn ×0.28 ≈ 5 m, 7 planters ×0.17 ≈ 3 m) at the positions of the old low-poly trees (`Data/amenity_clusters.json`, from mesh-vertex clustering); `SM_Amenity_Trees` hidden (not deleted). Lean turned towards the deck centre.
+  - `step_lights()` – 95 lights on the `SM_Amenity_Lighting_Fixtures` clusters: 6 floods, 10 poles, 24 bollards, 9 tree up-lights, 40 pool, 6 step; movable, no shadows, light function `MF_Neelam_NightLight` (= Emissive_MPC.Effects, off by day). Tag `Neelam_AmenityLight`.
+  - `step_emissive_night()` – `M_Neelam_Emissive` × (1 + NightBoost × Effects); NightBoost 18 on MI_Light_Emissive + MI_Pool_Light.
+- Lawn `MI_Grass_Lawn`: Tiling 4, Tint (0.12,0.30,0.06) ×0.55, NormalStrength 1.6.
+- **Open:** user to check the night look in PIE (time slider ~21:00) and tune intensities; empty planters could get small trees.
+- Editor tips: SceneCapture/HighResShot night shots are over-exposed (auto exposure) – judge night in PIE by eye.
+
+## 9. Resume checklist (new PC)
+1. Pull `main`, open the project, answer **Yes** to "rebuild modules" (needs VS 2022 + C++ workload) – NeelamTools plugin (Floor View + Python tools).
+2. The bridge (`Scripts/Neelam/NeelamBridge.py`) auto-starts with the editor; Cowork needs the project folder connected.
+3. Source files that are NOT in git: `SourceArt/FloorView` (panorama originals), `SourceArt/PolyHaven` (tree FBX/textures) – imported assets are in Content.

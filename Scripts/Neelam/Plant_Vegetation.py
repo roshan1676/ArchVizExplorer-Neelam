@@ -20,7 +20,7 @@ MIX = {"street_trees": [("beech", 0.7, (0.42, 0.56)), ("pine", 0.3, (0.85, 1.15)
        "lawn_trees":   [("beech", 0.8, (0.30, 0.42)), ("pine", 0.2, (0.7, 0.9))],
        "edge_bushes":  [("bush", 1.0, (0.45, 0.8))]}
 CULL = {"beech": (60000, 80000), "pine": (50000, 70000), "bush": (15000, 22000)}   # cm
-INSIDE_OK = ("Neelam_SiteGround", "SM_Site_PlantingBeds", "SM_Amenity_Lawns_Planting", "SM_Amenity_ABDeck_Lawn")
+INSIDE_OK = ("Neelam_SiteGround", "SM_Site_PlantingBeds")   # never on the amenity decks (user, 29 Sep)
 LABEL = "Neelam_Vegetation"
 
 PROJECT = unreal.Paths.convert_relative_path_to_full(unreal.Paths.project_dir())
