@@ -22,6 +22,15 @@
 #include "Serialization/JsonSerializer.h"
 #include "ScopedTransaction.h"
 #include "Engine/World.h"
+#include "Slate/WidgetRenderer.h"
+#include "Engine/TextureRenderTarget2D.h"
+#include "ImageUtils.h"
+#include "Misc/FileHelper.h"
+#include "RenderingThread.h"
+#include "TextureResource.h"
+#include "Blueprint/UserWidget.h"
+#include "Engine/Font.h"
+#include "Engine/FontFace.h"
 
 // ---------------------------------------------------------------- helpers
 static FString ToJson(const TSharedRef<FJsonObject>& O)
@@ -481,4 +490,61 @@ FString UNeelamToolsLibrary::GetWidgetViewportRect(UWidget* Widget)
     O->SetNumberField("w", VS.X > 0 ? S.X / VS.X : 0);           O->SetNumberField("h", VS.Y > 0 ? S.Y / VS.Y : 0);
     O->SetBoolField("visible", Widget->IsVisible());
     return ToJson(O);
+}
+
+
+// ---------------------------------------------------------------- previews
+static FString RenderSlate(TSharedRef<SWidget> S, int32 W, int32 H, const FString& Path)
+{
+    W = FMath::Clamp(W, 16, 8192); H = FMath::Clamp(H, 16, 8192);
+    FWidgetRenderer* R = new FWidgetRenderer(true, false);
+    UTextureRenderTarget2D* RT = FWidgetRenderer::CreateTargetFor(FVector2D(W, H), TF_Bilinear, true);
+    if (!RT) { delete R; return TEXT("no render target"); }
+    RT->ClearColor = FLinearColor::Transparent;
+    RT->UpdateResourceImmediate(true);
+    for (int32 i = 0; i < 3; ++i) R->DrawWidget(RT, S, FVector2D(W, H), 0.016f);
+    FlushRenderingCommands();
+    TArray<FColor> Px;
+    FTextureRenderTargetResource* Res = RT->GameThread_GetRenderTargetResource();
+    FReadSurfaceDataFlags Flags(RCM_UNorm); Flags.SetLinearToGamma(false);
+    if (!Res || !Res->ReadPixels(Px, Flags) || Px.Num() != W * H) { delete R; return TEXT("read pixels failed"); }
+    TArray64<uint8> Png;
+    FImageUtils::PNGCompressImageArray(W, H, TArrayView64<const FColor>(Px.GetData(), Px.Num()), Png);
+    const bool bOk = FFileHelper::SaveArrayToFile(Png, *Path);
+    delete R;
+    RT->MarkAsGarbage();
+    return bOk ? (TEXT("OK ") + Path) : TEXT("save failed");
+}
+
+FString UNeelamToolsLibrary::RenderWidgetToPng(UWidget* Widget, int32 Width, int32 Height, const FString& FilePath)
+{
+    if (!Widget) return TEXT("no widget");
+    return RenderSlate(Widget->TakeWidget(), Width, Height, FilePath);
+}
+
+FString UNeelamToolsLibrary::RenderWidgetClassToPng(TSubclassOf<UUserWidget> WidgetClass, int32 Width, int32 Height, const FString& FilePath)
+{
+    if (!*WidgetClass || !GEditor) return TEXT("no class");
+    UWorld* PW = GEditor->PlayWorld;
+    UWorld* World = PW ? PW : GEditor->GetEditorWorldContext().World();
+    if (!World) return TEXT("no world");
+    UUserWidget* W = CreateWidget<UUserWidget>(World, WidgetClass);
+    if (!W) return TEXT("create failed");
+    const FString R = RenderSlate(W->TakeWidget(), Width, Height, FilePath);
+    W->RemoveFromParent();
+    return R;
+}
+
+bool UNeelamToolsLibrary::SetFontTypefaces(UFont* Font, const TArray<FName>& Names, const TArray<UFontFace*>& Faces)
+{
+    if (!Font || Names.Num() != Faces.Num()) return false;
+    Font->Modify();
+    Font->FontCacheType = EFontCacheType::Runtime;
+    FTypeface& T = Font->CompositeFont.DefaultTypeface;
+    T.Fonts.Reset();
+    for (int32 i = 0; i < Names.Num(); ++i)
+        if (Faces[i]) { FTypefaceEntry& E = T.Fonts.AddDefaulted_GetRef(); E.Name = Names[i]; E.Font = FFontData(Faces[i]); }
+    Font->PostEditChange();
+    Font->MarkPackageDirty();
+    return T.Fonts.Num() == Names.Num();
 }

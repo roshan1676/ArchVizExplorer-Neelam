@@ -125,3 +125,14 @@ Full plan: `claude/surroundings_plan.md` in the Claude project "neelma" (copy of
 1. Pull `main`, open the project, answer **Yes** to "rebuild modules" (needs VS 2022 + C++ workload) – NeelamTools plugin (Floor View + Python tools).
 2. The bridge (`Scripts/Neelam/NeelamBridge.py`) auto-starts with the editor; Cowork needs the project folder connected.
 3. Source files that are NOT in git: `SourceArt/FloorView` (panorama originals), `SourceArt/PolyHaven` (tree FBX/textures) – imported assets are in Content.
+
+## 10. Premium UI redesign (29 Sep 2026, evening – new PC C:\Users\rosha\...)
+- Look: dark glass (BackgroundBlur + tinted rounded Border, 1 px white 10 % outline) + champagne gold `#C8A96A` (linear 0.578/0.397/0.144).
+  Fonts: `/Game/Neelam/UI/Fonts/F_Neelam_Sans` (Inter Light/Regular/Medium/SemiBold/Bold) + `F_Neelam_Serif` (Cormorant Garamond) – OFL, sources in `SourceArt/Fonts`.
+  Icons: Material Symbols rendered to `SourceArt/UI/*.png` → `/Game/Neelam/UI/Textures/T_UI_*` (compass ring/needle, dot, scrim too).
+- Scripts: `UI_Theme.py` (tokens + helpers), `UI_Premium.py` (step_taskbar, step_time, step_compass, step_lists, step_richtext, step_info, step_misc),
+  `FloorView_UI.py` (premium overrides at the bottom), `ui_preview.py` + `ui_comp.py`/`ui_comp2.py` + `pv.sh` (off-screen UI renders composited on HighResShot – BackgroundBlur does not show off-screen).
+- MasterMenu: floating glass pill taskbar (Home, Gallery, Surroundings, Amenities, Floor View, settings icon), template **Unit Search hidden** (SizeBox_4 collapsed), NEELAM wordmark bottom-left,
+  time pill top-centre, compass top-right. `ButtonStyle_TaskBar` class default = gold selected pill.
+- BP_Time_Widget reparented to C++ `UNeelamTimeWidget` (NeelamRuntime): presets Morning 8:00 / Noon 12:30 / Sunset 18:15 / Night 21:00 glide the slider (BP handler still moves the sun), sun/twilight/moon icon + period label.
+- Editor tools added: `RenderWidgetToPng`, `RenderWidgetClassToPng`, `SetFontTypefaces`. `ArchVizExplorer.uproject` disables MetaHumanSDK + CaptureData (engine plugin could not build on the new PC).

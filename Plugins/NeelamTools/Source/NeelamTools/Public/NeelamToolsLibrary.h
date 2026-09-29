@@ -3,7 +3,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "NeelamToolsLibrary.generated.h"
 
-class UBlueprint; class UWidgetBlueprint; class UWidget;
+class UBlueprint; class UWidgetBlueprint; class UWidget; class UUserWidget;
 
 /** Editor automation exposed to Python as unreal.NeelamToolsLibrary.* (all return human/JSON-readable results). */
 UCLASS()
@@ -66,6 +66,19 @@ public:
     /** Compile and return the compiler log (errors/warnings) as text; "OK" if clean. */
     UFUNCTION(BlueprintCallable, Category = "NeelamTools|Graphs")
     static FString CompileAndReport(UBlueprint* Blueprint);
+
+    // ---------------- fonts ----------------
+    /** Set the default typeface entries of a composite UFont (runtime cache): Names[i] -> Faces[i]. */
+    UFUNCTION(BlueprintCallable, Category = "NeelamTools|Fonts")
+    static bool SetFontTypefaces(class UFont* Font, const TArray<FName>& Names, const TArray<class UFontFace*>& Faces);
+
+    // ---------------- previews ----------------
+    /** Render a live widget (e.g. the PIE MasterMenu) off-screen to a PNG with alpha. Returns "OK <path>" or an error. */
+    UFUNCTION(BlueprintCallable, Category = "NeelamTools|Preview")
+    static FString RenderWidgetToPng(UWidget* Widget, int32 Width, int32 Height, const FString& FilePath);
+    /** Create a widget of Class in the editor (or PIE if running) world, render it to PNG, destroy it. */
+    UFUNCTION(BlueprintCallable, Category = "NeelamTools|Preview")
+    static FString RenderWidgetClassToPng(TSubclassOf<UUserWidget> WidgetClass, int32 Width, int32 Height, const FString& FilePath);
 
     // ---------------- PIE input / inspection ----------------
     /** Real Slate mouse click in the PIE game viewport at normalized coords (0..1). Button: Left/Right. */

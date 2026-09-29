@@ -7,6 +7,6 @@ public class NeelamTools : ModuleRules
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine" });
         PrivateDependencyModuleNames.AddRange(new string[] {
             "UnrealEd", "UMG", "UMGEditor", "Slate", "SlateCore", "InputCore", "BlueprintGraph", "Kismet", "KismetCompiler",
-            "GraphEditor", "Json", "JsonUtilities", "ApplicationCore" });
+            "GraphEditor", "Json", "JsonUtilities", "ApplicationCore", "RenderCore", "RHI" });
     }
 }

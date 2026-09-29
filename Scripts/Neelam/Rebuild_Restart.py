@@ -1,5 +1,5 @@
 """Rebuild C++ (NeelamTools plugin) and restart the editor - run as a NeelamBridge job.
-The helper batch is started through WMI so it survives the editor closing."""
+The helper batch runs from Task Scheduler so it survives the editor closing."""
 import os, subprocess
 import unreal
 PROJ = unreal.Paths.convert_relative_path_to_full(unreal.Paths.project_dir()).rstrip("/").replace("/", "\\")
@@ -19,10 +19,7 @@ echo editor closed %DATE% %TIME% > "{LOG}"
 call "{ENG}\\Build\\BatchFiles\\Build.bat" Development Win64 -Project="{UPROJ}" -TargetType=Editor -Progress -NoEngineChanges -NoHotReloadFromIDE >> "{LOG}" 2>&1
 set RC=%ERRORLEVEL%
 echo EXITCODE %RC% >> "{LOG}"
-if not "%RC%"=="0" (
-  ren "{PLUG}\\NeelamTools.uplugin" NeelamTools.uplugin.off
-  echo PLUGIN DISABLED - build failed >> "{LOG}"
-)
+if not "%RC%"=="0" echo BUILD FAILED - editor reopens with the previous plugin DLLs >> "{LOG}"
 start "" "{ENG}\\Binaries\\Win64\\UnrealEditor.exe" "{UPROJ}"
 ''')
     if save:

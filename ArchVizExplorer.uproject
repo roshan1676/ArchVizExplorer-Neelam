@@ -5,6 +5,14 @@
 	"Description": "",
 	"Plugins": [
 		{
+			"Name": "MetaHumanSDK",
+			"Enabled": false
+		},
+		{
+			"Name": "CaptureData",
+			"Enabled": false
+		},
+		{
 			"Name": "Volumetrics",
 			"Enabled": true
 		},

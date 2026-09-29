@@ -47,17 +47,17 @@ def step_material():
         return c
     edge = ("float2 d = abs(UV - 0.5) * 2.0; float e = max(d.x, d.y);"
             "float ed = smoothstep(0.90, 0.985, e);")
-    em = custom(edge + "float3 idle = float3(0.10, 0.42, 1.0); float3 sel = float3(0.55, 0.85, 1.0);"
-                "float3 c = lerp(idle, sel, saturate(S - 1.0));"
+    em = custom(edge + "float3 idle = float3(0.95, 0.90, 0.80); float3 sel = float3(0.78, 0.55, 0.22);"
+                "float3 c = lerp(idle, sel, saturate(S - 0.6));"
                 "return c * (1.2 + 2.2 * saturate(S) + ed * (3.0 + 3.0 * saturate(S)));",
                 unreal.CustomMaterialOutputType.CMOT_FLOAT3, 0, "FloorBoxEmissive")
     op = custom(edge + "float mask = saturate((S + 0.5) * 10.0);"
-                "float body = saturate(0.10 + 0.22 * S);"
-                "float rim = ed * saturate(0.55 + 0.25 * S);"
+                "float body = saturate(0.05 + 0.20 * S);"
+                "float rim = ed * saturate(0.30 + 0.35 * S);"
                 "return saturate(body + rim) * mask;",
                 unreal.CustomMaterialOutputType.CMOT_FLOAT1, 250, "FloorBoxOpacity")
     gain = MEL.create_material_expression(m, unreal.MaterialExpressionScalarParameter, -350, -200)
-    gain.set_editor_property("parameter_name", "Brightness"); gain.set_editor_property("default_value", 400.0)
+    gain.set_editor_property("parameter_name", "Brightness"); gain.set_editor_property("default_value", 260.0)
     mul = MEL.create_material_expression(m, unreal.MaterialExpressionMultiply, -120, 0)
     MEL.connect_material_expressions(em, "", mul, "A"); MEL.connect_material_expressions(gain, "", mul, "B")
     MEL.connect_material_property(mul, "", unreal.MaterialProperty.MP_EMISSIVE_COLOR)
@@ -152,7 +152,7 @@ UNIT_TYPES = {
                  StartRoom=0, Accent=dict(R=0.55, G=0.35, B=1.0, A=1.0),
                  Rooms=[("Living", "T_Pano_3BHK_Living", False, (0.42, 0.82), 0),
                         ("Dining", "T_Pano_3BHK_Dining", False, (0.60, 0.72), 0),
-                        ("Balcony", "T_Pano_3BHK_Living", True, (0.05, 0.87), 0),
+                        ("Balcony", "T_Pano_3BHK_Living", True, (0.13, 0.88), 0),
                         ("Kitchen", "T_Pano_Kitchen_A", False, (0.30, 0.65), 0),
                         ("Bedroom 1", "T_Pano_3BHK_Bedroom1", False, (0.81, 0.28), 0),
                         ("Bedroom 2", "T_Pano_3BHK_Bedroom2", False, (0.26, 0.19), 0),
