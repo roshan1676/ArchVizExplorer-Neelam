@@ -47,16 +47,19 @@ def spawn_poi(label, lat, lon, name, info, footer, cat, icon, lift=0.0):
     cc = L["categories"][cat]
     set_info(a, name, info, footer, cc["color"], icon)
     a.set_editor_property("Widget_Text_Color", unreal.LinearColor(1, 1, 1, 1))
-    a.tags = [unreal.Name(t) for t in cc["tags"] + ["Neelam_Surroundings", "Neelam_" + cat]]
+    a.tags = [unreal.Name(t) for t in cc["tags"] + ["Surroundings", "Neelam_Surroundings", "Neelam_" + cat]]
     return a, ok
 
 
-def build_spline(actor, pts, lift):
-    vs = C.smooth_z([C.to_ue(la, lo)[0] for la, lo in pts])
+def build_spline(actor, pts, lift, pid=None):
+    if pid:   # precise: max real surface over both neighbouring segments (Surface_Align.py) -> never under the map
+        vs, _ = C.envelope_z(pid, pts, list(range(len(pts))), lift)
+    else:
+        vs = [unreal.Vector(v.x, v.y, v.z + lift) for v in C.smooth_z([C.to_ue(la, lo)[0] for la, lo in pts])]
     spl = actor.get_component_by_class(unreal.SplineComponent)
     spl.clear_spline_points(False)
     for v in vs:
-        spl.add_spline_point(unreal.Vector(v.x, v.y, v.z + lift), unreal.SplineCoordinateSpace.WORLD, False)
+        spl.add_spline_point(v, unreal.SplineCoordinateSpace.WORLD, False)
     spl.update_spline()
     for p in ("spline_has_been_edited", "input_spline_points_to_construction_script"):
         try: spl.set_editor_property(p, True)
@@ -64,16 +67,16 @@ def build_spline(actor, pts, lift):
     return vs
 
 
-def spawn_route(label, pts, cat, width=7.0):
+def spawn_route(label, pts, cat, width=7.0, pid=None):
     v0 = C.to_ue(*pts[0])[0]
     a = C.EAS.spawn_actor_from_class(ROUTE, v0)
     a.set_actor_label(label); a.set_folder_path(FOLDER)
-    build_spline(a, pts, ROUTE_LIFT)
+    build_spline(a, pts, ROUTE_LIFT, pid)
     a.set_editor_property("Scale_X", width)          # BP_Route: Scale_X = ribbon width (m), Scale_Y = thickness
     a.set_editor_property("Scale_Y", 1.0)
     col = L["categories"][cat]["color"]
     a.set_editor_property("Route_Color", unreal.LinearColor(col[0], col[1], col[2], 1))      # also re-runs construction
-    a.tags = [unreal.Name(t) for t in L["categories"][cat]["tags"] + ["Neelam_Surroundings", "Neelam_" + cat]]
+    a.tags = [unreal.Name(t) for t in L["categories"][cat]["tags"] + ["Surroundings", "Neelam_Surroundings", "Neelam_" + cat]]
     return a, len(a.get_components_by_class(unreal.SplineMeshComponent))
 
 
@@ -86,13 +89,13 @@ for lm in L["landmarks"]:
     report["pois"].append([lm["name"], info, ok])
     report.setdefault("boxes", []).append(H.apply(C, a, lm, r["pts"] if r else None))
     if r:
-        ra, n = spawn_route("Route_" + lm["id"], r["pts"], lm["cat"])
+        ra, n = spawn_route("Route_" + lm["id"], r["pts"], lm["cat"], pid="route_" + lm["id"])
         report["routes"].append([lm["id"], n])
 
 # ---- key roads: glow line + name label (+ poles / light trails)
 for rd in L["roads"]:
     g = G["roads"][rd["id"]]
-    ra, n = spawn_route("Road_" + rd["id"], g["pts"], rd["cat"], width=12.0)
+    ra, n = spawn_route("Road_" + rd["id"], g["pts"], rd["cat"], width=12.0, pid="road_" + rd["id"])
     mid = g["pts"][len(g["pts"]) // 2]
     spawn_poi("Label_" + rd["id"], mid[0], mid[1], rd["label"], rd["dist"], "%.1f km shown" % g["km"], rd["cat"], "T_Icon_Place_01")
     report["roads"].append([rd["id"], n])
@@ -100,9 +103,10 @@ for rd in L["roads"]:
         v0 = C.to_ue(*g["pts"][0])[0]
         t = C.EAS.spawn_actor_from_class(ROAD, v0)
         t.set_actor_label("Poles_" + rd["id"]); t.set_folder_path(FOLDER)
-        build_spline(t, g["pts"], 5.0)
+        build_spline(t, g["pts"], globals().get("NEELAM_POLE_LIFT", -30.0), "road_" + rd["id"])
         for k, val in (("DrawSplinePointNumbers?", False), ("CenterOffset_LightPoles", float(rd["poles"]["offset"])),
-                       ("Spacing_LightPoles", float(rd["poles"]["spacing"])), ("Collision_Road?", False)):
+                       ("Spacing_LightPoles", float(rd["poles"]["spacing"])), ("Collision_Road?", False),
+                       ("Width_Road", 0.01)):                     # poles only - the traffic strip is Build_Traffic.py
             t.set_editor_property(k, val)
         t.set_editor_property("Build_LightPoles?", True)                              # last: re-runs construction
         poles = [a for a in C.EAS.get_all_level_actors() if a.get_class().get_name() == "BP_Pole_C" and a.get_attach_parent_actor() == t]

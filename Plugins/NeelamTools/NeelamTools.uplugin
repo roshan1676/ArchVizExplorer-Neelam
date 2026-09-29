@@ -1,0 +1,23 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "Neelam Tools",
+  "Description": "Neelam runtime (Floor View, flat tours, panoramas) + editor automation for AI-assisted work.",
+  "Category": "Neelam",
+  "CreatedBy": "Neelam / Claude",
+  "EnabledByDefault": true,
+  "CanContainContent": false,
+  "Modules": [
+    {
+      "Name": "NeelamRuntime",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    },
+    {
+      "Name": "NeelamTools",
+      "Type": "Editor",
+      "LoadingPhase": "PostEngineInit"
+    }
+  ]
+}

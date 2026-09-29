@@ -1,0 +1,114 @@
+{
+ "vaze": {
+  "cx_m": -82.9,
+  "cy_m": 37.4,
+  "w_m": 29.9,
+  "d_m": 27.5,
+  "yaw_deg": -118.7,
+  "src": "osm building '' area=719 in_plot=False"
+ },
+ "station": {
+  "cx_m": 43.0,
+  "cy_m": 53.7,
+  "w_m": 283.8,
+  "d_m": 10.0,
+  "yaw_deg": 46.1,
+  "src": "osm building '' area=2469 in_plot=True"
+ },
+ "checknaka": {
+  "cx_m": -55.5,
+  "cy_m": 29.5,
+  "w_m": 36.8,
+  "d_m": 9.5,
+  "yaw_deg": 96.3,
+  "src": "osm building '' area=337 in_plot=True"
+ },
+ "hiramongi": {
+  "cx_m": 5.0,
+  "cy_m": 0.1,
+  "w_m": 43.9,
+  "d_m": 34.5,
+  "yaw_deg": 136.2,
+  "src": "osm building '' area=1466 in_plot=True"
+ },
+ "fortis": {
+  "cx_m": -21.5,
+  "cy_m": -105.2,
+  "w_m": 31.0,
+  "d_m": 78.1,
+  "yaw_deg": -50.7,
+  "src": "osm building '' area=1587 in_plot=True"
+ },
+ "apex": {
+  "cx_m": -3.4,
+  "cy_m": 25.3,
+  "w_m": 64.0,
+  "d_m": 41.9,
+  "yaw_deg": -119.3,
+  "src": "osm building 'Sita Kutir CHS' area=1174 in_plot=True"
+ },
+ "jupiter": {
+  "cx_m": -14.4,
+  "cy_m": 43.4,
+  "w_m": 80.8,
+  "d_m": 69.8,
+  "yaw_deg": 136.3,
+  "src": "osm building 'Jupiter' area=3371 in_plot=True"
+ },
+ "rmall": {
+  "cx_m": 1.9,
+  "cy_m": 4.4,
+  "w_m": 180.7,
+  "d_m": 57.4,
+  "yaw_deg": -170.7,
+  "src": "osm building '' area=9369 in_plot=True"
+ },
+ "viviana": {
+  "cx_m": -20.8,
+  "cy_m": 4.1,
+  "w_m": 184.6,
+  "d_m": 210.0,
+  "yaw_deg": -44.8,
+  "src": "osm building 'Viviana Mall' area=32625 in_plot=True"
+ },
+ "dmart": {
+  "cx_m": 15.5,
+  "cy_m": 19.6,
+  "w_m": 91.7,
+  "d_m": 62.8,
+  "yaw_deg": -110.5,
+  "src": "osm building '' area=5410 in_plot=True"
+ },
+ "korum": {
+  "cx_m": 2.4,
+  "cy_m": 8.6,
+  "w_m": 192.8,
+  "d_m": 66.6,
+  "yaw_deg": 135.0,
+  "src": "osm building 'Korum Mall' area=10734 in_plot=True"
+ },
+ "jbcn": {
+  "cx_m": 3.3,
+  "cy_m": -44.6,
+  "w_m": 27.8,
+  "d_m": 9.4,
+  "yaw_deg": -15.5,
+  "src": "osm building '' area=262 in_plot=False"
+ },
+ "singhania": {
+  "cx_m": -61.7,
+  "cy_m": 182.6,
+  "w_m": 95.6,
+  "d_m": 59.4,
+  "yaw_deg": -16.3,
+  "src": "osm building '' area=5663 in_plot=True"
+ },
+ "billabong": {
+  "cx_m": 5.0,
+  "cy_m": -3.1,
+  "w_m": 46.0,
+  "d_m": 54.1,
+  "yaw_deg": -92.5,
+  "src": "osm building '' area=1443 in_plot=True"
+ }
+}

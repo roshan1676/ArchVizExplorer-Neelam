@@ -6,8 +6,9 @@ import json, os, sys, importlib, math
 import unreal
 P = os.path.join(unreal.Paths.convert_relative_path_to_full(unreal.Paths.project_dir()), "Scripts", "Neelam")
 sys.path.insert(0, P)
-import connectivity_lib as C; importlib.reload(C)
 MODE = globals().get("MODE", "prep"); env = globals()["env"]
+import connectivity_lib as C
+if not MODE.startswith("pie"): importlib.reload(C)   # during PIE the editor actor list is unavailable: reuse the loaded module
 CELL_CM = 100000.0
 if MODE == "prep":
     pts = set()
@@ -81,6 +82,44 @@ elif MODE == "dem":
         if k not in env["hs_z"]: env["hs_z"][k] = round(dem[k] * 100 + off, 1); nd += 1
     q = sorted(pairs)
     result = {"traced": len(pairs), "dem_filled": nd, "offset_cm": round(off), "calib_p10_p90": [round(q[len(q)//10]), round(q[9*len(q)//10])] if q else None}
+elif MODE == "pie_go":
+    # Best source: during PIE Cesium streams tiles around the player camera -> move the pawn over each cell.
+    gw = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
+    (cx, cy), _ = env["hs_cells"][CELL]
+    pawn = unreal.GameplayStatics.get_player_controller(gw, 0).get_controlled_pawn()
+    pawn.set_actor_location(unreal.Vector((cx + .5) * CELL_CM, (cy + .5) * CELL_CM, C.RZ + 2000), False, True)
+    result = CELL
+elif MODE == "pie_trace":
+    gw = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
+    if "pie_ignore" not in env or env.get("pie_world") != gw.get_path_name():
+        acts = unreal.GameplayStatics.get_all_actors_of_class(gw, unreal.Actor)
+        env["pie_ignore"] = [a for a in acts if not isinstance(a, unreal.Cesium3DTileset)]; env["pie_world"] = gw.get_path_name()
+        env.setdefault("hs_pie", set())
+    _, plist = env["hs_cells"][CELL]; hit = 0
+    for la, lo, x, y in plist:
+        k = C.hkey(la, lo)
+        if k in env["hs_pie"]: hit += 1; continue
+        h = unreal.SystemLibrary.line_trace_single(gw, unreal.Vector(x, y, C.RZ + 60000), unreal.Vector(x, y, C.RZ - 20000),
+                                                   unreal.TraceTypeQuery.TRACE_TYPE_QUERY1, True, env["pie_ignore"], unreal.DrawDebugTrace.NONE, True)
+        if h is not None and h.to_tuple()[0]:
+            env["hs_z"][k] = round(float(h.to_tuple()[4].z), 1); env["hs_pie"].add(k); hit += 1
+    result = [CELL, hit, len(plist)]
+elif MODE == "fill":
+    # Points PIE could not trace (tile gaps, site cut-out): interpolate along each route/road from traced neighbours.
+    pie = env.get("hs_pie", set()); filled = 0
+    for ph in globals().get("PHASES", ["phase2", "phase3"]):
+        G = json.load(open(os.path.join(P, "Data", "connectivity_%s.json" % ph), encoding="utf-8"))
+        for r in list(G["routes"].values()) + list(G["roads"].values()):
+            ks = [C.hkey(la, lo) for la, lo in r["pts"]]; good = [i for i, k in enumerate(ks) if k in pie]
+            if not good: continue
+            for i, k in enumerate(ks):
+                if k in pie: continue
+                a = max([g for g in good if g < i], default=None); b = min([g for g in good if g > i], default=None)
+                if a is None: z = env["hs_z"][ks[b]]
+                elif b is None: z = env["hs_z"][ks[a]]
+                else: t = (i - a) / (b - a); z = env["hs_z"][ks[a]] * (1 - t) + env["hs_z"][ks[b]] * t
+                env["hs_z"][k] = round(z, 1); filled += 1
+    result = {"pie_traced": len(pie), "interpolated": filled}
 elif MODE == "save":
     json.dump(env["hs_z"], open(C.HCACHE_PATH, "w"))
     missing = [k for (c, pl) in env["hs_cells"] for (la, lo, x, y) in pl if C.hkey(la, lo) not in env["hs_z"]]

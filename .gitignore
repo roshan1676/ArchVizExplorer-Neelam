@@ -102,3 +102,6 @@ cesium-request-cache.sqlite*
 __pycache__/
 *.pyc
 SourceArt/PolyHaven/
+
+# Floor View source images (1.9 GB originals live on the PC; imported textures are in Content/Neelam/FloorView)
+SourceArt/FloorView/

@@ -12,8 +12,8 @@
    "dist": "1.6 km", "icon": "T_Icon_Place_01", "about": "Mulund East check naka / toll plaza on the Eastern Express Highway (Thane gateway)"}
  ],
  "roads": [
-  {"id": "vb",  "cat": "Transport", "label": "V B Phadke Road", "dist": "Immediate / local", "poles": {"spacing": 3500, "offset": 650}},
-  {"id": "eeh", "cat": "Transport", "label": "Mumbai–Thane East / Highway", "dist": "Connectivity route", "poles": {"spacing": 5000, "offset": 1100}},
+  {"id": "vb",  "cat": "Transport", "label": "V B Phadke Road", "dist": "Immediate / local", "poles": null},
+  {"id": "eeh", "cat": "Transport", "label": "Mumbai–Thane East / Highway", "dist": "Connectivity route", "poles": null},
   {"id": "mar", "cat": "Transport", "label": "Mulund–Airoli Link Road", "dist": "Connectivity route", "poles": null}
  ]
 }
