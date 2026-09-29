@@ -10,6 +10,7 @@ import unreal
 P = os.path.join(unreal.Paths.convert_relative_path_to_full(unreal.Paths.project_dir()), "Scripts", "Neelam")
 sys.path.insert(0, P)
 import connectivity_lib as C; importlib.reload(C)
+import poi_highlight as H; importlib.reload(H)
 PHASE = globals().get("NEELAM_PHASE", "phase2")
 L = json.load(open(os.path.join(P, "Data", "landmarks_%s.json" % PHASE)))
 G = json.load(open(os.path.join(P, "Data", "connectivity_%s.json" % PHASE)))
@@ -19,7 +20,7 @@ ROUTE = EAL.load_blueprint_class("/Game/ArchVizExplorer/Blueprints/BP_Route")
 ROAD = EAL.load_blueprint_class("/Game/ArchVizExplorer/Blueprints/BP_RoadTool")
 FOLDER = "Neelam/Surroundings/" + PHASE
 ICONS = "/Game/ArchVizExplorer/Textures/UI/Icons/"
-ROUTE_LIFT, LABEL_LIFT = 250.0, 0.0
+ROUTE_LIFT, LABEL_LIFT = globals().get("NEELAM_ROUTE_LIFT", 250.0), 0.0
 report = {"pois": [], "routes": [], "roads": [], "poles": []}
 
 for a in [a for a in C.EAS.get_all_level_actors() if str(a.get_folder_path()).startswith(FOLDER)]:
@@ -83,6 +84,7 @@ for lm in L["landmarks"]:
     info = " · ".join(x for x in (lm["dist"], drive) if x)
     a, ok = spawn_poi("POI_" + lm["id"], lm["lat"], lm["lon"], lm["name"], info, lm.get("about", ""), lm["cat"], lm.get("icon"))
     report["pois"].append([lm["name"], info, ok])
+    report.setdefault("boxes", []).append(H.apply(C, a, lm, r["pts"] if r else None))
     if r:
         ra, n = spawn_route("Route_" + lm["id"], r["pts"], lm["cat"])
         report["routes"].append([lm["id"], n])

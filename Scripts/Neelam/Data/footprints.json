@@ -1,0 +1,114 @@
+{
+ "vaze": {
+  "cx_m": 4.3,
+  "cy_m": -32.0,
+  "w_m": 129.9,
+  "d_m": 146.3,
+  "yaw_deg": -119.1,
+  "src": "osm education 'V.G. Vaze Kelker College' area=12939 inside=True d=38 score=4.0"
+ },
+ "station": {
+  "cx_m": 13.0,
+  "cy_m": 29.9,
+  "w_m": 595.6,
+  "d_m": 86.1,
+  "yaw_deg": 47.7,
+  "src": "osm railway 'Mulund Railway Station' area=36346 inside=True d=28 score=6.3"
+ },
+ "checknaka": {
+  "cx_m": -55.5,
+  "cy_m": 29.5,
+  "w_m": 36.8,
+  "d_m": 9.5,
+  "yaw_deg": 96.3,
+  "src": "osm commercial '' area=337 inside=False d=50 score=-0.3"
+ },
+ "hiramongi": {
+  "cx_m": 0.0,
+  "cy_m": 0.0,
+  "w_m": 50.0,
+  "d_m": 45.0,
+  "yaw_deg": -43.4,
+  "src": "osm hospital 'Hira-Mongi Navneet Hospital' area=2239 inside=True d=33 score=6.2"
+ },
+ "fortis": {
+  "cx_m": -27.7,
+  "cy_m": -133.1,
+  "w_m": 176.1,
+  "d_m": 89.8,
+  "yaw_deg": 68.6,
+  "src": "osm hospital 'Fortis Hospitals' area=10862 inside=False d=46 score=3.8"
+ },
+ "apex": {
+  "cx_m": -3.4,
+  "cy_m": 25.3,
+  "w_m": 64.0,
+  "d_m": 41.9,
+  "yaw_deg": -119.3,
+  "src": "osm residential 'Sita Kutir CHS' area=1174 inside=True d=12 score=2.7"
+ },
+ "jupiter": {
+  "cx_m": 1.3,
+  "cy_m": 25.5,
+  "w_m": 159.4,
+  "d_m": 89.0,
+  "yaw_deg": -44.0,
+  "src": "osm hospital 'Jupiter Hospital' area=9734 inside=True d=29 score=6.3"
+ },
+ "rmall": {
+  "cx_m": 0.3,
+  "cy_m": -1.2,
+  "w_m": 190.2,
+  "d_m": 66.8,
+  "yaw_deg": 9.2,
+  "src": "osm mall 'R Mall' area=11707 inside=True d=38 score=6.0"
+ },
+ "viviana": {
+  "cx_m": -20.8,
+  "cy_m": 4.1,
+  "w_m": 184.6,
+  "d_m": 210.0,
+  "yaw_deg": -44.8,
+  "src": "osm mall 'Viviana Mall' area=32625 inside=True d=37 score=7.1"
+ },
+ "dmart": {
+  "cx_m": -3.5,
+  "cy_m": 27.6,
+  "w_m": 134.2,
+  "d_m": 110.9,
+  "yaw_deg": -22.3,
+  "src": "osm supermarket 'DMart' area=11303 inside=True d=41 score=6.0"
+ },
+ "korum": {
+  "cx_m": 2.4,
+  "cy_m": 8.6,
+  "w_m": 192.8,
+  "d_m": 66.6,
+  "yaw_deg": 135.0,
+  "src": "osm mall 'Korum Mall' area=10734 inside=True d=48 score=6.8"
+ },
+ "jbcn": {
+  "cx_m": 47.6,
+  "cy_m": 6.4,
+  "w_m": 143.0,
+  "d_m": 94.2,
+  "yaw_deg": 165.1,
+  "src": "osm construction '' area=8936 inside=True d=39 score=1.0"
+ },
+ "singhania": {
+  "cx_m": -15.6,
+  "cy_m": 34.8,
+  "w_m": 166.8,
+  "d_m": 335.1,
+  "yaw_deg": 44.8,
+  "src": "osm school 'Smt. Sulochanadevi Singhania School' area=39573 inside=True d=57 score=5.6"
+ },
+ "billabong": {
+  "cx_m": -0.0,
+  "cy_m": -0.2,
+  "w_m": 71.0,
+  "d_m": 65.4,
+  "yaw_deg": -177.0,
+  "src": "osm school 'Billabong International High School' area=4454 inside=True d=45 score=5.9"
+ }
+}

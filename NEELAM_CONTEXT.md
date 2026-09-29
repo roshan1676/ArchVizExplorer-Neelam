@@ -39,6 +39,9 @@ Reference videos for the target experience:
 | Surroundings Phase 2 (MUST HAVE) | POIs: V.G. Vaze College, Mulund Railway Station, Check Naka (Mulund East toll plaza, EEH). Drive routes (OSRM, real roads). Key-road glow lines + labels: V B Phadke Rd, Eastern Express Hwy, Mulund–Airoli Link Rd. 144 pole lights (45 VB Phadke, 99 highway) | `make_connectivity.py`, `connectivity_lib.py`, `Build_Surroundings.py`, `Data/landmarks_phase2.json`, `Data/connectivity_phase2.json`, `Data/osm/*` |
 | UI tweak | `BP_Entry_Widget` rows made shorter (padding 4→1 px, font 12→11) so 5 entries fit a list | via bridge |
 
+| Surroundings Phase 3 (HIGH) – 29 Sep | 11 POIs + OSRM drive routes: Healthcare (Hira Mongi, Fortis, Apex, Jupiter; new icon `T_Icon_Hospital_01`), Retail (R Mall, Viviana, D-Mart, Korum), Education (JBCN, Singhania, Billabong). Card = client distance · PDF drive time (route km). Colours: Healthcare red, Retail purple, Education green. Surroundings menu lists relabelled to the brief: IMMEDIATE · RETAIL · HEALTHCARE · EDUCATION · TRANSPORT (widget instance names unchanged: BP_POI_List_DINING/SHOPPING/ENTERTAINMENT/EDUCATION/TRANSPORTATION). Phase 2 rebuilt with corrected heights | `Data/landmarks_phase3.json`, `make_routes_osrm.py` (runs inside UE – Windows has network, the Cowork VM has none), `Data/connectivity_phase3.json`, `Build_Surroundings.py` |
+| Ground heights | `Data/height_cache.json` (lat,lon → Z) used first by `connectivity_lib.to_ue`. Filled by `Sample_Heights.py`: trace on loaded Google tiles, else Copernicus DEM (Open-Meteo API) calibrated to the traced points (offset −0.24 m, p10–p90 −5.8…+3.3 m). Phase 3 routes lifted 4.5 m (DEM uncertainty), phase 2 2.5 m | `Sample_Heights.py` |
+| POI highlight boxes – 29 Sep | BP_POI `POI_Geometry` (hologram box, blinks on select) sized/rotated to the OSM footprint of each landmark (manual for Check Naka, Apex), base below road level, height per category. Applied automatically by `Build_Surroundings.py` | `make_footprints.py` → `Data/footprints.json`, `poi_highlight.py` |
 Review / capture helper: `Capture_Review_Shots.py`.
 
 ## 4. ⚠️ OPEN ISSUE – Surroundings list entry not clickable
@@ -67,16 +70,16 @@ right-hand Surroundings list (TRANSPORTATION column) and swallowed every click t
 ## 5. Plan / next steps (approved by user)
 Full plan: `claude/surroundings_plan.md` in the Claude project "neelma" (copy of decisions below).
 1. ✅ Phase 1 clean-up · ✅ Phase 2 MUST HAVE (pending the click bug above)
-2. Phase 3 HIGH: Healthcare (Hira Mongi 2.5 km, Fortis 4.7, Apex 5.0, Jupiter 6.6), Retail (R Mall 4.4, Viviana 4.5, D-Mart 5.0, Korum 5.6), Education (JBCN 4.2, Singhania 6.5, Billabong 6.8)
+2. ✅ Phase 3 HIGH done 29 Sep (awaiting user review)
 3. Phase 4 Neighbourhood (clickable): Vardhaman Nagar, Spiro Tower, Superbia, Sanskar, Neelam Nagar
 4. Upcoming Metro Station (6.1 km) – SKIPPED until client confirms which station (OSM shows "Mulund Check Naka Metro" under construction at 19.18346, 72.95096).
-5. Menu categories should follow the brief (Immediate, Transport, Healthcare, Retail/Lifestyle, Education, Neighbourhood) – needs a widget edit + hospital icon.
+5. Menu categories: 5 of 6 done (IMMEDIATE/RETAIL/HEALTHCARE/EDUCATION/TRANSPORT). NEIGHBOURHOOD needs a 6th BP_EntryList in BP_Surroundings_Widget's UniformGridPanel (Phase 4).
 6. Card text = client distance + drive time ("1.3 km · 3 min drive (1.6 km)"). Route colour per category.
 7. Later: apartment selector (Filter_DataTable + BP_POI Filter + BP_UnitSearch + section view – rebuild for towers A–E), flat tour / interiors (user will provide details), replace KarlDetroit branding + Vagon ad widget.
 
 ## 6. Known limits / notes
 - Daylight: `BP_AVE_SunSky_01` (SunPosition BP) – driving it from Site_Finishing failed ("no sun actor found"); BP_Time_Widget drives it at runtime.
 - Google 3D Tiles are blurry at street level (source data); Cesium cut-out hides tiles visually but their collision remains inside the site.
-- Some POIs got Z = site level because the map wasn't streamed at build time (traces missed) – re-run `Build_Surroundings.py` with the area loaded to re-seat them.
+- Cesium only streams tiles while the editor viewport renders (window in foreground) and fog culling hides far tiles from high views – use `Sample_Heights.py` + height cache instead of live traces. POI Z re-seated 29 Sep.
 - `SourceArt/PolyHaven` (≈210 MB source JPGs) is NOT in git – it is re-downloaded automatically by `Apply_WindTunnel_Materials.py`; the imported textures (uassets) ARE in git.
 - Source model package lives outside the repo: `C:\Users\Admin\Downloads\wind tunnel\wind tunnel` (Unreal/, Export_v4/, reference renders, design_data.json).

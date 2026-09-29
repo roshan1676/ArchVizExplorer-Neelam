@@ -1,0 +1,22 @@
+{
+ "_note": "Phase 3 (HIGH). Coordinates: OSM/Nominatim, JBCN + Apex from Google Maps (not in OSM). dist = client brief; drive_min = CONNECTIVITY.pdf where given, else OSRM x 1.75 (traffic factor derived from the PDF times).",
+ "categories": {
+  "Healthcare": {"color": [1.00, 0.18, 0.25], "tags": ["Healthcare"]},
+  "Retail":     {"color": [0.78, 0.30, 1.00], "tags": ["Shopping", "Retail"]},
+  "Education":  {"color": [0.20, 0.85, 0.40], "tags": ["Education"]}
+ },
+ "landmarks": [
+  {"id": "hiramongi", "name": "Hira Mongi Navneet Hospital", "cat": "Healthcare", "lat": 19.170925, "lon": 72.95022, "dist": "2.5 km", "drive_min": 9,  "icon": "T_Icon_Hospital_01", "about": "Multi-speciality hospital, Mulund West"},
+  {"id": "fortis",    "name": "Fortis Hospital",             "cat": "Healthcare", "lat": 19.162789, "lon": 72.94198, "dist": "4.7 km", "drive_min": 10, "icon": "T_Icon_Hospital_01", "about": "Super-speciality hospital on Mulund–Goregaon Link Road"},
+  {"id": "apex",      "name": "Apex Hospitals",              "cat": "Healthcare", "lat": 19.180962, "lon": 72.942467, "dist": "5.0 km", "drive_min": 12, "icon": "T_Icon_Hospital_01", "about": "Multi-speciality hospital, Mulund West"},
+  {"id": "jupiter",   "name": "Jupiter Hospital",            "cat": "Healthcare", "lat": 19.209474, "lon": 72.972522, "dist": "6.6 km", "drive_min": 14, "icon": "T_Icon_Hospital_01", "about": "Tertiary-care hospital on the Eastern Express Highway, Thane"},
+  {"id": "rmall",     "name": "R Mall",                      "cat": "Retail", "lat": 19.183975, "lon": 72.951593, "dist": "4.4 km", "drive_min": 9,  "icon": "T_Icon_ShoppingBag_01", "about": "Shopping mall on LBS Marg, Mulund West"},
+  {"id": "viviana",   "name": "Viviana Mall",                "cat": "Retail", "lat": 19.208773, "lon": 72.971607, "dist": "4.5 km", "drive_min": 12, "icon": "T_Icon_ShoppingBag_01", "about": "Large shopping & entertainment mall, Eastern Express Highway, Thane"},
+  {"id": "dmart",     "name": "D-Mart",                      "cat": "Retail", "lat": 19.163755, "lon": 72.940169, "dist": "5.0 km", "drive_min": 12, "icon": "T_Icon_ShoppingCart_01", "about": "Hypermarket on Mulund–Goregaon Link Road"},
+  {"id": "korum",     "name": "Korum Mall",                  "cat": "Retail", "lat": 19.203018, "lon": 72.965096, "dist": "5.6 km", "drive_min": 10, "icon": "T_Icon_ShoppingBag_01", "about": "Shopping mall, Eastern Express Highway, Thane"},
+  {"id": "jbcn",      "name": "JBCN International School",   "cat": "Education", "lat": 19.158564, "lon": 72.949884, "dist": "4.2 km", "drive_min": 10, "icon": "T_Icon_Education_01", "about": "International school (IB / Cambridge), Mulund"},
+  {"id": "singhania", "name": "Singhania School",            "cat": "Education", "lat": 19.207348, "lon": 72.966233, "dist": "6.5 km", "drive_min": 13, "icon": "T_Icon_Education_01", "about": "Smt. Sulochanadevi Singhania School, Thane"},
+  {"id": "billabong", "name": "Billabong High International School", "cat": "Education", "lat": 19.192545, "lon": 72.94674, "dist": "6.8 km", "drive_min": 14, "icon": "T_Icon_Education_01", "about": "International school, Shree Nagar, Thane"}
+ ],
+ "roads": []
+}
