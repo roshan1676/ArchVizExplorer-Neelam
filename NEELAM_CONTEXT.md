@@ -57,6 +57,13 @@ Review / capture helper: `Capture_Review_Shots.py`.
 4. Text with non-ASCII "–" (en dash) in the name – unlikely but test by renaming to "Mulund-Airoli Link Road".
 5. `BP_Entry_Widget` uses `OnButtonReleased` (not OnClicked) – with touch/precise-click settings a drag inside the ScrollBox may cancel the release.
 
+
+**FIX APPLIED (29 Sep 2026) – root cause found:** in `BP_MasterMenu_Widget` the invisible wrapper of the Vagon ad
+(`BP_Vagon_Widget1`, bottom-right 512×344, instance visibility **Visible** while its content is collapsed) sat on top of the
+right-hand Surroundings list (TRANSPORTATION column) and swallowed every click there. Same pattern: `BP_Time_Widget`
+(top strip) and `BP_Notification_01` wrappers were **Visible**. Now: Vagon → Collapsed, Time + Notification → SelfHitTestInvisible
+(their buttons/slider stay clickable). Compiled + saved; verified in PIE the values stay at runtime. Confirmed working by user (29 Sep).
+
 ## 5. Plan / next steps (approved by user)
 Full plan: `claude/surroundings_plan.md` in the Claude project "neelma" (copy of decisions below).
 1. ✅ Phase 1 clean-up · ✅ Phase 2 MUST HAVE (pending the click bug above)
