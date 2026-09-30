@@ -548,3 +548,22 @@ bool UNeelamToolsLibrary::SetFontTypefaces(UFont* Font, const TArray<FName>& Nam
     Font->MarkPackageDirty();
     return T.Fonts.Num() == Names.Num();
 }
+
+
+FString UNeelamToolsLibrary::ExportRenderTargetRawR(UTextureRenderTarget2D* RenderTarget, const FString& FilePath)
+{
+    if (!RenderTarget) return TEXT("no render target");
+    FTextureRenderTargetResource* Res = RenderTarget->GameThread_GetRenderTargetResource();
+    if (!Res) return TEXT("no resource");
+    TArray<FLinearColor> Px;
+    FReadSurfaceDataFlags Flags(RCM_MinMax);
+    Flags.SetLinearToGamma(false);
+    if (!Res->ReadLinearColorPixels(Px, Flags)) return TEXT("read failed");
+    const int32 W = RenderTarget->SizeX, H = RenderTarget->SizeY;
+    if (Px.Num() != W * H) return FString::Printf(TEXT("size mismatch %d vs %d"), Px.Num(), W * H);
+    TArray<uint8> Out; Out.SetNumUninitialized(8 + W * H * 4);
+    FMemory::Memcpy(Out.GetData(), &W, 4); FMemory::Memcpy(Out.GetData() + 4, &H, 4);
+    float* F = reinterpret_cast<float*>(Out.GetData() + 8);
+    for (int32 i = 0; i < W * H; ++i) F[i] = Px[i].R;
+    return FFileHelper::SaveArrayToFile(Out, *FilePath) ? FString() : TEXT("write failed");
+}

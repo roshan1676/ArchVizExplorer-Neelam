@@ -1,4 +1,4 @@
-# blender -b --factory-startup --python build_roads.py -- road_build.json out.fbx
+# blender -b --factory-startup --python build_roads.py -- road_build.json out.fbx   (or: -- road_build.json out_dir --split)
 # One object per carriageway (origin = first centreline point): asphalt deck, kerbs, skirt under the map edge,
 # lane markings (solid edges + dashed dividers). Units: UE cm in the json -> metres here (Y flipped: UE is left-handed).
 import bpy, bmesh, json, sys, math
@@ -23,7 +23,10 @@ for key, r in data.items():
         if i > 0: s += (p - P[i - 1]).length
         t = (P[min(i + 1, len(P) - 1)] - P[max(i - 1, 0)]); t.z = 0; t.normalize()
         n = Vector((-t.y, t.x, 0.0))
-        prof = [(-half - KW, SKIRT), (-half - KW, KERB), (-half, KERB), (-half, DECK), (half, DECK), (half, KERB), (half + KW, KERB), (half + KW, SKIRT)]
+        # side wall reaches down to the traced ground where Flatten_Roads.py lifted the deck (capped 3 m -> embankment look)
+        gz = r.get("ground", [None] * len(P))[i]
+        sk = SKIRT - (min(3.0, max(0.0, (r["pts"][i][2] - gz) / 100.0)) if gz is not None else 0.0)
+        prof = [(-half - KW, sk), (-half - KW, KERB), (-half, KERB), (-half, DECK), (half, DECK), (half, KERB), (half + KW, KERB), (half + KW, sk)]
         rows.append((s, [bm.verts.new(p - o + n * off + Vector((0, 0, dz))) for off, dz in prof], p, n))
     segmat = [1, 1, 1, 0, 1, 1, 1]     # skirt, kerb top, kerb face, ASPHALT, kerb face, kerb top, skirt
     for (s0, r0, _, _), (s1, r1, _, _) in zip(rows, rows[1:]):
@@ -43,6 +46,14 @@ for key, r in data.items():
             for lp, u in zip(f.loops, ((0, 0), (1, 0), (1, 1), (0, 1))): lp[uv].uv = u
     bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
     bm.to_mesh(me); bm.free()
+if "--split" in sys.argv:              # one FBX per carriageway (out = folder) -> Import_Roads.py
+    import os
+    os.makedirs(out, exist_ok=True)
+    for ob in list(bpy.data.objects):
+        bpy.ops.object.select_all(action="DESELECT"); ob.select_set(True)
+        bpy.ops.export_scene.fbx(filepath=os.path.join(out, ob.name + ".fbx"), use_selection=True, apply_unit_scale=True, apply_scale_options="FBX_SCALE_UNITS",
+                                 axis_forward="-Y", axis_up="Z", object_types={"MESH"}, mesh_smooth_type="FACE", use_mesh_modifiers=True, bake_space_transform=False)
+    print("ROADS_OK", len(origins)); sys.exit(0)
 bpy.ops.export_scene.fbx(filepath=out, use_selection=False, apply_unit_scale=True, apply_scale_options="FBX_SCALE_UNITS",
                          axis_forward="-Y", axis_up="Z", object_types={"MESH"}, mesh_smooth_type="FACE", use_mesh_modifiers=True, bake_space_transform=False)
 json.dump(origins, open(out + ".origins.json", "w"))

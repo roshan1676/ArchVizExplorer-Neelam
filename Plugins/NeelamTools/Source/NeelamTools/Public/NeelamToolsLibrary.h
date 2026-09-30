@@ -6,6 +6,8 @@
 class UBlueprint; class UWidgetBlueprint; class UWidget; class UUserWidget;
 
 /** Editor automation exposed to Python as unreal.NeelamToolsLibrary.* (all return human/JSON-readable results). */
+class UTextureRenderTarget2D;
+
 UCLASS()
 class UNeelamToolsLibrary : public UBlueprintFunctionLibrary
 {
@@ -76,6 +78,12 @@ public:
     /** Render a live widget (e.g. the PIE MasterMenu) off-screen to a PNG with alpha. Returns "OK <path>" or an error. */
     UFUNCTION(BlueprintCallable, Category = "NeelamTools|Preview")
     static FString RenderWidgetToPng(UWidget* Widget, int32 Width, int32 Height, const FString& FilePath);
+
+    /** Read a (float) render target on the game thread and write its R channel as raw little-endian float32:
+     *  header int32 width, int32 height, then width*height floats (row-major, top row first). Returns "" or an error. */
+    UFUNCTION(BlueprintCallable, Category = "Neelam|Render")
+    static FString ExportRenderTargetRawR(UTextureRenderTarget2D* RenderTarget, const FString& FilePath);
+
     /** Create a widget of Class in the editor (or PIE if running) world, render it to PNG, destroy it. */
     UFUNCTION(BlueprintCallable, Category = "NeelamTools|Preview")
     static FString RenderWidgetClassToPng(TSubclassOf<UUserWidget> WidgetClass, int32 Width, int32 Height, const FString& FilePath);
