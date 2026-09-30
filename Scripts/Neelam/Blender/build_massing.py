@@ -1,8 +1,11 @@
-# python -c "import sys; sys.argv=['x','--','massing_build.json','out_dir']; exec(open('build_massing.py').read())"  (bpy module)
+# python -c "import sys; sys.argv=['x','--','massing_build.json','out_dir','massing_textured.json']; exec(open('build_massing.py').read())"  (bpy module)
+# optional 3rd arg: ids built with realistic facades instead (Blender/build_facades.py) -> skipped here; empty chunks not written.
 # One mesh per 500 m chunk: every footprint extruded base..top as a closed prism (flat roof), single material MM_Massing.
 # UE cm -> metres, Y flipped (UE is left-handed) - same convention as build_roads.py; import with Import_Massing.py.
 import bpy, bmesh, json, sys, os
 a = sys.argv[sys.argv.index("--") + 1:]; B = json.load(open(a[0])); out = a[1]; os.makedirs(out, exist_ok=True)
+SKIP = set(json.load(open(a[2]))) if len(a) > 2 else set()
+B = [b for b in B if b["id"] not in SKIP]
 bpy.ops.wm.read_factory_settings(use_empty=True)
 mat = bpy.data.materials.new("MM_Massing"); mat.diffuse_color = (0.6, 0.6, 0.6, 1)
 chunks = {}

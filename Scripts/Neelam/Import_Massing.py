@@ -21,7 +21,9 @@ MI = unreal.load_asset("/Game/Neelam/Massing/MI_Neelam_Massing_Grey") or m     #
 for a in [a for a in EAS.get_all_level_actors() if str(a.get_folder_path()).startswith("Neelam/Massing")]: EAS.destroy_actor(a)
 tasks = []
 import json
-KEEP = {"massing_" + b["chunk"] for b in json.load(open(os.path.join(unreal.Paths.convert_relative_path_to_full(unreal.Paths.project_dir()), "Scripts", "Neelam", "Data", "massing_build.json")))}
+_D = os.path.join(unreal.Paths.convert_relative_path_to_full(unreal.Paths.project_dir()), "Scripts", "Neelam", "Data")
+_TX = set(json.load(open(os.path.join(_D, "massing_textured.json")))) if os.path.exists(os.path.join(_D, "massing_textured.json")) else set()
+KEEP = {"massing_" + b["chunk"] for b in json.load(open(os.path.join(_D, "massing_build.json"))) if b["id"] not in _TX}   # textured ones: Build_Facades.py
 for f in sorted(glob.glob(os.path.join(SRC, "massing_*.fbx"))):
     if os.path.splitext(os.path.basename(f))[0] not in KEEP: continue      # stale chunk (emptied by make_massing filters)
     t = unreal.AssetImportTask(); t.filename = f; t.destination_path = "/Game/Neelam/Massing/Meshes"; t.destination_name = os.path.splitext(os.path.basename(f))[0]
