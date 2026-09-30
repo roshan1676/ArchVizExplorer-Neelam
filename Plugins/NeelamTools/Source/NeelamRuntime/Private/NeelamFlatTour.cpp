@@ -1,4 +1,5 @@
 #include "NeelamFlatTour.h"
+#include "Components/TimelineComponent.h"
 #include "NeelamTowerFloors.h"
 #include "NeelamWidgets.h"
 #include "Engine/DataTable.h"
@@ -107,6 +108,18 @@ static bool SetVectorProp(UObject* O, FName Name, const FVector& V)
     if (P && P->Struct == TBaseStructure<FVector>::Get()) { *P->ContainerPtrToValuePtr<FVector>(O) = V; return true; }
     return false;
 }
+static bool SetBoolProp(UObject* O, FName Name, bool V)
+{
+    if (!O) return false;
+    FBoolProperty* P = CastField<FBoolProperty>(O->GetClass()->FindPropertyByName(Name));
+    if (P) { P->SetPropertyValue_InContainer(O, V); return true; }
+    return false;
+}
+static bool GetBoolProp(UObject* O, FName Name, bool Default)
+{
+    FBoolProperty* P = O ? CastField<FBoolProperty>(O->GetClass()->FindPropertyByName(Name)) : nullptr;
+    return P ? P->GetPropertyValue_InContainer(O) : Default;
+}
 static UObject* GetObjectProp(UObject* O, FName Name)
 {
     if (!O) return nullptr;
@@ -197,6 +210,15 @@ void ANeelamFlatTour::ActivateFloorView()
     if (State != ENeelamTourState::Off) return;
     GatherTowers();
     if (APlayerController* P = PC()) MainPawn = P->GetPawn();
+    if (MainPawn && !bIdleSuppressed)
+    {
+        // the template pawn starts an idle auto-orbit after 15 s - it swung Tower E out of frame
+        bSavedAllowIdle = GetBoolProp(MainPawn, TEXT("Allow_Idle?"), true);
+        SetBoolProp(MainPawn, TEXT("Allow_Idle?"), false);
+        SetNumberProp(MainPawn, TEXT("Idle_Timer"), 0.0);
+        if (UTimelineComponent* TL = Cast<UTimelineComponent>(GetObjectProp(MainPawn, TEXT("Timeline_Idle")))) TL->Stop();   // an orbit already running
+        bIdleSuppressed = true;
+    }
     State = ENeelamTourState::FloorView;
     for (ANeelamTowerFloors* T : Towers) if (T) T->SetBoxesActive(true);
     SetPoiLayerHidden(true);
@@ -207,14 +229,17 @@ void ANeelamFlatTour::ActivateFloorView()
         FloorViewWidget->SetVisibility(ESlateVisibility::SelfHitTestInvisible);
         FloorViewWidget->InitFloorView(this);
     }
-    if (SelectedTower && SelectedFloor != INDEX_NONE) SelectFloor(SelectedTower, SelectedFloor, true);
-    else FocusOverview();
+    // always open on the Floor View start camera; a previously selected floor stays highlighted + in the detail panel
+    if (SelectedTower && SelectedFloor != INDEX_NONE) SelectFloor(SelectedTower, SelectedFloor, false);
+    FocusOverview();
 }
 
 void ANeelamFlatTour::DeactivateFloorView()
 {
     if (State != ENeelamTourState::FloorView) return;
     State = ENeelamTourState::Off;
+    if (bIdleSuppressed && MainPawn) { SetBoolProp(MainPawn, TEXT("Allow_Idle?"), bSavedAllowIdle); SetNumberProp(MainPawn, TEXT("Idle_Timer"), 0.0); }
+    bIdleSuppressed = false;
     for (ANeelamTowerFloors* T : Towers) if (T) T->SetBoxesActive(false);
     if (FloorViewWidget) FloorViewWidget->RemoveFromParent();
     FloorViewWidget = nullptr;
@@ -227,7 +252,7 @@ void ANeelamFlatTour::FocusOverview()
     ANeelamTowerFloors* Focus = SelectedTower ? SelectedTower.Get() : nullptr;
     if (FloorViewWidget) if (ANeelamTowerFloors* T = FindTower(FloorViewWidget->CurrentTower)) Focus = T;
     FVector C = FVector::ZeroVector;
-    if (Focus) C = Focus->GetTowerCenter();
+    if (Focus) C = Focus->GetTowerCenter() + OverviewPivotOffset;
     else { for (ANeelamTowerFloors* T : Towers) C += T->GetTowerCenter(); C /= Towers.Num(); }
     FocusPawn(C, OverviewPitch, OverviewYaw, Focus ? OverviewArmLength * 0.75f : OverviewArmLength);
 }

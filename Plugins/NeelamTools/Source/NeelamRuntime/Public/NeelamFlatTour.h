@@ -44,8 +44,10 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Neelam|UI") TSubclassOf<UNeelamTourWidget> TourWidgetClass;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float OverviewArmLength = 45000.f;
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float OverviewPitch = -14.f;
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float OverviewYaw = 130.f;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float OverviewPitch = -8.f;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float OverviewYaw = 47.f;
+    /** added to the focused tower centre for the Floor View start camera (world cm) (0 = tower centred on screen) */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") FVector OverviewPivotOffset = FVector::ZeroVector;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float FloorArmLength = 17000.f;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float FloorPitch = -6.f;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float FlyDuration = 3.2f;
@@ -123,5 +125,7 @@ private:
     bool bRoomSwitching = false;
     FVector2D PressPos = FVector2D::ZeroVector;
     bool bPressed = false;
+    bool bSavedAllowIdle = true;   // template pawn "Allow_Idle?" (auto-orbit after 15 s) - off while Floor View is open
+    bool bIdleSuppressed = false;
     FTimerHandle TimerA;
 };

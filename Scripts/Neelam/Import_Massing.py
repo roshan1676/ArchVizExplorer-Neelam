@@ -20,7 +20,10 @@ if m is None:
 MI = unreal.load_asset("/Game/Neelam/Massing/MI_Neelam_Massing_Grey") or m     # mid grey 0.2 (parent default 0.42 reads as white)
 for a in [a for a in EAS.get_all_level_actors() if str(a.get_folder_path()).startswith("Neelam/Massing")]: EAS.destroy_actor(a)
 tasks = []
+import json
+KEEP = {"massing_" + b["chunk"] for b in json.load(open(os.path.join(unreal.Paths.convert_relative_path_to_full(unreal.Paths.project_dir()), "Scripts", "Neelam", "Data", "massing_build.json")))}
 for f in sorted(glob.glob(os.path.join(SRC, "massing_*.fbx"))):
+    if os.path.splitext(os.path.basename(f))[0] not in KEEP: continue      # stale chunk (emptied by make_massing filters)
     t = unreal.AssetImportTask(); t.filename = f; t.destination_path = "/Game/Neelam/Massing/Meshes"; t.destination_name = os.path.splitext(os.path.basename(f))[0]
     t.automated = True; t.replace_existing = True; t.save = True
     ui = unreal.FbxImportUI(); ui.import_mesh = True; ui.import_as_skeletal = False; ui.import_materials = False; ui.import_textures = False

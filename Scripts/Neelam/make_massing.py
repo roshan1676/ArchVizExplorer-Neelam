@@ -16,8 +16,32 @@ def guess(b, typ, a):
     if a < 800: return 19.0 * r
     if a < 1500: return 26.0 * r
     return 30.0 * r
-out = []; used = {"osm": 0, "guess": 0}
+# no block may stand on a built carriageway (OSM building polygons sometimes overlap flyovers / the highway)
+RB = json.load(open(os.path.join(D, "road_build.json")))["roads"]
+def _inside(x, y, poly):
+    c = False
+    for i in range(len(poly)):
+        x1, y1 = poly[i]; x2, y2 = poly[i - 1]
+        if (y1 > y) != (y2 > y) and x < (x2 - x1) * (y - y1) / ((y2 - y1) or 1e-9) + x1: c = not c
+    return c
+def _segd(px, py, a, b):
+    dx, dy = b[0] - a[0], b[1] - a[1]; L = dx * dx + dy * dy or 1e-9
+    t = max(0, min(1, ((px - a[0]) * dx + (py - a[1]) * dy) / L)); return math.hypot(px - a[0] - t * dx, py - a[1] - t * dy)
+def on_road(P):
+    xs = [p[0] for p in P]; ys = [p[1] for p in P]
+    for r in RB.values():
+        hw = r["width_m"] * 50
+        for q in r["pts"]:
+            if not (min(xs) - hw <= q[0] <= max(xs) + hw and min(ys) - hw <= q[1] <= max(ys) + hw): continue
+            d = 0 if _inside(q[0], q[1], P) else min(_segd(q[0], q[1], P[i], P[i - 1]) for i in range(len(P)))
+            if d < hw - 100: return True
+    return False
+EXF = os.path.join(D, "massing_exclude.json")          # ids removed on request (Mark_Massing_Removals.py)
+EXCL = set(json.load(open(EXF))) if os.path.exists(EXF) else set()
+out = []; used = {"osm": 0, "guess": 0, "on_road_removed": 0, "excluded": 0}
 for b in S:
+    if b["id"] in EXCL: used["excluded"] += 1; continue
+    if on_road(b["pts"]): used["on_road_removed"] += 1; continue
     typ = SRC[b["id"]].get("b") or "yes"
     if b["h_osm"] and 3 <= b["h_osm"] <= 250: h = b["h_osm"]; used["osm"] += 1
     else: h = guess(b, typ, b["area"]); used["guess"] += 1

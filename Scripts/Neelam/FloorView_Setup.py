@@ -88,6 +88,8 @@ def step_towers():
         if not (n.startswith("SM_Tower") and "_Floor_" in n and n.endswith("_Shell")):
             continue
         tw = n.split("_")[1][-1]                       # A..E
+        if tw not in INTERACTIVE_TOWERS:
+            continue
         kind = n.split("_Floor_")[1].split("_")[0]     # PodiumTop / Refuge / Typical
         loc = unreal.MathLibrary.transform_location(inv, a.get_actor_location())
         bb = sm.get_bounding_box()
@@ -158,13 +160,15 @@ UNIT_TYPES = {
                         ("Bedroom 2", "T_Pano_3BHK_Bedroom2", False, (0.26, 0.19), 0),
                         ("Bedroom 3", "T_Pano_3BHK_Bedroom3", False, (0.30, 0.44), 0)]),
 }
-# two test flats, middle of Tower C (user: pick any two, one 2BHK + one 3BHK)
+# two test flats, middle of Tower E (30 Sep: client - only Tower E is interactive; C/D showcase, A/B removed ->
+# "Upcoming project" label). One 2BHK + one 3BHK; balcony panoramas are still the temp C-2001/C-2002 images.
 FLATS = {
-    "C_20_01": dict(Tower="C", Floor=20, FlatNumber="C-2001", UnitType="2BHK", Status="Available", Facing="East",
+    "E_20_01": dict(Tower="E", Floor=20, FlatNumber="E-2001", UnitType="2BHK", Status="Available", Facing="East",
                     BalconyPanorama="T_Pano_Balcony_C2001", FacadeYaw=-90.0, FacadeOffset=-700.0),
-    "C_20_02": dict(Tower="C", Floor=20, FlatNumber="C-2002", UnitType="3BHK", Status="Available", Facing="East",
+    "E_20_02": dict(Tower="E", Floor=20, FlatNumber="E-2002", UnitType="3BHK", Status="Available", Facing="East",
                     BalconyPanorama="T_Pano_Balcony_C2002", FacadeYaw=-90.0, FacadeOffset=700.0),
 }
+INTERACTIVE_TOWERS = ("E",)      # step_towers only builds floor boxes for these
 
 def _tex(n):
     return "%s/%s.%s" % (TEX, n, n)
