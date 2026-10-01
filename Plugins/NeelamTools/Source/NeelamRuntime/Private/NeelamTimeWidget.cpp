@@ -4,6 +4,10 @@
 #include "Components/Image.h"
 #include "Components/Button.h"
 #include "Engine/Texture2D.h"
+#include "Kismet/KismetMaterialLibrary.h"
+#include "Materials/MaterialParameterCollection.h"
+#include "Components/SkyLightComponent.h"
+#include "EngineUtils.h"
 
 #define LOCTEXT_NAMESPACE "NeelamTime"
 
@@ -14,6 +18,31 @@ void UNeelamTimeWidget::NativeOnInitialized()
     if (Btn_Noon) Btn_Noon->OnClicked.AddDynamic(this, &UNeelamTimeWidget::OnNoon);
     if (Btn_Sunset) Btn_Sunset->OnClicked.AddDynamic(this, &UNeelamTimeWidget::OnSunset);
     if (Btn_Night) Btn_Night->OnClicked.AddDynamic(this, &UNeelamTimeWidget::OnNight);
+    if (!LightingMPC)
+        LightingMPC = LoadObject<UMaterialParameterCollection>(nullptr, TEXT("/Game/Neelam/Amenities/Lighting/MPC_Neelam_Lighting.MPC_Neelam_Lighting"));
+    EmissiveMPC = LoadObject<UMaterialParameterCollection>(nullptr, TEXT("/Game/ArchVizExplorer/Materials/MPC/Emissive_MPC.Emissive_MPC"));
+}
+
+void UNeelamTimeWidget::UpdateNightAmbient()
+{
+    UWorld* W = GetWorld();
+    if (!W || !EmissiveMPC || NightSkyLightScale >= 0.999f) return;
+    if (!SkyLight.IsValid())
+    {
+        for (TActorIterator<AActor> It(W); It; ++It)
+            if (USkyLightComponent* C = It->FindComponentByClass<USkyLightComponent>()) { SkyLight = C; SkyLightDay = C->Intensity; break; }
+        if (!SkyLight.IsValid()) return;
+    }
+    const float Night = FMath::Clamp(UKismetMaterialLibrary::GetScalarParameterValue(this, EmissiveMPC, TEXT("Effects")), 0.f, 1.f);
+    const float Target = SkyLightDay * FMath::Lerp(1.f, NightSkyLightScale, Night);
+    if (!FMath::IsNearlyEqual(SkyLight->Intensity, Target, 0.0005f)) SkyLight->SetIntensity(Target);
+}
+
+void UNeelamTimeWidget::PushHour(float Hour)
+{
+    if (!LightingMPC || FMath::Abs(Hour - LastHourSent) < 0.001f) return;
+    LastHourSent = Hour;
+    UKismetMaterialLibrary::SetScalarParameterValue(this, LightingMPC, TEXT("Hour"), Hour);
 }
 
 void UNeelamTimeWidget::OnMorning() { GlideTo(MorningHour); }
@@ -47,6 +76,8 @@ void UNeelamTimeWidget::NativeTick(const FGeometry& MyGeometry, float InDeltaTim
         if (GlideT >= 1.f) bGliding = false;
     }
     RefreshLook(Slider_01->GetValue());
+    PushHour(Slider_01->GetValue());
+    UpdateNightAmbient();
 }
 
 void UNeelamTimeWidget::RefreshLook(float H)
