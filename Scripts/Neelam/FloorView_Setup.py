@@ -160,14 +160,21 @@ UNIT_TYPES = {
                         ("Bedroom 2", "T_Pano_3BHK_Bedroom2", False, (0.26, 0.19), 0),
                         ("Bedroom 3", "T_Pano_3BHK_Bedroom3", False, (0.30, 0.44), 0)]),
 }
+# top floor (client 2 Oct): no flat plan, one 360 from the top of the building.
+# Balcony rule: own BalconyPanorama = 360 (use T_Pano_TopFloor for any flat on floor 41); empty = photo gallery (Balcony_Views.py)
+UNIT_TYPES["TOPVIEW"] = dict(DisplayName="Top Floor View", AreaText="360° view from the top of Tower E", FloorPlan="",
+                             StartRoom=0, Accent=dict(R=0.578, G=0.397, B=0.144, A=1.0),
+                             Rooms=[("Top Floor 360°", "T_Pano_TopFloor", False, (0.5, 0.5), 0)])
 # two test flats, middle of Tower E (30 Sep: client - only Tower E is interactive; C/D showcase, A/B removed ->
 # "Upcoming project" label). One 2BHK + one 3BHK; balcony panoramas are still the temp C-2001/C-2002 images.
 FLATS = {
     "E_20_01": dict(Tower="E", Floor=20, FlatNumber="E-2001", UnitType="2BHK", Status="Available", Facing="East",
-                    BalconyPanorama="T_Pano_Balcony_C2001", FacadeYaw=-90.0, FacadeOffset=-700.0),
+                    BalconyPanorama="", FacadeYaw=-90.0, FacadeOffset=-700.0),
     "E_20_02": dict(Tower="E", Floor=20, FlatNumber="E-2002", UnitType="3BHK", Status="Available", Facing="East",
-                    BalconyPanorama="T_Pano_Balcony_C2002", FacadeYaw=-90.0, FacadeOffset=700.0),
+                    BalconyPanorama="", FacadeYaw=-90.0, FacadeOffset=700.0),
 }
+FLATS["E_41_TOP"] = dict(Tower="E", Floor=41, FlatNumber="Top Floor View", UnitType="TOPVIEW", Status="Available", Facing="360°",
+                         BalconyPanorama="T_Pano_TopFloor", FacadeYaw=-90.0, FacadeOffset=0.0)
 INTERACTIVE_TOWERS = ("E",)      # step_towers only builds floor boxes for these
 
 def _tex(n):
@@ -189,7 +196,7 @@ def step_tables():
     dt2 = _asset(FV + "/Data/DT_Neelam_Flats", unreal.DataTable, f2)
     rows = []
     for k, v in FLATS.items():
-        r = dict(v); r["Name"] = k; r["BalconyPanorama"] = _tex(v["BalconyPanorama"]); rows.append(r)
+        r = dict(v); r["Name"] = k; r["BalconyPanorama"] = _tex(v["BalconyPanorama"]) if v["BalconyPanorama"] else ""; rows.append(r)
     res["flats"] = unreal.DataTableFunctionLibrary.fill_data_table_from_json_string(dt2, json.dumps(rows))
     EAL.save_asset(FV + "/Data/DT_Neelam_Flats")
     res["rows"] = [str(n) for n in unreal.DataTableFunctionLibrary.get_data_table_row_names(dt)] + \

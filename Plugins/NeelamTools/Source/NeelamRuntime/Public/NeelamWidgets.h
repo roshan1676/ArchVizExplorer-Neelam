@@ -5,7 +5,7 @@
 #include "NeelamWidgets.generated.h"
 
 class UButton; class UTextBlock; class UImage; class UBorder; class UPanelWidget; class UScrollBox;
-class UCanvasPanel; class USizeBox; class ANeelamFlatTour; class ANeelamTowerFloors; class UNeelamListItem;
+class UCanvasPanel; class USizeBox; class UScaleBox; class ANeelamFlatTour; class ANeelamTowerFloors; class UNeelamListItem;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FNeelamItemEvent, UNeelamListItem*, Item);
 
@@ -146,4 +146,27 @@ protected:
     UFUNCTION() void HandleExit();
     UPROPERTY() TArray<TObjectPtr<UNeelamListItem>> Hotspots;
     UPROPERTY() TArray<TObjectPtr<UNeelamListItem>> RoomButtons;
+};
+
+/** Full-screen balcony photo viewer (day / night) - built in C++, no WBP needed. Opens over the 360 pawn, under the tour overlay. */
+UCLASS(Blueprintable)
+class NEELAMRUNTIME_API UNeelamBalconyGallery : public UUserWidget
+{
+    GENERATED_BODY()
+public:
+    UFUNCTION(BlueprintCallable, Category = "Neelam") void ShowView(const FNeelamBalconyView& View, int32 FlatFloor);
+    UFUNCTION(BlueprintCallable, Category = "Neelam") void SetNight(bool bInNight);
+protected:
+    virtual TSharedRef<SWidget> RebuildWidget() override;
+    UFUNCTION() void HandleDay();
+    UFUNCTION() void HandleNight();
+    void Refresh();
+    UPROPERTY() TObjectPtr<UImage> Photo;
+    UPROPERTY() TObjectPtr<UButton> BtnDay;
+    UPROPERTY() TObjectPtr<UButton> BtnNight;
+    UPROPERTY() TObjectPtr<UTextBlock> Caption;
+    UPROPERTY() TObjectPtr<UTexture2D> DayTex;
+    UPROPERTY() TObjectPtr<UTexture2D> NightTex;
+    int32 ViewFloor = 0, FlatFloorNum = 0;
+    bool bNight = false;
 };

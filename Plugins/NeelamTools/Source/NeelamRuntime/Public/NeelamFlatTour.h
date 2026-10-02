@@ -6,7 +6,7 @@
 
 class ANeelamTowerFloors;
 class UNeelamFloorViewWidget;
-class UNeelamTourWidget;
+class UNeelamTourWidget; class UNeelamBalconyGallery;
 class UDataTable;
 class ACameraActor;
 class APawn;
@@ -42,6 +42,9 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Neelam|Data") TObjectPtr<UDataTable> UnitTypesTable;
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Neelam|UI") TSubclassOf<UNeelamFloorViewWidget> FloorViewWidgetClass;
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Neelam|UI") TSubclassOf<UNeelamTourWidget> TourWidgetClass;
+    /** Balcony photo sets per floor (day / night). When set, a flat's Balcony room shows these as a gallery instead of a panorama. */
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Neelam") TArray<FNeelamBalconyView> BalconyViews;
+    UFUNCTION(BlueprintPure, Category = "Neelam") bool FindBalconyView(int32 Floor, FNeelamBalconyView& OutView) const;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float OverviewArmLength = 45000.f;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float OverviewPitch = -8.f;
@@ -69,6 +72,7 @@ public:
     UPROPERTY(BlueprintReadOnly, Category = "Neelam") int32 CurrentRoom = INDEX_NONE;
     UPROPERTY(BlueprintReadOnly, Category = "Neelam") TObjectPtr<UNeelamFloorViewWidget> FloorViewWidget;
     UPROPERTY(BlueprintReadOnly, Category = "Neelam") TObjectPtr<UNeelamTourWidget> TourWidget;
+    UPROPERTY(BlueprintReadOnly, Category = "Neelam") TObjectPtr<UNeelamBalconyGallery> Gallery;
 
     UPROPERTY(BlueprintAssignable, Category = "Neelam") FNeelamFloorEvent OnFloorSelected;
     UPROPERTY(BlueprintAssignable, Category = "Neelam") FNeelamFloorEvent OnFloorHovered;

@@ -461,7 +461,16 @@ void ANeelamFlatTour::ApplyRoom(int32 RoomIndex)
     if (!GetFlat(CurrentFlat, Flat) || !GetUnitType(Flat.UnitType, Type) || !Type.Rooms.IsValidIndex(RoomIndex)) return;
     CurrentRoom = RoomIndex;
     const FNeelamRoom& R = Type.Rooms[RoomIndex];
-    SetSphereTexture(ResolveRoomTexture(Flat, R));
+    FNeelamBalconyView View;
+    // a flat with its own balcony panorama (top floor) keeps the 360; the others get the photo gallery of the nearest floor
+    const bool bGallery = R.bUseFlatBalcony && Flat.BalconyPanorama.IsNull() && FindBalconyView(Flat.Floor, View);
+    if (!bGallery) SetSphereTexture(ResolveRoomTexture(Flat, R));
+    if (bGallery && !Gallery) if (APlayerController* GP = PC()) Gallery = CreateWidget<UNeelamBalconyGallery>(GP, UNeelamBalconyGallery::StaticClass());
+    if (Gallery)
+    {
+        if (bGallery) { if (!Gallery->IsInViewport()) Gallery->AddToViewport(9); Gallery->ShowView(View, Flat.Floor); }
+        else Gallery->SetVisibility(ESlateVisibility::Collapsed);
+    }
     if (APlayerController* P = PC()) P->SetControlRotation(FRotator(0.f, R.StartYaw, 0.f));
     if (TourWidget) TourWidget->SetActiveRoom(RoomIndex);
     OnRoomShown.Broadcast(CurrentFlat, RoomIndex);
@@ -492,6 +501,8 @@ void ANeelamFlatTour::FinishEndTour()
 {
     if (TourWidget) TourWidget->RemoveFromParent();
     TourWidget = nullptr;
+    if (Gallery) Gallery->RemoveFromParent();
+    Gallery = nullptr;
     CallSwitchPawn(0);   // template: back to the main pawn, main menu + POIs restored
     if (APlayerController* P = PC()) if (P->GetPawn()) P->SetViewTarget(P->GetPawn());
     CurrentRoom = INDEX_NONE;
@@ -500,4 +511,18 @@ void ANeelamFlatTour::FinishEndTour()
     ActivateFloorView();           // back in Floor View, same floor selected
     SetMasterMenuVisible(true);
     Fade(1.f, 0.f, FadeInDuration, false);
+}
+
+bool ANeelamFlatTour::FindBalconyView(int32 Floor, FNeelamBalconyView& OutView) const
+{
+    int32 Best = INDEX_NONE, BestD = MAX_int32;
+    for (int32 i = 0; i < BalconyViews.Num(); ++i)
+    {
+        if (BalconyViews[i].Day.IsNull() && BalconyViews[i].Night.IsNull()) continue;
+        const int32 D = FMath::Abs(BalconyViews[i].Floor - Floor);
+        if (D < BestD) { BestD = D; Best = i; }
+    }
+    if (Best == INDEX_NONE) return false;
+    OutView = BalconyViews[Best];
+    return true;
 }

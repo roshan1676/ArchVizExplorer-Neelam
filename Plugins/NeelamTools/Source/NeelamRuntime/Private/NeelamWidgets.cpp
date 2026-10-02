@@ -12,6 +12,16 @@
 #include "Components/SizeBox.h"
 #include "Components/WidgetSwitcher.h"
 #include "Engine/Texture2D.h"
+#include "Components/ScaleBox.h"
+#include "Components/ScaleBoxSlot.h"
+#include "Components/HorizontalBox.h"
+#include "Components/HorizontalBoxSlot.h"
+#include "Components/ButtonSlot.h"
+#include "Blueprint/WidgetTree.h"
+#include "Brushes/SlateRoundedBoxBrush.h"
+#include "Kismet/KismetMaterialLibrary.h"
+#include "Materials/MaterialParameterCollection.h"
+#include "Engine/Font.h"
 
 #define LOCTEXT_NAMESPACE "Neelam"
 
@@ -244,7 +254,7 @@ void UNeelamTourWidget::SetupFlat(ANeelamFlatTour* InTour, FName FlatRow)
     if (!Tour) return;
     FNeelamFlatRow Flat; FNeelamUnitTypeRow Type;
     if (!Tour->GetFlat(FlatRow, Flat) || !Tour->GetUnitType(Flat.UnitType, Type)) return;
-    if (FlatTitle) FlatTitle->SetText(FText::Format(LOCTEXT("TourTitle", "Flat {0}"), Flat.FlatNumber));
+    if (FlatTitle) FlatTitle->SetText(Type.FloorPlan.IsNull() ? Flat.FlatNumber : FText::Format(LOCTEXT("TourTitle", "Flat {0}"), Flat.FlatNumber));
     if (FlatInfo)
     {
         const FText TypeT = Type.DisplayName.IsEmpty() ? FText::FromName(Flat.UnitType) : Type.DisplayName;
@@ -253,6 +263,7 @@ void UNeelamTourWidget::SetupFlat(ANeelamFlatTour* InTour, FName FlatRow)
     }
     UTexture2D* Plan = Type.FloorPlan.LoadSynchronous();
     if (PlanImage && Plan) PlanImage->SetBrushFromTexture(Plan, false);
+    if (PlanBox) PlanBox->SetVisibility(Plan ? ESlateVisibility::SelfHitTestInvisible : ESlateVisibility::Collapsed);
     if (PlanBox && Plan)
     {
         const float W = FMath::Max(1, Plan->GetSizeX()), H = FMath::Max(1, Plan->GetSizeY());
@@ -311,5 +322,99 @@ void UNeelamTourWidget::SetActiveRoom(int32 RoomIndex)
 
 void UNeelamTourWidget::HandleRoom(UNeelamListItem* Item) { if (Item && Tour) Tour->ShowRoom(Item->Index); }
 void UNeelamTourWidget::HandleExit() { if (Tour) Tour->EndTour(); }
+
+
+// ------------------------------------------------------------------ balcony gallery
+static FSlateFontInfo NeelamFont(int32 Size, const TCHAR* Face)
+{
+    if (UObject* F = LoadObject<UObject>(nullptr, TEXT("/Game/Neelam/UI/Fonts/F_Neelam_Sans.F_Neelam_Sans")))
+        return FSlateFontInfo(F, Size, FName(Face));
+    return FCoreStyle::GetDefaultFontStyle("Bold", Size);
+}
+
+TSharedRef<SWidget> UNeelamBalconyGallery::RebuildWidget()
+{
+    if (WidgetTree && !WidgetTree->RootWidget)
+    {
+        UCanvasPanel* Root = WidgetTree->ConstructWidget<UCanvasPanel>(UCanvasPanel::StaticClass(), TEXT("Root"));
+        WidgetTree->RootWidget = Root;
+        auto Full = [](UCanvasPanelSlot* S) { S->SetAnchors(FAnchors(0, 0, 1, 1)); S->SetOffsets(FMargin(0)); };
+        UImage* Bg = WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(), TEXT("Bg"));
+        Bg->SetColorAndOpacity(FLinearColor(0.01f, 0.01f, 0.012f, 1.f));
+        Full(Root->AddChildToCanvas(Bg));
+        UScaleBox* SB = WidgetTree->ConstructWidget<UScaleBox>(UScaleBox::StaticClass(), TEXT("Fit"));
+        SB->SetStretch(EStretch::ScaleToFit);
+        Full(Root->AddChildToCanvas(SB));
+        Photo = WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(), TEXT("Photo"));
+        SB->AddChild(Photo);
+
+        // top-centre pill: caption + DAY / NIGHT
+        UBorder* Pill = WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass(), TEXT("Pill"));
+        Pill->SetBrush(FSlateRoundedBoxBrush(FLinearColor(0.f, 0.f, 0.f, 0.55f), 22.f, FLinearColor(1, 1, 1, 0.12f), 1.f));
+        Pill->SetPadding(FMargin(18, 6, 6, 6));
+        if (UCanvasPanelSlot* S = Root->AddChildToCanvas(Pill))
+        { S->SetAnchors(FAnchors(0.5f, 0.f)); S->SetAlignment(FVector2D(0.5f, 0.f)); S->SetPosition(FVector2D(0, 28)); S->SetAutoSize(true); }
+        UHorizontalBox* HB = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass(), TEXT("Row"));
+        Pill->SetContent(HB);
+        Caption = WidgetTree->ConstructWidget<UTextBlock>(UTextBlock::StaticClass(), TEXT("Caption"));
+        Caption->SetFont(NeelamFont(13, TEXT("Medium"))); Caption->SetColorAndOpacity(FSlateColor(FLinearColor(1, 1, 1, 0.85f)));
+        if (UHorizontalBoxSlot* S = HB->AddChildToHorizontalBox(Caption)) { S->SetVerticalAlignment(VAlign_Center); S->SetPadding(FMargin(0, 0, 16, 0)); }
+        auto MakeBtn = [&](const TCHAR* Name, const FText& Label) -> UButton*
+        {
+            UButton* B = WidgetTree->ConstructWidget<UButton>(UButton::StaticClass(), FName(Name));
+            UTextBlock* T = WidgetTree->ConstructWidget<UTextBlock>(UTextBlock::StaticClass());
+            T->SetText(Label); T->SetFont(NeelamFont(12, TEXT("SemiBold"))); T->SetColorAndOpacity(FSlateColor(FLinearColor::White));
+            B->SetContent(T);
+            if (UButtonSlot* BS = Cast<UButtonSlot>(T->Slot)) BS->SetPadding(FMargin(16, 6));
+            if (UHorizontalBoxSlot* S = HB->AddChildToHorizontalBox(B)) S->SetPadding(FMargin(2, 0));
+            return B;
+        };
+        BtnDay = MakeBtn(TEXT("BtnDay"), NSLOCTEXT("Neelam", "BalDay", "DAY"));
+        BtnNight = MakeBtn(TEXT("BtnNight"), NSLOCTEXT("Neelam", "BalNight", "NIGHT"));
+        BtnDay->OnClicked.AddDynamic(this, &UNeelamBalconyGallery::HandleDay);
+        BtnNight->OnClicked.AddDynamic(this, &UNeelamBalconyGallery::HandleNight);
+    }
+    return Super::RebuildWidget();
+}
+
+void UNeelamBalconyGallery::ShowView(const FNeelamBalconyView& View, int32 FlatFloor)
+{
+    DayTex = View.Day.LoadSynchronous(); NightTex = View.Night.LoadSynchronous();
+    ViewFloor = View.Floor; FlatFloorNum = FlatFloor;
+    // follow the app's time of day (Emissive_MPC.Effects: 0 day -> 1 night)
+    float Eff = 0.f;
+    if (UMaterialParameterCollection* M = LoadObject<UMaterialParameterCollection>(nullptr, TEXT("/Game/ArchVizExplorer/Materials/MPC/Emissive_MPC.Emissive_MPC")))
+        Eff = UKismetMaterialLibrary::GetScalarParameterValue(this, M, TEXT("Effects"));
+    bNight = NightTex && (Eff > 0.5f || !DayTex);
+    SetVisibility(ESlateVisibility::Visible);
+    Refresh();
+}
+
+void UNeelamBalconyGallery::SetNight(bool bInNight) { bNight = bInNight && NightTex; Refresh(); }
+void UNeelamBalconyGallery::HandleDay() { if (DayTex) SetNight(false); }
+void UNeelamBalconyGallery::HandleNight() { if (NightTex) SetNight(true); }
+
+void UNeelamBalconyGallery::Refresh()
+{
+    if (!Photo) return;
+    UTexture2D* T = bNight ? NightTex.Get() : DayTex.Get();
+    if (T) { Photo->SetBrushFromTexture(T, true); }
+    const FLinearColor Gold(0.578f, 0.397f, 0.144f, 1.f), Off(1.f, 1.f, 1.f, 0.08f);
+    auto Style = [&](UButton* B, bool bOn, bool bHas)
+    {
+        if (!B) return;
+        FButtonStyle St = B->GetStyle();
+        const FLinearColor C = bOn ? Gold : Off;
+        St.SetNormal(FSlateRoundedBoxBrush(C, 16.f)); St.SetHovered(FSlateRoundedBoxBrush(bOn ? Gold : FLinearColor(1, 1, 1, 0.18f), 16.f));
+        St.SetPressed(FSlateRoundedBoxBrush(Gold, 16.f));
+        St.SetNormalPadding(FMargin(0)); St.SetPressedPadding(FMargin(0));
+        B->SetStyle(St);
+        B->SetVisibility(bHas ? ESlateVisibility::Visible : ESlateVisibility::Collapsed);
+    };
+    Style(BtnDay, !bNight, DayTex != nullptr);
+    Style(BtnNight, bNight, NightTex != nullptr);
+    if (Caption)
+        Caption->SetText(FText::Format(NSLOCTEXT("Neelam", "BalCap", "BALCONY VIEW  ·  FLOOR {0}"), FText::AsNumber(FlatFloorNum)));
+}
 
 #undef LOCTEXT_NAMESPACE

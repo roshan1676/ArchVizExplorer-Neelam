@@ -64,6 +64,17 @@ struct NEELAMRUNTIME_API FNeelamFlatRow : public FTableRowBase
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float FacadeOffset = 0.f;
 };
 
+/** Balcony photo set (not a panorama) shot from one floor: shown as a gallery when a flat's Balcony room opens.
+    Flats use the set of the nearest floor. */
+USTRUCT(BlueprintType)
+struct NEELAMRUNTIME_API FNeelamBalconyView
+{
+    GENERATED_BODY()
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") int32 Floor = 1;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") TSoftObjectPtr<UTexture2D> Day;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") TSoftObjectPtr<UTexture2D> Night;
+};
+
 /** One floor of a tower (actor-local heights). */
 USTRUCT(BlueprintType)
 struct NEELAMRUNTIME_API FNeelamFloor
