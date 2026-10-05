@@ -30,6 +30,13 @@ AMENITIES = [
     ("garden",  "Landscaped Garden",         "Green walk beside the pool",           "Planting & trees",            "Leisure",    "T_Icon_Nature_01",  (3074, 2869, DECK_Z), (9.5, 36, 1.5)),
     ("sky",     "Sky Garden",                "Rooftop lawn with pergola",            "Podium roof, Towers A & B",   "Leisure",    "T_Icon_Nature_01",  (1173, -467, ABDECK_Z), (20, 20, 3)),
     ("parking", "Multi-level Parking",       "Podium parking levels",                "Below the amenity deck",      "Facilities", "T_Icon_Parking_01", (4753, 755, 1300), (2, 30, 7)),
+    # 4 Oct (client panoramas) - positions are first guesses along the podium edge, client to confirm
+    ("gym",     "Gymnasium",                 "Fully equipped fitness studio",        "Podium level",                "Fitness",    "T_Icon_Fitness_01", (5902, 1719, 1300), (12, 8, 4)),
+    ("senior",  "Senior Citizens' Corner",   "Quiet seating garden",                 "Landscaped deck",             "Leisure",    "T_Icon_Nature_01",  (2495, 3558, DECK_Z), (8, 8, 2)),
+    ("toilets", "Toilets (Staff & Drivers)", "Washrooms for domestic help / drivers", "Podium level",               "Facilities", "T_Icon_Place_01",   (6668, 2363, 1300), (8, 6, 4)),
+    ("stp",     "STP & Rain-Water Harvesting", "Sewage treatment + RWH tank",        "Services",                    "Facilities", "T_Icon_Place_01",   (3604, -209, 1300), (10, 8, 4)),
+    ("fire",    "Fire Pump Room",            "Fire-fighting pumps & tanks",          "Services",                    "Facilities", "T_Icon_Place_01",   (2838, -853, 1300), (8, 6, 4)),
+    ("wall",    "Decorative Compound Wall",  "Lit boundary wall with planters",      "Site boundary",               "Facilities", "T_Icon_Home_01",    (8018, 1959, 1300), (30, 1, 3)),
 ]
 
 

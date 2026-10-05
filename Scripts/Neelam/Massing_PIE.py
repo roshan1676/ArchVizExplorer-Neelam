@@ -6,9 +6,10 @@ import json, os, math
 import unreal
 P = os.path.join(unreal.Paths.convert_relative_path_to_full(unreal.Paths.project_dir()), "Scripts", "Neelam")
 MODE = globals().get("MODE", "prep"); env = globals()["env"]; CC = 50000.0
+SEL = globals().get("SEL", "massing_sel.json"); OUT = globals().get("OUT", "massing_heights.json")   # far landmarks: massing_far_sel.json / massing_far_heights.json
 gw = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_game_world()
 if MODE == "prep":
-    S = json.load(open(os.path.join(P, "Data", "massing_sel.json"))); cells = {}
+    S = json.load(open(os.path.join(P, "Data", SEL))); cells = {}
     for i, b in enumerate(S):
         cells.setdefault((math.floor(b["c"][0] / CC), math.floor(b["c"][1] / CC)), []).append(i)
     env["ms"] = S; env["ms_cells"] = sorted(cells.items()); env["ms_res"] = {}
@@ -45,5 +46,5 @@ elif MODE == "trace":
             env["ms_res"][b["id"]] = [grd[0], roof[len(roof) // 2]]; ok += 1
     result = [CELL, ok, len(idx)]
 elif MODE == "save":
-    json.dump(env["ms_res"], open(os.path.join(P, "Data", "massing_heights.json"), "w"))
+    json.dump(env["ms_res"], open(os.path.join(P, "Data", OUT), "w"))
     result = len(env["ms_res"])

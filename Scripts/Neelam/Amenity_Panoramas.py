@@ -28,6 +28,7 @@ def import_all():
         os.makedirs(SRC)
     tasks = []
     for f in sorted(os.listdir(SRC)):
+        if os.path.isdir(os.path.join(SRC, f)): continue   # src/ = client originals
         aid, ext = os.path.splitext(f)
         if ext.lower() not in EXT:
             continue
@@ -50,6 +51,7 @@ def import_all():
         tex.set_editor_property("never_stream", True)
         tex.set_editor_property("power_of_two_mode", unreal.TexturePowerOfTwoSetting.NONE)
         tex.set_editor_property("mip_gen_settings", unreal.TextureMipGenSettings.TMGS_NO_MIPMAPS)
+        tex.set_editor_property("max_texture_size", 8192)
         EAL.save_asset(tex_path(aid))
         out.append((aid, tex_path(aid)))
     return out
