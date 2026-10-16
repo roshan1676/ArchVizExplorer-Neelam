@@ -1,11 +1,12 @@
 """Pick the context buildings for the grey massing (30 Sep): OSM footprints (Data/massing_src.json, 2.5 km around the
 site) -> Data/massing_sel.json. Sparse near the tower (client: 'just enough to identify the surroundings'):
-< 500 m from the site only >= 500 m2, < 1.2 km >= 300 m2, beyond >= 250 m2. Site / landmark cut-outs excluded.
+< 500 m from the site only >= 500 m2, < 1.2 km >= 300 m2, beyond >= 250 m2 (11 Oct: every building >= MIN_M2). Site / landmark cut-outs excluded.
 Footprints simplified (0.6 m) and closed. Pure python."""
 import json, math, os
 D = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Data")
 B = json.load(open(os.path.join(D, "massing_src.json"))); C = json.load(open(os.path.join(D, "cut_polys.json")))
 S = (944.0, 4429.0)
+MIN_M2 = 60      # client 11 Oct: "surrounding buildings - which we don't have, add them" (was 500 / 300 / 250 m2 by distance)
 def area(p): return abs(sum(p[i][0] * p[i - 1][1] - p[i - 1][0] * p[i][1] for i in range(len(p)))) / 2 / 1e4
 def inside(x, y, poly):
     c = False
@@ -28,7 +29,7 @@ for b in B:
     a = area(p); cx = sum(q[0] for q in p) / len(p); cy = sum(q[1] for q in p) / len(p)
     d = math.hypot(cx - S[0], cy - S[1]) / 100
     if any(inside(cx, cy, poly) for poly in C.values()): continue
-    if a < (500 if d < 500 else 300 if d < 1200 else 250): continue
+    if a < MIN_M2: continue
     q = dp(p + [p[0]], 60.0)[:-1]
     if len(q) < 3: q = p
     lv = b.get("levels"); h = b.get("height")

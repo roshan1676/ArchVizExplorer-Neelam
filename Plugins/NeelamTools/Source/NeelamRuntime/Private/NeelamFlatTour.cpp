@@ -238,6 +238,8 @@ void ANeelamFlatTour::DeactivateFloorView()
 {
     if (State != ENeelamTourState::FloorView) return;
     State = ENeelamTourState::Off;
+    CloseFloorGallery();
+    bHiddenByOverlay = false;
     if (bIdleSuppressed && MainPawn) { SetBoolProp(MainPawn, TEXT("Allow_Idle?"), bSavedAllowIdle); SetNumberProp(MainPawn, TEXT("Idle_Timer"), 0.0); }
     bIdleSuppressed = false;
     for (ANeelamTowerFloors* T : Towers) if (T) T->SetBoxesActive(false);
@@ -326,8 +328,12 @@ void ANeelamFlatTour::PollMenuTab()
     if (!Menu) return;
     if (!MenuTab.IsValid() || MenuTabOwner.Get() != Menu)
     {
-        MenuTab = nullptr; MenuTabOwner = Menu;
-        if (Menu->WidgetTree) Menu->WidgetTree->ForEachWidget([this](UWidget* W) { if (UNeelamFloorViewTab* T = Cast<UNeelamFloorViewTab>(W)) MenuTab = T; });
+        MenuTab = nullptr; MenuTabOwner = Menu; MenuOverlays.Reset();
+        if (Menu->WidgetTree) Menu->WidgetTree->ForEachWidget([this](UWidget* W)
+        {
+            if (UNeelamFloorViewTab* T = Cast<UNeelamFloorViewTab>(W)) MenuTab = T;
+            else if (W->GetClass()->GetName().StartsWith(TEXT("BP_Gallery_Widget"))) MenuOverlays.Add(W);
+        });
     }
     UNeelamFloorViewTab* Tab = MenuTab.Get();
     if (!Tab) return;
@@ -343,14 +349,31 @@ void ANeelamFlatTour::PollMenuTab()
             }
     const bool bNow = Tab->IsActivePage() && Menu->IsVisible();
     if (bNow && State == ENeelamTourState::Off) { Tab->bTabActive = true; ActivateFloorView(); }
-    else if (!bNow && State == ENeelamTourState::FloorView && Menu->IsVisible()) { Tab->bTabActive = false; DeactivateFloorView(); }
+    else if (!bNow && State == ENeelamTourState::FloorView) { Tab->bTabActive = false; DeactivateFloorView(); }
+    // the template Gallery is a full-screen overlay INSIDE the MasterMenu (the Floor View page stays the active page):
+    // hide the Floor View overlay + floor boxes while it is open, bring them back when it closes
+    if (State == ENeelamTourState::FloorView)
+    {
+        bool bOverlay = false;
+        for (const TWeakObjectPtr<UWidget>& W : MenuOverlays) if (W.IsValid() && W->IsVisible()) bOverlay = true;
+        SetHiddenByOverlay(bOverlay);
+    }
+}
+
+void ANeelamFlatTour::SetHiddenByOverlay(bool bHide)
+{
+    if (bHide == bHiddenByOverlay) return;
+    bHiddenByOverlay = bHide;
+    if (bHide) { CloseFloorGallery(); HoverFloor(nullptr, INDEX_NONE); }
+    if (FloorViewWidget) FloorViewWidget->SetVisibility(bHide ? ESlateVisibility::Collapsed : ESlateVisibility::SelfHitTestInvisible);
+    for (ANeelamTowerFloors* T : Towers) if (T) T->SetBoxesActive(!bHide);
 }
 
 void ANeelamFlatTour::Tick(float Dt)
 {
     Super::Tick(Dt);
     if (State == ENeelamTourState::Off || State == ENeelamTourState::FloorView) PollMenuTab();
-    if (State == ENeelamTourState::FloorView) UpdatePicking();
+    if (State == ENeelamTourState::FloorView && !bHiddenByOverlay && !(FloorGalleryWidget && FloorGalleryWidget->IsInViewport())) UpdatePicking();
     else if (State == ENeelamTourState::Flying) TickFly(Dt);
 }
 
@@ -395,6 +418,7 @@ void ANeelamFlatTour::StartTour(FName FlatRow)
     P->SetViewTarget(FlyCamera);
     FlyT = 0.f; bFadeStarted = false;
     State = ENeelamTourState::Flying;
+    CloseFloorGallery();
     if (FloorViewWidget) FloorViewWidget->SetVisibility(ESlateVisibility::Collapsed);
     SetMasterMenuVisible(false);
     HoverFloor(nullptr, INDEX_NONE);
@@ -513,16 +537,40 @@ void ANeelamFlatTour::FinishEndTour()
     Fade(1.f, 0.f, FadeInDuration, false);
 }
 
-bool ANeelamFlatTour::FindBalconyView(int32 Floor, FNeelamBalconyView& OutView) const
+static bool NearestView(const TArray<FNeelamBalconyView>& Views, int32 Floor, FNeelamBalconyView& OutView)
 {
     int32 Best = INDEX_NONE, BestD = MAX_int32;
-    for (int32 i = 0; i < BalconyViews.Num(); ++i)
+    for (int32 i = 0; i < Views.Num(); ++i)
     {
-        if (BalconyViews[i].Day.IsNull() && BalconyViews[i].Night.IsNull()) continue;
-        const int32 D = FMath::Abs(BalconyViews[i].Floor - Floor);
+        if (Views[i].Day.IsNull() && Views[i].Night.IsNull()) continue;
+        const int32 D = FMath::Abs(Views[i].Floor - Floor);
         if (D < BestD) { BestD = D; Best = i; }
     }
     if (Best == INDEX_NONE) return false;
-    OutView = BalconyViews[Best];
+    OutView = Views[Best];
     return true;
+}
+
+bool ANeelamFlatTour::FindBalconyView(int32 Floor, FNeelamBalconyView& OutView) const { return NearestView(BalconyViews, Floor, OutView); }
+bool ANeelamFlatTour::FindFloorGalleryView(int32 Floor, FNeelamBalconyView& OutView) const { return NearestView(FloorGallery, Floor, OutView); }
+
+void ANeelamFlatTour::OpenFloorGallery(int32 FloorNumber)
+{
+    FNeelamBalconyView View;
+    APlayerController* P = PC();
+    if (State != ENeelamTourState::FloorView || !P || !FindFloorGalleryView(FloorNumber, View)) return;
+    if (!FloorGalleryWidget)
+    {
+        FloorGalleryWidget = CreateWidget<UNeelamBalconyGallery>(P, UNeelamBalconyGallery::StaticClass());
+        FloorGalleryWidget->CaptionFormat = NSLOCTEXT("Neelam", "FloorGalCap", "VIEW FROM FLOOR {0}");
+        FloorGalleryWidget->bShowClose = true;
+    }
+    if (!FloorGalleryWidget->IsInViewport()) FloorGalleryWidget->AddToViewport(8);   // above the Floor View overlay (5)
+    FloorGalleryWidget->ShowView(View, FloorNumber);
+    HoverFloor(nullptr, INDEX_NONE);
+}
+
+void ANeelamFlatTour::CloseFloorGallery()
+{
+    if (FloorGalleryWidget) FloorGalleryWidget->RemoveFromParent();
 }

@@ -1,5 +1,5 @@
 """Windows Shipping build (4 Oct, client pitch): saves, closes the editor, runs BuildCookRun via a Task Scheduler batch
-(survives the editor exit), archives to C:/Users/rosha/Documents/Neelam (Windows/ inside), adds a 'Neelam.lnk' shortcut,
+(survives the editor exit), archives to C:/Users/Admin/Documents/builds/av_neelam (Windows/ inside), adds a 'Neelam.lnk' shortcut,
 reopens the editor. Log: Saved/NeelamBridge/package.log ("PACKAGE EXITCODE n" at the end).
 Settings: Config/DefaultGame.ini (Shipping, pak+iostore, compressed, prereqs, map Realistic_01, always cook /Game/Neelam)
 and Config/DefaultGameUserSettings.ini (scalability High = 2, windowed fullscreen, VSync, 60 fps cap)."""
@@ -8,7 +8,7 @@ import unreal
 PROJ = unreal.Paths.convert_relative_path_to_full(unreal.Paths.project_dir()).rstrip("/").replace("/", "\\")
 ENG = unreal.Paths.convert_relative_path_to_full(unreal.Paths.engine_dir()).rstrip("/").replace("/", "\\")
 NB = os.path.join(PROJ, "Saved", "NeelamBridge"); LOG = os.path.join(NB, "package.log")
-UPROJ = os.path.join(PROJ, "ArchVizExplorer.uproject"); OUT = r"C:\Users\rosha\Documents\Neelam"
+UPROJ = os.path.join(PROJ, "ArchVizExplorer.uproject"); OUT = r"C:\Users\Admin\Documents\builds\av_neelam"
 
 def run():
     bat = os.path.join(NB, "package_build.bat")

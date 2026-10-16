@@ -7,7 +7,7 @@
  },
  "landmarks": [
   {"id": "hiramongi", "name": "Hira Mongi Navneet Hospital", "cat": "Healthcare", "lat": 19.170925, "lon": 72.95022, "dist": "2.5 km", "drive_min": 9,  "icon": "T_Icon_Hospital_01", "about": "Multi-speciality hospital, Mulund West"},
-  {"id": "fortis",    "name": "Fortis Hospital",             "cat": "Healthcare", "lat": 19.162789, "lon": 72.94198, "dist": "4.7 km", "drive_min": 10, "icon": "T_Icon_Hospital_01", "about": "Super-speciality hospital on Mulund–Goregaon Link Road"},
+  {"id": "fortis",    "name": "Fortis Hospital",             "cat": "Healthcare", "lat": 19.161794, "lon": 72.941809, "dist": "4.7 km", "drive_min": 10, "icon": "T_Icon_Hospital_01", "about": "Super-speciality hospital on Mulund–Goregaon Link Road"},
   {"id": "apex",      "name": "Apex Hospitals",              "cat": "Healthcare", "lat": 19.180962, "lon": 72.942467, "dist": "5.0 km", "drive_min": 12, "icon": "T_Icon_Hospital_01", "about": "Multi-speciality hospital, Mulund West"},
   {"id": "jupiter",   "name": "Jupiter Hospital",            "cat": "Healthcare", "lat": 19.209474, "lon": 72.972522, "dist": "6.6 km", "drive_min": 14, "icon": "T_Icon_Hospital_01", "about": "Tertiary-care hospital on the Eastern Express Highway, Thane"},
   {"id": "rmall",     "name": "R Mall",                      "cat": "Retail", "lat": 19.183975, "lon": 72.951593, "dist": "4.4 km", "drive_min": 9,  "icon": "T_Icon_ShoppingBag_01", "about": "Shopping mall on LBS Marg, Mulund West"},

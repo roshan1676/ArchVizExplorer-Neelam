@@ -93,6 +93,7 @@ void UNeelamFloorViewTab::NativeDestruct()
 }
 
 // ============================================================ UNeelamFloorViewWidget
+static const FName NeelamGalleryId(TEXT("__FloorGallery"));
 void UNeelamFloorViewWidget::NativeOnInitialized()
 {
     Super::NativeOnInitialized();
@@ -169,6 +170,36 @@ void UNeelamFloorViewWidget::ShowFloorDetail(ANeelamTowerFloors* T, int32 FloorI
     if (FlatList)
     {
         FlatList->ClearChildren();
+        FNeelamBalconyView GView;
+        if (FlatCardClass && Tour->FindFloorGalleryView(F.Number, GView))
+        {
+            UNeelamListItem* It = CreateWidget<UNeelamListItem>(this, FlatCardClass);
+            It->Id = NeelamGalleryId; It->Index = F.Number;
+            It->SetTexts(LOCTEXT("GalT", "Floor Gallery"), FText::Format(LOCTEXT("GalInfo", "View from floor {0}"), FText::AsNumber(F.Number)),
+                         LOCTEXT("GalExtra", "Tap to open the photo"));
+            It->SetBadge(LOCTEXT("GalBadge", "GALLERY"), FLinearColor(0.85f, 0.68f, 0.38f));
+            // the flat card's action button reads "360° PANORAMA" - relabel it for the gallery card
+            if (It->WidgetTree) It->WidgetTree->ForEachWidget([](UWidget* W)
+            {
+                if (UTextBlock* T = Cast<UTextBlock>(W)) if (T->GetText().ToString().Contains(TEXT("PANORAMA"))) T->SetText(LOCTEXT("GalOpen", "OPEN GALLERY"));
+            });
+            UTexture2D* Tex = GView.Day.LoadSynchronous();
+            if (!Tex) Tex = GView.Night.LoadSynchronous();
+            It->SetThumb(Tex);
+            if (Tex && It->Thumb)
+            {
+                // centre crop of the wide photo to the thumbnail's aspect (no stretching)
+                const FVector2D Sz = It->Thumb->GetDesiredSize().IsNearlyZero() ? FVector2D(80, 120) : It->Thumb->GetDesiredSize();
+                const float Img = Tex->GetSizeX() / FMath::Max(1.f, (float)Tex->GetSizeY());
+                const float W = FMath::Clamp((Sz.X / FMath::Max(1.0, Sz.Y)) / Img, 0.05f, 1.f);
+                FSlateBrush B = It->Thumb->GetBrush();
+                B.SetUVRegion(FBox2f(FVector2f(0.5f - W * 0.5f, 0.f), FVector2f(0.5f + W * 0.5f, 1.f)));
+                It->Thumb->SetBrush(B);
+            }
+            It->OnItemClicked.AddDynamic(this, &UNeelamFloorViewWidget::HandleFlatPanorama);
+            It->OnItemAction.AddDynamic(this, &UNeelamFloorViewWidget::HandleFlatPanorama);
+            FlatList->AddChild(It);
+        }
         for (const FName& R : Flats)
         {
             FNeelamFlatRow Row; if (!Tour->GetFlat(R, Row) || !FlatCardClass) continue;
@@ -233,7 +264,9 @@ void UNeelamFloorViewWidget::HandleFloorUnhover(UNeelamListItem* Item)
 }
 void UNeelamFloorViewWidget::HandleFlatPanorama(UNeelamListItem* Item)
 {
-    if (Item && Tour) Tour->StartTour(Item->Id);
+    if (!Item || !Tour) return;
+    if (Item->Id == NeelamGalleryId) Tour->OpenFloorGallery(Item->Index);
+    else Tour->StartTour(Item->Id);
 }
 void UNeelamFloorViewWidget::HandleCloseDetail()
 {
@@ -373,6 +406,22 @@ TSharedRef<SWidget> UNeelamBalconyGallery::RebuildWidget()
         BtnNight = MakeBtn(TEXT("BtnNight"), NSLOCTEXT("Neelam", "BalNight", "NIGHT"));
         BtnDay->OnClicked.AddDynamic(this, &UNeelamBalconyGallery::HandleDay);
         BtnNight->OnClicked.AddDynamic(this, &UNeelamBalconyGallery::HandleNight);
+
+        // top-right CLOSE (Floor View gallery only)
+        BtnClose = WidgetTree->ConstructWidget<UButton>(UButton::StaticClass(), TEXT("BtnClose"));
+        UTextBlock* CT = WidgetTree->ConstructWidget<UTextBlock>(UTextBlock::StaticClass());
+        CT->SetText(NSLOCTEXT("Neelam", "GalClose", "×  CLOSE")); CT->SetFont(NeelamFont(12, TEXT("SemiBold"))); CT->SetColorAndOpacity(FSlateColor(FLinearColor::White));
+        BtnClose->SetContent(CT);
+        if (UButtonSlot* BS = Cast<UButtonSlot>(CT->Slot)) BS->SetPadding(FMargin(18, 8));
+        FButtonStyle St = BtnClose->GetStyle();
+        St.SetNormal(FSlateRoundedBoxBrush(FLinearColor(0.f, 0.f, 0.f, 0.55f), 20.f, FLinearColor(1, 1, 1, 0.18f), 1.f));
+        St.SetHovered(FSlateRoundedBoxBrush(FLinearColor(0.578f, 0.397f, 0.144f, 1.f), 20.f));
+        St.SetPressed(FSlateRoundedBoxBrush(FLinearColor(0.578f, 0.397f, 0.144f, 1.f), 20.f));
+        St.SetNormalPadding(FMargin(0)); St.SetPressedPadding(FMargin(0));
+        BtnClose->SetStyle(St);
+        if (UCanvasPanelSlot* S = Root->AddChildToCanvas(BtnClose))
+        { S->SetAnchors(FAnchors(1.f, 0.f)); S->SetAlignment(FVector2D(1.f, 0.f)); S->SetPosition(FVector2D(-32, 28)); S->SetAutoSize(true); }
+        BtnClose->OnClicked.AddDynamic(this, &UNeelamBalconyGallery::HandleClose);
     }
     return Super::RebuildWidget();
 }
@@ -393,6 +442,11 @@ void UNeelamBalconyGallery::ShowView(const FNeelamBalconyView& View, int32 FlatF
 void UNeelamBalconyGallery::SetNight(bool bInNight) { bNight = bInNight && NightTex; Refresh(); }
 void UNeelamBalconyGallery::HandleDay() { if (DayTex) SetNight(false); }
 void UNeelamBalconyGallery::HandleNight() { if (NightTex) SetNight(true); }
+void UNeelamBalconyGallery::HandleClose()
+{
+    if (ANeelamFlatTour* T = ANeelamFlatTour::GetFlatTour(this)) T->CloseFloorGallery();
+    else RemoveFromParent();
+}
 
 void UNeelamBalconyGallery::Refresh()
 {
@@ -411,10 +465,12 @@ void UNeelamBalconyGallery::Refresh()
         B->SetStyle(St);
         B->SetVisibility(bHas ? ESlateVisibility::Visible : ESlateVisibility::Collapsed);
     };
-    Style(BtnDay, !bNight, DayTex != nullptr);
-    Style(BtnNight, bNight, NightTex != nullptr);
+    // DAY / NIGHT only when both photos exist (the Floor View gallery has day photos only)
+    Style(BtnDay, !bNight, DayTex != nullptr && NightTex != nullptr);
+    Style(BtnNight, bNight, DayTex != nullptr && NightTex != nullptr);
     if (Caption)
-        Caption->SetText(FText::Format(NSLOCTEXT("Neelam", "BalCap", "BALCONY VIEW  ·  FLOOR {0}"), FText::AsNumber(FlatFloorNum)));
+        Caption->SetText(FText::Format(CaptionFormat, FText::AsNumber(FlatFloorNum)));
+    if (BtnClose) BtnClose->SetVisibility(bShowClose ? ESlateVisibility::Visible : ESlateVisibility::Collapsed);
 }
 
 #undef LOCTEXT_NAMESPACE

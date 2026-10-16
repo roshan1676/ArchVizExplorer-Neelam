@@ -169,7 +169,8 @@ def step_materials():
 
 def step_import():
     mf = unreal.load_asset(DIR + "/M_Neelam_Facade"); mr = unreal.load_asset(DIR + "/M_Neelam_Roof")
-    for a in [a for a in EAS.get_all_level_actors() if str(a.get_folder_path()).startswith(FOLDER)]:
+    for a in [a for a in EAS.get_all_level_actors() if str(a.get_folder_path()).startswith(FOLDER)
+              and not a.get_actor_label().startswith("Facade_far_")]:      # far-landmark facades: make_far_massing.import_far()
         EAS.destroy_actor(a)
     tasks = []
     for f in sorted(glob.glob(os.path.join(SRC, "facade_*.fbx"))):

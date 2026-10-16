@@ -4,7 +4,7 @@
 #include "NeelamTypes.h"
 #include "NeelamFlatTour.generated.h"
 
-class ANeelamTowerFloors;
+class ANeelamTowerFloors; class UWidget;
 class UNeelamFloorViewWidget;
 class UNeelamTourWidget; class UNeelamBalconyGallery;
 class UDataTable;
@@ -45,6 +45,11 @@ public:
     /** Balcony photo sets per floor (day / night). When set, a flat's Balcony room shows these as a gallery instead of a panorama. */
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Neelam") TArray<FNeelamBalconyView> BalconyViews;
     UFUNCTION(BlueprintPure, Category = "Neelam") bool FindBalconyView(int32 Floor, FNeelamBalconyView& OutView) const;
+    /** Floor View gallery: view photos per floor (Day = photo). The floor detail panel shows a "Floor Gallery" card with the nearest floor's photo. */
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Neelam") TArray<FNeelamBalconyView> FloorGallery;
+    UFUNCTION(BlueprintPure, Category = "Neelam") bool FindFloorGalleryView(int32 Floor, FNeelamBalconyView& OutView) const;
+    UFUNCTION(BlueprintCallable, Category = "Neelam") void OpenFloorGallery(int32 FloorNumber);
+    UFUNCTION(BlueprintCallable, Category = "Neelam") void CloseFloorGallery();
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float OverviewArmLength = 45000.f;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float OverviewPitch = -8.f;
@@ -73,6 +78,7 @@ public:
     UPROPERTY(BlueprintReadOnly, Category = "Neelam") TObjectPtr<UNeelamFloorViewWidget> FloorViewWidget;
     UPROPERTY(BlueprintReadOnly, Category = "Neelam") TObjectPtr<UNeelamTourWidget> TourWidget;
     UPROPERTY(BlueprintReadOnly, Category = "Neelam") TObjectPtr<UNeelamBalconyGallery> Gallery;
+    UPROPERTY(BlueprintReadOnly, Category = "Neelam") TObjectPtr<UNeelamBalconyGallery> FloorGalleryWidget;
 
     UPROPERTY(BlueprintAssignable, Category = "Neelam") FNeelamFloorEvent OnFloorSelected;
     UPROPERTY(BlueprintAssignable, Category = "Neelam") FNeelamFloorEvent OnFloorHovered;
@@ -131,5 +137,9 @@ private:
     bool bPressed = false;
     bool bSavedAllowIdle = true;   // template pawn "Allow_Idle?" (auto-orbit after 15 s) - off while Floor View is open
     bool bIdleSuppressed = false;
+    /** template full-screen overlays inside the MasterMenu (BP_Gallery_Widget: main gallery, POI info gallery) */
+    TArray<TWeakObjectPtr<UWidget>> MenuOverlays;
+    bool bHiddenByOverlay = false;
+    void SetHiddenByOverlay(bool bHide);
     FTimerHandle TimerA;
 };

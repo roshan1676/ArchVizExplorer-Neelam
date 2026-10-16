@@ -8,14 +8,17 @@ D = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Data")
 S = json.load(open(os.path.join(D, "massing_sel.json")))
 H = json.load(open(os.path.join(D, "massing_heights.json")))
 SRC = {b["id"]: b for b in json.load(open(os.path.join(D, "massing_src.json")))}
+SRC_C = {b["id"]: b["c"] for b in S}
 def guess(b, typ, a):
+    # 11 Oct (client "raise them"): Mulund residential blocks are mostly G+7 .. G+30 towers - the 30 Sep guesses were too low
     r = random.Random(b["id"]).uniform(0.8, 1.2)
     if typ in ("industrial", "warehouse", "roof", "shed", "garage", "construction", "stadium"): return 9.0 * r
-    if typ in ("school", "hospital", "public", "temple", "commercial", "retail", "mall"): return 15.0 * r
-    if a < 400: return 13.0 * r
-    if a < 800: return 19.0 * r
-    if a < 1500: return 26.0 * r
-    return 30.0 * r
+    if typ in ("school", "hospital", "public", "temple", "commercial", "retail", "mall"): return 18.0 * r
+    if a < 150: return 7.0 * r
+    if a < 400: return 16.0 * r
+    if a < 800: return 26.0 * r
+    if a < 1500: return 36.0 * r
+    return 45.0 * r
 # no block may stand on a built carriageway (OSM building polygons sometimes overlap flyovers / the highway)
 RB = json.load(open(os.path.join(D, "road_build.json")))["roads"]
 def _inside(x, y, poly):
@@ -38,15 +41,36 @@ def on_road(P):
     return False
 EXF = os.path.join(D, "massing_exclude.json")          # ids removed on request (Mark_Massing_Removals.py)
 EXCL = set(json.load(open(EXF))) if os.path.exists(EXF) else set()
+_GP = [(SRC_C[int(k)], v[0]) for k, v in H.items() if v and v[0] is not None and int(k) in SRC_C]
+def near_ground(c, k=5):
+    """lowest of the k nearest measured grounds (street level) - same rule as the measured blocks"""
+    d = sorted(((c[0] - p[0]) ** 2 + (c[1] - p[1]) ** 2, z) for p, z in _GP)[:k]
+    return min(z for _, z in d) if d and d[0][0] < 400 ** 2 * 1e4 else None
+# no grey block inside a landmark model (Fix_Landmarks.py -> Data/landmark_boxes.json, +4 m margin)
+LMB = json.load(open(os.path.join(D, "landmark_boxes.json"))) if os.path.exists(os.path.join(D, "landmark_boxes.json")) else {}
+def in_landmark(P, margin=600):
+    """footprint P overlaps a landmark box grown by margin (cm): vertex in box, box corner in P, or crossing edges"""
+    def cross(a, b, c, d):
+        def o(p, q, r): return (q[0] - p[0]) * (r[1] - p[1]) - (q[1] - p[1]) * (r[0] - p[0])
+        return o(a, b, c) * o(a, b, d) < 0 and o(c, d, a) * o(c, d, b) < 0
+    for v in LMB.values():
+        r = math.radians(v["yaw"]); ux, uy = math.cos(r), math.sin(r); hw, hd = v["size_m"][0] * 50 + margin, v["size_m"][1] * 50 + margin
+        cx, cy = v["xy"]
+        R = [(cx + s1 * hw * ux - s2 * hd * uy, cy + s1 * hw * uy + s2 * hd * ux) for s1, s2 in ((-1, -1), (1, -1), (1, 1), (-1, 1))]
+        if any(abs((x - cx) * ux + (y - cy) * uy) < hw and abs(-(x - cx) * uy + (y - cy) * ux) < hd for x, y in P): return True
+        if any(_inside(x, y, P) for x, y in R): return True
+        if any(cross(P[i - 1], P[i], R[j - 1], R[j]) for i in range(len(P)) for j in range(4)): return True
+    return False
 out = []; used = {"osm": 0, "guess": 0, "on_road_removed": 0, "excluded": 0}
 for b in S:
     if b["id"] in EXCL: used["excluded"] += 1; continue
     if on_road(b["pts"]): used["on_road_removed"] += 1; continue
+    if in_landmark(b["pts"]): used["in_landmark"] = used.get("in_landmark", 0) + 1; continue
     typ = SRC[b["id"]].get("b") or "yes"
     if b["h_osm"] and 3 <= b["h_osm"] <= 250: h = b["h_osm"]; used["osm"] += 1
     else: h = guess(b, typ, b["area"]); used["guess"] += 1
     g = H.get(str(b["id"]))
-    ground = g[0] if g else None
+    ground = g[0] if g and g[0] is not None else near_ground(b["c"])     # buildings added 11 Oct: from measured neighbours
     if ground is None: continue
     out.append({"id": b["id"], "pts": b["pts"], "base": round(ground - 300, 1), "top": round(ground + h * 100, 1),
                 "chunk": "%d_%d" % (math.floor(b["c"][0] / 50000), math.floor(b["c"][1] / 50000))})

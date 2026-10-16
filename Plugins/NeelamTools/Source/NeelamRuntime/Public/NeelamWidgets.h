@@ -156,11 +156,17 @@ class NEELAMRUNTIME_API UNeelamBalconyGallery : public UUserWidget
 public:
     UFUNCTION(BlueprintCallable, Category = "Neelam") void ShowView(const FNeelamBalconyView& View, int32 FlatFloor);
     UFUNCTION(BlueprintCallable, Category = "Neelam") void SetNight(bool bInNight);
+    /** Caption, {0} = floor number. */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") FText CaptionFormat = NSLOCTEXT("Neelam", "BalCapFmt", "BALCONY VIEW  ·  FLOOR {0}");
+    /** Shows a CLOSE button (Floor View gallery); clicking it calls ANeelamFlatTour::CloseFloorGallery. */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") bool bShowClose = false;
 protected:
     virtual TSharedRef<SWidget> RebuildWidget() override;
     UFUNCTION() void HandleDay();
     UFUNCTION() void HandleNight();
+    UFUNCTION() void HandleClose();
     void Refresh();
+    UPROPERTY(BlueprintReadOnly, Category = "Neelam") TObjectPtr<UButton> BtnClose;
     UPROPERTY() TObjectPtr<UImage> Photo;
     UPROPERTY() TObjectPtr<UButton> BtnDay;
     UPROPERTY() TObjectPtr<UButton> BtnNight;
