@@ -7,7 +7,10 @@
 #include "Kismet/KismetMaterialLibrary.h"
 #include "Materials/MaterialParameterCollection.h"
 #include "Components/SkyLightComponent.h"
+#include "Engine/PostProcessVolume.h"
 #include "EngineUtils.h"
+#include "Misc/DateTime.h"
+#include "UObject/UnrealType.h"
 
 #define LOCTEXT_NAMESPACE "NeelamTime"
 
@@ -21,6 +24,33 @@ void UNeelamTimeWidget::NativeOnInitialized()
     if (!LightingMPC)
         LightingMPC = LoadObject<UMaterialParameterCollection>(nullptr, TEXT("/Game/Neelam/Amenities/Lighting/MPC_Neelam_Lighting.MPC_Neelam_Lighting"));
     EmissiveMPC = LoadObject<UMaterialParameterCollection>(nullptr, TEXT("/Game/ArchVizExplorer/Materials/MPC/Emissive_MPC.Emissive_MPC"));
+    SyncSunDateToToday();
+}
+
+void UNeelamTimeWidget::SyncSunDateToToday()
+{
+    // BP_AVE_SunSky_01 (SunPosition plugin, Blueprint-only class) had its Date frozen at whatever day it was last
+    // edited on - the sun/sky for Mumbai is otherwise correct (Latitude/Longitude/TimeZone), it just never advances
+    // past that one stale date. Set it to the real calendar date every time the project opens, via reflection since
+    // there is no C++ header for the plugin's Blueprint SunSky class.
+    UWorld* World = GetWorld();
+    if (!World) return;
+    AActor* SunSky = nullptr;
+    for (TActorIterator<AActor> It(World); It; ++It)
+        if (It->GetClass()->GetName().Contains(TEXT("SunSky"))) { SunSky = *It; break; }
+    if (!SunSky) return;
+
+    const FDateTime Now = FDateTime::Now();
+    UClass* Cls = SunSky->GetClass();
+    auto SetIntProp = [&](const TCHAR* Name, int32 Value)
+    {
+        if (FIntProperty* P = FindFProperty<FIntProperty>(Cls, Name)) P->SetPropertyValue_InContainer(SunSky, Value);
+        else if (FFloatProperty* FP = FindFProperty<FFloatProperty>(Cls, Name)) FP->SetPropertyValue_InContainer(SunSky, (float)Value);
+    };
+    SetIntProp(TEXT("Year"), Now.GetYear());
+    SetIntProp(TEXT("Month"), Now.GetMonth());
+    SetIntProp(TEXT("Day"), Now.GetDay());
+    if (UFunction* Fn = SunSky->FindFunction(TEXT("UpdateSun"))) SunSky->ProcessEvent(Fn, nullptr);
 }
 
 void UNeelamTimeWidget::UpdateNightAmbient()
@@ -78,6 +108,25 @@ void UNeelamTimeWidget::NativeTick(const FGeometry& MyGeometry, float InDeltaTim
     RefreshLook(Slider_01->GetValue());
     PushHour(Slider_01->GetValue());
     UpdateNightAmbient();
+    UpdateNightExposure();
+}
+
+void UNeelamTimeWidget::UpdateNightExposure()
+{
+    UWorld* World = GetWorld();
+    if (!World || NightExposureBiasReduction <= 0.f || !EmissiveMPC) return;
+    if (!MainPPV.IsValid())
+    {
+        if (bPPVSearched) return;   // already looked, none found (or none Unbound) - don't search every frame
+        bPPVSearched = true;
+        for (TActorIterator<APostProcessVolume> It(World); It; ++It)
+            if (It->bUnbound) { MainPPV = *It; PPVDayBias = It->Settings.AutoExposureBias; break; }
+        if (!MainPPV.IsValid()) return;
+    }
+    const float Night = FMath::Clamp(UKismetMaterialLibrary::GetScalarParameterValue(this, EmissiveMPC, TEXT("Effects")), 0.f, 1.f);
+    APostProcessVolume* PPV = MainPPV.Get();
+    PPV->Settings.bOverride_AutoExposureBias = true;
+    PPV->Settings.AutoExposureBias = PPVDayBias - NightExposureBiasReduction * Night;
 }
 
 void UNeelamTimeWidget::RefreshLook(float H)

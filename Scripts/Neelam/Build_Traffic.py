@@ -72,6 +72,8 @@ for name, pts, width in lines:
                        ("Traffic_Speed_01", 0.06), ("Traffic_Speed_02", 0.04), ("Width_Road", width)):
             t.set_editor_property(k, val)
         t.set_editor_property("Spacing_Road", 3000.0)            # last: re-runs construction with the edited spline
+        if name.startswith("route_"):   # per-landmark (every entry in `lines` is, currently) -> tag for IsolateSurroundingsRoute
+            t.tags = [unreal.Name("Neelam_Route"), unreal.Name("LM_" + name[len("route_"):])]
         report.append([t.get_actor_label(), len(seg), len(t.get_components_by_class(unreal.SplineMeshComponent))])
 # ---- one-way traffic on every built carriageway (OSM way direction = driving direction)
 for k, r in RB.items():

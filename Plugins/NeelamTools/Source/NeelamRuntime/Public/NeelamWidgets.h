@@ -138,6 +138,11 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Neelam") void SetupFlat(ANeelamFlatTour* InTour, FName FlatRow);
     UFUNCTION(BlueprintCallable, Category = "Neelam") void SetActiveRoom(int32 RoomIndex);
 
+    /** "You are here" dot + spreading cone drawn on the floor plan at the active room's PlanPosition, rotated by
+        its StartYaw - texture authored pointing up with the dot at the bottom-centre (make_view_cone.py). */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") TObjectPtr<UTexture2D> ViewConeTexture;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") FVector2D ViewConeSize = FVector2D(90.f, 140.f);
+
     UPROPERTY(BlueprintReadOnly, Category = "Neelam") TObjectPtr<ANeelamFlatTour> Tour;
 
 protected:
@@ -146,6 +151,7 @@ protected:
     UFUNCTION() void HandleExit();
     UPROPERTY() TArray<TObjectPtr<UNeelamListItem>> Hotspots;
     UPROPERTY() TArray<TObjectPtr<UNeelamListItem>> RoomButtons;
+    UPROPERTY() TObjectPtr<UImage> ViewCone;
 };
 
 /** Full-screen balcony photo viewer (day / night) - built in C++, no WBP needed. Opens over the 360 pawn, under the tour overlay. */

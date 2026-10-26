@@ -7,19 +7,19 @@ from UI_Theme import *
 WB = "/Game/ArchVizExplorer/Blueprints/Widgets/"
 TABS = [  # sizebox, button, icon image, label, icon texture, text
     ("SizeBox_0", "Button_Home", "Image_3", "TextBlock_48", "T_UI_Icon_Home", "HOME", "HorizontalBox_0"),
-    ("SizeBox_1", "Button_Gallery", "Image_4", "TextBlock_1", "T_UI_Icon_Gallery", "GALLERY", "HorizontalBox_2"),
+    ("SizeBox_1", "Button_Gallery", "Image_4", "TextBlock_1", "T_UI_Icon_Gallery", "WALKTHROUGH", "HorizontalBox_2"),
     ("SizeBox_11", "Button_Surroundings", "Image_1", "TextBlock_3", "T_UI_Icon_Surroundings", "SURROUNDINGS", "HorizontalBox_43"),
     ("SizeBox_3", "Button_Amenities", "Image_0", "TextBlock_2", "T_UI_Icon_Amenities", "AMENITIES", "HorizontalBox_42"),
     ("SizeBox_4_FV_0", "Button_UnitSearch_FV_0", "Image_2_FV_1", "TextBlock_0_FV_0", "T_UI_Icon_FloorView", "FLOOR VIEW", "HorizontalBox_1_FV_0"),
 ]
 HIDDEN = ["Image_6", "Image_7", "Image_8", "Image_9", "Image_10", "Image_10_FV_0", "Image_5", "SizeBox_4"]   # separators + template Unit Search
-TAB_W, TAB_H, PILL_H = 168, 44, 58
+TAB_W, TAB_H, PILL_H = 210, 44, 58
 
 def step_taskbar():
     mm = unreal.load_asset(WB + "BP_MasterMenu_Widget")
     r = {}
     n_tabs = len(TABS)
-    pill_w = n_tabs * (TAB_W + 4) + 48 + 28
+    pill_w = n_tabs * (TAB_W + 14) + 48 + 28
     canvas(W(mm, "Taskbar"), (0.5, 1, 0.5, 1), (0, -22, pill_w, PILL_H), (0.5, 1), z=1)
     blur(W(mm, "BackgroundBlur_3"), PILL_H / 2)
     canvas(W(mm, "BackgroundBlur_3"), (0, 0, 1, 1), (0, 0, 0, 0))
@@ -29,15 +29,16 @@ def step_taskbar():
     for n in HIDDEN:
         w = W(mm, n)
         if w: w.set_editor_property("visibility", VIS.COLLAPSED)
-    sel = button_style(no_brush(), brush(ROW_HOVER, TAB_H / 2), brush(GOLD_SOFT, TAB_H / 2, ((GOLD[0], GOLD[1], GOLD[2], 0.75), 1.0)))
+    sel = button_style(no_brush(), brush(ROW_HOVER, TAB_H / 2), brush(GOLD_SOFT, TAB_H / 2, ((GOLD[0], GOLD[1], GOLD[2], 0.75), 1.0)), pad=M(18, 10, 18, 10))
     for sb, bt, im, tx, icon, label, hbn in TABS:
         s = W(mm, sb); s.set_width_override(TAB_W); s.set_height_override(TAB_H)
-        box(s, pad=M(2, 0, 2, 0), v="V_ALIGN_CENTER")
+        box(s, pad=M(7, 0, 7, 0), v="V_ALIGN_CENTER")
         b = W(mm, bt); b.set_editor_property("widget_style", sel)
         b.set_editor_property("background_color", LC((1, 1, 1, 1)))
         i = W(mm, im); i.set_editor_property("brush", image_brush(tex(icon), (21, 21)))
         box(i, pad=M(0, 0, 10, 0), fill=0, v="V_ALIGN_CENTER")
-        t = W(mm, tx); style_text(t, label, 10.5, "Medium", WHITE, spacing=140)
+        t = W(mm, tx); style_text(t, label, 10.5, "Medium", WHITE, spacing=120)
+        t.set_editor_property("auto_wrap_text", False)
         box(t, fill=0, v="V_ALIGN_CENTER")
         t.set_editor_property("justification", unreal.TextJustify.LEFT)
         hs = W(mm, hbn).get_editor_property("slot")

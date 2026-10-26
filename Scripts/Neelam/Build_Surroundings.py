@@ -47,7 +47,10 @@ def spawn_poi(label, lat, lon, name, info, footer, cat, icon, lift=0.0):
     cc = L["categories"][cat]
     set_info(a, name, info, footer, cc["color"], icon)
     a.set_editor_property("Widget_Text_Color", unreal.LinearColor(1, 1, 1, 1))
-    a.tags = [unreal.Name(t) for t in cc["tags"] + ["Surroundings", "Neelam_Surroundings", "Neelam_" + cat]]
+    tags = cc["tags"] + ["Surroundings", "Neelam_Surroundings", "Neelam_" + cat]
+    if label.startswith("POI_"):   # landmark pin (not an amenity/other POI) -> tag for IsolateSurroundingsRouteForActor
+        tags.append("LM_" + label[len("POI_"):])
+    a.tags = [unreal.Name(t) for t in tags]
     return a, ok
 
 
@@ -67,7 +70,7 @@ def build_spline(actor, pts, lift, pid=None):
     return vs
 
 
-def spawn_route(label, pts, cat, width=7.0, pid=None):
+def spawn_route(label, pts, cat, width=7.0, pid=None, lm_id=None):
     v0 = C.to_ue(*pts[0])[0]
     a = C.EAS.spawn_actor_from_class(ROUTE, v0)
     a.set_actor_label(label); a.set_folder_path(FOLDER)
@@ -76,7 +79,10 @@ def spawn_route(label, pts, cat, width=7.0, pid=None):
     a.set_editor_property("Scale_Y", 1.0)
     col = L["categories"][cat]["color"]
     a.set_editor_property("Route_Color", unreal.LinearColor(col[0], col[1], col[2], 1))      # also re-runs construction
-    a.tags = [unreal.Name(t) for t in L["categories"][cat]["tags"] + ["Surroundings", "Neelam_Surroundings", "Neelam_" + cat]]
+    tags = L["categories"][cat]["tags"] + ["Surroundings", "Neelam_Surroundings", "Neelam_" + cat]
+    if lm_id:   # per-landmark route (not a shared key-road glow): tag for IsolateSurroundingsRoute (runtime-safe, unlike GetActorLabel)
+        tags += ["Neelam_Route", "LM_" + lm_id]
+    a.tags = [unreal.Name(t) for t in tags]
     return a, len(a.get_components_by_class(unreal.SplineMeshComponent))
 
 
@@ -89,13 +95,14 @@ for lm in L["landmarks"]:
     report["pois"].append([lm["name"], info, ok])
     report.setdefault("boxes", []).append(H.apply(C, a, lm, r["pts"] if r else None))
     if r:
-        ra, n = spawn_route("Route_" + lm["id"], r["pts"], lm["cat"], pid="route_" + lm["id"])
+        ra, n = spawn_route("Route_" + lm["id"], r["pts"], lm["cat"], pid="route_" + lm["id"], lm_id=lm["id"])
         report["routes"].append([lm["id"], n])
 
 # ---- key roads: glow line + name label (+ poles / light trails)
 for rd in L["roads"]:
     g = G["roads"][rd["id"]]
     ra, n = spawn_route("Road_" + rd["id"], g["pts"], rd["cat"], width=12.0, pid="road_" + rd["id"])
+    ra.tags = list(ra.tags) + [unreal.Name("Neelam_RoadGlow")]   # shared context, not a landmark path - IsolateSurroundingsRoute hides it too
     mid = g["pts"][len(g["pts"]) // 2]
     spawn_poi("Label_" + rd["id"], mid[0], mid[1], rd["label"], rd["dist"], "%.1f km shown" % g["km"], rd["cat"], "T_Icon_Place_01")
     report["roads"].append([rd["id"], n])

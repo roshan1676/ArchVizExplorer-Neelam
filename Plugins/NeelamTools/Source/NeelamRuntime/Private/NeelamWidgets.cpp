@@ -132,9 +132,16 @@ void UNeelamFloorViewWidget::ShowTower(FName TowerId)
     for (int32 i = T->Floors.Num() - 1; i >= 0; --i)
     {
         const FNeelamFloor& F = T->Floors[i];
+        const TArray<FName> Flats = Tour->GetFlatsOnFloor(TowerId, F.Number);
+        // Keep only floors that actually have content to show - a FloorGallery photo, real flats, ground floor,
+        // or the very top floor (so "till the top" always has an entry) - instead of listing every single floor.
+        // NOTE: FindFloorGalleryView/FindBalconyView do a NEAREST-floor lookup (by design, for the floors in
+        // between), so they return true for every floor and can't be used here - check for an exact match instead.
+        const bool bHasGallery = Tour->FloorGallery.ContainsByPredicate([&F](const FNeelamBalconyView& V) { return V.Floor == F.Number; });
+        const bool bIsTop = (i == T->Floors.Num() - 1);
+        if (!bHasGallery && Flats.Num() == 0 && F.Number != 0 && !bIsTop) continue;
         UNeelamListItem* It = CreateWidget<UNeelamListItem>(this, FloorRowClass);
         It->Id = TowerId; It->Index = i;
-        const TArray<FName> Flats = Tour->GetFlatsOnFloor(TowerId, F.Number);
         int32 Avail = 0;
         for (const FName& R : Flats) { FNeelamFlatRow Row; if (Tour->GetFlat(R, Row) && Row.Status == ENeelamUnitStatus::Available) ++Avail; }
         FText InfoT;
@@ -306,7 +313,20 @@ void UNeelamTourWidget::SetupFlat(ANeelamFlatTour* InTour, FName FlatRow)
     }
     if (HotspotLayer)
     {
-        HotspotLayer->ClearChildren(); Hotspots.Reset();
+        HotspotLayer->ClearChildren(); Hotspots.Reset(); ViewCone = nullptr;
+        if (ViewConeTexture)   // added first so it renders behind the room hotspot buttons
+        {
+            ViewCone = WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(), TEXT("ViewCone"));
+            ViewCone->SetBrushFromTexture(ViewConeTexture, false);
+            ViewCone->SetDesiredSizeOverride(ViewConeSize);
+            ViewCone->SetVisibility(ESlateVisibility::HitTestInvisible);
+            ViewCone->SetRenderTransformPivot(FVector2D(0.5f, 1.f));   // rotate around the dot (texture's bottom-centre), not the image centre
+            if (UCanvasPanelSlot* S = HotspotLayer->AddChildToCanvas(ViewCone))
+            {
+                S->SetAlignment(FVector2D(0.5f, 1.f));   // pivot = the dot, baked at the texture's bottom-centre
+                S->SetAutoSize(true);
+            }
+        }
         for (int32 i = 0; i < Type.Rooms.Num(); ++i)
         {
             if (!HotspotClass) break;
@@ -345,11 +365,20 @@ void UNeelamTourWidget::SetActiveRoom(int32 RoomIndex)
 {
     for (UNeelamListItem* It : Hotspots) if (It) It->SetSelected(It->Index == RoomIndex);
     for (UNeelamListItem* It : RoomButtons) if (It) It->SetSelected(It->Index == RoomIndex);
-    if (RoomTitle && Tour)
+    if (Tour)
     {
         FNeelamFlatRow Flat; FNeelamUnitTypeRow Type;
         if (Tour->GetFlat(Tour->CurrentFlat, Flat) && Tour->GetUnitType(Flat.UnitType, Type) && Type.Rooms.IsValidIndex(RoomIndex))
-            RoomTitle->SetText(Type.Rooms[RoomIndex].Name);
+        {
+            const FNeelamRoom& R = Type.Rooms[RoomIndex];
+            if (RoomTitle) RoomTitle->SetText(R.Name);
+            if (ViewCone)
+            {
+                if (UCanvasPanelSlot* S = Cast<UCanvasPanelSlot>(ViewCone->Slot))
+                    S->SetAnchors(FAnchors((float)R.PlanPosition.X, (float)R.PlanPosition.Y));
+                ViewCone->SetRenderTransformAngle(R.StartYaw);
+            }
+        }
     }
 }
 

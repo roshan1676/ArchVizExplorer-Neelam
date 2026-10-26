@@ -44,6 +44,10 @@ public:
         by Lerp(1, NightSkyLightScale, Emissive_MPC.Effects) - Effects is the template's 0 day -> 1 night factor. 1 = off. */
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float NightSkyLightScale = 0.003f;
 
+    /** Subtracted from the main PostProcessVolume's Auto Exposure Bias at full night (Lerp by Emissive_MPC.Effects),
+        so lit glass/windows don't read as over-exposed/"mirror bright" after dark. 0 = off (daytime bias unchanged). */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float NightExposureBiasReduction = 0.6f;
+
     /** Glide the time of day to Hour (the Blueprint's slider handler updates sun + lights every frame). */
     UFUNCTION(BlueprintCallable, Category = "Neelam") void GlideTo(float Hour);
 
@@ -64,6 +68,11 @@ private:
     TWeakObjectPtr<USkyLightComponent> SkyLight;
     float SkyLightDay = -1.f;
     TObjectPtr<UMaterialParameterCollection> EmissiveMPC;
+    TWeakObjectPtr<class APostProcessVolume> MainPPV;
+    float PPVDayBias = 0.f;
+    bool bPPVSearched = false;
     void UpdateNightAmbient();
+    void UpdateNightExposure();
+    void SyncSunDateToToday();
     void PushHour(float Hour);
 };
