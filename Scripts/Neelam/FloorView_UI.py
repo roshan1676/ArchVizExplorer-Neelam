@@ -360,14 +360,7 @@ def build_items():
     ab = b.pill_button("CardTexts", "ActionButton", radius=16); slot_box(ab, h="H_ALIGN_LEFT")
     b.text("ActionButton", "ActionText", "360°  PANORAMA", 9.5, "bold", spacing=200)
     res["card"] = b.done(item_colors((1, 1, 1, 0.04), (1, 1, 1, 0.08), (0.578, 0.397, 0.144, 0.22)))
-    b = B(UI + "/WBP_FV_Hotspot", LI)
-    b.border(None, "Background", (0.008, 0.010, 0.016, 0.85), 14, M(0), var=True)
-    b.clear_button("Background", "MainButton")
-    pw = b.add("MainButton", unreal.HorizontalBox, "Pill"); slot_box(pw, h="H_ALIGN_FILL", v="V_ALIGN_FILL")
-    mk = b.border("Pill", "GoldDot", C_GOLD, 5, M(0)); slot_box(mk, pad=M(9, 0, 7, 0), v="V_ALIGN_CENTER")
-    ms = b.add("GoldDot", unreal.SizeBox, "Dot"); ms.set_width_override(9); ms.set_height_override(9)
-    lb = b.text("Pill", "Label", "Living", 10, "bold", var=True, spacing=120); _caps(lb); slot_box(lb, pad=M(0, 6, 11, 6), v="V_ALIGN_CENTER")
-    res["hotspot"] = b.done({"normal_color": LC((0.008, 0.010, 0.016, 0.85)), "hover_color": LC((0.12, 0.09, 0.05, 0.95)), "selected_color": LC((0.578, 0.397, 0.144, 1.0))})
+    res["hotspot"] = build_hotspot()
     b = B(UI + "/WBP_FV_RoomButton", LI)
     b.border(None, "Background", (1, 1, 1, 0.0), 18, M(0), var=True)
     b.clear_button("Background", "MainButton")
@@ -375,6 +368,28 @@ def build_items():
     slot_box(t, pad=M(16, 9, 16, 9))
     res["room"] = b.done({"normal_color": LC((1, 1, 1, 0.0)), "hover_color": LC((1, 1, 1, 0.09)), "selected_color": LC((0.578, 0.397, 0.144, 0.55))})
     return res
+
+def build_hotspot():
+    """27 Oct: plan room marker for the realistic plan (no CAD labels any more): gold dot with a dark outline exactly
+    on PlanPosition + the room name in a dark pill under it (white text, readable on wood / tile / dark surround).
+    The widget is centred on PlanPosition by UNeelamTourWidget, so an empty spacer as tall as the pill sits above the
+    dot to keep the dot at the widget centre. Background = the pill (dark -> gold when selected)."""
+    b = B(UI + "/WBP_FV_Hotspot", unreal.NeelamListItem)
+    b.clear_button(None, "MainButton")
+    vb = b.add("MainButton", unreal.VerticalBox, "Stack")
+    sp = b.add("Stack", unreal.SizeBox, "TopSpacer"); sp.set_height_override(24); sp.set_width_override(1)
+    slot_box(sp, h="H_ALIGN_CENTER")
+    dot = b.border("Stack", "DotRing", (0.578, 0.397, 0.144, 1.0), 10, M(0), outline=((0.03, 0.025, 0.02, 1.0), 3.0))
+    slot_box(dot, h="H_ALIGN_CENTER")
+    ds = b.add("DotRing", unreal.SizeBox, "Dot"); ds.set_width_override(20); ds.set_height_override(20)
+    ps = b.add("Stack", unreal.SizeBox, "PillBox"); ps.set_height_override(24); slot_box(ps, pad=M(0, 0, 0, 0), h="H_ALIGN_CENTER")
+    pill = b.border("PillBox", "Background", (0.01, 0.012, 0.018, 0.82), 11, M(9, 0, 9, 0), var=True,
+                    outline=((1, 1, 1, 0.25), 1.0))
+    lb = b.text("Background", "Label", "Living", 10, "bold", (1, 1, 1, 1), var=True, spacing=120, shadow=True); _caps(lb)
+    slot_box(lb, v="V_ALIGN_CENTER")
+    return b.done({"normal_color": LC((0.01, 0.012, 0.018, 0.82)), "hover_color": LC((0.20, 0.14, 0.06, 0.92)),
+                   "selected_color": LC((0.578, 0.397, 0.144, 1.0))})
+
 
 def build_floor_view():
     b = B(UI + "/WBP_Neelam_FloorView", unreal.NeelamFloorViewWidget)
@@ -442,4 +457,5 @@ def build_tour():
     return b.done({
         "hotspot_class": unreal.load_asset(UI + "/WBP_FV_Hotspot").generated_class(),
         "room_button_class": unreal.load_asset(UI + "/WBP_FV_RoomButton").generated_class(),
-        "plan_max_height": 600.0, "plan_max_width": 420.0})
+        "plan_max_height": 600.0, "plan_max_width": 420.0,
+        "view_cone_size": V2(125.0, 100.0)})   # T_UI_ViewCone is 800x640 (make_view_cone.py)

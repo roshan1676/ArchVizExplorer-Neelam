@@ -1,0 +1,116 @@
+[
+  {
+    "asset": "outdoor_table_chair_set_01",
+    "mesh_objects": 3,
+    "bounds": [
+      [
+        -0.445,
+        -0.922,
+        -0.006
+      ],
+      [
+        0.331,
+        0.909,
+        0.853
+      ]
+    ],
+    "export": "{'FINISHED'}",
+    "path": "C:/Users/Admin/Documents/Unreal Projects/Room_render/SourceArt/FreeAssets/PolyHaven\\outdoor_table_chair_set_01.glb",
+    "bytes": 59165216
+  },
+  {
+    "asset": "modular_street_seating",
+    "mesh_objects": 16,
+    "bounds": [
+      [
+        -2.36,
+        -0.4,
+        -0.0
+      ],
+      [
+        1.98,
+        0.37,
+        0.95
+      ]
+    ],
+    "export": "{'FINISHED'}",
+    "path": "C:/Users/Admin/Documents/Unreal Projects/Room_render/SourceArt/FreeAssets/PolyHaven\\modular_street_seating.glb",
+    "bytes": 52757760
+  },
+  {
+    "asset": "painted_wooden_bench",
+    "mesh_objects": 1,
+    "bounds": [
+      [
+        -0.576,
+        -0.243,
+        -0.0
+      ],
+      [
+        0.589,
+        0.254,
+        0.889
+      ]
+    ],
+    "export": "{'FINISHED'}",
+    "path": "C:/Users/Admin/Documents/Unreal Projects/Room_render/SourceArt/FreeAssets/PolyHaven\\painted_wooden_bench.glb",
+    "bytes": 21743056
+  },
+  {
+    "asset": "shrub_01",
+    "mesh_objects": 9,
+    "bounds": [
+      [
+        -1.855,
+        -0.105,
+        -0.009
+      ],
+      [
+        0.732,
+        0.114,
+        0.387
+      ]
+    ],
+    "export": "{'FINISHED'}",
+    "path": "C:/Users/Admin/Documents/Unreal Projects/Room_render/SourceArt/FreeAssets/PolyHaven\\shrub_01.glb",
+    "bytes": 25287296
+  },
+  {
+    "asset": "flower_gazania",
+    "mesh_objects": 8,
+    "bounds": [
+      [
+        -0.774,
+        -0.38,
+        -0.141
+      ],
+      [
+        0.805,
+        0.43,
+        0.258
+      ]
+    ],
+    "export": "{'FINISHED'}",
+    "path": "C:/Users/Admin/Documents/Unreal Projects/Room_render/SourceArt/FreeAssets/PolyHaven\\flower_gazania.glb",
+    "bytes": 21097864
+  },
+  {
+    "asset": "planter_box_01",
+    "mesh_objects": 1,
+    "bounds": [
+      [
+        -0.457,
+        -0.207,
+        0.0
+      ],
+      [
+        0.456,
+        0.207,
+        0.425
+      ]
+    ],
+    "export": "{'FINISHED'}",
+    "path": "C:/Users/Admin/Documents/Unreal Projects/Room_render/SourceArt/FreeAssets/PolyHaven\\planter_box_01.glb",
+    "bytes": 22300960
+  }
+]

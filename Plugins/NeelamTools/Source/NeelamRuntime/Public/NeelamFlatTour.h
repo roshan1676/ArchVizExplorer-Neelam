@@ -64,6 +64,18 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float FadeOutDuration = 0.7f;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float FadeInDuration = 0.9f;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Camera") float RoomFadeDuration = 0.35f;
+    /** 360 viewer calibration: control yaw at which the panorama's centre column (plan +x / world +X) is in view. */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Panorama") float PanoForwardControlYaw = 0.f;
+    /** Lens forced on the viewer's CineCamera while it is inside BP_360Sphere (all 360s: rooms + amenity pins).
+     *  Template = 30 mm = 62 deg: rooms felt cramped ("giant viewer") and the 8K pano was upscaled (blurry). 18 mm = 90 deg. */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Panorama") float PanoFocalLength = 18.f;
+    /** True if turning right in the 360 viewer DEcreases the plan yaw (mirrored sphere mapping). */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Panorama") bool bPanoYawInverted = false;
+    /** viewer control yaw -> plan yaw (0 = plan right, 90 = plan down) */
+    UFUNCTION(BlueprintPure, Category = "Neelam|Panorama") float ControlYawToPlanYaw(float ControlYaw) const
+    { return FRotator::NormalizeAxis((bPanoYawInverted ? -1.f : 1.f) * (ControlYaw - PanoForwardControlYaw)); }
+    UFUNCTION(BlueprintPure, Category = "Neelam|Panorama") float PlanYawToControlYaw(float PlanYaw) const
+    { return FRotator::NormalizeAxis(PanoForwardControlYaw + (bPanoYawInverted ? -1.f : 1.f) * PlanYaw); }
     /** Mouse movement (px) allowed between press and release for a click on a floor box. */
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam|Input") float ClickTolerance = 8.f;
 
@@ -126,6 +138,7 @@ private:
     TWeakObjectPtr<class UNeelamFloorViewTab> MenuTab;
     TWeakObjectPtr<UUserWidget> MenuTabOwner;
     UPROPERTY() TObjectPtr<APawn> MainPawn;
+    TWeakObjectPtr<AActor> Sphere360;
     UPROPERTY() TArray<TObjectPtr<UTexture>> LoadedTextures;
     FVector FlyP0, FlyP1, FlyP2, FlyP3, FlyLookAt;
     FRotator FlyStartRot;

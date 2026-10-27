@@ -1,0 +1,8 @@
+﻿track previous | JoggingTrack fresh
+stp previous | STP fresh
+toilets previous | Washroom fresh
+gym previous | Gym fresh
+cabin previous | Cabin fresh
+fire previous | FireRoom fresh
+parking previous | CarPark fresh
+clubhouse previous | Building fresh

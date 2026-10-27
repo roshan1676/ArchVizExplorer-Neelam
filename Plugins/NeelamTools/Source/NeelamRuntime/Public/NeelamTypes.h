@@ -25,7 +25,8 @@ struct NEELAMRUNTIME_API FNeelamRoom
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") bool bUseFlatBalcony = false;
     /** Hotspot position on the floor-plan image, 0..1 (0,0 = top-left). */
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") FVector2D PlanPosition = FVector2D(0.5, 0.5);
-    /** Initial look direction inside the panorama (degrees). */
+    /** Initial look direction (degrees) in PLAN / panorama-world space: 0 = plan +x (right, = panorama centre
+        column = Room_render world +X), 90 = plan +y (down). ANeelamFlatTour::PlanYawToControlYaw converts it. */
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float StartYaw = 0.f;
 };
 

@@ -1,0 +1,56 @@
+﻿[
+    {
+        "asset":  "outdoor_table_chair_set_01",
+        "resolution":  "2K",
+        "file":  "outdoor_table_chair_set_01_2k.blend",
+        "sizeBytes":  427033,
+        "source":  "https://polyhaven.com/a/outdoor_table_chair_set_01",
+        "license":  "CC0 1.0",
+        "credit":  "Poly Haven (credit appreciated, not required)"
+    },
+    {
+        "asset":  "modular_street_seating",
+        "resolution":  "2K",
+        "file":  "modular_street_seating_2k.blend",
+        "sizeBytes":  672211,
+        "source":  "https://polyhaven.com/a/modular_street_seating",
+        "license":  "CC0 1.0",
+        "credit":  "Poly Haven (credit appreciated, not required)"
+    },
+    {
+        "asset":  "painted_wooden_bench",
+        "resolution":  "2K",
+        "file":  "painted_wooden_bench_2k.blend",
+        "sizeBytes":  133205,
+        "source":  "https://polyhaven.com/a/painted_wooden_bench",
+        "license":  "CC0 1.0",
+        "credit":  "Poly Haven (credit appreciated, not required)"
+    },
+    {
+        "asset":  "shrub_01",
+        "resolution":  "2K",
+        "file":  "shrub_01_2k.blend",
+        "sizeBytes":  6533875,
+        "source":  "https://polyhaven.com/a/shrub_01",
+        "license":  "CC0 1.0",
+        "credit":  "Poly Haven (credit appreciated, not required)"
+    },
+    {
+        "asset":  "flower_gazania",
+        "resolution":  "2K",
+        "file":  "flower_gazania_2k.blend",
+        "sizeBytes":  839183,
+        "source":  "https://polyhaven.com/a/flower_gazania",
+        "license":  "CC0 1.0",
+        "credit":  "Poly Haven (credit appreciated, not required)"
+    },
+    {
+        "asset":  "planter_box_01",
+        "resolution":  "2K",
+        "file":  "planter_box_01_2k.blend",
+        "sizeBytes":  343348,
+        "source":  "https://polyhaven.com/a/planter_box_01",
+        "license":  "CC0 1.0",
+        "credit":  "Poly Haven (credit appreciated, not required)"
+    }
+]

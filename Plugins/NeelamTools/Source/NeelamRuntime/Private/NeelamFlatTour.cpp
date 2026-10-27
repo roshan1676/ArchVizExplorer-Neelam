@@ -11,6 +11,7 @@
 #include "Camera/PlayerCameraManager.h"
 #include "GameFramework/PlayerController.h"
 #include "GameFramework/Pawn.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/InstancedStaticMeshComponent.h"
 #include "Materials/MaterialInstanceDynamic.h"
@@ -372,6 +373,15 @@ void ANeelamFlatTour::SetHiddenByOverlay(bool bHide)
 void ANeelamFlatTour::Tick(float Dt)
 {
     Super::Tick(Dt);
+    if (!Sphere360.IsValid())
+        for (TActorIterator<AActor> It(GetWorld()); It; ++It)
+            if (It->GetClass()->GetName() == TEXT("BP_360Sphere_C")) { Sphere360 = *It; break; }
+    if (APlayerController* LP = PC())
+        if (APawn* Pn = LP->GetPawn())
+            if (Sphere360.IsValid() && FVector::Dist(Pn->GetActorLocation(), Sphere360->GetActorLocation()) < 15000.f)
+                for (UActorComponent* C : Pn->GetComponents())   // by reflection: no CinematicCamera module dependency
+                    if (FFloatProperty* FP = FindFProperty<FFloatProperty>(C->GetClass(), TEXT("CurrentFocalLength")))
+                        FP->SetPropertyValue_InContainer(C, PanoFocalLength);
     if (State == ENeelamTourState::Off || State == ENeelamTourState::FloorView) PollMenuTab();
     if (State == ENeelamTourState::FloorView && !bHiddenByOverlay && !(FloorGalleryWidget && FloorGalleryWidget->IsInViewport())) UpdatePicking();
     else if (State == ENeelamTourState::Flying) TickFly(Dt);
@@ -465,6 +475,12 @@ void ANeelamFlatTour::EnterPanorama()
     if (UUserWidget* M = Cast<UUserWidget>(GetObjectProp(P, TEXT("360Menu")))) M->SetVisibility(ESlateVisibility::Collapsed);
     if (FlyCamera) { FlyCamera->Destroy(); FlyCamera = nullptr; }
     if (P->GetPawn()) P->SetViewTarget(P->GetPawn());
+    if (APawn* Pn = P->GetPawn())   // view from the exact sphere centre (an offset camera bends the pano and breaks the plan cone)
+    {
+        for (TActorIterator<AActor> It(GetWorld()); It; ++It)
+            if (It->GetClass()->GetName() == TEXT("BP_360Sphere_C")) { Pn->SetActorLocation(It->GetActorLocation()); break; }
+        if (USpringArmComponent* Arm = Pn->FindComponentByClass<USpringArmComponent>()) Arm->TargetArmLength = 0.f;
+    }
 
     FNeelamFlatRow Flat; FNeelamUnitTypeRow Type;
     GetFlat(CurrentFlat, Flat); GetUnitType(Flat.UnitType, Type);
@@ -495,7 +511,7 @@ void ANeelamFlatTour::ApplyRoom(int32 RoomIndex)
         if (bGallery) { if (!Gallery->IsInViewport()) Gallery->AddToViewport(9); Gallery->ShowView(View, Flat.Floor); }
         else Gallery->SetVisibility(ESlateVisibility::Collapsed);
     }
-    if (APlayerController* P = PC()) P->SetControlRotation(FRotator(0.f, R.StartYaw, 0.f));
+    if (APlayerController* P = PC()) P->SetControlRotation(FRotator(0.f, PlanYawToControlYaw(R.StartYaw), 0.f));
     if (TourWidget) TourWidget->SetActiveRoom(RoomIndex);
     OnRoomShown.Broadcast(CurrentFlat, RoomIndex);
 }

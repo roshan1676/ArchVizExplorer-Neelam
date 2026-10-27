@@ -89,7 +89,7 @@ def spawn_route(label, pts, cat, width=7.0, pid=None, lm_id=None):
 # ---- landmarks + drive routes
 for lm in L["landmarks"]:
     r = G["routes"].get(lm["id"])
-    drive = ("%s min drive (%.1f km)" % (int(round(r["min"])) or 1, r["km_route"])) if r else ""
+    drive = ("%s min drive" % (int(round(r["min"])) or 1)) if r else ""   # client 27 Oct: one distance only (brochure km); route km dropped
     info = " · ".join(x for x in (lm["dist"], drive) if x)
     a, ok = spawn_poi("POI_" + lm["id"], lm["lat"], lm["lon"], lm["name"], info, lm.get("about", ""), lm["cat"], lm.get("icon"))
     report["pois"].append([lm["name"], info, ok])

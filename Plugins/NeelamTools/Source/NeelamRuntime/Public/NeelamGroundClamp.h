@@ -33,11 +33,18 @@ public:
      *  tower's own structure - the ground trace can catch a floor slab and yank the camera, overshooting toward
      *  the top). Only meant for free-roam exploration outside Floor View. */
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") bool bPauseDuringFlatTour = true;
+    /** Keep the spring-arm CAMERA above the terrain too: limits how far the orbit can tilt up (camera swinging below
+     *  the pivot went under the map). Client 27 Oct. */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") bool bClampCamera = true;
+    /** Minimum height (cm) of the camera above the ground under it. */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float CameraClearance = 400.f;
 
 protected:
     virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 private:
+    bool SphereChecked = false;
+    bool bInside360Sphere = false;
     bool bHasLastLocation = false;
     FVector LastLocation = FVector::ZeroVector;
 };

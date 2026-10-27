@@ -147,6 +147,8 @@ public:
 
 protected:
     virtual void NativeOnInitialized() override;
+    /** Points ViewCone where the 360 camera looks (plan yaw from the player camera yaw). */
+    virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
     UFUNCTION() void HandleRoom(UNeelamListItem* Item);
     UFUNCTION() void HandleExit();
     UPROPERTY() TArray<TObjectPtr<UNeelamListItem>> Hotspots;
@@ -171,11 +173,15 @@ protected:
     UFUNCTION() void HandleDay();
     UFUNCTION() void HandleNight();
     UFUNCTION() void HandleClose();
+    UFUNCTION() void HandlePrevFloor();
+    UFUNCTION() void HandleNextFloor();
     void Refresh();
     UPROPERTY(BlueprintReadOnly, Category = "Neelam") TObjectPtr<UButton> BtnClose;
     UPROPERTY() TObjectPtr<UImage> Photo;
     UPROPERTY() TObjectPtr<UButton> BtnDay;
     UPROPERTY() TObjectPtr<UButton> BtnNight;
+    UPROPERTY() TObjectPtr<UButton> BtnPrevFloor;
+    UPROPERTY() TObjectPtr<UButton> BtnNextFloor;
     UPROPERTY() TObjectPtr<UTextBlock> Caption;
     UPROPERTY() TObjectPtr<UTexture2D> DayTex;
     UPROPERTY() TObjectPtr<UTexture2D> NightTex;

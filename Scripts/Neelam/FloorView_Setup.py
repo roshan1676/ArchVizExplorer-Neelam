@@ -141,24 +141,37 @@ def step_towers():
 def _soft(path):
     return path  # soft object refs are written as strings in the JSON import
 
+# 27 Oct: rooms = the Room_render panorama spots (Room_render/Content/Python/pano_spots.py, world cm), 8K panos from
+# Room_render Saved/Final/Panoramas/8K -> SourceArt/FloorView/rooms8k -> /Game/Neelam/FloorView/Textures/Rooms.
+# Plan px = calibration fitted from the unit's wall mesh vs the plan image (see memory note): px = a*x+b, py = c*y+d.
+# StartYaw = PLAN yaw (0 = plan right / world +X = pano centre, 90 = plan down), converted by ANeelamFlatTour.
+PLAN_CAL = {"2BHK": ((1.032, 655), (1.031, 1125), (1209, 2297)),
+            "3BHK": ((0.921, 513), (0.914, 1456), (1545, 2333))}
+def _pp(unit, x, y):
+    (a, b), (c, d), (w, h) = PLAN_CAL[unit]
+    return (round((a * x + b) / w, 4), round((c * y + d) / h, 4))
+def _rooms(unit, spots):   # (display, spot id, world x, world y, balcony?, plan yaw)
+    return [(n, "Rooms/T_Pano_%s_%s" % (unit, sid), bal, _pp(unit, x, y), yaw) for (n, sid, x, y, bal, yaw) in spots]
 UNIT_TYPES = {
     "2BHK": dict(DisplayName="2 BHK", AreaText="RERA 652.54 sq.ft (incl. balcony)", FloorPlan=TEX + "/T_FloorPlan_2BHK.T_FloorPlan_2BHK",
                  StartRoom=0, Accent=dict(R=0.12, G=0.5, B=1.0, A=1.0),
-                 Rooms=[("Living", "T_Pano_2BHK_Living", False, (0.38, 0.17), 0),
-                        ("Dining", "T_Pano_2BHK_Dining", False, (0.30, 0.08), 0),
-                        ("Balcony", "T_Pano_2BHK_Living", True, (0.89, 0.22), 0),
-                        ("Kitchen", "T_Pano_Kitchen_A", False, (0.70, 0.40), 0),
-                        ("Bedroom 2", "T_Pano_2BHK_Bedroom2", False, (0.73, 0.63), 0),
-                        ("Master Bedroom", "T_Pano_2BHK_MasterBedroom", False, (0.62, 0.88), 0)]),
+                 Rooms=_rooms("2BHK", [("Living", "01_Living", 60, -900, False, 0),          # balcony / windows at plan right
+                                       ("Dining", "02_Dining", -260, -720, False, 0),
+                                       ("Balcony", "03_Balcony", 365, -780, True, 0),
+                                       ("Kitchen", "04_Kitchen", 100, -330, False, -90),     # counter + hob on the top wall
+                                       ("Bedroom 1", "05_Bedroom1", 310, 200, False, 0),
+                                       ("Bedroom 2", "06_Bedroom2", 300, 700, False, 0),
+                                       ("Bathroom", "07_Bathroom", -470, 780, False, 0),
+                                       ("Toilet 2", "08_Toilet2", -470, -150, False, 0)])),
     "3BHK": dict(DisplayName="3 BHK", AreaText="RERA 855.86 sq.ft (incl. balcony)", FloorPlan=TEX + "/T_FloorPlan_3BHK.T_FloorPlan_3BHK",
                  StartRoom=0, Accent=dict(R=0.55, G=0.35, B=1.0, A=1.0),
-                 Rooms=[("Living", "T_Pano_3BHK_Living", False, (0.42, 0.82), 0),
-                        ("Dining", "T_Pano_3BHK_Dining", False, (0.60, 0.72), 0),
-                        ("Balcony", "T_Pano_3BHK_Living", True, (0.13, 0.88), 0),
-                        ("Kitchen", "T_Pano_Kitchen_A", False, (0.30, 0.65), 0),
-                        ("Bedroom 1", "T_Pano_3BHK_Bedroom1", False, (0.81, 0.28), 0),
-                        ("Bedroom 2", "T_Pano_3BHK_Bedroom2", False, (0.26, 0.19), 0),
-                        ("Bedroom 3", "T_Pano_3BHK_Bedroom3", False, (0.30, 0.44), 0)]),
+                 Rooms=_rooms("3BHK", [("Living", "01_Living", 20, 520, False, 180),         # balcony + W1 at plan left
+                                       ("Balcony", "02_Balcony", -400, 560, True, 180),
+                                       ("Dining", "03_Dining", 660, 340, False, 180),
+                                       ("Kitchen", "04_Kitchen", 150, 0, False, 180),        # window W2
+                                       ("Corridor", "05_Corridor", 380, -150, False, -90),   # towards the bedrooms
+                                       ("Bedroom 1", "06_Bedroom1", -90, -720, False, 180),  # window W3
+                                       ("Bedroom 2", "07_Bedroom2", -150, -1150, False, 180)])),
 }
 # top floor (client 2 Oct): no flat plan, one 360 from the top of the building.
 # Balcony rule: own BalconyPanorama = 360 (use T_Pano_TopFloor for any flat on floor 41); empty = photo gallery (Balcony_Views.py)
@@ -177,8 +190,8 @@ FLATS["E_41_TOP"] = dict(Tower="E", Floor=41, FlatNumber="Top Floor View", UnitT
                          BalconyPanorama="T_Pano_TopFloor", FacadeYaw=-90.0, FacadeOffset=0.0)
 INTERACTIVE_TOWERS = ("E",)      # step_towers only builds floor boxes for these
 
-def _tex(n):
-    return "%s/%s.%s" % (TEX, n, n)
+def _tex(n):   # n may carry a sub folder, e.g. "Rooms/T_Pano_2BHK_01_Living"
+    return "%s/%s.%s" % (TEX, n, n.rsplit("/", 1)[-1])
 
 def step_tables():
     res = {}

@@ -4,7 +4,7 @@ site centre) + a few tall landmark blocks further out (>= TALL_M high, <= FAR_M)
 import json, math, os
 D = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Data")
 SITE = (4500.0, 3500.0)          # UE cm, amenity deck / towers
-NEAR_M, FAR_M, TALL_M = 1500.0, 2600.0, 30.0
+NEAR_M, FAR_M, TALL_M = 1e9, 2600.0, 30.0   # client 27 Oct: windows on EVERY context building (was 1500 m + tall landmarks)
 B = json.load(open(os.path.join(D, "massing_build.json")))
 sel, near, far = [], 0, 0
 for b in B:

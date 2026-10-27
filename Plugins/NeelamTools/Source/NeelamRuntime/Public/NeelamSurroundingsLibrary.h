@@ -25,4 +25,15 @@ public:
      *  no "LM_" tag - e.g. the IMMEDIATE/landmark category pins. */
     UFUNCTION(BlueprintCallable, Category = "Neelam|Surroundings", meta = (WorldContext = "WorldContextObject"))
     static void IsolateSurroundingsRouteForActor(UObject* WorldContextObject, AActor* Poi);
+
+    /** Calls BP_POI's no-arg custom event Hide_POI on every actor carrying Tag (e.g. "Amenities").
+     *  Actors without a Hide_POI function (routes etc.) are skipped. Used by BP_MasterMenu_Widget so opening the
+     *  Amenities menu shows no amenity tags until one is picked. */
+    UFUNCTION(BlueprintCallable, Category = "Neelam|POI", meta = (WorldContext = "WorldContextObject"))
+    static void HideTaggedPOIs(UObject* WorldContextObject, FName Tag);
+
+    /** BP_POI::Select_POI helper: if Poi carries Tag, calls Show_POI on it and Hide_POI on every other actor with
+     *  Tag, so only the selected amenity's floating tag is visible. No-op when Poi lacks Tag (Surroundings pins). */
+    UFUNCTION(BlueprintCallable, Category = "Neelam|POI", meta = (WorldContext = "WorldContextObject"))
+    static void IsolateTaggedPOI(UObject* WorldContextObject, AActor* Poi, FName Tag);
 };

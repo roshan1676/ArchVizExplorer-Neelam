@@ -22,6 +22,8 @@
 #include "Kismet/KismetMaterialLibrary.h"
 #include "Materials/MaterialParameterCollection.h"
 #include "Engine/Font.h"
+#include "Camera/PlayerCameraManager.h"
+#include "GameFramework/PlayerController.h"
 
 #define LOCTEXT_NAMESPACE "Neelam"
 
@@ -317,8 +319,9 @@ void UNeelamTourWidget::SetupFlat(ANeelamFlatTour* InTour, FName FlatRow)
         if (ViewConeTexture)   // added first so it renders behind the room hotspot buttons
         {
             ViewCone = WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(), TEXT("ViewCone"));
-            ViewCone->SetBrushFromTexture(ViewConeTexture, false);
-            ViewCone->SetDesiredSizeOverride(ViewConeSize);
+            FSlateBrush ConeBrush; ConeBrush.SetResourceObject(ViewConeTexture);
+            ConeBrush.ImageSize = ViewConeSize;   // SetDesiredSizeOverride was ignored -> cone drew at the 32 px default
+            ViewCone->SetBrush(ConeBrush);
             ViewCone->SetVisibility(ESlateVisibility::HitTestInvisible);
             ViewCone->SetRenderTransformPivot(FVector2D(0.5f, 1.f));   // rotate around the dot (texture's bottom-centre), not the image centre
             if (UCanvasPanelSlot* S = HotspotLayer->AddChildToCanvas(ViewCone))
@@ -376,10 +379,22 @@ void UNeelamTourWidget::SetActiveRoom(int32 RoomIndex)
             {
                 if (UCanvasPanelSlot* S = Cast<UCanvasPanelSlot>(ViewCone->Slot))
                     S->SetAnchors(FAnchors((float)R.PlanPosition.X, (float)R.PlanPosition.Y));
-                ViewCone->SetRenderTransformAngle(R.StartYaw);
+                ViewCone->SetRenderTransformAngle(R.StartYaw + 90.f);   // texture points up at 0; plan yaw 0 = right
             }
         }
     }
+}
+
+void UNeelamTourWidget::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
+{
+    Super::NativeTick(MyGeometry, InDeltaTime);
+    if (!ViewCone || !Tour || Tour->CurrentRoom == INDEX_NONE) return;
+    // balcony photo gallery has no look direction: keep the cone at the room's StartYaw (set in SetActiveRoom)
+    if (Tour->Gallery && Tour->Gallery->IsInViewport() && Tour->Gallery->GetVisibility() != ESlateVisibility::Collapsed) return;
+    APlayerController* PC = GetOwningPlayer();
+    if (!PC) return;
+    const float CamYaw = PC->PlayerCameraManager ? PC->PlayerCameraManager->GetCameraRotation().Yaw : PC->GetControlRotation().Yaw;
+    ViewCone->SetRenderTransformAngle(Tour->ControlYawToPlanYaw(CamYaw) + 90.f);   // UMG angle: 0 = up, clockwise
 }
 
 void UNeelamTourWidget::HandleRoom(UNeelamListItem* Item) { if (Item && Tour) Tour->ShowRoom(Item->Index); }
@@ -418,9 +433,6 @@ TSharedRef<SWidget> UNeelamBalconyGallery::RebuildWidget()
         { S->SetAnchors(FAnchors(0.5f, 0.f)); S->SetAlignment(FVector2D(0.5f, 0.f)); S->SetPosition(FVector2D(0, 28)); S->SetAutoSize(true); }
         UHorizontalBox* HB = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass(), TEXT("Row"));
         Pill->SetContent(HB);
-        Caption = WidgetTree->ConstructWidget<UTextBlock>(UTextBlock::StaticClass(), TEXT("Caption"));
-        Caption->SetFont(NeelamFont(13, TEXT("Medium"))); Caption->SetColorAndOpacity(FSlateColor(FLinearColor(1, 1, 1, 0.85f)));
-        if (UHorizontalBoxSlot* S = HB->AddChildToHorizontalBox(Caption)) { S->SetVerticalAlignment(VAlign_Center); S->SetPadding(FMargin(0, 0, 16, 0)); }
         auto MakeBtn = [&](const TCHAR* Name, const FText& Label) -> UButton*
         {
             UButton* B = WidgetTree->ConstructWidget<UButton>(UButton::StaticClass(), FName(Name));
@@ -431,6 +443,14 @@ TSharedRef<SWidget> UNeelamBalconyGallery::RebuildWidget()
             if (UHorizontalBoxSlot* S = HB->AddChildToHorizontalBox(B)) S->SetPadding(FMargin(2, 0));
             return B;
         };
+        // floor-step buttons, either side of the caption (Floor View gallery only - see Refresh)
+        BtnPrevFloor = MakeBtn(TEXT("BtnPrevFloor"), NSLOCTEXT("Neelam", "GalPrev", "−"));
+        Caption = WidgetTree->ConstructWidget<UTextBlock>(UTextBlock::StaticClass(), TEXT("Caption"));
+        Caption->SetFont(NeelamFont(13, TEXT("Medium"))); Caption->SetColorAndOpacity(FSlateColor(FLinearColor(1, 1, 1, 0.85f)));
+        if (UHorizontalBoxSlot* S = HB->AddChildToHorizontalBox(Caption)) { S->SetVerticalAlignment(VAlign_Center); S->SetPadding(FMargin(8, 0, 16, 0)); }
+        BtnNextFloor = MakeBtn(TEXT("BtnNextFloor"), NSLOCTEXT("Neelam", "GalNext", "+"));
+        BtnPrevFloor->OnClicked.AddDynamic(this, &UNeelamBalconyGallery::HandlePrevFloor);
+        BtnNextFloor->OnClicked.AddDynamic(this, &UNeelamBalconyGallery::HandleNextFloor);
         BtnDay = MakeBtn(TEXT("BtnDay"), NSLOCTEXT("Neelam", "BalDay", "DAY"));
         BtnNight = MakeBtn(TEXT("BtnNight"), NSLOCTEXT("Neelam", "BalNight", "NIGHT"));
         BtnDay->OnClicked.AddDynamic(this, &UNeelamBalconyGallery::HandleDay);
@@ -476,6 +496,23 @@ void UNeelamBalconyGallery::HandleClose()
     if (ANeelamFlatTour* T = ANeelamFlatTour::GetFlatTour(this)) T->CloseFloorGallery();
     else RemoveFromParent();
 }
+// nearest Floor Gallery photo floor below (Dir -1) / above (Dir +1) Floor; INDEX_NONE if none.
+// -/+ step through the floors that HAVE a photo (5, 10, 15, 20 ...), not every floor number (client 27 Oct)
+static int32 NeighbourGalleryFloor(const ANeelamFlatTour* T, int32 Floor, int32 Dir)
+{
+    int32 Best = INDEX_NONE;
+    for (const FNeelamBalconyView& V : T->FloorGallery)
+        if ((V.Floor - Floor) * Dir > 0 && (Best == INDEX_NONE || (V.Floor - Best) * Dir < 0)) Best = V.Floor;
+    return Best;
+}
+void UNeelamBalconyGallery::HandlePrevFloor()
+{
+    if (ANeelamFlatTour* T = ANeelamFlatTour::GetFlatTour(this)) { const int32 F = NeighbourGalleryFloor(T, FlatFloorNum, -1); if (F != INDEX_NONE) T->OpenFloorGallery(F); }
+}
+void UNeelamBalconyGallery::HandleNextFloor()
+{
+    if (ANeelamFlatTour* T = ANeelamFlatTour::GetFlatTour(this)) { const int32 F = NeighbourGalleryFloor(T, FlatFloorNum, +1); if (F != INDEX_NONE) T->OpenFloorGallery(F); }
+}
 
 void UNeelamBalconyGallery::Refresh()
 {
@@ -500,6 +537,16 @@ void UNeelamBalconyGallery::Refresh()
     if (Caption)
         Caption->SetText(FText::Format(CaptionFormat, FText::AsNumber(FlatFloorNum)));
     if (BtnClose) BtnClose->SetVisibility(bShowClose ? ESlateVisibility::Visible : ESlateVisibility::Collapsed);
+    // floor-step arrows: only in the Floor View gallery (bShowClose), hidden when there is no lower / higher photo floor
+    bool bCanPrev = false, bCanNext = false;
+    if (bShowClose)
+        if (ANeelamFlatTour* GalTour = ANeelamFlatTour::GetFlatTour(this))
+        {
+            bCanPrev = NeighbourGalleryFloor(GalTour, FlatFloorNum, -1) != INDEX_NONE;
+            bCanNext = NeighbourGalleryFloor(GalTour, FlatFloorNum, +1) != INDEX_NONE;
+        }
+    if (BtnPrevFloor) BtnPrevFloor->SetVisibility(bCanPrev ? ESlateVisibility::Visible : ESlateVisibility::Collapsed);
+    if (BtnNextFloor) BtnNextFloor->SetVisibility(bCanNext ? ESlateVisibility::Visible : ESlateVisibility::Collapsed);
 }
 
 #undef LOCTEXT_NAMESPACE

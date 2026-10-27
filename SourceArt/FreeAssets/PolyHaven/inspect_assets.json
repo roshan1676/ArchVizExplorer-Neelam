@@ -1,0 +1,2267 @@
+[
+  {
+    "asset": "shrub_01",
+    "scene_objects": [
+      "shrub_01_b_LOD0",
+      "shrub_01_d_LOD0",
+      "shrub_01_c_LOD0",
+      "shrub_01_f_LOD0",
+      "shrub_01_a_LOD0",
+      "shrub_01_e_LOD0",
+      "shrub_01_i_LOD0",
+      "shrub_01_h_LOD0",
+      "shrub_01_g_LOD0",
+      "shrub_01_b_LOD1",
+      "shrub_01_d_LOD1",
+      "shrub_01_c_LOD1",
+      "shrub_01_f_LOD1",
+      "shrub_01_a_LOD1",
+      "shrub_01_e_LOD1",
+      "shrub_01_i_LOD1",
+      "shrub_01_g_LOD1",
+      "shrub_01_h_LOD1",
+      "shrub_01_b_LOD2",
+      "shrub_01_d_LOD2",
+      "shrub_01_c_LOD2",
+      "shrub_01_f_LOD2",
+      "shrub_01_a_LOD2",
+      "shrub_01_e_LOD2",
+      "shrub_01_i_LOD2",
+      "shrub_01_g_LOD2",
+      "shrub_01_h_LOD2",
+      "shrub_01_a_LOD3",
+      "shrub_01_b_LOD3",
+      "shrub_01_d_LOD3",
+      "shrub_01_c_LOD3",
+      "shrub_01_f_LOD3",
+      "shrub_01_e_LOD3",
+      "shrub_01_i_LOD3",
+      "shrub_01_g_LOD3",
+      "shrub_01_h_LOD3"
+    ],
+    "mesh_objects": [
+      {
+        "name": "shrub_01_a_LOD0",
+        "data": "Circle.010",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.2311609387397766,
+          0.20608974993228912,
+          0.37206438183784485
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_a_LOD1",
+        "data": "Circle.014",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.2307974398136139,
+          0.2057398557662964,
+          0.371906042098999
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_a_LOD2",
+        "data": "Circle.026",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.2307974398136139,
+          0.2057398557662964,
+          0.371906042098999
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_a_LOD3",
+        "data": "Circle.028",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.23157110810279846,
+          0.2061828374862671,
+          0.3715684115886688
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_b_LOD0",
+        "data": "Circle.003",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.1819048523902893,
+          0.17505468428134918,
+          0.33232811093330383
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_b_LOD1",
+        "data": "Circle.008",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.18182379007339478,
+          0.175035297870636,
+          0.33232811093330383
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_b_LOD2",
+        "data": "Circle.022",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.18182379007339478,
+          0.175035297870636,
+          0.33232811093330383
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_b_LOD3",
+        "data": "Circle.029",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.18195118010044098,
+          0.17534805834293365,
+          0.3323051333427429
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_c_LOD0",
+        "data": "Circle.006",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.16066531836986542,
+          0.17509004473686218,
+          0.29396408796310425
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_c_LOD1",
+        "data": "Circle.011",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.1605764627456665,
+          0.1750762164592743,
+          0.293949693441391
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_c_LOD2",
+        "data": "Circle.024",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.1605764627456665,
+          0.1750762164592743,
+          0.293949693441391
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_c_LOD3",
+        "data": "Circle.031",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.1605764627456665,
+          0.17598579823970795,
+          0.2938760221004486
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_d_LOD0",
+        "data": "Circle.005",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.13537482917308807,
+          0.1523318588733673,
+          0.20063595473766327
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_d_LOD1",
+        "data": "Circle.009",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.13537482917308807,
+          0.1523318588733673,
+          0.20057439804077148
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_d_LOD2",
+        "data": "Circle.023",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.13537482917308807,
+          0.1523318588733673,
+          0.20057439804077148
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_d_LOD3",
+        "data": "Circle.030",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.1354631930589676,
+          0.1523493230342865,
+          0.2002137303352356
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_e_LOD0",
+        "data": "Circle.019",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.09445271641016006,
+          0.10896126925945282,
+          0.18295155465602875
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_e_LOD1",
+        "data": "Circle.020",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.09445271641016006,
+          0.10892774909734726,
+          0.18284928798675537
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_e_LOD2",
+        "data": "Circle.027",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.0927211195230484,
+          0.10892774909734726,
+          0.18284928798675537
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_e_LOD3",
+        "data": "Circle.033",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.0933750718832016,
+          0.10890017449855804,
+          0.18282023072242737
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_f_LOD0",
+        "data": "Circle.007",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.09179911017417908,
+          0.09767156094312668,
+          0.11556646972894669
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_f_LOD1",
+        "data": "Circle.012",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.0917753279209137,
+          0.09764237701892853,
+          0.11552232503890991
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_f_LOD2",
+        "data": "Circle.025",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.0917753279209137,
+          0.09764237701892853,
+          0.11541824042797089
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_f_LOD3",
+        "data": "Circle.032",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.0917753279209137,
+          0.09791813790798187,
+          0.11536923050880432
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_g_LOD0",
+        "data": "Circle.048",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.11363369226455688,
+          0.11417459696531296,
+          0.24923217296600342
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_g_LOD1",
+        "data": "Circle.052",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.11327728629112244,
+          0.11383966356515884,
+          0.2477279007434845
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_g_LOD2",
+        "data": "Circle.061",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.11327728629112244,
+          0.11383966356515884,
+          0.2475922554731369
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_g_LOD3",
+        "data": "Circle.004",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.11327728629112244,
+          0.11383966356515884,
+          0.24755556881427765
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_h_LOD0",
+        "data": "Circle.036",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.23209816217422485,
+          0.20168060064315796,
+          0.3951091766357422
+        ],
+        "selected": true
+      },
+      {
+        "name": "shrub_01_h_LOD1",
+        "data": "Circle.054",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.23050081729888916,
+          0.19995391368865967,
+          0.3934911787509918
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_h_LOD2",
+        "data": "Circle.062",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.23036321997642517,
+          0.19983410835266113,
+          0.3934078514575958
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_h_LOD3",
+        "data": "Circle.013",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.23036321997642517,
+          0.19983410835266113,
+          0.393498033285141
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_i_LOD0",
+        "data": "Circle.001",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.1765086054801941,
+          0.17505468428134918,
+          0.3460131585597992
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_i_LOD1",
+        "data": "Circle.050",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.17649023234844208,
+          0.175035297870636,
+          0.34465691447257996
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_i_LOD2",
+        "data": "Circle.060",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.17649023234844208,
+          0.175035297870636,
+          0.3446570634841919
+        ],
+        "selected": false
+      },
+      {
+        "name": "shrub_01_i_LOD3",
+        "data": "Circle.002",
+        "users": 1,
+        "collections": [
+          "shrub_01_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.17649023234844208,
+          0.175035297870636,
+          0.3445809781551361
+        ],
+        "selected": false
+      }
+    ],
+    "images": [
+      {
+        "name": "shrub_01_alpha.png",
+        "packed": false,
+        "path": "//textures\\shrub_01_alpha_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "shrub_01_diff.png",
+        "packed": false,
+        "path": "//textures\\shrub_01_diff_2k.jpg",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "shrub_01_disp.png",
+        "packed": false,
+        "path": "//textures\\shrub_01_disp_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "shrub_01_nor_gl.png",
+        "packed": false,
+        "path": "//textures\\shrub_01_nor_gl_2k.exr",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "shrub_01_rough.png",
+        "packed": false,
+        "path": "//textures\\shrub_01_rough_2k.exr",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      }
+    ],
+    "collections": [
+      "shrub_01",
+      "shrub_01_LOD0",
+      "shrub_01_LOD1",
+      "shrub_01_LOD2",
+      "shrub_01_LOD3"
+    ]
+  },
+  {
+    "asset": "flower_gazania",
+    "scene_objects": [
+      "flower_gazania_a_LOD0",
+      "flower_gazania_b_LOD0",
+      "flower_gazania_c_LOD0",
+      "flower_gazania_d_LOD0",
+      "flower_gazania_h_LOD0",
+      "flower_gazania_g_LOD0",
+      "flower_gazania_f_LOD0",
+      "flower_gazania_e_LOD0",
+      "flower_gazania_a_LOD1",
+      "flower_gazania_b_LOD1",
+      "flower_gazania_c_LOD1",
+      "flower_gazania_d_LOD1",
+      "flower_gazania_h_LOD1",
+      "flower_gazania_g_LOD1",
+      "flower_gazania_f_LOD1",
+      "flower_gazania_e_LOD1",
+      "flower_gazania_a_LOD2",
+      "flower_gazania_b_LOD2",
+      "flower_gazania_c_LOD2",
+      "flower_gazania_d_LOD2",
+      "flower_gazania_h_LOD2",
+      "flower_gazania_g_LOD2",
+      "flower_gazania_f_LOD2",
+      "flower_gazania_e_LOD2",
+      "flower_gazania_a_LOD3",
+      "flower_gazania_b_LOD3",
+      "flower_gazania_c_LOD3",
+      "flower_gazania_d_LOD3",
+      "flower_gazania_h_LOD3",
+      "flower_gazania_g_LOD3",
+      "flower_gazania_f_LOD3",
+      "flower_gazania_e_LOD3"
+    ],
+    "mesh_objects": [
+      {
+        "name": "flower_gazania_a_LOD0",
+        "data": "Plane.097",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.14527012407779694,
+          0.14267170429229736,
+          0.05964772775769234
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_a_LOD1",
+        "data": "Plane.106",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.14527012407779694,
+          0.14267170429229736,
+          0.05889292433857918
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_a_LOD2",
+        "data": "Plane.366",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.1276721954345703,
+          0.11804304271936417,
+          0.09757129102945328
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_a_LOD3",
+        "data": "Plane.494",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.12789691984653473,
+          0.11275720596313477,
+          0.09930036216974258
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_b_LOD0",
+        "data": "Plane.089",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.24432307481765747,
+          0.22113457322120667,
+          0.06447122991085052
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_b_LOD1",
+        "data": "Plane.134",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.24432307481765747,
+          0.22113457322120667,
+          0.06135501340031624
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_b_LOD2",
+        "data": "Plane.378",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.24432307481765747,
+          0.22113457322120667,
+          0.06135501340031624
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_b_LOD3",
+        "data": "Plane.502",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.21476365625858307,
+          0.2287423312664032,
+          0.10215200483798981
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_c_LOD0",
+        "data": "Plane.170",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.1894843876361847,
+          0.23727194964885712,
+          0.10348410904407501
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_c_LOD1",
+        "data": "Plane.138",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.1894843876361847,
+          0.23727194964885712,
+          0.10348410904407501
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_c_LOD2",
+        "data": "Plane.381",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.1894843876361847,
+          0.23751504719257355,
+          0.10309302806854248
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_c_LOD3",
+        "data": "Plane.510",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.18983539938926697,
+          0.23611818253993988,
+          0.10051200538873672
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_d_LOD0",
+        "data": "Plane.279",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.20043696463108063,
+          0.25108155608177185,
+          0.10494249314069748
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_d_LOD1",
+        "data": "Plane.156",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.2649987041950226,
+          0.23223313689231873,
+          0.09406889975070953
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_d_LOD2",
+        "data": "Plane.397",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.2195725440979004,
+          0.23521840572357178,
+          0.13569343090057373
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_d_LOD3",
+        "data": "Plane.526",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.21901185810565948,
+          0.2346583753824234,
+          0.13712121546268463
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_e_LOD0",
+        "data": "Plane.227",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.1887548863887787,
+          0.2340899556875229,
+          0.12443989515304565
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_e_LOD1",
+        "data": "Plane.347",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.1887548863887787,
+          0.2340899556875229,
+          0.12436005473136902
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_e_LOD2",
+        "data": "Plane.476",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.1887548863887787,
+          0.2340899556875229,
+          0.12436005473136902
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_e_LOD3",
+        "data": "Plane.603",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.1843799203634262,
+          0.2301194667816162,
+          0.127985417842865
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_f_LOD0",
+        "data": "Plane.082",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.28534257411956787,
+          0.21040445566177368,
+          0.23683121800422668
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_f_LOD1",
+        "data": "Plane.329",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.31047120690345764,
+          0.28781387209892273,
+          0.12896645069122314
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_f_LOD2",
+        "data": "Plane.459",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.31021127104759216,
+          0.28781387209892273,
+          0.1285477727651596
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_f_LOD3",
+        "data": "Plane.588",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.3099140524864197,
+          0.29138481616973877,
+          0.12574565410614014
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_g_LOD0",
+        "data": "Plane.108",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.2293238341808319,
+          0.2336258739233017,
+          0.22833886742591858
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_g_LOD1",
+        "data": "Plane.308",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.2885783016681671,
+          0.2378733605146408,
+          0.16018067300319672
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_g_LOD2",
+        "data": "Plane.438",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.2885783016681671,
+          0.2378733605146408,
+          0.15969091653823853
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_g_LOD3",
+        "data": "Plane.572",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.228165864944458,
+          0.23008663952350616,
+          0.2282416969537735
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_h_LOD0",
+        "data": "Plane.164",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD0"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.26837998628616333,
+          0.2859313189983368,
+          0.22548913955688477
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_h_LOD1",
+        "data": "Plane.225",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD1"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.26837998628616333,
+          0.2859313189983368,
+          0.22548913955688477
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_h_LOD2",
+        "data": "Plane.414",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD2"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.26837998628616333,
+          0.2859313189983368,
+          0.22548913955688477
+        ],
+        "selected": false
+      },
+      {
+        "name": "flower_gazania_h_LOD3",
+        "data": "Plane.544",
+        "users": 1,
+        "collections": [
+          "flower_gazania_LOD3"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.2724097669124603,
+          0.2802363336086273,
+          0.22750981152057648
+        ],
+        "selected": false
+      },
+      {
+        "name": "Plane",
+        "data": "Plane",
+        "users": 2,
+        "collections": [],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.44177407026290894,
+          0.20524317026138306,
+          0.0
+        ],
+        "selected": false
+      },
+      {
+        "name": "Plane.001",
+        "data": "Plane.002",
+        "users": 2,
+        "collections": [],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.45286107063293457,
+          0.32976794242858887,
+          0.0
+        ],
+        "selected": false
+      },
+      {
+        "name": "Plane.002",
+        "data": "Plane.003",
+        "users": 2,
+        "collections": [],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.29720184206962585,
+          0.45313122868537903,
+          0.0
+        ],
+        "selected": false
+      },
+      {
+        "name": "Plane.003",
+        "data": "Plane.004",
+        "users": 2,
+        "collections": [],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.4631834328174591,
+          0.29307660460472107,
+          0.0
+        ],
+        "selected": false
+      },
+      {
+        "name": "Plane.004",
+        "data": "Plane.005",
+        "users": 2,
+        "collections": [],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.45874130725860596,
+          0.32184845209121704,
+          0.0
+        ],
+        "selected": false
+      },
+      {
+        "name": "Plane.005",
+        "data": "Plane.006",
+        "users": 2,
+        "collections": [],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.40774983167648315,
+          0.35905057191848755,
+          0.0
+        ],
+        "selected": false
+      },
+      {
+        "name": "Plane.006",
+        "data": "Plane.007",
+        "users": 2,
+        "collections": [],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.3686444163322449,
+          0.20419467985630035,
+          0.0
+        ],
+        "selected": false
+      },
+      {
+        "name": "Plane.007",
+        "data": "Plane.008",
+        "users": 2,
+        "collections": [],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.4680437743663788,
+          0.21321380138397217,
+          0.0
+        ],
+        "selected": false
+      },
+      {
+        "name": "Plane.008",
+        "data": "Plane.009",
+        "users": 2,
+        "collections": [],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.7814059257507324,
+          0.8368699550628662,
+          0.00037948600947856903
+        ],
+        "selected": false
+      },
+      {
+        "name": "Plane.009",
+        "data": "Plane.010",
+        "users": 2,
+        "collections": [],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.48348820209503174,
+          2.6321613788604736,
+          0.046424563974142075
+        ],
+        "selected": false
+      },
+      {
+        "name": "Plane.010",
+        "data": "Plane.001",
+        "users": 2,
+        "collections": [],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          2.8766098022460938,
+          2.3712244033813477,
+          0.006109076086431742
+        ],
+        "selected": false
+      },
+      {
+        "name": "Plane.011",
+        "data": "Plane.011",
+        "users": 2,
+        "collections": [],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          1.7812684774398804,
+          2.000628709793091,
+          1.206253230634502e-08
+        ],
+        "selected": false
+      },
+      {
+        "name": "Plane.021",
+        "data": "Plane.021",
+        "users": 2,
+        "collections": [],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.22974729537963867,
+          0.24439653754234314,
+          0.046424563974142075
+        ],
+        "selected": false
+      }
+    ],
+    "images": [
+      {
+        "name": "ehingen_hillside_02_1k.hdr",
+        "packed": false,
+        "path": "//..\\..\\..\\..\\..\\..\\Poly Haven Blender Addon\\ehingen_hillside_02\\ehingen_hillside_02_1k.hdr",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "flower_gazania_alpha.png",
+        "packed": false,
+        "path": "//textures\\flower_gazania_alpha_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "flower_gazania_diff.png",
+        "packed": false,
+        "path": "//textures\\flower_gazania_diff_2k.jpg",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "flower_gazania_disp.png",
+        "packed": false,
+        "path": "//textures\\flower_gazania_disp_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "flower_gazania_nor_gl.png",
+        "packed": false,
+        "path": "//textures\\flower_gazania_nor_gl_2k.exr",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "flower_gazania_rough.png",
+        "packed": false,
+        "path": "//textures\\flower_gazania_rough_2k.exr",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "scan4_Albedo_02.png",
+        "packed": false,
+        "path": "//..\\..\\Resources\\scan4_Output\\scan4_Albedo_02.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "scan4_Height_01.png",
+        "packed": false,
+        "path": "//..\\..\\Resources\\scan4_Output\\scan4_Height_01.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "scan4_NorGL.png",
+        "packed": false,
+        "path": "//..\\..\\Resources\\scan4_Output\\scan4_NorGL.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "SMK_Scan2_PNG_9500x6307_Albedo.png",
+        "packed": false,
+        "path": "//..\\..\\Resources\\Scan2_Output\\SMK_Scan2_PNG_9500x6307_Albedo.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "SMK_Scan2_PNG_9500x6307_Height.png",
+        "packed": false,
+        "path": "//..\\..\\Resources\\Scan2_Output\\SMK_Scan2_PNG_9500x6307_Height.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "SMK_Scan2_PNG_9500x6307_Normal_flat.png",
+        "packed": false,
+        "path": "//..\\..\\Resources\\Scan2_Output\\SMK_Scan2_PNG_9500x6307_Normal_flat.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "SMK_Scan5_PNG_9500x6307_Albedo.png",
+        "packed": false,
+        "path": "//..\\..\\Resources\\Scan5_Output\\SMK_Scan5_PNG_9500x6307_Albedo.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "SMK_Scan5_PNG_9500x6307_Height.png",
+        "packed": false,
+        "path": "//..\\..\\Resources\\Scan5_Output\\SMK_Scan5_PNG_9500x6307_Height.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "SMK_Scan5_PNG_9500x6307_Normal_flat.png",
+        "packed": false,
+        "path": "//..\\..\\Resources\\Scan5_Output\\SMK_Scan5_PNG_9500x6307_Normal_flat.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      }
+    ],
+    "collections": [
+      "flower_gazania",
+      "flower_gazania_LOD0",
+      "flower_gazania_LOD1",
+      "flower_gazania_LOD2",
+      "flower_gazania_LOD3"
+    ]
+  },
+  {
+    "asset": "planter_box_01",
+    "scene_objects": [
+      "planter_box_01"
+    ],
+    "mesh_objects": [
+      {
+        "name": "planter_box_01",
+        "data": "Plane.003",
+        "users": 1,
+        "collections": [
+          "planter_box_01"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.9126113653182983,
+          0.4136679768562317,
+          0.42496824264526367
+        ],
+        "selected": false
+      }
+    ],
+    "images": [
+      {
+        "name": "planter_box_01_diff.png",
+        "packed": false,
+        "path": "//textures\\planter_box_01_diff_2k.jpg",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "planter_box_01_metal.png",
+        "packed": false,
+        "path": "//textures\\planter_box_01_metal_2k.exr",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "planter_box_01_nor_gl.png",
+        "packed": false,
+        "path": "//textures\\planter_box_01_nor_gl_2k.exr",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "planter_box_01_rough.png",
+        "packed": false,
+        "path": "//textures\\planter_box_01_rough_2k.exr",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      }
+    ],
+    "collections": [
+      "planter_box_01"
+    ]
+  },
+  {
+    "asset": "outdoor_table_chair_set_01",
+    "scene_objects": [
+      "outdoor_table_chair_set_01_chair_01",
+      "outdoor_table_chair_set_01_table",
+      "outdoor_table_chair_set_01_chair_02"
+    ],
+    "mesh_objects": [
+      {
+        "name": "outdoor_table_chair_set_01_chair_01",
+        "data": "Folding_Chair_Wood",
+        "users": 1,
+        "collections": [
+          "outdoor_table_chair_set_01"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.47168248891830444,
+          0.5994717478752136,
+          0.8585816025733948
+        ],
+        "selected": true
+      },
+      {
+        "name": "outdoor_table_chair_set_01_chair_02",
+        "data": "Folding_Chair_Wood.001",
+        "users": 1,
+        "collections": [
+          "outdoor_table_chair_set_01"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.5974935293197632,
+          0.671042799949646,
+          0.8585816025733948
+        ],
+        "selected": true
+      },
+      {
+        "name": "outdoor_table_chair_set_01_table",
+        "data": "Folding_Table_Wood.001",
+        "users": 1,
+        "collections": [
+          "outdoor_table_chair_set_01"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.6916830539703369,
+          0.6918506622314453,
+          0.7259219288825989
+        ],
+        "selected": true
+      }
+    ],
+    "images": [
+      {
+        "name": "outdoor_table_chair_set_01_chair_diff.png",
+        "packed": false,
+        "path": "//textures\\outdoor_table_chair_set_01_chair_diff_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "outdoor_table_chair_set_01_chair_metal.png",
+        "packed": false,
+        "path": "//textures\\outdoor_table_chair_set_01_chair_metal_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "outdoor_table_chair_set_01_chair_nor_gl.png",
+        "packed": false,
+        "path": "//textures\\outdoor_table_chair_set_01_chair_nor_gl_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "outdoor_table_chair_set_01_chair_rough.png",
+        "packed": false,
+        "path": "//textures\\outdoor_table_chair_set_01_chair_rough_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "outdoor_table_chair_set_01_table_diff.png",
+        "packed": false,
+        "path": "//textures\\outdoor_table_chair_set_01_table_diff_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "outdoor_table_chair_set_01_table_metal.png",
+        "packed": false,
+        "path": "//textures\\outdoor_table_chair_set_01_table_metal_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "outdoor_table_chair_set_01_table_nor_gl.png",
+        "packed": false,
+        "path": "//textures\\outdoor_table_chair_set_01_table_nor_gl_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "outdoor_table_chair_set_01_table_rough.png",
+        "packed": false,
+        "path": "//textures\\outdoor_table_chair_set_01_table_rough_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      }
+    ],
+    "collections": [
+      "outdoor_table_chair_set_01"
+    ]
+  },
+  {
+    "asset": "modular_street_seating",
+    "scene_objects": [
+      "crossbar",
+      "legs_double",
+      "legs_single",
+      "suspended_support_01",
+      "suspended_support_02",
+      "back_support_r",
+      "back_support_l",
+      "arm_rest_01",
+      "arm_rest_02",
+      "seat",
+      "seat_back",
+      "connector_60",
+      "connector_45",
+      "connector_90",
+      "connector_30",
+      "seat_bench"
+    ],
+    "mesh_objects": [
+      {
+        "name": "arm_rest_01",
+        "data": "arm_rest_01",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.07999993115663528,
+          0.5990468263626099,
+          0.229925274848938
+        ],
+        "selected": false
+      },
+      {
+        "name": "arm_rest_02",
+        "data": "arm_rest_02",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.07999993115663528,
+          0.4471709728240967,
+          0.1670055240392685
+        ],
+        "selected": true
+      },
+      {
+        "name": "back_support_l",
+        "data": "back_support_l",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.12999999523162842,
+          0.17306500673294067,
+          0.44191402196884155
+        ],
+        "selected": false
+      },
+      {
+        "name": "back_support_r",
+        "data": "back_support_r",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.12999999523162842,
+          0.17306500673294067,
+          0.44191402196884155
+        ],
+        "selected": false
+      },
+      {
+        "name": "connector_30",
+        "data": "connector_30",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.349323570728302,
+          0.612530529499054,
+          0.024692459031939507
+        ],
+        "selected": false
+      },
+      {
+        "name": "connector_45",
+        "data": "connector_45",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.4940183758735657,
+          0.6281612515449524,
+          0.02469245344400406
+        ],
+        "selected": false
+      },
+      {
+        "name": "connector_60",
+        "data": "connector_60",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.6054816246032715,
+          0.6491891145706177,
+          0.02469242922961712
+        ],
+        "selected": false
+      },
+      {
+        "name": "connector_90",
+        "data": "connector_90",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.6999788880348206,
+          0.699978768825531,
+          0.02469242922961712
+        ],
+        "selected": false
+      },
+      {
+        "name": "crossbar",
+        "data": "crossbar",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          1.8623936176300049,
+          0.03999999910593033,
+          0.04000002145767212
+        ],
+        "selected": false
+      },
+      {
+        "name": "legs_double",
+        "data": "legs_double",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.18438175320625305,
+          0.6000000238418579,
+          0.45000001788139343
+        ],
+        "selected": false
+      },
+      {
+        "name": "legs_single",
+        "data": "legs_single",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.13219085335731506,
+          0.6000000238418579,
+          0.45000001788139343
+        ],
+        "selected": false
+      },
+      {
+        "name": "seat",
+        "data": "seat",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          1.840000033378601,
+          0.6000000238418579,
+          0.02499997615814209
+        ],
+        "selected": false
+      },
+      {
+        "name": "seat_back",
+        "data": "seat_back",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          1.6800000667572021,
+          0.36500000953674316,
+          0.02499997615814209
+        ],
+        "selected": false
+      },
+      {
+        "name": "seat_bench",
+        "data": "seat_bench",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          1.8400001525878906,
+          0.6000000238418579,
+          0.02499997615814209
+        ],
+        "selected": false
+      },
+      {
+        "name": "suspended_support_01",
+        "data": "suspended_support_01",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.10603751242160797,
+          0.5670339465141296,
+          0.20096440613269806
+        ],
+        "selected": false
+      },
+      {
+        "name": "suspended_support_02",
+        "data": "suspended_support_02",
+        "users": 1,
+        "collections": [
+          "modular_street_seating"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          0.18438175320625305,
+          0.6000000238418579,
+          0.22577108442783356
+        ],
+        "selected": false
+      }
+    ],
+    "images": [
+      {
+        "name": "modular_street_seating_armrests_diff.png",
+        "packed": false,
+        "path": "//textures\\modular_street_seating_armrests_diff_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "modular_street_seating_armrests_metal.png",
+        "packed": false,
+        "path": "//textures\\modular_street_seating_armrests_metal_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "modular_street_seating_armrests_nor_gl.png",
+        "packed": false,
+        "path": "//textures\\modular_street_seating_armrests_nor_gl_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "modular_street_seating_armrests_rough.png",
+        "packed": false,
+        "path": "//textures\\modular_street_seating_armrests_rough_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "modular_street_seating_connectors_diff.png",
+        "packed": false,
+        "path": "//textures\\modular_street_seating_connectors_diff_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "modular_street_seating_connectors_nor_gl.png",
+        "packed": false,
+        "path": "//textures\\modular_street_seating_connectors_nor_gl_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "modular_street_seating_connectors_rough.png",
+        "packed": false,
+        "path": "//textures\\modular_street_seating_connectors_rough_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "modular_street_seating_supports_diff.png",
+        "packed": false,
+        "path": "//textures\\modular_street_seating_supports_diff_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "modular_street_seating_supports_metal.png",
+        "packed": false,
+        "path": "//textures\\modular_street_seating_supports_metal_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "modular_street_seating_supports_nor_gl.png",
+        "packed": false,
+        "path": "//textures\\modular_street_seating_supports_nor_gl_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "modular_street_seating_supports_rough.png",
+        "packed": false,
+        "path": "//textures\\modular_street_seating_supports_rough_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "modular_street_seating_timber_diff.png",
+        "packed": false,
+        "path": "//textures\\modular_street_seating_timber_diff_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "modular_street_seating_timber_nor_gl.png",
+        "packed": false,
+        "path": "//textures\\modular_street_seating_timber_nor_gl_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "modular_street_seating_timber_rough.png",
+        "packed": false,
+        "path": "//textures\\modular_street_seating_timber_rough_2k.png",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      }
+    ],
+    "collections": [
+      "modular_street_seating"
+    ]
+  },
+  {
+    "asset": "painted_wooden_bench",
+    "scene_objects": [
+      "painted_wooden_bench"
+    ],
+    "mesh_objects": [
+      {
+        "name": "painted_wooden_bench",
+        "data": "bench.002",
+        "users": 3,
+        "collections": [
+          "painted_wooden_bench"
+        ],
+        "hide_viewport": false,
+        "hide_render": false,
+        "dimensions": [
+          1.1649435758590698,
+          0.49654310941696167,
+          0.8892914652824402
+        ],
+        "selected": true
+      }
+    ],
+    "images": [
+      {
+        "name": "painted_wooden_bench_diff.png",
+        "packed": false,
+        "path": "//textures\\painted_wooden_bench_diff_2k.jpg",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "painted_wooden_bench_nor_gl.png",
+        "packed": false,
+        "path": "//textures\\painted_wooden_bench_nor_gl_2k.exr",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "painted_wooden_bench_rough.png",
+        "packed": false,
+        "path": "//textures\\painted_wooden_bench_rough_2k.exr",
+        "has_data": false,
+        "size": [
+          0,
+          0
+        ]
+      }
+    ],
+    "collections": [
+      "painted_wooden_bench"
+    ]
+  }
+]
