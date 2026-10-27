@@ -99,5 +99,31 @@ def assign(suffix="", keep=()):
     return out
 
 
+def audit_assignments(suffix="_UE", keep=()):
+    """Preview each amenity pin's panorama assignment without changing or saving the level."""
+    out = []
+    for a in unreal.get_editor_subsystem(unreal.EditorActorSubsystem).get_all_level_actors():
+        lab = a.get_actor_label()
+        if a.get_class().get_name() != "BP_POI_C" or not lab.startswith("Amenity_"):
+            continue
+        aid = lab[len("Amenity_"):]
+        preferred = tex_path(aid) + suffix
+        fallback = tex_path(aid)
+        target = preferred if aid not in keep and EAL.does_asset_exist(preferred) else fallback
+        struct = a.get_editor_property("POI_Info_Struct")
+        match = re.search(r'Texture_360_[0-9A-Za-z_]+=("[^"]*"|None)', struct.export_text())
+        current = match.group(1) if match else None
+        target_exists = EAL.does_asset_exist(target)
+        target_ref = ("/Script/Engine.Texture2D'%s.%s'" % (target, target.rsplit("/", 1)[1])) if target_exists else None
+        out.append({
+            "pin": aid,
+            "current": current,
+            "would_use": target_ref,
+            "texture_exists": target_exists,
+            "would_change": current != ('"' + target_ref + '"' if target_ref else "None"),
+        })
+    return out
+
+
 def run():
     return {"imported": import_all(), "pins": assign()}

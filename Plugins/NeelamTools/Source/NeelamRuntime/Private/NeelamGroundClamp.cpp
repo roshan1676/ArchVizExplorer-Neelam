@@ -6,6 +6,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/Pawn.h"
 #include "GameFramework/Controller.h"
+#include "Camera/CameraComponent.h"
 
 UNeelamGroundClampComponent::UNeelamGroundClampComponent()
 {
@@ -50,10 +51,14 @@ void UNeelamGroundClampComponent::TickComponent(float DeltaTime, ELevelTick Tick
     if (bEnableAntiTunnelSweep && bHasLastLocation)
     {
         const FVector Delta = Loc - LastLocation;
-        if (Delta.SizeSquared() > MinStepToSweep * MinStepToSweep)
+        if (Delta.SizeSquared() > 1.f)   // every step: the stand-off sphere must never be crossed
         {
             FHitResult SweepHit;
-            if (World->SweepSingleByChannel(SweepHit, LastLocation, Loc, FQuat::Identity, TraceChannel, FCollisionShape::MakeSphere(SweepRadius), Params))
+            if (World->SweepSingleByChannel(SweepHit, LastLocation, Loc, FQuat::Identity, TraceChannel, FCollisionShape::MakeSphere(FMath::Max(SweepRadius, PivotStandoff)), Params)
+                && SweepHit.GetComponent() && SweepHit.GetComponent()->Bounds.BoxExtent.GetMax() >= MinBlockerExtent
+                && !(SweepHit.GetActor() && SweepHit.GetActor()->GetClass()->GetName().Contains(TEXT("Cesium")))
+                && !SweepHit.bStartPenetrating                 // already inside the stand-off: let it move away
+                && SweepHit.ImpactNormal.Z < 0.7f)            // floors / decks / roofs under the pivot: ground clamp's job
             {
                 // pull back to just outside the hit, keeping the attempted height so it still reads as "blocked", not "teleported down"
                 Loc = SweepHit.Location + SweepHit.ImpactNormal * 2.f;
@@ -79,36 +84,68 @@ void UNeelamGroundClampComponent::TickComponent(float DeltaTime, ELevelTick Tick
         }
     }
 
-    // 3) the camera hangs on a long spring arm: camera z = pivot z - sin(pitch) * L, so tilting up swings it under the
-    //    terrain. Cap the pitch so the camera stays CameraClearance above the ground under it.
+    // 3) + 4) camera on the spring arm (client 27 Oct: "camera not smooth, goes into the property, goes under the map")
     if (!bClampCamera) return;
     USpringArmComponent* Arm = Owner->FindComponentByClass<USpringArmComponent>();
     if (!Arm || Arm->TargetArmLength < 1.f) return;
-    if (!Arm->bDoCollisionTest)   // client 27 Oct: orbit/zoom went INTO the podium/towers -> stop the camera in front of walls
+    if (!CamComp.IsValid())
     {
-        Arm->bDoCollisionTest = true; Arm->ProbeSize = 40.f; Arm->ProbeChannel = TraceChannel;
+        TArray<USceneComponent*> Kids; Arm->GetChildrenComponents(false, Kids);
+        for (USceneComponent* K : Kids)   // the CineCamera - not the proxy mesh / frustum / widget also hanging on the arm
+            if (K && K->IsA<UCameraComponent>()) { CamComp = K; CamBaseRel = K->GetRelativeLocation(); break; }
+        Arm->bDoCollisionTest = false;   // the engine test snaps; ours below eases
     }
     const FVector Pivot = Arm->GetComponentLocation();
-    const FVector Cam = Arm->GetSocketLocation(USpringArmComponent::SocketName);
-    FHitResult CamHit;
-    if (!World->LineTraceSingleByChannel(CamHit, FVector(Cam.X, Cam.Y, FMath::Max(Cam.Z, Pivot.Z) + 50000.f),
-                                         FVector(Cam.X, Cam.Y, Cam.Z - TraceDistance), TraceChannel, Params)) return;
-    const float L = Arm->TargetArmLength;
-    const float MaxPitch = FMath::RadiansToDegrees(FMath::Asin(FMath::Clamp((Pivot.Z - (CamHit.ImpactPoint.Z + CameraClearance)) / L, -1.f, 1.f)));
+    const FVector Desired = Arm->GetSocketLocation(USpringArmComponent::SocketName);   // collision test off = lagged desired spot
+    const float Len = FVector::Dist(Pivot, Desired);
+
+    // 3) never below the terrain: cap the arm pitch. Terrain only (Cesium tiles) - roofs made the cap jump. Eased.
+    float GroundZ;
+    float MaxPitch = 89.f;
+    if (TerrainZ(World, Desired, GroundZ) && Len > 1.f)
+        MaxPitch = FMath::RadiansToDegrees(FMath::Asin(FMath::Clamp((Pivot.Z - (GroundZ + CameraClearance)) / Len, -1.f, 1.f)));
+    SmoothMaxPitch = FMath::FInterpTo(SmoothMaxPitch, MaxPitch, DeltaTime, 4.f);
     FRotator R = Arm->GetComponentRotation();
-    if (R.Pitch <= MaxPitch) return;
-    R.Pitch = MaxPitch;
-    Arm->SetWorldRotation(R);
-    // whoever drives the arm next frame must agree: template BP target (Pitch_New) and/or the controller
-    if (FNumericProperty* N = CastField<FNumericProperty>(Owner->GetClass()->FindPropertyByName(TEXT("Pitch_New"))))
+    if (R.Pitch > SmoothMaxPitch)
     {
-        void* Ptr = N->ContainerPtrToValuePtr<void>(Owner);
-        if (N->IsFloatingPoint() && N->GetFloatingPointPropertyValue(Ptr) > MaxPitch) N->SetFloatingPointPropertyValue(Ptr, MaxPitch);
+        R.Pitch = SmoothMaxPitch; Arm->SetWorldRotation(R);
+        if (FNumericProperty* N = CastField<FNumericProperty>(Owner->GetClass()->FindPropertyByName(TEXT("Pitch_New"))))
+        {
+            void* Ptr = N->ContainerPtrToValuePtr<void>(Owner);
+            if (N->IsFloatingPoint() && N->GetFloatingPointPropertyValue(Ptr) > SmoothMaxPitch) N->SetFloatingPointPropertyValue(Ptr, SmoothMaxPitch);
+        }
+        if (APawn* Pn = Cast<APawn>(Owner))
+            if (AController* C = Pn->GetController())
+                if (Arm->bUsePawnControlRotation && C->GetControlRotation().GetNormalized().Pitch > SmoothMaxPitch)
+                {
+                    FRotator CR = C->GetControlRotation(); CR.Pitch = SmoothMaxPitch; C->SetControlRotation(CR);
+                }
     }
-    if (APawn* Pn = Cast<APawn>(Owner))
-        if (AController* C = Pn->GetController())
-            if (Arm->bUsePawnControlRotation && C->GetControlRotation().GetNormalized().Pitch > MaxPitch)
-            {
-                FRotator CR = C->GetControlRotation(); CR.Pitch = MaxPitch; C->SetControlRotation(CR);
-            }
+
+    // 4) keep the camera out of buildings, eased: sweep pivot -> camera, slide the camera toward the pivot by an
+    //    interpolated amount (fast in, slow out) instead of the spring arm's per-frame snap
+    if (!CamComp.IsValid()) return;
+    float Want = 0.f;
+    FHitResult Near, Hit;   // wide early-warning sweep drives the easing; the tight one is the hard limit
+    if (World->SweepSingleByChannel(Near, Pivot, Desired, FQuat::Identity, TraceChannel, FCollisionShape::MakeSphere(CamAnticipate), Params) && !Near.bStartPenetrating)
+        Want = FMath::Max(0.f, Len - FMath::Max(Near.Distance - 100.f, 150.f));
+    World->SweepSingleByChannel(Hit, Pivot, Desired, FQuat::Identity, TraceChannel, FCollisionShape::MakeSphere(CamProbeRadius), Params);
+    CamPull = FMath::FInterpTo(CamPull, Want, DeltaTime, Want > CamPull ? CamPullInSpeed : CamLetOutSpeed);
+    // hard limit (client: "camera shall not be able to go inside the building"): never behind the first wall, even
+    // when a fast pan outruns the easing. Want keeps a 1 m buffer, so this only bites in that case.
+    if (Hit.bBlockingHit && !Hit.bStartPenetrating) CamPull = FMath::Max(CamPull, Len - FMath::Max(Hit.Distance - 30.f, 100.f));
+    CamComp->SetRelativeLocation(CamBaseRel + FVector(CamPull, 0.f, 0.f));   // +X = along the arm toward the pivot
+}
+
+bool UNeelamGroundClampComponent::TerrainZ(UWorld* World, const FVector& At, float& OutZ) const
+{
+    FCollisionQueryParams P(SCENE_QUERY_STAT(NeelamTerrainZ), false, GetOwner());
+    for (int32 i = 0; i < 6; ++i)   // step through roofs / decks until the map tiles (blocking hits end a trace)
+    {
+        FHitResult H;
+        if (!World->LineTraceSingleByChannel(H, FVector(At.X, At.Y, At.Z + 100000.f), FVector(At.X, At.Y, At.Z - TraceDistance), TraceChannel, P) || !H.GetActor()) return false;
+        if (H.GetActor()->GetClass()->GetName().Contains(TEXT("Cesium3DTileset"))) { OutZ = H.ImpactPoint.Z; return true; }
+        P.AddIgnoredActor(H.GetActor());
+    }
+    return false;
 }

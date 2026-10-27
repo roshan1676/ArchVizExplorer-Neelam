@@ -20,7 +20,13 @@ public:
     /** Minimum height (cm) the owner is kept above whatever the ground trace hits. */
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float MinClearance = 60.f;
     /** See class comment - off by default, caused camera stutter against small decorative props. */
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") bool bEnableAntiTunnelSweep = false;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") bool bEnableAntiTunnelSweep = true;
+    /** Anti-tunnel only blocks on structures at least this big (half-extent, cm): towers / podium / landmarks, not trees,
+     *  bollards or pool lights (those caused the old stutter). Map tiles never block (ground clamp handles them). */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float MinBlockerExtent = 1500.f;
+    /** The pivot stays this far (cm) from big structures, so the orbiting camera always has room in front of a wall
+     *  (pivot glued to a facade = camera behind the wall for half the orbit). */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float PivotStandoff = 800.f;
     /** How far below the owner to search for ground (cm). */
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float TraceDistance = 20000.f;
     /** Trace channel used for both traces (Visibility matches Cesium tile / site mesh collision). */
@@ -38,12 +44,24 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") bool bClampCamera = true;
     /** Minimum height (cm) of the camera above the ground under it. */
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float CameraClearance = 400.f;
+    /** Smoothed camera collision (replaces USpringArmComponent::bDoCollisionTest, which snapped the camera 6 m in one
+     *  frame every time a tower passed between camera and pivot = jerky panning). Pull-in / let-out speeds (1/s). */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float CamPullInSpeed = 5.f;
+    /** Early-warning sweep radius (cm): the camera starts easing in this far before it would touch a wall. */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float CamAnticipate = 600.f;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float CamLetOutSpeed = 2.5f;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float CamProbeRadius = 60.f;
 
 protected:
     virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 private:
     bool SphereChecked = false;
+    TWeakObjectPtr<class USceneComponent> CamComp;
+    FVector CamBaseRel = FVector::ZeroVector;
+    float CamPull = 0.f;
+    float SmoothMaxPitch = 90.f;
+    bool TerrainZ(UWorld* World, const FVector& At, float& OutZ) const;
     bool bInside360Sphere = false;
     bool bHasLastLocation = false;
     FVector LastLocation = FVector::ZeroVector;

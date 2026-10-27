@@ -1,0 +1,57 @@
+{
+  "_doc": "2BHK traced from 2bhk_plan.webp (1053x2000 px). Rects are [x0, x1, y0, y1] in plan pixels; 166.5 px = 1 m (checked on all 6 labelled rooms). Blender X = px/scale, Y = (2000-py)/scale. z in metres.",
+  "plan": "2bhk_plan.webp",
+  "plan_px": [1053, 2000],
+  "scale": 166.5,
+  "clear_height": 2.85,
+  "slab": 0.15,
+  "walls": {
+    "ext_top":        {"r": [0, 1048, 0, 40],      "kind": "rcc"},
+    "ext_bottom":     {"r": [0, 1022, 1930, 1990], "kind": "rcc"},
+    "ext_left_up":    {"r": [0, 40, 40, 865],      "kind": "rcc"},
+    "ext_left_down":  {"r": [15, 40, 865, 1930],   "kind": "rcc"},
+    "ext_right_beds": {"r": [998, 1022, 980, 1930],"kind": "rcc"},
+    "ext_kitchen":    {"r": [1022, 1048, 522, 980],"kind": "rcc"},
+    "rcc_kit_bed":    {"r": [440, 1048, 912, 980], "kind": "rcc"},
+    "balcony_slider": {"r": [857, 872, 40, 522],   "kind": "rcc"},
+    "balcony_bottom": {"r": [860, 1022, 522, 540], "kind": "block"},
+    "kitchen_top":    {"r": [440, 860, 522, 540],  "kind": "block"},
+    "kitchen_left":   {"r": [440, 457, 522, 912],  "kind": "block"},
+    "bed1_left":      {"r": [440, 457, 980, 1453], "kind": "block"},
+    "bed1_bottom":    {"r": [440, 998, 1437, 1453],"kind": "block"},
+    "bed2_door_wall": {"r": [290, 440, 1437, 1453],"kind": "block"},
+    "t1_top":         {"r": [40, 290, 572, 590],   "kind": "block"},
+    "t1_right":       {"r": [273, 290, 572, 945],  "kind": "block"},
+    "shaft_top":      {"r": [40, 290, 945, 970],   "kind": "rcc"},
+    "shaft_right":    {"r": [265, 290, 945, 1590], "kind": "rcc"},
+    "shaft_bottom":   {"r": [40, 290, 1560, 1590], "kind": "rcc"},
+    "t2_right":       {"r": [273, 290, 1590, 1930],"kind": "block"}
+  },
+  "openings": [
+    {"name": "main_door",     "r": [-5, 45, 40, 205],     "z": [0, 2.1],  "type": "door", "w": 1.0},
+    {"name": "t1_door",       "r": [268, 295, 825, 940],  "z": [0, 2.1],  "type": "door"},
+    {"name": "t2_door",       "r": [268, 295, 1590, 1710],"z": [0, 2.1],  "type": "door"},
+    {"name": "bed1_door",     "r": [435, 462, 980, 1120], "z": [0, 2.1],  "type": "door"},
+    {"name": "bed2_door",     "r": [290, 440, 1432, 1458],"z": [0, 2.1],  "type": "door"},
+    {"name": "kitchen_arch",  "r": [435, 462, 655, 805],  "z": [0, 2.1],  "type": "opening"},
+    {"name": "balcony_slide", "r": [852, 877, 115, 445],  "z": [0, 2.4],  "type": "slider"},
+    {"name": "t1_vent",       "r": [105, 200, 940, 975],  "z": [1.8, 2.4],"type": "window"},
+    {"name": "t2_vent",       "r": [105, 200, 1555, 1595],"z": [1.8, 2.4],"type": "window"},
+    {"name": "bed1_window",   "r": [993, 1027, 1060, 1395],"z": [0.75, 2.1],"type": "window"},
+    {"name": "bed2_window",   "r": [993, 1027, 1540, 1880],"z": [0.75, 2.1],"type": "window"},
+    {"name": "kitchen_window","r": [1017, 1053, 600, 855], "z": [1.05, 2.1],"type": "window"}
+  ],
+  "railings": [
+    {"name": "balcony_rail", "r": [1022, 1045, 40, 522], "h": 1.1}
+  ],
+  "rooms": {
+    "living":   [40, 857, 40, 572],
+    "passage":  [290, 440, 572, 1437],
+    "kitchen":  [457, 1022, 540, 912],
+    "bedroom1": [457, 998, 980, 1437],
+    "bedroom2": [290, 998, 1453, 1930],
+    "toilet1":  [40, 273, 590, 945],
+    "toilet2":  [40, 273, 1590, 1930],
+    "balcony":  [872, 1022, 40, 522]
+  }
+}
