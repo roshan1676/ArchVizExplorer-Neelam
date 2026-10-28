@@ -1,0 +1,109 @@
+{
+ "kit": "KIT_PotBush",
+ "faces": 709710,
+ "size_m": [
+  2.003,
+  1.238,
+  1.765
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\pool.blend",
+ "objects": [
+  "Plane.019",
+  "Icosphere",
+  "Cube.003",
+  "Plane.020",
+  "Icosphere.001",
+  "Cube.004"
+ ],
+ "materials": [
+  {
+   "name": "bb_1",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true,
+   "base": "1576423322_31470_jpg.jpg",
+   "transl": "1576423322_31470_jpg.jpg",
+   "alpha": "1576423322_31470_jpg.jpg",
+   "alpha_ch": "A"
+  },
+  {
+   "name": "bb_3",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true,
+   "base": "1576423322_31470_jpg.jpg",
+   "transl": "1576423322_31470_jpg.jpg",
+   "alpha": "1576423322_31470_jpg.jpg",
+   "alpha_ch": "A"
+  },
+  {
+   "name": "bb_grey and brown soil",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true,
+   "base": "grey_and_brown_soil_albedo_jpg.jpg",
+   "rough_tex": "grey_and_brown_soil_roughness_jpg.jpg",
+   "normal": "grey_and_brown_soil_normal_jpg.jpg",
+   "alpha": "grey_and_brown_soil_albedo_jpg.jpg",
+   "alpha_ch": "A"
+  },
+  {
+   "name": "bb_2",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true,
+   "base": "1576423322_31470_jpg.jpg",
+   "transl": "1576423322_31470_jpg.jpg",
+   "alpha": "1576423322_31470_jpg.jpg",
+   "alpha_ch": "A"
+  },
+  {
+   "name": "bb_Metal rough",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.20454543828964233,
+   "metal": 1.0,
+   "masked": true
+  },
+  {
+   "name": "bb_plastic touched",
+   "foliage": false,
+   "color": [
+    0.5924862623214722,
+    0.5493016839027405,
+    0.23175403475761414
+   ],
+   "rough": 0.0,
+   "metal": 0.0,
+   "masked": true
+  }
+ ]
+}

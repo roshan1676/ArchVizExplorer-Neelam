@@ -1,0 +1,32 @@
+{
+ "kit": "KIT_LowShrub",
+ "faces": 33550,
+ "size_m": [
+  3.093,
+  1.922,
+  0.424
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\pool.blend",
+ "objects": [
+  "garden02_001"
+ ],
+ "materials": [
+  {
+   "name": "vray Material #66",
+   "foliage": false,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_032.jpg",
+   "alpha": "Bitmaptexture_035.jpg",
+   "rough_tex": "Bitmaptexture_033.jpg",
+   "normal": "Bitmaptexture_034.jpg",
+   "transl": "Bitmaptexture_032.jpg"
+  }
+ ]
+}

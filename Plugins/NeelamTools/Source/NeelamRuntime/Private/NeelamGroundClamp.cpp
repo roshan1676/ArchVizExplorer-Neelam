@@ -7,6 +7,9 @@
 #include "GameFramework/Pawn.h"
 #include "GameFramework/Controller.h"
 #include "Camera/CameraComponent.h"
+#include "Components/StaticMeshComponent.h"
+#include "Engine/StaticMesh.h"
+#include "Components/TimelineComponent.h"
 
 UNeelamGroundClampComponent::UNeelamGroundClampComponent()
 {
@@ -48,21 +51,39 @@ void UNeelamGroundClampComponent::TickComponent(float DeltaTime, ELevelTick Tick
 
     // 1) anti-tunnel: did this frame's step skip clean through a wall/building/amenity mesh?
     FVector Loc = Owner->GetActorLocation();
-    if (bEnableAntiTunnelSweep && bHasLastLocation)
+    // the template's pin flight (BP timeline "Timeline_Focus_Animation") must pass: gym / toilets / STP / fire / parking
+    // pins sit INSIDE the podium - blocking it left the camera parked outside and the pin click did nothing
+    bool bFocusFlight = false;
+    TInlineComponentArray<UTimelineComponent*> Timelines(Owner);
+    for (const UTimelineComponent* T : Timelines)
+        if (T->IsPlaying() && T->GetName().Contains(TEXT("Focus"))) bFocusFlight = true;
+    if (bEnableAntiTunnelSweep && bHasLastLocation && !bFocusFlight)
     {
         const FVector Delta = Loc - LastLocation;
         if (Delta.SizeSquared() > 1.f)   // every step: the stand-off sphere must never be crossed
         {
-            FHitResult SweepHit;
-            if (World->SweepSingleByChannel(SweepHit, LastLocation, Loc, FQuat::Identity, TraceChannel, FCollisionShape::MakeSphere(FMath::Max(SweepRadius, PivotStandoff)), Params)
-                && SweepHit.GetComponent() && SweepHit.GetComponent()->Bounds.BoxExtent.GetMax() >= MinBlockerExtent
-                && !(SweepHit.GetActor() && SweepHit.GetActor()->GetClass()->GetName().Contains(TEXT("Cesium")))
-                && !SweepHit.bStartPenetrating                 // already inside the stand-off: let it move away
-                && SweepHit.ImpactNormal.Z < 0.7f)            // floors / decks / roofs under the pivot: ground clamp's job
+            FCollisionQueryParams SweepParams = Params;
+            for (int32 i = 0; i < 6; ++i)   // skip non-blockers and look behind them (a tower can sit behind a fence)
             {
-                // pull back to just outside the hit, keeping the attempted height so it still reads as "blocked", not "teleported down"
-                Loc = SweepHit.Location + SweepHit.ImpactNormal * 2.f;
-                Owner->SetActorLocation(Loc, false, nullptr, ETeleportType::TeleportPhysics);
+                FHitResult SweepHit;
+                if (!World->SweepSingleByChannel(SweepHit, LastLocation, Loc, FQuat::Identity, TraceChannel, FCollisionShape::MakeSphere(FMath::Max(SweepRadius, PivotStandoff)), SweepParams)
+                    || !SweepHit.GetActor()) break;
+                const UPrimitiveComponent* C = SweepHit.GetComponent();
+                const UStaticMeshComponent* S = Cast<UStaticMeshComponent>(C);
+                const bool bBlocks = S && C->Bounds.BoxExtent.GetMax() >= MinBlockerExtent   // meshes only: pin (BP_POI) boxes are not walls
+                    && !SweepHit.GetActor()->GetClass()->GetName().Contains(TEXT("Cesium"))
+                    // amenity dressing is merged per type (fences / trees / climbing wall = 20-28 m bounds): pan over it
+                    && !(S && S->GetStaticMesh() && S->GetStaticMesh()->GetName().StartsWith(TEXT("SM_Amenity_")))
+                    && !SweepHit.bStartPenetrating                 // already inside the stand-off: let it move away
+                    && SweepHit.ImpactNormal.Z < 0.7f;            // floors / decks / roofs under the pivot: ground clamp's job
+                if (bBlocks)
+                {
+                    // pull back to just outside the hit, keeping the attempted height so it still reads as "blocked", not "teleported down"
+                    Loc = SweepHit.Location + SweepHit.ImpactNormal * 2.f;
+                    Owner->SetActorLocation(Loc, false, nullptr, ETeleportType::TeleportPhysics);
+                    break;
+                }
+                SweepParams.AddIgnoredActor(SweepHit.GetActor());
             }
         }
     }
@@ -96,7 +117,9 @@ void UNeelamGroundClampComponent::TickComponent(float DeltaTime, ELevelTick Tick
         Arm->bDoCollisionTest = false;   // the engine test snaps; ours below eases
     }
     const FVector Pivot = Arm->GetComponentLocation();
-    const FVector Desired = Arm->GetSocketLocation(USpringArmComponent::SocketName);   // collision test off = lagged desired spot
+    // where the camera really sits unpulled: the CineCamera hangs 12 m BEHIND the arm end (relative X -1216) - sweeping
+    // only to the socket left those 12 m unchecked and the camera ended up behind Tower C (test 27 Oct)
+    const FVector Desired = Arm->GetSocketTransform(USpringArmComponent::SocketName).TransformPosition(CamBaseRel);
     const float Len = FVector::Dist(Pivot, Desired);
 
     // 3) never below the terrain: cap the arm pitch. Terrain only (Cesium tiles) - roofs made the cap jump. Eased.
@@ -125,15 +148,65 @@ void UNeelamGroundClampComponent::TickComponent(float DeltaTime, ELevelTick Tick
     // 4) keep the camera out of buildings, eased: sweep pivot -> camera, slide the camera toward the pivot by an
     //    interpolated amount (fast in, slow out) instead of the spring arm's per-frame snap
     if (!CamComp.IsValid()) return;
+    // 28 Oct (client: "Home / camera broken - inside buildings, under the map"): no camera collision while
+    //  - the template flies the camera (pin focus / Home): its end views are designed, and
+    //  - the pivot itself is covered (Home pivot sits at 2 m INSIDE the podium, some pins are under the map /
+    //    inside the podium): every sweep from there hits the cover -> camera was dragged in to the pivot.
+    FHitResult Cover;
+    bool bPivotCovered = World->LineTraceSingleByChannel(Cover, Pivot + FVector(0, 0, 50.f), Pivot + FVector(0, 0, 15000.f), TraceChannel, Params);
+    // enclosed: walls within 150 m in 7+ of 8 directions (Home's pivot is INSIDE the podium, whose ceiling has no
+    // collision, so the up-trace sees sky). Re-checked only when the pivot has moved > 1 m.
+    static TWeakObjectPtr<const UNeelamGroundClampComponent> EncFor; static FVector EncAt(1e30); static bool bEnc = false;
+    if (EncFor.Get() != this || FVector::DistSquared(EncAt, Pivot) > 10000.f)
+    {
+        EncFor = this; EncAt = Pivot; int32 Walls = 0;
+        for (int32 d = 0; d < 8; ++d)
+        {
+            const FVector Dir = FRotator(0.f, d * 45.f, 0.f).Vector(); FHitResult W;
+            if (World->LineTraceSingleByChannel(W, Pivot, Pivot + Dir * 15000.f, TraceChannel, Params) && W.GetActor()
+                && !W.GetActor()->GetClass()->GetName().Contains(TEXT("Cesium"))) ++Walls;
+        }
+        bEnc = Walls >= 7;
+    }
+    bPivotCovered = bPivotCovered || bEnc;
+    const bool bCollide = !bFocusFlight && !bPivotCovered;
+    // the wall sweeps react to buildings only: the photo map is the terrain (pitch cap above handles it). Home's 450 m arm
+    // at -4..-8 deg skims the map ground ~17 m out -> it was "a wall" and the camera got dragged in to the pivot.
+    static TWeakObjectPtr<UWorld> MapWorld; static TArray<TWeakObjectPtr<AActor>> MapActors;   // found once per world
+    if (MapWorld.Get() != World)
+    {
+        MapWorld = World; MapActors.Reset();
+        for (TActorIterator<AActor> It(World); It; ++It)
+            if (It->GetClass()->GetName().Contains(TEXT("Cesium3DTileset"))) MapActors.Add(*It);
+    }
+    FCollisionQueryParams CamParams = Params;
+    for (const TWeakObjectPtr<AActor>& M : MapActors) if (M.IsValid()) CamParams.AddIgnoredActor(M.Get());
     float Want = 0.f;
     FHitResult Near, Hit;   // wide early-warning sweep drives the easing; the tight one is the hard limit
-    if (World->SweepSingleByChannel(Near, Pivot, Desired, FQuat::Identity, TraceChannel, FCollisionShape::MakeSphere(CamAnticipate), Params) && !Near.bStartPenetrating)
+    if (bCollide && World->SweepSingleByChannel(Near, Pivot, Desired, FQuat::Identity, TraceChannel, FCollisionShape::MakeSphere(CamAnticipate), CamParams) && !Near.bStartPenetrating)
         Want = FMath::Max(0.f, Len - FMath::Max(Near.Distance - 100.f, 150.f));
-    World->SweepSingleByChannel(Hit, Pivot, Desired, FQuat::Identity, TraceChannel, FCollisionShape::MakeSphere(CamProbeRadius), Params);
-    CamPull = FMath::FInterpTo(CamPull, Want, DeltaTime, Want > CamPull ? CamPullInSpeed : CamLetOutSpeed);
+    // look ahead along the orbit: where the arm will point CamLookAheadTime from now
+    const float ArmYaw = Arm->GetComponentRotation().Yaw;
+    if (DeltaTime > KINDA_SMALL_NUMBER)
+        SmoothYawRate = FMath::FInterpTo(SmoothYawRate, FMath::FindDeltaAngleDegrees(LastArmYaw, ArmYaw) / DeltaTime, DeltaTime, 5.f);
+    LastArmYaw = ArmYaw;
+    const float AheadYaw = FMath::Clamp(SmoothYawRate * CamLookAheadTime, -45.f, 45.f);
+    FHitResult Ahead;
+    if (bCollide && FMath::Abs(AheadYaw) > 2.f
+        && World->SweepSingleByChannel(Ahead, Pivot, Pivot + FRotator(0.f, AheadYaw, 0.f).RotateVector(Desired - Pivot), FQuat::Identity, TraceChannel, FCollisionShape::MakeSphere(CamProbeRadius), CamParams)
+        && !Ahead.bStartPenetrating)
+        Want = FMath::Max(Want, Len - FMath::Max(Ahead.Distance - 100.f, 150.f));
+    if (bCollide) World->SweepSingleByChannel(Hit, Pivot, Desired, FQuat::Identity, TraceChannel, FCollisionShape::MakeSphere(CamProbeRadius), CamParams);
+    const bool bIn = Want > CamPull;
+    // let-out scales with the arm: Home sets a 450 m arm, a fixed 6 m/s let-out left the camera pulled ~360 m for a minute
+    const float MaxStep = (bIn ? CamMaxPullInRate : FMath::Max(CamMaxLetOutRate, 0.25f * Len)) * DeltaTime;
+    CamPull = FMath::Clamp(FMath::FInterpTo(CamPull, Want, DeltaTime, bIn ? CamPullInSpeed : CamLetOutSpeed), CamPull - MaxStep, CamPull + MaxStep);
     // hard limit (client: "camera shall not be able to go inside the building"): never behind the first wall, even
     // when a fast pan outruns the easing. Want keeps a 1 m buffer, so this only bites in that case.
-    if (Hit.bBlockingHit && !Hit.bStartPenetrating) CamPull = FMath::Max(CamPull, Len - FMath::Max(Hit.Distance - 30.f, 100.f));
+    if (bCollide && Hit.bBlockingHit && !Hit.bStartPenetrating) CamPull = FMath::Max(CamPull, Len - FMath::Max(Hit.Distance - 30.f, 100.f));
+    // never past the pivot: the arm can shrink in one frame (450 m Home -> 97 m Amenities) while CamPull was large ->
+    // the camera went through the pivot and out the far side, under the map
+    CamPull = FMath::Clamp(CamPull, 0.f, FMath::Max(0.f, Len - 300.f));
     CamComp->SetRelativeLocation(CamBaseRel + FVector(CamPull, 0.f, 0.f));   // +X = along the arm toward the pivot
 }
 

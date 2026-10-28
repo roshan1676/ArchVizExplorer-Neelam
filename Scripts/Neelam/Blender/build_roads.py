@@ -13,8 +13,19 @@ origins = {}
 for key, r in data.items():
     P = [Vector((x / 100.0, -y / 100.0, z / 100.0)) for x, y, z in r["pts"]]
     if len(P) < 2: continue
-    o = P[0].copy(); origins[key] = [r["pts"][0][0], r["pts"][0][1], r["pts"][0][2]]
+    # optional "ext": {"start": m, "end": m, "drop": cm (default 2)} - run the deck that far past its end, that much lower, so it tucks under the
+    # neighbouring carriageway: hides the V-notch between two square-cut kerb ends at a joint (json pts stay as they are)
+    ext = r.get("ext") or {}; GR = list(r.get("ground", [None] * len(P))); WD = list(r["widths"]) if r.get("widths") else None
+    ZP = [p_[2] for p_ in r["pts"]]
+    if ext.get("start"):
+        t0 = (P[0] - P[1]); t0.z = 0; t0.normalize(); P.insert(0, P[0] + t0 * ext["start"] - Vector((0, 0, ext.get("drop", 2) / 100.0)))
+        GR.insert(0, GR[0]); ZP.insert(0, ZP[0] - 2); WD and WD.insert(0, WD[0])
+    if ext.get("end"):
+        t1 = (P[-1] - P[-2]); t1.z = 0; t1.normalize(); P.append(P[-1] + t1 * ext["end"] - Vector((0, 0, ext.get("drop", 2) / 100.0)))
+        GR.append(GR[-1]); ZP.append(ZP[-1] - 2); WD and WD.append(WD[-1])
+    o = P[0].copy(); origins[key] = [o.x * 100.0, -o.y * 100.0, o.z * 100.0]
     W = r["width_m"]; half = W / 2.0
+    HALF = [w / 2.0 for w in WD] if WD else [half] * len(P)   # optional per-point width (taper at joints)
     me = bpy.data.meshes.new(key); ob = bpy.data.objects.new(key, me); bpy.context.collection.objects.link(ob); ob.location = o
     for m in mats.values(): me.materials.append(m)
     bm = bmesh.new(); uv = bm.loops.layers.uv.new("UVMap")
@@ -24,24 +35,27 @@ for key, r in data.items():
         t = (P[min(i + 1, len(P) - 1)] - P[max(i - 1, 0)]); t.z = 0; t.normalize()
         n = Vector((-t.y, t.x, 0.0))
         # side wall reaches down to the traced ground where Flatten_Roads.py lifted the deck (capped 3 m -> embankment look)
-        gz = r.get("ground", [None] * len(P))[i]
-        sk = SKIRT - (min(3.0, max(0.0, (r["pts"][i][2] - gz) / 100.0)) if gz is not None else 0.0)
-        prof = [(-half - KW, sk), (-half - KW, KERB), (-half, KERB), (-half, DECK), (half, DECK), (half, KERB), (half + KW, KERB), (half + KW, sk)]
-        rows.append((s, [bm.verts.new(p - o + n * off + Vector((0, 0, dz))) for off, dz in prof], p, n))
+        gz = GR[i]
+        sk = SKIRT - (min(3.0, max(0.0, (ZP[i] - gz) / 100.0)) if gz is not None else 0.0)
+        h = HALF[i]
+        prof = [(-h - KW, sk), (-h - KW, KERB), (-h, KERB), (-h, DECK), (h, DECK), (h, KERB), (h + KW, KERB), (h + KW, sk)]
+        rows.append((s, [bm.verts.new(p - o + n * off + Vector((0, 0, dz))) for off, dz in prof], p, n, h))
     segmat = [1, 1, 1, 0, 1, 1, 1]     # skirt, kerb top, kerb face, ASPHALT, kerb face, kerb top, skirt
-    for (s0, r0, _, _), (s1, r1, _, _) in zip(rows, rows[1:]):
+    for (s0, r0, _, _, _), (s1, r1, _, _, _) in zip(rows, rows[1:]):
         for c in range(7):
             f = bm.faces.new((r0[c], r0[c + 1], r1[c + 1], r1[c])); f.material_index = segmat[c]
             for lp, (vv, ss) in zip(f.loops, ((r0[c], s0), (r0[c + 1], s0), (r1[c + 1], s1), (r1[c], s1))):
                 lp[uv].uv = ((vv.co - (vv.co.project(Vector((0, 0, 1))))).length * 0 + (c + (vv in (r0[c + 1], r1[c + 1]))) * (W / 4.0 if c == 3 else 0.1), ss / 4.0)
     # lane markings: solid edge lines 0.3 m inside the kerbs, dashed dividers every 3.5 m (3 m on / 6 m off)
-    lines = [(-half + 0.3, True), (half - 0.3, True)] + [(-half + 3.5 * k, False) for k in range(1, int(r["lanes"]))]
-    for off, solid in lines:
-        for i, ((s0, _, p0, n0), (s1, _, p1, n1)) in enumerate(zip(rows, rows[1:])):
+    # (side, distance from that edge): -1 = from the left edge, +1 = from the right edge - follows a width taper
+    lines = [(-1, 0.3, True), (1, 0.3, True)] + [(-1, 3.5 * k, False) for k in range(1, int(r["lanes"]))]
+    for side, d, solid in lines:
+        for i, ((s0, _, p0, n0, h0), (s1, _, p1, n1, h1)) in enumerate(zip(rows, rows[1:])):
             if not solid and (int(s0 // 3.0) % 3) != 0: continue
             hw = 0.1 if solid else 0.075; z = Vector((0, 0, DECK + 0.012))
-            q = [bm.verts.new(p0 - o + n0 * (off - hw) + z), bm.verts.new(p0 - o + n0 * (off + hw) + z),
-                 bm.verts.new(p1 - o + n1 * (off + hw) + z), bm.verts.new(p1 - o + n1 * (off - hw) + z)]
+            o0 = side * (h0 - d); o1 = side * (h1 - d)
+            q = [bm.verts.new(p0 - o + n0 * (o0 - hw) + z), bm.verts.new(p0 - o + n0 * (o0 + hw) + z),
+                 bm.verts.new(p1 - o + n1 * (o1 + hw) + z), bm.verts.new(p1 - o + n1 * (o1 - hw) + z)]
             f = bm.faces.new(q); f.material_index = 2
             for lp, u in zip(f.loops, ((0, 0), (1, 0), (1, 1), (0, 1))): lp[uv].uv = u
     bmesh.ops.recalc_face_normals(bm, faces=bm.faces)

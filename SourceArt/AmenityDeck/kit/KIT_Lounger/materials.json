@@ -1,0 +1,69 @@
+{
+ "kit": "KIT_Lounger",
+ "faces": 13534,
+ "size_m": [
+  2.008,
+  4.41,
+  1.401
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\pool.blend",
+ "objects": [
+  "Plane.061",
+  "Plane.060",
+  "Plane.056",
+  "Plane.055",
+  "Plane.045",
+  "Circle.112",
+  "Circle.111",
+  "Circle.110",
+  "Circle.108"
+ ],
+ "materials": [
+  {
+   "name": "00-Wood Structure",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true,
+   "base": "LightWood2_dif_jpg.jpg",
+   "rough_tex": "LightWood_rgh_jpg.jpg",
+   "normal": "LightWood_nrm_jpg.jpg",
+   "alpha": "LightWood2_dif_jpg.jpg",
+   "alpha_ch": "A"
+  },
+  {
+   "name": "00-Metal",
+   "foliage": false,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.15000000596046448,
+   "metal": 1.0,
+   "masked": true
+  },
+  {
+   "name": "00-Fabric Bed",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Jeans02_2K_BaseColor_jpg.jpg",
+   "rough_tex": "Jeans02_2K_Roughness_jpg.jpg",
+   "normal": "Jeans02_2K_Normal_jpg.jpg",
+   "alpha": "Jeans02_2K_BaseColor_jpg.jpg",
+   "alpha_ch": "A"
+  }
+ ]
+}

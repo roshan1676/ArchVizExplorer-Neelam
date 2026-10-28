@@ -51,6 +51,11 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float CamAnticipate = 600.f;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float CamLetOutSpeed = 2.5f;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float CamProbeRadius = 60.f;
+    /** Speed caps (cm/s) on the eased pull-in / let-out: FInterpTo alone moved 40+ m/s on a big gap (test 27 Oct). */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float CamMaxPullInRate = 1500.f;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float CamMaxLetOutRate = 600.f;
+    /** While orbiting, also probe where the camera will be this many seconds ahead, so it eases in before the wall. */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Neelam") float CamLookAheadTime = 0.8f;
 
 protected:
     virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
@@ -61,6 +66,8 @@ private:
     FVector CamBaseRel = FVector::ZeroVector;
     float CamPull = 0.f;
     float SmoothMaxPitch = 90.f;
+    float LastArmYaw = 0.f;
+    float SmoothYawRate = 0.f;
     bool TerrainZ(UWorld* World, const FVector& At, float& OutZ) const;
     bool bInside360Sphere = false;
     bool bHasLastLocation = false;

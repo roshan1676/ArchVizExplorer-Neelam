@@ -1,0 +1,116 @@
+{
+ "kit": "KIT_Umbrella",
+ "faces": 295823,
+ "size_m": [
+  6.081,
+  6.067,
+  6.077
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\pool.blend",
+ "objects": [
+  "Bolt_1",
+  "Bolt_2",
+  "Canopy",
+  "Center_Pole",
+  "Locking_Screw",
+  "Pull_Rope",
+  "Pulley_System",
+  "Rib_Wire",
+  "Safety_Pin_With_Chain",
+  "Slider",
+  "Umbrella_Base",
+  "Umbrella_Ribs"
+ ],
+ "materials": [
+  {
+   "name": "Steel",
+   "foliage": false,
+   "color": [
+    0.24620109796524048,
+    0.25818270444869995,
+    0.26635563373565674
+   ],
+   "rough": 0.20000000298023224,
+   "metal": 1.0,
+   "masked": true
+  },
+  {
+   "name": "White linen fabric",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true,
+   "base": "white_linen_BaseColor_jpg.jpg",
+   "rough_tex": "white_linen_Roughness_jpg.jpg",
+   "normal": "white_linen_Normal_jpg.jpg",
+   "transl": "white_linen_BaseColor_jpg.jpg",
+   "alpha": "white_linen_BaseColor_jpg.jpg",
+   "alpha_ch": "A"
+  },
+  {
+   "name": "Old scratched wood",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true,
+   "base": "wood_basecolor_diffuse_jpg.jpg",
+   "base_ch": "R",
+   "rough_tex": "wood_glossiness_jpg.jpg",
+   "normal": "wood_normal_opengl_jpg.jpg",
+   "alpha": "wood_basecolor_diffuse_jpg.jpg",
+   "alpha_ch": "A"
+  },
+  {
+   "name": "Black Plastic",
+   "foliage": false,
+   "color": [
+    0.006800676696002483,
+    0.007221427746117115,
+    0.007880649529397488
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true
+  },
+  {
+   "name": "Sisal Rope",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Sisal_Rope_Base_Color_jpg_001.jpg",
+   "rough_tex": "Sisal_Rope_Roughness_jpg_001.jpg",
+   "normal": "Sisal_Rope_Normal_jpg_001.jpg",
+   "normal_ch": "R",
+   "alpha": "Sisal_Rope_Base_Color_jpg_001.jpg",
+   "alpha_ch": "A"
+  },
+  {
+   "name": "Black_Steel",
+   "foliage": false,
+   "color": [
+    0.013704380951821804,
+    0.01444320660084486,
+    0.015995139256119728
+   ],
+   "rough": 0.5,
+   "metal": 1.0,
+   "masked": true
+  }
+ ]
+}

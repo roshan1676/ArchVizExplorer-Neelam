@@ -1,0 +1,53 @@
+{
+ "kit": "KIT_DiningSet",
+ "faces": 5188,
+ "size_m": [
+  0.742,
+  1.717,
+  0.859
+ ],
+ "source": "C:\\Users\\Admin\\Documents\\Unreal Projects\\ArchVizExplorer-Neelam\\SourceArt\\AmenityDeck\\amenity_deck.blend",
+ "objects": [
+  "outdoor_table_chair_set_01_chair_01",
+  "outdoor_table_chair_set_01_chair_02",
+  "outdoor_table_chair_set_01_table"
+ ],
+ "materials": [
+  {
+   "name": "outdoor_table_chair_set_01_chair",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true,
+   "base": "outdoor_table_chair_set_01_chair_diff_png.png",
+   "rough_tex": "outdoor_table_chair_set_01_chair_rough_png.png",
+   "metal_tex": "outdoor_table_chair_set_01_chair_metal_png.png",
+   "normal": "outdoor_table_chair_set_01_chair_nor_gl_png.png",
+   "alpha": "outdoor_table_chair_set_01_chair_diff_png.png",
+   "alpha_ch": "A"
+  },
+  {
+   "name": "outdoor_table_chair_set_01_table",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.4000000059604645,
+   "metal": 0.0,
+   "masked": true,
+   "base": "outdoor_table_chair_set_01_table_diff_png.png",
+   "rough_tex": "outdoor_table_chair_set_01_table_rough_png.png",
+   "metal_tex": "outdoor_table_chair_set_01_table_metal_png.png",
+   "normal": "outdoor_table_chair_set_01_table_nor_gl_png.png",
+   "alpha": "outdoor_table_chair_set_01_table_diff_png.png",
+   "alpha_ch": "A"
+  }
+ ]
+}

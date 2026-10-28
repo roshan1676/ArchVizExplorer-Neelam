@@ -1,0 +1,59 @@
+{
+ "kit": "KIT_Plumeria_C",
+ "faces": 48773,
+ "size_m": [
+  3.2,
+  3.2,
+  2.29
+ ],
+ "source": "procedural tools/trees.py",
+ "materials": [
+  {
+   "name": "Bark",
+   "foliage": false,
+   "color": [
+    0.35,
+    0.3,
+    0.26
+   ],
+   "rough": 0.85,
+   "metal": 0.0,
+   "masked": false,
+   "base": "bark_diff.jpg",
+   "normal": "bark_nor.jpg",
+   "rough_tex": "bark_rough.jpg"
+  },
+  {
+   "name": "Leaf",
+   "foliage": true,
+   "color": [
+    0.2,
+    0.4,
+    0.1
+   ],
+   "rough": 0.42,
+   "metal": 0.0,
+   "masked": true,
+   "base": "leaf_diff.png",
+   "rough_tex": "leaf_rough.png",
+   "alpha": "solid_mask.png",
+   "transl": "leaf_diff.png"
+  },
+  {
+   "name": "Flower",
+   "foliage": true,
+   "color": [
+    0.95,
+    0.93,
+    0.85
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true,
+   "base": "flower_diff.png",
+   "rough_tex": "leaf_rough.png",
+   "alpha": "solid_mask.png",
+   "transl": "flower_diff.png"
+  }
+ ]
+}

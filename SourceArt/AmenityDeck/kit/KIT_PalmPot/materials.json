@@ -1,0 +1,75 @@
+{
+ "kit": "KIT_PalmPot",
+ "faces": 38181,
+ "size_m": [
+  3.066,
+  2.989,
+  2.624
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\pool.blend",
+ "objects": [
+  "Caraday Palm Lrg Pot",
+  "Caraday Palm Large",
+  "Caraday Palm Juvenile_Soil"
+ ],
+ "materials": [
+  {
+   "name": "Pots_A2.001",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true,
+   "base": "TX_Pots_A2_MRA_tga_001.jpg",
+   "base_ch": "B",
+   "rough_tex": "TX_Pots_A2_MRA_tga_001.jpg",
+   "rough_tex_ch": "G",
+   "metal_tex": "TX_Pots_A2_MRA_tga_001.jpg",
+   "metal_tex_ch": "R",
+   "normal": "TX_Pots_A2_NM_tga_001.jpg",
+   "normal_ch": "R",
+   "alpha": "TX_Pots_A2_MRA_tga_001.jpg",
+   "alpha_ch": "A"
+  },
+  {
+   "name": "Caraday Palm Leaves.001",
+   "foliage": true,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.6,
+   "metal": 0.0,
+   "masked": true,
+   "base": "T_CaradayPalm_Leaf_BC_jpg_001.jpg",
+   "rough_tex": "T_CaradayPalm_Leaf_NR_jpg_001.jpg",
+   "rough_tex_ch": "B",
+   "normal": "T_CaradayPalm_Leaf_NR_jpg_001.jpg",
+   "transl": "T_CaradayPalm_Leaf_SS_jpg_001.jpg",
+   "alpha": "T_CaradayPalm_Leaf_BC_jpg_001.jpg",
+   "alpha_ch": "A"
+  },
+  {
+   "name": "Soil_1a.003",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Moist_Soil_rmrkhyp0_4K_AO_jpg_003.jpg",
+   "rough_tex": "Moist_Soil_rmrkhyp0_4K_Roughness_jpg_003.jpg",
+   "normal": "Moist_Soil_rmrkhyp0_4K_Normal_jpg_003.jpg",
+   "alpha": "Moist_Soil_rmrkhyp0_4K_AO_jpg_003.jpg",
+   "alpha_ch": "A"
+  }
+ ]
+}

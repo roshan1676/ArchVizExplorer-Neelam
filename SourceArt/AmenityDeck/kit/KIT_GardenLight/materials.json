@@ -1,0 +1,101 @@
+{
+ "kit": "KIT_GardenLight",
+ "faces": 9418,
+ "size_m": [
+  0.122,
+  0.121,
+  0.509
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\party lawn.blend",
+ "objects": [
+  "LightScrews",
+  "LightBulb.003",
+  "GardenLightLightbulbWhite.001"
+ ],
+ "materials": [
+  {
+   "name": "lightbulbmetal.001",
+   "foliage": false,
+   "color": [
+    0.28048789501190186,
+    0.28048789501190186,
+    0.28048789501190186
+   ],
+   "rough": 0.22727273404598236,
+   "metal": 1.0,
+   "masked": true
+  },
+  {
+   "name": "lightbulbglass.001",
+   "foliage": false,
+   "color": [
+    0.800000011920929,
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rough": 0.0,
+   "metal": 0.0,
+   "masked": true
+  },
+  {
+   "name": "lightbulbblack.001",
+   "foliage": false,
+   "color": [
+    0.01599469967186451,
+    0.01599469967186451,
+    0.01599469967186451
+   ],
+   "rough": 0.18636363744735718,
+   "metal": 0.0,
+   "masked": true
+  },
+  {
+   "name": "lighbulbglassthick.001",
+   "foliage": false,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.6,
+   "metal": 0.0,
+   "masked": true
+  },
+  {
+   "name": "lightbulbfilament.001",
+   "foliage": false,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.6,
+   "metal": 0.0,
+   "masked": true
+  },
+  {
+   "name": "Material.001",
+   "foliage": false,
+   "color": [
+    0.8000000715255737,
+    0.7366549968719482,
+    0.5128418803215027
+   ],
+   "rough": 0.0,
+   "metal": 0.0,
+   "masked": true
+  },
+  {
+   "name": "Material.002",
+   "foliage": false,
+   "color": [
+    0.006370100192725658,
+    0.006370100192725658,
+    0.006370100192725658
+   ],
+   "rough": 0.16929134726524353,
+   "metal": 0.0,
+   "masked": true
+  }
+ ]
+}

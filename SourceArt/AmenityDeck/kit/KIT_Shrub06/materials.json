@@ -1,0 +1,32 @@
+{
+ "kit": "KIT_Shrub06",
+ "faces": 56100,
+ "size_m": [
+  1.745,
+  2.036,
+  1.823
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\pool.blend",
+ "objects": [
+  "flowebox01_026"
+ ],
+ "materials": [
+  {
+   "name": "leavese06_Mat",
+   "foliage": true,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.5527864098548889,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_020.jpg",
+   "alpha": "Bitmaptexture_022.jpg",
+   "rough_tex": "Bitmaptexture_021.jpg",
+   "normal": "Bitmaptexture_023.jpg",
+   "transl": "Bitmaptexture_020.jpg"
+  }
+ ]
+}

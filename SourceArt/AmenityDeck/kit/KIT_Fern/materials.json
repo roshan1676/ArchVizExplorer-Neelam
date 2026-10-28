@@ -1,0 +1,49 @@
+{
+ "kit": "KIT_Fern",
+ "faces": 63415,
+ "size_m": [
+  1.628,
+  0.845,
+  0.324
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\pool.blend",
+ "objects": [
+  "garden02_002"
+ ],
+ "materials": [
+  {
+   "name": "vray bark_Mat",
+   "foliage": false,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_036.jpg",
+   "alpha": "Bitmaptexture_038.jpg",
+   "rough_tex": "Bitmaptexture_039.jpg",
+   "normal": "Bitmaptexture_037.jpg",
+   "transl": "Bitmaptexture_036.jpg"
+  },
+  {
+   "name": "vray leaf01_Mat",
+   "foliage": true,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_036.jpg",
+   "alpha": "Bitmaptexture_038.jpg",
+   "rough_tex": "Bitmaptexture_039.jpg",
+   "normal": "Bitmaptexture_037.jpg",
+   "transl": "Bitmaptexture_036.jpg"
+  }
+ ]
+}

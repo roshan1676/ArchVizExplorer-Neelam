@@ -6,7 +6,7 @@ non-map actor in between (= camera behind / inside a wall).
 
 Bridge jobs (each its own .py in Saved/NeelamBridge/inbox, PIE running, Surroundings/Amenities menus closed = Home):
   1)  import sys; sys.path.insert(0, r"<project>/Scripts/Neelam"); import Camera_Test as CT; result = CT.start("towers")
-  2)  wait ~25 s
+  2)  ~1 s later: CT.arm()  (anti-tunnel back on after the start teleport), then wait ~25 s
   3)  import Camera_Test as CT; result = CT.dump()      -> Saved/NeelamBridge/outbox/cam_<name>.json
 Then on the PC:  py Scripts/Neelam/Camera_Test.py Saved/NeelamBridge/outbox/cam_towers.json [more files]
 PASS = 0 frames behind a wall, zoom snaps (camera-pivot distance change > 20 m/s) <= 3, and for "deck" the pivot
@@ -14,8 +14,8 @@ reaches close to the target (panning over the property must NOT be blocked)."""
 import json, os, sys, time
 
 PATHS = {   # name: (start xy, end xy, pivot z cm)
-    "towers": ((-4000.0, -3000.0), (12000.0, 11000.0), 4000.0),   # straight through towers C/D/E at 40 m: pivot must stop 8 m off the facade
-    "deck": ((1500.0, -500.0), (8500.0, 5000.0), 2900.0),         # across the amenity deck: must reach the end
+    "towers": ((-4000.0, -3000.0), (12000.0, 11000.0), 5000.0),   # straight through towers C/D/E at 50 m (40 m touched the AB podium top: pawn could not move): pivot must stop 8 m off the facade
+    "deck": ((5200.0, 2600.0), (10500.0, 3000.0), 3500.0),        # 10 m over the open CDE deck, >8 m clear of towers / podium skin (old end was 8 m from Tower E): must reach the end
 }
 
 
@@ -26,6 +26,9 @@ def start(name):
     (ax, ay), (bx, by), z = PATHS[name]
     st = {"rec": [], "t0": time.time(), "name": name}
     gc = [c for c in pn.get_components_by_class(unreal.ActorComponent) if c.get_class().get_name() == "NeelamGroundClampComponent"]
+    # same start every run (else it inherits the last run's end); the anti-tunnel would treat the jump as a pan -> off for it
+    if gc: gc[0].set_editor_property("bEnableAntiTunnelSweep", False)
+    pn.set_actor_location(unreal.Vector(ax, ay, z), False, True)
 
     def tick(dt):
         t = time.time() - st["t0"]
@@ -45,6 +48,15 @@ def start(name):
     return {"clamp_component": bool(gc), "props": {k: str(gc[0].get_editor_property(k)) for k in ("bEnableAntiTunnelSweep", "bClampCamera", "PivotStandoff", "CamAnticipate")} if gc else None}
 
 
+def arm():
+    """Run ~1 s after start(): anti-tunnel back on (setting it from the tick hit a stale component wrapper)."""
+    import unreal
+    w = unreal.EditorLevelLibrary.get_game_world(); pn = unreal.GameplayStatics.get_player_controller(w, 0).get_controlled_pawn()
+    gc = [c for c in pn.get_components_by_class(unreal.ActorComponent) if c.get_class().get_name() == "NeelamGroundClampComponent"][0]
+    gc.set_editor_property("bEnableAntiTunnelSweep", True)
+    return gc.get_editor_property("bEnableAntiTunnelSweep")
+
+
 def dump():
     import unreal
     st = sys.modules[__name__].__dict__["_st"]
@@ -55,7 +67,8 @@ def dump():
 
 def report(path):
     import numpy as np, collections
-    d = json.load(open(path)); R = d["rec"][3:]; A = np.array([r[:7] for r in R], float)
+    d = json.load(open(path)); R = [r for r in d["rec"] if r[0] > 1.0];   # skip the start teleport + camera-lag catch-up
+    A = np.array([r[:7] for r in R], float)
     t = A[:, 0]; C = A[:, 1:4]; P = A[:, 4:7]; dist = np.linalg.norm(C - P, axis=1); dt = np.diff(t); ok = dt > 1e-3
     rate = np.abs(np.diff(dist))[ok] / dt[ok]
     walls = [r[8] for r in R if r[7]]

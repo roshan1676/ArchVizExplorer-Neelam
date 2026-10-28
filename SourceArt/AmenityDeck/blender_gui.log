@@ -1,0 +1,502 @@
+Traceback (most recent call last):
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\addon_utils.py", line 544, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\bl_pkg\__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\bl_pkg\__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\assets\remote_library\listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\http\downloader.py", line 51, in <module>
+    import cattrs
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\__init__.py", line 3, in <module>
+    from .converters import BaseConverter, Converter, GenConverter, UnstructureStrategy
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\converters.py", line 18, in <module>
+    from ._compat import (
+    ...<35 lines>...
+    )
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\_compat.py", line 45, in <module>
+    from attrs import NOTHING, Attribute, Factory, NothingType, resolve_types
+ImportError: cannot import name 'NothingType' from 'attrs' (C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\.local\lib\python3.13\site-packages\attrs\__init__.py)
+Exception in module register(): C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\bl_pkg\__init__.py
+ℹ️  blendkit: Verbose is enabled [15:54:23.561, addon_updater.py:150]
+ℹ️  blendkit: Read in JSON settings from file [15:54:23.568, addon_updater.py:150]
+ℹ️  blendkit: Ports reordered so first port is now 62485 (previous index was 0) [15:54:23.570, client_lib.py:156]
+Gscatter - __init__.py:52 - INFO: Initialized IKEA Browser
+Reloading external rigs...
+Reloading external metarigs...
+Cannot read ARP prefs
+Update armature presets...
+SIMPLEBAKE: -- There is a newer version of SimpleBake available
+2.0.8
+
+====================================================
+Starting RS addon, version: v.2.0.8, Blender version: (5, 2, 1)
+====================================================
+
+Add-on not loaded: "d5_export", cause: module loaded with no associated file, __path__=_NamespacePath(['C:\\Users\\Admin\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\d5_export']), aborting!
+Created history step 5086e59e-0898-448d-a7d9-adc547ad6d60
+ℹ️  blendkit: Created new search history step [15:54:34.032, search.py:2698]
+ℹ️  blendkit: No temporarily enabled addons to clean up [15:54:34.032, download.py:419]
+Gscatter - props.py:40 - INFO: Creating first entry
+Gscatter - callbacks.py:90 - INFO: No Duplicates Found.
+ℹ️  blendkit: Running background update callback [15:54:34.285, addon_updater.py:150]
+ℹ️  blendkit: Attempted popup prompt [15:54:34.286, addon_updater.py:150]
+ℹ️  blendkit: Global dir permissions are OK: C:\Users\Admin\blenderkit_data [15:54:34.351, utils.py:1722]
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\bl_pkg\__init__.py", line 455, in remote_asset_library_sync
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\assets\remote_library\listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\http\downloader.py", line 51, in <module>
+    import cattrs
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\__init__.py", line 3, in <module>
+    from .converters import BaseConverter, Converter, GenConverter, UnstructureStrategy
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\converters.py", line 18, in <module>
+    from ._compat import (
+    ...<35 lines>...
+    )
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\_compat.py", line 45, in <module>
+    from attrs import NOTHING, Attribute, Factory, NothingType, resolve_types
+ImportError: cannot import name 'NothingType' from 'attrs' (C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\.local\lib\python3.13\site-packages\attrs\__init__.py)
+00:14.984  reports          | ERROR Asset Library 'Online Essentials': file does not exist: C:\Users\Admin\AppData\Local\Blender Foundation\Blender\Cache\remote-assets\online-essentials\_asset-library-meta.json
+00:14.984  reports          | ERROR Could not read asset listing 'Online Essentials', see Info Editor for details
+00:15.297  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\materials\cotton-dark-red_3ed2ce49-bc23-47ab-b3a9-f5954e6621e0\cotton-dark-red_16c09ca9-c2c5-4545-8ac6-37a89f8b42d1.blend': Missing DNA block
+ℹ️  blendkit: Expectedly, first request for BKClient reports failed: HTTPConnectionPool(host='127.0.0.1', port=62485): Max retries exceeded with url: /v1.9/report (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000280D33F9A90>, 'Connection to 127.0.0.1 timed out. (connect timeout=0.05)')) <class 'requests.exceptions.ConnectTimeout'> [15:54:35.024, timer.py:80]
+ℹ️  blendkit: Blendkit-Client v1.9.2 starting on http://127.0.0.1:62485 [15:54:35.038, client_lib.py:774]
+⚠️  blendkit: Request for BKClient reports failed: HTTPConnectionPool(host='127.0.0.1', port=62485): Max retries exceeded with url: /v1.9/report (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000280D33560D0>, 'Connection to 127.0.0.1 timed out. (connect timeout=0.05)')) <class 'requests.exceptions.ConnectTimeout'> [15:54:35.135, timer.py:100]
+00:15.469  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\materials\marble_8df35f88-db8b-4a2e-8b17-92985de45a1d\marble_2K_858a3608-97e6-4c6a-bcd1-ef13aa07d38e.blend': Missing DNA block
+ℹ️  blendkit: Blendkit-Client is running on port 62485! [15:54:35.273, timer.py:215]
+ℹ️  blendkit: Calling API token refresh [15:54:35.288, client_lib.py:609]
+00:15.812  reports          | WARNING Unrecognized file format 'C:\Users\Admin\blenderkit_data\materials\white-office-wal_4d746fdd-ee6c-43f9-b16b-e425b7ef17ac\white-office-wall_2K_c745c34f-25f3-4919-80c1-89eda7007b14.blend'
+ℹ️  blendkit: Calling API token refresh [15:54:35.867, client_lib.py:609]
+❌  blendkit: Invalid API key token. Refreshing the token now. If problem persist, please log-out and log-in. [timer.py:363] [15:54:36.088, timer.py:363]
+⚠️  blendkit: Could not load categories: categories: {"detail":"Invalid token.","statusCode":401} (401 Unauthorized) [15:54:36.088, categories.py:141]
+ℹ️  blendkit: Logging out. [15:54:36.097, bkit_oauth.py:127]
+00:16.406  blend            | Writing user preferences: "C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\config\userpref.blend" 
+Info: Preferences saved
+❌  blendkit: Failed to refresh token: Wrong response status: 400 Bad Request , response: &{400 Bad Request 400 HTTP/2.0 2 0 map[Cache-Control:[no-store] Cf-Cache-Status:[DYNAMIC] Cf-Ray:[a5193b5eefb99bc1-MAA] Content-Length:[26] Content-Type:[application/json] Cross-Origin-Opener-Policy:[same-origin-allow-popups] Date:[Wed, 28 Oct 2026 10:24:38 GMT] Nel:[{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}] Pragma:[no-cache] Referrer-Policy:[same-origin] Report-To:[{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=hqhE6C9tjO%2BNh55ddYmaNCBQ%2BjRe1maCgaOd8G7EZNk%3D\u0026sid=67ff5de4-ad2b-4112-9289-cf96be89efed\u0026ts=1793183078"}],"max_age":3600}] Reporting-Endpoints:[heroku-nel="https://nel.heroku.com/reports?s=hqhE6C9tjO%2BNh55ddYmaNCBQ%2BjRe1maCgaOd8G7EZNk%3D&sid=67ff5de4-ad2b-4112-9289-cf96be89efed&ts=1793183078"] Server:[cloudflare] Set-Cookie:[cookie-debug="path:/o/token/\054 time:2026-10-28 10:24:38.564055+00:00"; expires=Thu, 28 Oct 2027 10:24:38 GMT; HttpOnly; Max-Age=31536000; Path=/; SameSite=Lax; Secure cookie-sessionid-debug="path:/o/token/\054 time:2026-10-28 10:24:38.564124+00:00"; expires=Thu, 28 Oct 2027 10:24:38 GMT; HttpOnly; Max-Age=31536000; Path=/; SameSite=Lax; Secure] Strict-Transport-Security:[max-age=31536000; includeSubDomains; preload] Vary:[origin, Cookie] Via:[2.0 heroku-router] X-Content-Type-Options:[nosniff] X-Frame-Options:[DENY]] 0xc00021e260 26 [] false false map[] 0xc00021c3c0 0xc0000b2180}, body: {"error": "invalid_grant"} [bkit_oauth.py:69] [15:54:36.113, bkit_oauth.py:69]
+⚠️  blendkit: Could not load disclaimer: disclaimer: {"detail":"Invalid token.","statusCode":401} (401 Unauthorized) [15:54:36.113, disclaimer_op.py:311]
+⚠️  blendkit: Could not load notifications: notifications: {"detail":"Invalid token.","statusCode":401} (401 Unauthorized) [15:54:36.113, comments_utils.py:129]
+⚠️  blendkit: Could not load bookmarks: get bookmarks: {"detail":"Invalid token.","statusCode":401} (401 Unauthorized) [15:54:36.113, ratings_utils.py:83]
+⚠️  blendkit: Could not load user profile: get profile: {"detail":"Invalid token.","statusCode":401} (401 Unauthorized) [15:54:36.113, search.py:1288]
+ℹ️  blendkit: Ratings help us distribute funds to creators. [15:54:36.164, disclaimer_op.py:103]
+ℹ️  blendkit: Ratings help us distribute funds to creators. [15:54:36.164, disclaimer_op.py:103]
+ℹ️  blendkit: Running the install popup handler. [15:54:36.190, addon_updater.py:150]
+00:16.500  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\decorative-set_b507c963-7873-417d-87c0-59147bfc9f3b\decorative-set_3d28e0d2-680e-45c7-af4c-7b3c3a07f303.blend': Missing DNA block
+ℹ️  blendkit: Logging out. [15:54:36.335, bkit_oauth.py:127]
+00:16.640  blend            | Writing user preferences: "C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\config\userpref.blend" 
+Info: Preferences saved
+❌  blendkit: Failed to refresh token: Wrong response status: 400 Bad Request , response: &{400 Bad Request 400 HTTP/2.0 2 0 map[Cache-Control:[no-store] Cf-Cache-Status:[DYNAMIC] Cf-Ray:[a5193b6218b19bc1-MAA] Content-Length:[26] Content-Type:[application/json] Cross-Origin-Opener-Policy:[same-origin-allow-popups] Date:[Wed, 28 Oct 2026 10:24:39 GMT] Nel:[{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}] Pragma:[no-cache] Referrer-Policy:[same-origin] Report-To:[{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=1phvwakQwm3tjmHPuPpATdvu2tvIuGGYydpLrg5Z3cI%3D\u0026sid=67ff5de4-ad2b-4112-9289-cf96be89efed\u0026ts=1793183079"}],"max_age":3600}] Reporting-Endpoints:[heroku-nel="https://nel.heroku.com/reports?s=1phvwakQwm3tjmHPuPpATdvu2tvIuGGYydpLrg5Z3cI%3D&sid=67ff5de4-ad2b-4112-9289-cf96be89efed&ts=1793183079"] Server:[cloudflare] Set-Cookie:[cookie-debug="path:/o/token/\054 time:2026-10-28 10:24:39.078305+00:00"; expires=Thu, 28 Oct 2027 10:24:39 GMT; HttpOnly; Max-Age=31536000; Path=/; SameSite=Lax; Secure cookie-sessionid-debug="path:/o/token/\054 time:2026-10-28 10:24:39.078367+00:00"; expires=Thu, 28 Oct 2027 10:24:39 GMT; HttpOnly; Max-Age=31536000; Path=/; SameSite=Lax; Secure] Strict-Transport-Security:[max-age=31536000; includeSubDomains; preload] Vary:[origin, Cookie] Via:[2.0 heroku-router] X-Content-Type-Options:[nosniff] X-Frame-Options:[DENY]] 0xc000322220 26 [] false false map[] 0xc0003eac80 0xc0000b2180}, body: {"error": "invalid_grant"} [bkit_oauth.py:69] [15:54:36.351, bkit_oauth.py:69]
+ℹ️  blendkit: Logout OK, tokens successfully revoked on the server [15:54:36.531, bkit_oauth.py:104]
+00:16.828  blend            | Writing user preferences: "C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\config\userpref.blend" 
+Info: Preferences saved
+❌  blendkit: Logout partially OK, failed to revoke tokens: ['api_key: error response (400) from server: {"error": "invalid_request", "error_description": "Missing token parameter."}' 'refresh_token: error response (400) from server: {"error": "invalid_request", "error_description": "Missing token parameter."}'] [bkit_oauth.py:106] [15:54:36.736, bkit_oauth.py:106]
+00:17.047  blend            | Writing user preferences: "C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\config\userpref.blend" 
+00:17.297  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\high-quality-pop_153b2469-7a3b-4538-808e-1070eadf7f05\high-quality-poplar-tree_e4c3ebf5-906a-45eb-8686-bd6baddb5c35.blend': Missing DNA block
+00:17.984  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\hostel-building_4889bc5e-06e2-4834-ab00-47b4d4fb2316\hostel-building_2K_07c57052-bf2a-45c6-8ea0-a40b8e6040e4.blend': Missing DNA block
+00:18.297  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\hostel_4e757cb9-ab21-4ea5-bd5c-993f5e58795c\hostel_1K_1be40717-e51e-45ea-9fd6-f24484113cdd.blend': Missing DNA block
+00:18.750  reports          | WARNING Unrecognized file format 'C:\Users\Admin\blenderkit_data\models\mossy-ground_72ecd584-81fd-457b-b265-0472a0dac759\mossy-ground_28f9f1cb-55b4-4a35-a739-75f1d5bacbe4.blend'
+00:19.000  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\residental-build_e5866bdd-d813-4dc3-b321-95e9020fd070\residental-building_a8cceb86-3e0e-4310-87e2-28b1621207e8.blend': Missing DNA block
+Info: Preferences saved
+ℹ️  blendkit: No temporarily enabled addons to clean up [15:57:45.753, download.py:419]
+Error in bpy.app.handlers.save_pre[2]:
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\blender_org\vrm\common\scene_watcher.py", line 230, in save_pre
+    _scene_watcher_scheduler.flush(context)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\blender_org\vrm\common\scene_watcher.py", line 154, in flush
+    while self.process(context):
+          ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\blender_org\vrm\common\scene_watcher.py", line 141, in process
+    run_state = scene_watcher_schedule.scene_watcher.run(context)
+  File "C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\blender_org\vrm\editor\mtoon1\scene_watcher.py", line 72, in run
+    objects = context.visible_objects
+              ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Context' object has no attribute 'visible_objects'
+Info: Saved as "amenity_deck.blend"
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\bl_pkg\__init__.py", line 455, in remote_asset_library_sync
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\assets\remote_library\listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\http\downloader.py", line 51, in <module>
+    import cattrs
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\__init__.py", line 3, in <module>
+    from .converters import BaseConverter, Converter, GenConverter, UnstructureStrategy
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\converters.py", line 18, in <module>
+    from ._compat import (
+    ...<35 lines>...
+    )
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\_compat.py", line 45, in <module>
+    from attrs import NOTHING, Attribute, Factory, NothingType, resolve_types
+ImportError: cannot import name 'NothingType' from 'attrs' (C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\.local\lib\python3.13\site-packages\attrs\__init__.py)
+03:26.687  reports          | ERROR Asset Library 'Online Essentials': file does not exist: C:\Users\Admin\AppData\Local\Blender Foundation\Blender\Cache\remote-assets\online-essentials\_asset-library-meta.json
+03:26.687  reports          | ERROR Could not read asset listing 'Online Essentials', see Info Editor for details
+03:26.750  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\materials\cotton-dark-red_3ed2ce49-bc23-47ab-b3a9-f5954e6621e0\cotton-dark-red_16c09ca9-c2c5-4545-8ac6-37a89f8b42d1.blend': Missing DNA block
+03:26.765  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\materials\marble_8df35f88-db8b-4a2e-8b17-92985de45a1d\marble_2K_858a3608-97e6-4c6a-bcd1-ef13aa07d38e.blend': Missing DNA block
+03:26.781  reports          | WARNING Unrecognized file format 'C:\Users\Admin\blenderkit_data\materials\white-office-wal_4d746fdd-ee6c-43f9-b16b-e425b7ef17ac\white-office-wall_2K_c745c34f-25f3-4919-80c1-89eda7007b14.blend'
+03:27.062  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\decorative-set_b507c963-7873-417d-87c0-59147bfc9f3b\decorative-set_3d28e0d2-680e-45c7-af4c-7b3c3a07f303.blend': Missing DNA block
+03:27.656  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\high-quality-pop_153b2469-7a3b-4538-808e-1070eadf7f05\high-quality-poplar-tree_e4c3ebf5-906a-45eb-8686-bd6baddb5c35.blend': Missing DNA block
+03:28.250  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\hostel-building_4889bc5e-06e2-4834-ab00-47b4d4fb2316\hostel-building_2K_07c57052-bf2a-45c6-8ea0-a40b8e6040e4.blend': Missing DNA block
+03:28.469  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\hostel_4e757cb9-ab21-4ea5-bd5c-993f5e58795c\hostel_1K_1be40717-e51e-45ea-9fd6-f24484113cdd.blend': Missing DNA block
+03:28.500  reports          | WARNING Unrecognized file format 'C:\Users\Admin\blenderkit_data\models\mossy-ground_72ecd584-81fd-457b-b265-0472a0dac759\mossy-ground_28f9f1cb-55b4-4a35-a739-75f1d5bacbe4.blend'
+03:28.625  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\residental-build_e5866bdd-d813-4dc3-b321-95e9020fd070\residental-building_a8cceb86-3e0e-4310-87e2-28b1621207e8.blend': Missing DNA block
+Info: Saved "amenity_deck.blend"
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/export/AD_Hardscape.fbx'
+export finished in 0.2056 sec.
+Warning: Mesh 'AD_Mast_Poles.002' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'AD_Mound_Soil.001' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'AD_Path_Kota.001' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'AD_Pool_Kids_Lights.001' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'AD_Pool_Kids_Steps.002' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'AD_Pool_Main_Lights.001' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'AD_Pool_Main_Steps.002' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'AD_Seating_Tier1.002' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'AD_Track_Band0.001' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'AD_Track_Band1.001' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'AD_Track_Band2.001' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Warning: Mesh 'AD_Track_Band3.001' has polygons with more than 4 vertices, cannot compute/export tangent space for it
+Info: Saved "amenity_deck.blend"
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/export/AD_Hardscape.fbx'
+export finished in 0.3350 sec.
+Info: Saved "amenity_deck.blend"
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/export/AD_Hardscape.fbx'
+export finished in 0.3138 sec.
+44:24.031  blend            | Read blend: "C:\Users\Admin\Downloads\Blender Files\pool.blend"
+ℹ️  blendkit: No temporarily enabled addons to clean up [16:38:46.982, download.py:419]
+Warning: File written by newer Blender binary (502.45), expect loss of data!
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\bl_pkg\__init__.py", line 455, in remote_asset_library_sync
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\assets\remote_library\listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\http\downloader.py", line 51, in <module>
+    import cattrs
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\__init__.py", line 3, in <module>
+    from .converters import BaseConverter, Converter, GenConverter, UnstructureStrategy
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\converters.py", line 18, in <module>
+    from ._compat import (
+    ...<35 lines>...
+    )
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\_compat.py", line 45, in <module>
+    from attrs import NOTHING, Attribute, Factory, NothingType, resolve_types
+ImportError: cannot import name 'NothingType' from 'attrs' (C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\.local\lib\python3.13\site-packages\attrs\__init__.py)
+44:48.859  reports          | ERROR Asset Library 'Online Essentials': file does not exist: C:\Users\Admin\AppData\Local\Blender Foundation\Blender\Cache\remote-assets\online-essentials\_asset-library-meta.json
+44:48.859  reports          | ERROR Could not read asset listing 'Online Essentials', see Info Editor for details
+44:49.140  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\materials\cotton-dark-red_3ed2ce49-bc23-47ab-b3a9-f5954e6621e0\cotton-dark-red_16c09ca9-c2c5-4545-8ac6-37a89f8b42d1.blend': Missing DNA block
+44:49.172  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\materials\marble_8df35f88-db8b-4a2e-8b17-92985de45a1d\marble_2K_858a3608-97e6-4c6a-bcd1-ef13aa07d38e.blend': Missing DNA block
+44:49.265  reports          | WARNING Unrecognized file format 'C:\Users\Admin\blenderkit_data\materials\white-office-wal_4d746fdd-ee6c-43f9-b16b-e425b7ef17ac\white-office-wall_2K_c745c34f-25f3-4919-80c1-89eda7007b14.blend'
+44:49.922  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\decorative-set_b507c963-7873-417d-87c0-59147bfc9f3b\decorative-set_3d28e0d2-680e-45c7-af4c-7b3c3a07f303.blend': Missing DNA block
+44:51.265  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\high-quality-pop_153b2469-7a3b-4538-808e-1070eadf7f05\high-quality-poplar-tree_e4c3ebf5-906a-45eb-8686-bd6baddb5c35.blend': Missing DNA block
+44:52.328  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\hostel-building_4889bc5e-06e2-4834-ab00-47b4d4fb2316\hostel-building_2K_07c57052-bf2a-45c6-8ea0-a40b8e6040e4.blend': Missing DNA block
+44:52.750  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\hostel_4e757cb9-ab21-4ea5-bd5c-993f5e58795c\hostel_1K_1be40717-e51e-45ea-9fd6-f24484113cdd.blend': Missing DNA block
+44:52.828  reports          | WARNING Unrecognized file format 'C:\Users\Admin\blenderkit_data\models\mossy-ground_72ecd584-81fd-457b-b265-0472a0dac759\mossy-ground_28f9f1cb-55b4-4a35-a739-75f1d5bacbe4.blend'
+44:53.078  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\residental-build_e5866bdd-d813-4dc3-b321-95e9020fd070\residental-building_a8cceb86-3e0e-4310-87e2-28b1621207e8.blend': Missing DNA block
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Lounger\\KIT_Lounger.fbx'
+export finished in 0.9443 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Lounger\\KIT_Lounger.fbx'
+export finished in 0.0356 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Umbrella\\KIT_Umbrella.fbx'
+export finished in 0.8288 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Umbrella\\KIT_Umbrella.fbx'
+export finished in 1.0709 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_GrassBig\\KIT_GrassBig.fbx'
+export finished in 0.3599 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_FlowerSpikes\\KIT_FlowerSpikes.fbx'
+export finished in 0.0495 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_GroundFlower\\KIT_GroundFlower.fbx'
+export finished in 0.8596 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_BigLeaf\\KIT_BigLeaf.fbx'
+export finished in 0.0175 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_SmallPlant\\KIT_SmallPlant.fbx'
+export finished in 0.0088 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Fern\\KIT_Fern.fbx'
+export finished in 0.1496 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_LowShrubMat66\\KIT_LowShrubMat66.fbx'
+export finished in 0.0796 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_GrassTuft\\KIT_GrassTuft.fbx'
+export finished in 0.0172 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_GrassCarpet\\KIT_GrassCarpet.fbx'
+export finished in 0.6204 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_FlowerBush\\KIT_FlowerBush.fbx'
+export finished in 0.0269 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Shrub01\\KIT_Shrub01.fbx'
+export finished in 0.0359 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Shrub05\\KIT_Shrub05.fbx'
+export finished in 0.0228 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Shrub06\\KIT_Shrub06.fbx'
+export finished in 0.0875 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Shrub04\\KIT_Shrub04.fbx'
+export finished in 0.0189 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_PalmPot\\KIT_PalmPot.fbx'
+export finished in 0.0675 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_PotBush\\KIT_PotBush.fbx'
+export finished in 2.5439 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Lounger\\KIT_Lounger.fbx'
+export finished in 0.0339 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Umbrella\\KIT_Umbrella.fbx'
+export finished in 0.9172 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_GrassBig\\KIT_GrassBig.fbx'
+export finished in 0.3753 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_FlowerSpikes\\KIT_FlowerSpikes.fbx'
+export finished in 0.0456 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_GroundFlower\\KIT_GroundFlower.fbx'
+export finished in 0.8201 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_BigLeaf\\KIT_BigLeaf.fbx'
+export finished in 0.0149 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_SmallPlant\\KIT_SmallPlant.fbx'
+export finished in 0.0077 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Fern\\KIT_Fern.fbx'
+export finished in 0.1228 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_LowShrub\\KIT_LowShrub.fbx'
+export finished in 0.0663 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_GrassTuft\\KIT_GrassTuft.fbx'
+export finished in 0.0141 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_GrassCarpet\\KIT_GrassCarpet.fbx'
+export finished in 0.5281 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_FlowerBush\\KIT_FlowerBush.fbx'
+export finished in 0.0226 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Shrub01\\KIT_Shrub01.fbx'
+export finished in 0.0385 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Shrub05\\KIT_Shrub05.fbx'
+export finished in 0.0185 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Shrub06\\KIT_Shrub06.fbx'
+export finished in 0.0900 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Shrub04\\KIT_Shrub04.fbx'
+export finished in 0.0234 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_PalmPot\\KIT_PalmPot.fbx'
+export finished in 0.0862 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_PotBush\\KIT_PotBush.fbx'
+export finished in 2.5378 sec.
+01:10:28.312  blend            | Read blend: "C:\Users\Admin\Documents\Unreal Projects\ArchVizExplorer-Neelam\SourceArt\AmenityDeck\amenity_deck.blend"
+ℹ️  blendkit: No temporarily enabled addons to clean up [17:04:51.954, download.py:419]
+Traceback (most recent call last):
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_fbx\__init__.py", line 622, in execute
+    return export_fbx_bin.save(self, context, **keywords)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_fbx\export_fbx_bin.py", line 3735, in save
+    ctx_objects = context.selected_objects
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Context' object has no attribute 'selected_objects'
+01:10:34.390  bpy.rna          | ERROR Python script error in EXPORT_SCENE_OT_fbx.execute
+Error: Python: Traceback (most recent call last):
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_fbx\__init__.py", line 622, in execute
+    return export_fbx_bin.save(self, context, **keywords)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_fbx\export_fbx_bin.py", line 3735, in save
+    ctx_objects = context.selected_objects
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Context' object has no attribute 'selected_objects'
+Location: <string>:217
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\bl_pkg\__init__.py", line 455, in remote_asset_library_sync
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\assets\remote_library\listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\http\downloader.py", line 51, in <module>
+    import cattrs
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\__init__.py", line 3, in <module>
+    from .converters import BaseConverter, Converter, GenConverter, UnstructureStrategy
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\converters.py", line 18, in <module>
+    from ._compat import (
+    ...<35 lines>...
+    )
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\_compat.py", line 45, in <module>
+    from attrs import NOTHING, Attribute, Factory, NothingType, resolve_types
+ImportError: cannot import name 'NothingType' from 'attrs' (C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\.local\lib\python3.13\site-packages\attrs\__init__.py)
+01:10:34.515  reports          | ERROR Asset Library 'Online Essentials': file does not exist: C:\Users\Admin\AppData\Local\Blender Foundation\Blender\Cache\remote-assets\online-essentials\_asset-library-meta.json
+01:10:34.515  reports          | ERROR Could not read asset listing 'Online Essentials', see Info Editor for details
+01:10:34.687  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\materials\cotton-dark-red_3ed2ce49-bc23-47ab-b3a9-f5954e6621e0\cotton-dark-red_16c09ca9-c2c5-4545-8ac6-37a89f8b42d1.blend': Missing DNA block
+01:10:34.734  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\materials\marble_8df35f88-db8b-4a2e-8b17-92985de45a1d\marble_2K_858a3608-97e6-4c6a-bcd1-ef13aa07d38e.blend': Missing DNA block
+01:10:34.844  reports          | WARNING Unrecognized file format 'C:\Users\Admin\blenderkit_data\materials\white-office-wal_4d746fdd-ee6c-43f9-b16b-e425b7ef17ac\white-office-wall_2K_c745c34f-25f3-4919-80c1-89eda7007b14.blend'
+01:10:35.547  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\decorative-set_b507c963-7873-417d-87c0-59147bfc9f3b\decorative-set_3d28e0d2-680e-45c7-af4c-7b3c3a07f303.blend': Missing DNA block
+01:10:37.078  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\high-quality-pop_153b2469-7a3b-4538-808e-1070eadf7f05\high-quality-poplar-tree_e4c3ebf5-906a-45eb-8686-bd6baddb5c35.blend': Missing DNA block
+01:10:38.250  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\hostel-building_4889bc5e-06e2-4834-ab00-47b4d4fb2316\hostel-building_2K_07c57052-bf2a-45c6-8ea0-a40b8e6040e4.blend': Missing DNA block
+01:10:38.656  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\hostel_4e757cb9-ab21-4ea5-bd5c-993f5e58795c\hostel_1K_1be40717-e51e-45ea-9fd6-f24484113cdd.blend': Missing DNA block
+01:10:38.719  reports          | WARNING Unrecognized file format 'C:\Users\Admin\blenderkit_data\models\mossy-ground_72ecd584-81fd-457b-b265-0472a0dac759\mossy-ground_28f9f1cb-55b4-4a35-a739-75f1d5bacbe4.blend'
+01:10:39.312  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\residental-build_e5866bdd-d813-4dc3-b321-95e9020fd070\residental-building_a8cceb86-3e0e-4310-87e2-28b1621207e8.blend': Missing DNA block
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Plumeria_A\\KIT_Plumeria_A.fbx'
+export finished in 0.3198 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Plumeria_B\\KIT_Plumeria_B.fbx'
+export finished in 0.0759 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Plumeria_C\\KIT_Plumeria_C.fbx'
+export finished in 0.1088 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Terminalia_A\\KIT_Terminalia_A.fbx'
+export finished in 0.0741 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Terminalia_B\\KIT_Terminalia_B.fbx'
+export finished in 0.0721 sec.
+Info: Saved "amenity_deck.blend"
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\bl_pkg\__init__.py", line 455, in remote_asset_library_sync
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\assets\remote_library\listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\http\downloader.py", line 51, in <module>
+    import cattrs
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\__init__.py", line 3, in <module>
+    from .converters import BaseConverter, Converter, GenConverter, UnstructureStrategy
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\converters.py", line 18, in <module>
+    from ._compat import (
+    ...<35 lines>...
+    )
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\_compat.py", line 45, in <module>
+    from attrs import NOTHING, Attribute, Factory, NothingType, resolve_types
+ImportError: cannot import name 'NothingType' from 'attrs' (C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\.local\lib\python3.13\site-packages\attrs\__init__.py)
+01:10:41.969  reports          | ERROR Asset Library 'Online Essentials': file does not exist: C:\Users\Admin\AppData\Local\Blender Foundation\Blender\Cache\remote-assets\online-essentials\_asset-library-meta.json
+01:10:41.969  reports          | ERROR Could not read asset listing 'Online Essentials', see Info Editor for details
+01:10:42.109  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\materials\cotton-dark-red_3ed2ce49-bc23-47ab-b3a9-f5954e6621e0\cotton-dark-red_16c09ca9-c2c5-4545-8ac6-37a89f8b42d1.blend': Missing DNA block
+01:10:42.140  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\materials\marble_8df35f88-db8b-4a2e-8b17-92985de45a1d\marble_2K_858a3608-97e6-4c6a-bcd1-ef13aa07d38e.blend': Missing DNA block
+01:10:42.187  reports          | WARNING Unrecognized file format 'C:\Users\Admin\blenderkit_data\materials\white-office-wal_4d746fdd-ee6c-43f9-b16b-e425b7ef17ac\white-office-wall_2K_c745c34f-25f3-4919-80c1-89eda7007b14.blend'
+01:10:42.594  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\decorative-set_b507c963-7873-417d-87c0-59147bfc9f3b\decorative-set_3d28e0d2-680e-45c7-af4c-7b3c3a07f303.blend': Missing DNA block
+01:10:43.453  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\high-quality-pop_153b2469-7a3b-4538-808e-1070eadf7f05\high-quality-poplar-tree_e4c3ebf5-906a-45eb-8686-bd6baddb5c35.blend': Missing DNA block
+01:10:44.390  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\hostel-building_4889bc5e-06e2-4834-ab00-47b4d4fb2316\hostel-building_2K_07c57052-bf2a-45c6-8ea0-a40b8e6040e4.blend': Missing DNA block
+01:10:44.781  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\hostel_4e757cb9-ab21-4ea5-bd5c-993f5e58795c\hostel_1K_1be40717-e51e-45ea-9fd6-f24484113cdd.blend': Missing DNA block
+01:10:44.828  reports          | WARNING Unrecognized file format 'C:\Users\Admin\blenderkit_data\models\mossy-ground_72ecd584-81fd-457b-b265-0472a0dac759\mossy-ground_28f9f1cb-55b4-4a35-a739-75f1d5bacbe4.blend'
+01:10:45.062  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\residental-build_e5866bdd-d813-4dc3-b321-95e9020fd070\residental-building_a8cceb86-3e0e-4310-87e2-28b1621207e8.blend': Missing DNA block
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Terminalia_A\\KIT_Terminalia_A.fbx'
+export finished in 0.1791 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_Terminalia_B\\KIT_Terminalia_B.fbx'
+export finished in 0.1720 sec.
+Info: Saved "amenity_deck.blend"
+⚠️  blendkit: First request for BKClient reports failed unexpectedly: HTTPConnectionPool(host='127.0.0.1', port=62485): Read timed out. (read timeout=0.25) <class 'requests.exceptions.ReadTimeout'> [17:08:53.941, timer.py:91]
+ℹ️  blendkit: Blendkit-Client v1.9.2 starting on http://127.0.0.1:62485 [17:08:54.410, client_lib.py:774]
+ℹ️  blendkit: Blendkit-Client is running on port 62485! [17:08:54.464, timer.py:215]
+FBX version: 7400
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_DiningSet\\KIT_DiningSet.fbx'
+export finished in 0.0229 sec.
+01:29:11.703  blend            | Read blend: "C:\Users\Admin\Downloads\Blender Files\party lawn.blend"
+ℹ️  blendkit: No temporarily enabled addons to clean up [17:23:33.118, download.py:419]
+Warning: File written by newer Blender binary (502.45), expect loss of data!
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\bl_pkg\__init__.py", line 455, in remote_asset_library_sync
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\assets\remote_library\listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\http\downloader.py", line 51, in <module>
+    import cattrs
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\__init__.py", line 3, in <module>
+    from .converters import BaseConverter, Converter, GenConverter, UnstructureStrategy
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\converters.py", line 18, in <module>
+    from ._compat import (
+    ...<35 lines>...
+    )
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\_compat.py", line 45, in <module>
+    from attrs import NOTHING, Attribute, Factory, NothingType, resolve_types
+ImportError: cannot import name 'NothingType' from 'attrs' (C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\.local\lib\python3.13\site-packages\attrs\__init__.py)
+01:29:17.453  reports          | ERROR Asset Library 'Online Essentials': file does not exist: C:\Users\Admin\AppData\Local\Blender Foundation\Blender\Cache\remote-assets\online-essentials\_asset-library-meta.json
+01:29:17.453  reports          | ERROR Could not read asset listing 'Online Essentials', see Info Editor for details
+01:29:17.562  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\materials\cotton-dark-red_3ed2ce49-bc23-47ab-b3a9-f5954e6621e0\cotton-dark-red_16c09ca9-c2c5-4545-8ac6-37a89f8b42d1.blend': Missing DNA block
+01:29:17.578  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\materials\marble_8df35f88-db8b-4a2e-8b17-92985de45a1d\marble_2K_858a3608-97e6-4c6a-bcd1-ef13aa07d38e.blend': Missing DNA block
+01:29:17.640  reports          | WARNING Unrecognized file format 'C:\Users\Admin\blenderkit_data\materials\white-office-wal_4d746fdd-ee6c-43f9-b16b-e425b7ef17ac\white-office-wall_2K_c745c34f-25f3-4919-80c1-89eda7007b14.blend'
+01:29:18.015  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\decorative-set_b507c963-7873-417d-87c0-59147bfc9f3b\decorative-set_3d28e0d2-680e-45c7-af4c-7b3c3a07f303.blend': Missing DNA block
+01:29:18.859  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\high-quality-pop_153b2469-7a3b-4538-808e-1070eadf7f05\high-quality-poplar-tree_e4c3ebf5-906a-45eb-8686-bd6baddb5c35.blend': Missing DNA block
+01:29:19.781  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\hostel-building_4889bc5e-06e2-4834-ab00-47b4d4fb2316\hostel-building_2K_07c57052-bf2a-45c6-8ea0-a40b8e6040e4.blend': Missing DNA block
+01:29:20.234  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\hostel_4e757cb9-ab21-4ea5-bd5c-993f5e58795c\hostel_1K_1be40717-e51e-45ea-9fd6-f24484113cdd.blend': Missing DNA block
+01:29:20.281  reports          | WARNING Unrecognized file format 'C:\Users\Admin\blenderkit_data\models\mossy-ground_72ecd584-81fd-457b-b265-0472a0dac759\mossy-ground_28f9f1cb-55b4-4a35-a739-75f1d5bacbe4.blend'
+01:29:20.484  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\residental-build_e5866bdd-d813-4dc3-b321-95e9020fd070\residental-building_a8cceb86-3e0e-4310-87e2-28b1621207e8.blend': Missing DNA block
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_PathLight\\KIT_PathLight.fbx'
+export finished in 0.0097 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_PostLight\\KIT_PostLight.fbx'
+export finished in 0.0109 sec.
+
+FBX export starting... 'C:/Users/Admin/Documents/Unreal Projects/ArchVizExplorer-Neelam/SourceArt/AmenityDeck/kit\\KIT_GardenLight\\KIT_GardenLight.fbx'
+export finished in 0.0258 sec.
+01:29:33.312  blend            | Read blend: "C:\Users\Admin\Documents\Unreal Projects\ArchVizExplorer-Neelam\SourceArt\AmenityDeck\amenity_deck.blend"
+ℹ️  blendkit: No temporarily enabled addons to clean up [17:23:53.778, download.py:419]
+GeoScatError: SCATTER5_PR_particle_listers.get_emitter_ui_owner(): emitter is None, uid='7890'.
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\bl_pkg\__init__.py", line 455, in remote_asset_library_sync
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\assets\remote_library\listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\http\downloader.py", line 51, in <module>
+    import cattrs
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\__init__.py", line 3, in <module>
+    from .converters import BaseConverter, Converter, GenConverter, UnstructureStrategy
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\converters.py", line 18, in <module>
+    from ._compat import (
+    ...<35 lines>...
+    )
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\_compat.py", line 45, in <module>
+    from attrs import NOTHING, Attribute, Factory, NothingType, resolve_types
+ImportError: cannot import name 'NothingType' from 'attrs' (C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\.local\lib\python3.13\site-packages\attrs\__init__.py)
+01:29:34.422  reports          | ERROR Asset Library 'Online Essentials': file does not exist: C:\Users\Admin\AppData\Local\Blender Foundation\Blender\Cache\remote-assets\online-essentials\_asset-library-meta.json
+01:29:34.422  reports          | ERROR Could not read asset listing 'Online Essentials', see Info Editor for details
+01:29:34.640  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\materials\cotton-dark-red_3ed2ce49-bc23-47ab-b3a9-f5954e6621e0\cotton-dark-red_16c09ca9-c2c5-4545-8ac6-37a89f8b42d1.blend': Missing DNA block
+01:29:34.687  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\materials\marble_8df35f88-db8b-4a2e-8b17-92985de45a1d\marble_2K_858a3608-97e6-4c6a-bcd1-ef13aa07d38e.blend': Missing DNA block
+01:29:34.750  reports          | WARNING Unrecognized file format 'C:\Users\Admin\blenderkit_data\materials\white-office-wal_4d746fdd-ee6c-43f9-b16b-e425b7ef17ac\white-office-wall_2K_c745c34f-25f3-4919-80c1-89eda7007b14.blend'
+01:29:35.281  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\decorative-set_b507c963-7873-417d-87c0-59147bfc9f3b\decorative-set_3d28e0d2-680e-45c7-af4c-7b3c3a07f303.blend': Missing DNA block
+01:29:36.203  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\high-quality-pop_153b2469-7a3b-4538-808e-1070eadf7f05\high-quality-poplar-tree_e4c3ebf5-906a-45eb-8686-bd6baddb5c35.blend': Missing DNA block
+01:29:37.297  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\hostel-building_4889bc5e-06e2-4834-ab00-47b4d4fb2316\hostel-building_2K_07c57052-bf2a-45c6-8ea0-a40b8e6040e4.blend': Missing DNA block
+01:29:37.656  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\hostel_4e757cb9-ab21-4ea5-bd5c-993f5e58795c\hostel_1K_1be40717-e51e-45ea-9fd6-f24484113cdd.blend': Missing DNA block
+01:29:37.703  reports          | WARNING Unrecognized file format 'C:\Users\Admin\blenderkit_data\models\mossy-ground_72ecd584-81fd-457b-b265-0472a0dac759\mossy-ground_28f9f1cb-55b4-4a35-a739-75f1d5bacbe4.blend'
+01:29:37.890  reports          | ERROR Failed to read blend file 'C:\Users\Admin\blenderkit_data\models\residental-build_e5866bdd-d813-4dc3-b321-95e9020fd070\residental-building_a8cceb86-3e0e-4310-87e2-28b1621207e8.blend': Missing DNA block
+01:53:19.500  blend            | Saved session recovery to "C:\Users\Admin\AppData\Local\Temp\quit.blend"
+01:53:19.500  blend            | Writing user preferences: "C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\config\userpref.blend" 
+01:53:19.515  reports          | Preferences saved
+ℹ️  blendkit: Unregistering Blendkit add-on [17:47:39.286, __init__.py:2973]
+ℹ️  blendkit: No temporarily enabled addons to clean up [17:47:39.290, download.py:419]
+ℹ️  blendkit: Reported Blender quit to Client. [17:47:39.298, __init__.py:3002]
+
+Blender quit

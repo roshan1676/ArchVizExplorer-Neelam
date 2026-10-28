@@ -256,7 +256,7 @@ void ANeelamFlatTour::FocusOverview()
     if (FloorViewWidget) if (ANeelamTowerFloors* T = FindTower(FloorViewWidget->CurrentTower)) Focus = T;
     FVector C = FVector::ZeroVector;
     if (Focus) C = Focus->GetTowerCenter() + OverviewPivotOffset;
-    else { for (ANeelamTowerFloors* T : Towers) C += T->GetTowerCenter(); C /= Towers.Num(); }
+    else { for (ANeelamTowerFloors* T : Towers) C += T->GetTowerCenter(); C /= Towers.Num(); C += OverviewPivotOffset; }   // Home too: the centre is at ground level, inside the podium
     FocusPawn(C, OverviewPitch, OverviewYaw, Focus ? OverviewArmLength * 0.75f : OverviewArmLength);
 }
 

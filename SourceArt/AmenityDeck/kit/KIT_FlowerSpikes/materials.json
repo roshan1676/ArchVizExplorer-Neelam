@@ -1,0 +1,66 @@
+{
+ "kit": "KIT_FlowerSpikes",
+ "faces": 16752,
+ "size_m": [
+  2.984,
+  1.274,
+  1.07
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\pool.blend",
+ "objects": [
+  "garden02_012"
+ ],
+ "materials": [
+  {
+   "name": "vray bark_green_Mat",
+   "foliage": false,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_056.jpg",
+   "alpha": "Bitmaptexture_059.jpg",
+   "rough_tex": "Bitmaptexture_057.jpg",
+   "normal": "Bitmaptexture_058.jpg",
+   "transl": "Bitmaptexture_056.jpg"
+  },
+  {
+   "name": "vray flowe_Mat",
+   "foliage": true,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_056.jpg",
+   "alpha": "Bitmaptexture_059.jpg",
+   "rough_tex": "Bitmaptexture_057.jpg",
+   "normal": "Bitmaptexture_058.jpg",
+   "transl": "Bitmaptexture_056.jpg"
+  },
+  {
+   "name": "vray flowe_v2_Mat",
+   "foliage": true,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_056.jpg",
+   "alpha": "Bitmaptexture_059.jpg",
+   "rough_tex": "Bitmaptexture_057.jpg",
+   "normal": "Bitmaptexture_058.jpg",
+   "transl": "Bitmaptexture_056.jpg"
+  }
+ ]
+}

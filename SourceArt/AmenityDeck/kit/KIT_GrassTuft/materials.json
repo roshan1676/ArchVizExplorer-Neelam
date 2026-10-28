@@ -1,0 +1,47 @@
+{
+ "kit": "KIT_GrassTuft",
+ "faces": 4140,
+ "size_m": [
+  0.836,
+  0.89,
+  0.841
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\pool.blend",
+ "objects": [
+  "garden02_009"
+ ],
+ "materials": [
+  {
+   "name": "vray Material_Mat",
+   "foliage": false,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_044.jpg",
+   "alpha": "Bitmaptexture_047.jpg",
+   "rough_tex": "Bitmaptexture_045.jpg",
+   "normal": "Bitmaptexture_046.jpg"
+  },
+  {
+   "name": "vray gras_big_02_Mat",
+   "foliage": true,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_044.jpg",
+   "alpha": "Bitmaptexture_047.jpg",
+   "rough_tex": "Bitmaptexture_045.jpg",
+   "normal": "Bitmaptexture_046.jpg"
+  }
+ ]
+}

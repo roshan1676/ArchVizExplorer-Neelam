@@ -171,7 +171,9 @@ UNIT_TYPES = {
                                        ("Kitchen", "04_Kitchen", 150, 0, False, 180),        # window W2
                                        ("Corridor", "05_Corridor", 380, -150, False, -90),   # towards the bedrooms
                                        ("Bedroom 1", "06_Bedroom1", -90, -720, False, 180),  # window W3
-                                       ("Bedroom 2", "07_Bedroom2", -150, -1150, False, 180)])),
+                                       ("Bedroom 2", "07_Bedroom2", -150, -1150, False, 180),
+                                       # The 3BHK source has no complete bathroom shell. Reuse the finished 2BHK bathroom panorama.
+                                       ("Bathroom", "Rooms/T_Pano_2BHK_07_Bathroom", 892, -228, False, 0)])),
 }
 # top floor (client 2 Oct): no flat plan, one 360 from the top of the building.
 # Balcony rule: own BalconyPanorama = 360 (use T_Pano_TopFloor for any flat on floor 41); empty = photo gallery (Balcony_Views.py)

@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\addon_utils.py", line 544, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\bl_pkg\__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\bl_pkg\__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\assets\remote_library\listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\modules\_bpy_internal\http\downloader.py", line 51, in <module>
+    import cattrs
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\__init__.py", line 3, in <module>
+    from .converters import BaseConverter, Converter, GenConverter, UnstructureStrategy
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\converters.py", line 18, in <module>
+    from ._compat import (
+    ...<35 lines>...
+    )
+  File "C:\Program Files\Blender Foundation\Blender 5.2\5.2\python\Lib\site-packages\cattrs\_compat.py", line 45, in <module>
+    from attrs import NOTHING, Attribute, Factory, NothingType, resolve_types
+ImportError: cannot import name 'NothingType' from 'attrs' (C:\Users\Admin\AppData\Roaming\Blender Foundation\Blender\5.2\extensions\.local\lib\python3.13\site-packages\attrs\__init__.py)
+00:01.109  blend            | Read blend: "C:\Users\Admin\Downloads\Blender Files\washroom.blend"
+00:01.234  reports          | WARNING File written by newer Blender binary (502.45), expect loss of data!
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+Exception in module register(): C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\bl_pkg\__init__.py
+
+Blender quit

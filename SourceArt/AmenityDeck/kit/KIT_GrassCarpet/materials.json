@@ -1,0 +1,32 @@
+{
+ "kit": "KIT_GrassCarpet",
+ "faces": 234902,
+ "size_m": [
+  2.98,
+  1.528,
+  0.132
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\pool.blend",
+ "objects": [
+  "garden02_007"
+ ],
+ "materials": [
+  {
+   "name": "vray gras_small_Mat",
+   "foliage": true,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_044.jpg",
+   "alpha": "Bitmaptexture_047.jpg",
+   "rough_tex": "Bitmaptexture_045.jpg",
+   "normal": "Bitmaptexture_046.jpg",
+   "transl": "Bitmaptexture_044.jpg"
+  }
+ ]
+}

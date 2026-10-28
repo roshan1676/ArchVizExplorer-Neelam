@@ -24,7 +24,11 @@ def ground(x, y, r=2500.0):
                 d = math.hypot(px - x, py - y)
                 if d < r: best.append((d, z))
     if not best: return None
-    best.sort(); zs = sorted(z for _, z in best[:6]); return zs[len(zs) // 3]
+    best.sort()
+    # 28 Oct: the lower third within 25 m took in the low ground BESIDE the suburban embankment -> track 1-2.6 m under the
+    # photo tracks. Median of the samples within 8 m of the track (25 m only when nothing is that close).
+    close = [z for d, z in best if d < 800]
+    zs = sorted(close) if close else sorted(z for _, z in best[:6]); return zs[len(zs) // 2]
 
 def dens(pts, step=500.0):
     out = []
@@ -44,7 +48,7 @@ def smooth_profile(P):
     # rolling 30th percentile +-60 m (trains / canopies in the photogrammetry), then mean +-40 m, grade-limited
     w = 12; zp = []
     for i in range(len(z)):
-        s = sorted(z[max(0, i - w):i + w + 1]); zp.append(s[int(len(s) * 0.3)])
+        s = sorted(z[max(0, i - w):i + w + 1]); zp.append(s[int(len(s) * 0.65)] + 20.0)   # 28 Oct: 65th pct + 20 cm (30th pct sank the track under the photo tracks)
     w2 = 8; zs = [sum(zp[max(0, i - w2):i + w2 + 1]) / len(zp[max(0, i - w2):i + w2 + 1]) for i in range(len(zp))]
     return zs
 

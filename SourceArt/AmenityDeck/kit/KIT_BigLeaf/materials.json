@@ -1,0 +1,49 @@
+{
+ "kit": "KIT_BigLeaf",
+ "faces": 5832,
+ "size_m": [
+  0.88,
+  0.684,
+  0.865
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\pool.blend",
+ "objects": [
+  "garden02_014"
+ ],
+ "materials": [
+  {
+   "name": "vray bark_Mat.001",
+   "foliage": false,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_048.jpg",
+   "alpha": "Bitmaptexture_051.jpg",
+   "rough_tex": "Bitmaptexture_049.jpg",
+   "normal": "Bitmaptexture_050.jpg",
+   "transl": "Bitmaptexture_048.jpg"
+  },
+  {
+   "name": "vray big_fond_Mat",
+   "foliage": true,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_048.jpg",
+   "rough_tex": "Bitmaptexture_049.jpg",
+   "normal": "Bitmaptexture_050.jpg",
+   "alpha": "Bitmaptexture_048.jpg",
+   "alpha_ch": "A"
+  }
+ ]
+}

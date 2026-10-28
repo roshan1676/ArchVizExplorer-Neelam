@@ -1,0 +1,49 @@
+{
+ "kit": "KIT_GrassBig",
+ "faces": 142290,
+ "size_m": [
+  2.015,
+  1.548,
+  1.035
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\pool.blend",
+ "objects": [
+  "garden02_017"
+ ],
+ "materials": [
+  {
+   "name": "vray gras_big_02_Mat.001",
+   "foliage": true,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_064.jpg",
+   "alpha": "Bitmaptexture_067.jpg",
+   "rough_tex": "Bitmaptexture_065.jpg",
+   "normal": "Bitmaptexture_066.jpg",
+   "transl": "Bitmaptexture_064.jpg"
+  },
+  {
+   "name": "vray gras_big_Mat",
+   "foliage": true,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_064.jpg",
+   "alpha": "Bitmaptexture_067.jpg",
+   "rough_tex": "Bitmaptexture_065.jpg",
+   "normal": "Bitmaptexture_066.jpg",
+   "transl": "Bitmaptexture_064.jpg"
+  }
+ ]
+}

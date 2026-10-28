@@ -1,0 +1,49 @@
+{
+ "kit": "KIT_GroundFlower",
+ "faces": 353733,
+ "size_m": [
+  1.366,
+  1.456,
+  0.476
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\pool.blend",
+ "objects": [
+  "garden02_013"
+ ],
+ "materials": [
+  {
+   "name": "vray bark_green_Mat.001",
+   "foliage": false,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_060.jpg",
+   "alpha": "Bitmaptexture_063.jpg",
+   "rough_tex": "Bitmaptexture_061.jpg",
+   "normal": "Bitmaptexture_063.jpg",
+   "transl": "Bitmaptexture_060.jpg"
+  },
+  {
+   "name": "vray flower02_Mat",
+   "foliage": true,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.858578622341156,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Bitmaptexture_060.jpg",
+   "alpha": "Bitmaptexture_063.jpg",
+   "rough_tex": "Bitmaptexture_061.jpg",
+   "normal": "Bitmaptexture_063.jpg",
+   "transl": "Bitmaptexture_060.jpg"
+  }
+ ]
+}

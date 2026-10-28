@@ -1,0 +1,46 @@
+{
+ "kit": "KIT_PathLight",
+ "faces": 1424,
+ "size_m": [
+  0.09,
+  0.22,
+  0.4
+ ],
+ "source": "C:\\Users\\Admin\\Downloads\\Blender Files\\party lawn.blend",
+ "objects": [
+  "Cuerpo",
+  "Luz"
+ ],
+ "materials": [
+  {
+   "name": "Aluminium",
+   "foliage": false,
+   "color": [
+    0.040692850947380066,
+    0.040692850947380066,
+    0.040692850947380066
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "masked": true,
+   "base": "Aluminio_Anodizado_Duro_4K_Albedo_jpg_001.jpg",
+   "rough_tex": "Aluminio_Anodizado_Duro_4K_Roughness_jpg_001.jpg",
+   "metal_tex": "Aluminio_Anodizado_Duro_4K_Metalness_jpg_001.jpg",
+   "normal": "Aluminio_Anodizado_Duro_4K_Normal_jpg_001.jpg",
+   "alpha": "Aluminio_Anodizado_Duro_4K_Albedo_jpg_001.jpg",
+   "alpha_ch": "A"
+  },
+  {
+   "name": "Light",
+   "foliage": false,
+   "color": [
+    0.5,
+    0.5,
+    0.5
+   ],
+   "rough": 0.6,
+   "metal": 0.0,
+   "masked": true
+  }
+ ]
+}

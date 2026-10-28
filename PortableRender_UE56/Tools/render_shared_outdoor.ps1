@@ -1,10 +1,25 @@
 param([string]$ProjectRoot = (Split-Path -Parent $PSScriptRoot))
 $bridge = Join-Path $ProjectRoot 'Saved\ClaudeBridge'
 $ue = Join-Path $ProjectRoot 'Tools\ue.sh'
-$gitBash = 'C:\Program Files\Git\bin\bash.exe'
-$python = (Get-Command 'python.exe' -ErrorAction SilentlyContinue).Source
-$pythonArgs = @()
-if(-not $python){$python=(Get-Command 'py.exe' -ErrorAction SilentlyContinue).Source;$pythonArgs=@('-3')}
+$gitBash = $null
+$gitExe = (Get-Command 'git.exe' -ErrorAction SilentlyContinue).Source
+if ($gitExe) {
+  $gitDir = Split-Path -Parent $gitExe
+  if ((Split-Path -Leaf $gitDir) -eq 'cmd') { $gitRoot = Split-Path -Parent $gitDir }
+  elseif ((Split-Path -Leaf $gitDir) -eq 'bin') { $gitRoot = Split-Path -Parent $gitDir }
+  else { $gitRoot = $gitDir }
+  $candidate = Join-Path $gitRoot 'bin\bash.exe'
+  if (Test-Path -LiteralPath $candidate) { $gitBash = $candidate }
+}
+if (-not $gitBash) {
+  foreach ($candidate in @('C:\Program Files\Git\bin\bash.exe', 'C:\Program Files (x86)\Git\bin\bash.exe')) {
+    if (Test-Path -LiteralPath $candidate) { $gitBash = $candidate; break }
+  }
+}
+if (-not $gitBash) { throw 'Git Bash was not found. Install Git for Windows.' }
+$python = (Get-Command 'py.exe' -ErrorAction SilentlyContinue).Source
+$pythonArgs = @('-3')
+if (-not $python) { $python = (Get-Command 'python.exe' -ErrorAction SilentlyContinue).Source; $pythonArgs = @() }
 if(-not $python){throw 'Install Python 3 to stitch the panorama faces.'}
 $stitcher = Join-Path $ProjectRoot 'Tools\stitch_pano.py'
 $facesRoot = Join-Path $ProjectRoot 'Saved\Pano\faces'
@@ -27,6 +42,8 @@ function Run-Bridge([string]$Name,[string]$Code,[int]$Timeout=60) {
   & $gitBash $ue $file $Timeout
   if ($LASTEXITCODE -ne 0) { throw "Bridge job failed: $Name" }
 }
+$map='/Game/Neelam/Amenity_Shared_Outdoor/L_Amenity_Shared_Outdoor'
+Run-Bridge 'load_shared_outdoor' "import unreal; result=unreal.get_editor_subsystem(unreal.LevelEditorSubsystem).load_level('$map')" 600 | Out-Null
 $i=0
 foreach ($s in $spots) {
   $i++
@@ -40,6 +57,5 @@ foreach ($s in $spots) {
   $base=Join-Path $outRoot ($s.Name + '_8K')
   & $python @pythonArgs $stitcher (Join-Path $facesRoot ("${unit}_$($s.Name)")) $base 8192
   if ($LASTEXITCODE -ne 0) { throw "Stitch failed: $($s.Name)" }
-  Move-Item -LiteralPath ($base + '.jpg') -Destination ($base + '.jpg') -Force
   Write-Output ("DONE {0}: {1}.jpg" -f $s.Name,$base)
 }
