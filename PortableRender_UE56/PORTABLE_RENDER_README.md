@@ -1,6 +1,14 @@
-# Portable Neelam amenity render project (Unreal Engine 5.6)
+# Portable Neelam render project (Unreal Engine 5.6)
 
-This is a standalone render project beside the main Neelam UE 5.5 project. It contains the 17 amenity levels and their Unreal asset dependencies (about 7.0 GB), plus the Python render pipeline and helper scripts. It is intentionally separate to avoid loading UE 5.6 assets into the UE 5.5 project.
+This is a standalone render project beside the main Neelam application. It contains the 17 amenity levels, the 2BHK and 3BHK apartment review scenes, their Unreal asset dependencies, and the Python render pipeline and helper scripts.
+
+## Apartment scenes
+
+- 2BHK: `/Game/Neelam/_WIP_Luxury_20261028/L_2BHK_Luxury_Refresh`
+- 3BHK: `/Game/Neelam/_WIP_Luxury_20261028/L_3BHK_Luxury_Refresh`
+- Open `Room_render.uproject` in Unreal Engine 5.6, then open either map from the Content Browser. These are the saved review scenes; they are not wired into the ArchViz Explorer runtime tour.
+- The 2BHK scene includes the updated kitchen lighting and vanity surface/light. The 3BHK scene includes the corridor door material update.
+- No new final apartment panoramas are included in this handoff. Render or stitch them after reviewing the scenes.
 
 ## Open at home
 
